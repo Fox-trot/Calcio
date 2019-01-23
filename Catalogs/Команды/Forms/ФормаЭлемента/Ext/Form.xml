@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа1" id="10">
+			<GroupVerticalAlign>Top</GroupVerticalAlign>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ОсновнаяИнформация" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная информация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная информация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновнаяИнформацияРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Владелец" id="7">
+							<DataPath>Объект.Owner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Линк" id="38">
+							<DataPath>1/0:8ac4ff3a-cc89-4e96-a217-b862f7e8d846</DataPath>
+							<ContextMenu name="ЛинкКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ЛинкРасширеннаяПодсказка" id="40"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТекущийСостав" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий состав</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий состав</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.User</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаТекущийСоставРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Table name="ТекущийСостав" id="16">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТекущийСостав</DataPath>
+							<RowPictureDataPath>ТекущийСостав.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ТекущийСоставКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ТекущийСоставКоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ТекущийСоставРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ТекущийСоставСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ТекущийСостав</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущийСоставСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ТекущийСоставСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТекущийСоставСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ТекущийСостав</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущийСоставСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ТекущийСоставСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТекущийСоставУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ТекущийСостав</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущийСоставУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ТекущийСоставУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="СписокИгрокПометкаУдаления" id="41">
+									<DataPath>ТекущийСостав.ИгрокПометкаУдаления</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В запасе</v8:content>
+										</v8:item>
+									</ToolTip>
+									<FixingInTable>Left</FixingInTable>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокИгрокПометкаУдаленияКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СписокИгрокПометкаУдаленияРасширеннаяПодсказка" id="43"/>
+								</CheckBoxField>
+								<LabelField name="СписокНомер" id="35">
+									<DataPath>ТекущийСостав.Номер</DataPath>
+									<Width>2</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СписокНомерКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СписокНомерРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<LabelField name="СписокИгрок" id="32">
+									<DataPath>ТекущийСостав.Игрок</DataPath>
+									<ContextMenu name="СписокИгрокКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СписокИгрокРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="СписокАмплуа" id="29">
+									<DataPath>ТекущийСостав.Амплуа</DataPath>
+									<ContextMenu name="СписокАмплуаКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СписокАмплуаРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Команды</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТекущийСостав" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий состав</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ТекущийСостав.Амплуа</Field>
+				<Field>ТекущийСостав.Игрок</Field>
+				<Field>ТекущийСостав.Команда</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Перемещения.Игрок КАК Игрок,
+	Перемещения.Амплуа КАК Амплуа,
+	Перемещения.Номер КАК Номер,
+	Перемещения.Команда КАК Команда,
+	Перемещения.Игрок.ПометкаУдаления КАК ИгрокПометкаУдаления
+ИЗ
+	РегистрСведений.ПеремещенияИгроков.СрезПоследних(, Игрок.Наименование &gt; "") КАК Перемещения
+ГДЕ
+	Перемещения.Команда = &amp;Ссылка
+	И ГОД(Перемещения.Игрок.ДатаРождения) &gt; 1900</QueryText>
+				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>
