@@ -48,10 +48,10 @@
 							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
 						</InputField>
-						<InputField name="Линк" id="38">
-							<DataPath>1/0:8ac4ff3a-cc89-4e96-a217-b862f7e8d846</DataPath>
-							<ContextMenu name="ЛинкКонтекстноеМеню" id="39"/>
-							<ExtendedTooltip name="ЛинкРасширеннаяПодсказка" id="40"/>
+						<InputField name="Примечание" id="44">
+							<DataPath>Объект.Примечание</DataPath>
+							<ContextMenu name="ПримечаниеКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="46"/>
 						</InputField>
 					</ChildItems>
 				</Page>
