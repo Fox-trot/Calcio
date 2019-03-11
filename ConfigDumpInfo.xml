@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.7">
 	<ConfigVersions>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица" id="94617236-0587-403c-88ce-66a45546d10d" configVersion="4b369cf2f2a1714f97145fad9d0c1f5200000000">
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица" id="94617236-0587-403c-88ce-66a45546d10d" configVersion="f6c7747fa1755a47a5998cd0a62d345000000000">
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Dimension.Команда" id="0e794d59-d1a8-434e-8df0-bb650cfe44a5"/>
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Resource.КоличествоГолов" id="17b800b7-cc4f-447d-b0f1-4ec4e29f30bb"/>
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.Матчи" id="720042ee-36b6-4c35-843f-4b33915f14f2"/>
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Resource.КоличествоОчков" id="855a699b-5191-428c-a181-58d5f17d086b"/>
+			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Dimension.Тур" id="a5eda555-6059-4c4e-9082-96196c1e5e20"/>
 		</Metadata>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.Матчи.CommandModule" id="720042ee-36b6-4c35-843f-4b33915f14f2.2" configVersion="721653dd2251b9439424d3a659e38a9a00000000"/>
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.Матчи.CommandModule" id="720042ee-36b6-4c35-843f-4b33915f14f2.2" configVersion="6b9645c5ce570c4aa80859bbf7130e7e00000000"/>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Help" id="94617236-0587-403c-88ce-66a45546d10d.0" configVersion="b3d1bf7fd846a44a8bf28fe50b57561c00000000"/>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.ManagerModule" id="94617236-0587-403c-88ce-66a45546d10d.2" configVersion="9814ff4d0fef3f4280390765b50c076a00000000"/>
 		<Metadata name="Catalog.Амплуа" id="e693f8f8-ae53-49a4-b110-260a44c87e29" configVersion="aa7755ff9bb6774fa09e1b6dfc76197800000000"/>
@@ -71,7 +72,7 @@
 		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="9630eac90afc26479e4bcd8e8d7d3b3700000000"/>
 		<Metadata name="Configuration.Calcio.MainSectionPicture" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.c" configVersion="591472a363a44849bac2eac4d527998100000000"/>
 		<Metadata name="Configuration.Calcio.Splash" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.2" configVersion="45d0c112235e124dae843b1a3cafdf5300000000"/>
-		<Metadata name="Document.Матч" id="968fdade-8bba-49c0-9187-90aea4d5194a" configVersion="6b3f659985519a4696145be78cf1b01100000000">
+		<Metadata name="Document.Матч" id="968fdade-8bba-49c0-9187-90aea4d5194a" configVersion="7aad214436b173439f85cbb60a8c030700000000">
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд" id="11a0963e-f1f2-416e-b2a0-57e6722fea8c"/>
 			<Metadata name="Document.Матч.Attribute.Тур" id="1cace6f1-b7ee-4379-8a08-9bcbe06b8300"/>
 			<Metadata name="Document.Матч.TabularSection.Команды.Attribute.КоличествоГолов" id="2be74b46-7504-4994-9a46-e975cfd3e9cd"/>
@@ -83,13 +84,13 @@
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Игрок" id="c9ad558c-702e-482e-b9d9-1b280a464e6d"/>
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Команда" id="e3732354-c0ee-4318-b528-2b3d82d142ac"/>
 		</Metadata>
-		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="cdf5891f999d6146a76c7c11d6076f5600000000"/>
-		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="e6489a95cfa4c246b5bda8a83a5e44c100000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="eb593e14e80f9d4692a49194b5eddfb100000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="e95abe9c052da04da87af92438a46cd600000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка" id="ec0c34f6-3dd4-4666-8e39-b281b216548a" configVersion="840078de0d129a49941cc0858012b45700000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="bc7b3eae098b3a47ae068a6553f3394c00000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="17bda27daee6874abed50f8244234dd900000000"/>
-		<Metadata name="Document.Матч.ObjectModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.0" configVersion="b1a1cc8edf0bba47bfb8262f97d582cc00000000"/>
-		<Metadata name="InformationRegister.ПеремещенияИгроков" id="b289b23f-402e-4ded-b372-bb419befed76" configVersion="78fee497d64a184b915ad10ce1cf200f00000000">
+		<Metadata name="Document.Матч.ObjectModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.0" configVersion="0a2aebe56542164085d00ffdf164bed000000000"/>
+		<Metadata name="InformationRegister.ПеремещенияИгроков" id="b289b23f-402e-4ded-b372-bb419befed76" configVersion="e8d6a1765d9f324bb06104821bdd55c000000000">
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Resource.Команда" id="12445eb9-e067-4ee2-870a-a41ea74949c3"/>
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Resource.Номер" id="1aad3e64-6fe1-40ee-9154-ebe382f6a884"/>
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Dimension.Игрок" id="2de4bc2c-8ffa-44bf-962c-478cea40dfcf"/>
