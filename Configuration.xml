@@ -149,12 +149,12 @@
 			<CommonCommand>Биоритмы</CommonCommand>
 			<Catalog>Амплуа</Catalog>
 			<Catalog>ВидыСпорта</Catalog>
-			<Catalog>Команды</Catalog>
 			<Catalog>Игроки</Catalog>
-			<Catalog>Стадионы</Catalog>
+			<Catalog>Команды</Catalog>
 			<Catalog>Лига</Catalog>
-			<Catalog>Чемпионаты</Catalog>
+			<Catalog>Стадионы</Catalog>
 			<Catalog>Туры</Catalog>
+			<Catalog>Чемпионаты</Catalog>
 			<Document>Матч</Document>
 			<Report>Биоритмы</Report>
 			<Report>ТурнирнаяТаблица</Report>
