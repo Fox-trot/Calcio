@@ -342,7 +342,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ПрошлыеВстречи</DataPath>
 							<RowPictureDataPath>ПрошлыеВстречи.DefaultPicture</RowPictureDataPath>
-							<AutoRefresh>false</AutoRefresh>
+							<AutoRefresh>true</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -382,6 +382,9 @@
 								<ContextMenu name="ПрошлыеВстречиУправлениеПоискомКонтекстноеМеню" id="134"/>
 								<ExtendedTooltip name="ПрошлыеВстречиУправлениеПоискомРасширеннаяПодсказка" id="135"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПрошлыеВстречиВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ПрошлыеВстречиДата" id="136">
 									<DataPath>ПрошлыеВстречи.Дата</DataPath>
@@ -392,6 +395,13 @@
 									<DataPath>ПрошлыеВстречи.Счет</DataPath>
 									<ContextMenu name="ПрошлыеВстречиСчетКонтекстноеМеню" id="140"/>
 									<ExtendedTooltip name="ПрошлыеВстречиСчетРасширеннаяПодсказка" id="141"/>
+								</LabelField>
+								<LabelField name="ПрошлыеВстречиРегистратор" id="142">
+									<DataPath>ПрошлыеВстречи.Регистратор</DataPath>
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ПрошлыеВстречиРегистраторКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ПрошлыеВстречиРегистраторРасширеннаяПодсказка" id="144"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -425,7 +435,7 @@
 							<CommandSet>
 								<ExcludedCommand>Change</ExcludedCommand>
 							</CommandSet>
-							<AutoRefresh>false</AutoRefresh>
+							<AutoRefresh>true</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -465,6 +475,9 @@
 								<ContextMenu name="ПрошлыеМатчиУправлениеПоискомКонтекстноеМеню" id="110"/>
 								<ExtendedTooltip name="ПрошлыеМатчиУправлениеПоискомРасширеннаяПодсказка" id="111"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПрошлыеВстречиВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ПрошлыеМатчиДата" id="112">
 									<DataPath>ПрошлыеМатчи.Дата</DataPath>
@@ -488,6 +501,13 @@
 									<DataPath>ПрошлыеМатчи.Счет</DataPath>
 									<ContextMenu name="ПрошлыеМатчиСчетКонтекстноеМеню" id="116"/>
 									<ExtendedTooltip name="ПрошлыеМатчиСчетРасширеннаяПодсказка" id="117"/>
+								</LabelField>
+								<LabelField name="ПрошлыеМатчиРегистратор" id="145">
+									<DataPath>ПрошлыеМатчи.Регистратор</DataPath>
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="ПрошлыеМатчиРегистраторКонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="ПрошлыеМатчиРегистраторРасширеннаяПодсказка" id="147"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -806,12 +826,16 @@
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
+			<UseAlways>
+				<Field>ПрошлыеМатчи.Регистратор</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ТурнирнаяТаблица.Период КАК Дата,
-	ТурнирнаяТаблица.Регистратор.Счет КАК Счет
+	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
+	ТурнирнаяТаблица.Регистратор КАК Регистратор
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 ГДЕ
@@ -850,12 +874,16 @@
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
+			<UseAlways>
+				<Field>ПрошлыеВстречи.Регистратор</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ТурнирнаяТаблица.Период КАК Дата,
-	ТурнирнаяТаблица.Регистратор.Счет КАК Счет
+	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
+	ТурнирнаяТаблица.Регистратор КАК Регистратор
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч.Команды КАК МатчКоманды

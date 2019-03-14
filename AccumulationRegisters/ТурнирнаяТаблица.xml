@@ -168,7 +168,7 @@
 				</xr:StandardAttribute>
 			</StandardAttributes>
 			<DataLockControlMode>Managed</DataLockControlMode>
-			<FullTextSearch>DontUse</FullTextSearch>
+			<FullTextSearch>Use</FullTextSearch>
 			<EnableTotalsSplitting>false</EnableTotalsSplitting>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
