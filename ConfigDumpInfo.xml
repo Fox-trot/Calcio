@@ -63,8 +63,8 @@
 		<Metadata name="CommonCommand.ОткрытьВВикипедии.CommandModule" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4.2" configVersion="3cfa663102fdca4eb9b48e846b43773a00000000"/>
 		<Metadata name="CommonModule.Биоритмы" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b" configVersion="6b1cb80594796949a308f1258c11822100000000"/>
 		<Metadata name="CommonModule.Биоритмы.Module" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b.0" configVersion="da4f946f2366264691e786759d8b3ea100000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="4cba0eb12685a9428c6eb6396070e0ea00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="c2698f919e30c242b5ccc88be1dbc8c000000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="65dd5fa49f704a48bb50c84732daa00b00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="b5c5ec062a12794d86f72ddc0cfc7ac000000000"/>
 		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="64aa9b765ea8d6468a020b3b7292a7df00000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="441af500703989479eff77134d410b6a00000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="2ad9b2dd0c4bbd4ba70fc46133ee3b2100000000"/>
@@ -121,8 +121,8 @@
 			<Metadata name="Report.Хронология.Command.КомандаХронология" id="f1d2d318-378b-45c7-9066-2a368d73e996"/>
 		</Metadata>
 		<Metadata name="Report.Хронология.Command.КомандаХронология.CommandModule" id="f1d2d318-378b-45c7-9066-2a368d73e996.2" configVersion="591bd23a82bfbe40a19c6fd24dabd45400000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="8a12f3b7b6ac514f9ca71cc039bd4e5e00000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="3d29507e375cc241b9eefd1ba9b2d9eb00000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="a445c60b63750843a99c77ec99685c8000000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="01c018fd0a50bb46aea75afb9eae22a200000000"/>
 		<Metadata name="Subsystem.Биоритмы" id="b560f594-ff2e-4fbd-865f-83a65910aada" configVersion="b3bd37f58cd9664f9cbfc6bc0e7fe21700000000"/>
 		<Metadata name="Subsystem.Биоритмы.Help" id="b560f594-ff2e-4fbd-865f-83a65910aada.0" configVersion="a92a8ea630488345a0f83e2ce414e2c000000000"/>
 		<Metadata name="Subsystem.ИсходныеДанные" id="a863f426-8d03-4454-a033-0b56c0665be5" configVersion="ec46cc8d0d80f44fa34d5e5290ea3ec400000000"/>
