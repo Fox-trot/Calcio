@@ -105,6 +105,8 @@
 		<ChartField name="График" id="4">
 			<DataPath>График</DataPath>
 			<TitleLocation>None</TitleLocation>
+			<Width>1</Width>
+			<Height>1</Height>
 			<ContextMenu name="ГрафикКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="6"/>
 			<Events>
@@ -337,6 +339,9 @@
 						</d4p1:border>
 						<d4p1:borderColor>auto</d4p1:borderColor>
 					</d4p1:titleArea>
+					<d4p1:scaleLine width="1" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">None</v8ui:style>
+					</d4p1:scaleLine>
 				</d4p1:seriesScale>
 				<d4p1:legendPlacement>Auto</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>Auto</d4p1:plotAreaPlacement>
