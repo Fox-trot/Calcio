@@ -94,7 +94,15 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ТекущийСоставКонтекстноеМеню" id="17"/>
-							<AutoCommandBar name="ТекущийСоставКоманднаяПанель" id="18"/>
+							<AutoCommandBar name="ТекущийСоставКоманднаяПанель" id="18">
+								<ChildItems>
+									<Button name="Исключить" id="47">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Исключить</CommandName>
+										<ExtendedTooltip name="ИсключитьРасширеннаяПодсказка" id="48"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТекущийСоставРасширеннаяПодсказка" id="19"/>
 							<SearchStringAddition name="ТекущийСоставСтрокаПоиска" id="20">
 								<AdditionSource>
@@ -218,4 +226,26 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="Исключить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UserWithoutNecessaryProperties</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Исключить</Action>
+			<AssociatedTableElementId>16</AssociatedTableElementId>
+		</Command>
+	</Commands>
 </Form>
