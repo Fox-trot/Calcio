@@ -1,4 +1,4 @@
-﻿//	http://football.kulichki.net/england/2019/teams/arsenal.htm
+﻿//	https://football.kulichki.net/england/2019/teams/arsenal.htm
 &НаКлиенте
 Процедура ОбработкаКоманды(ПараметрКоманды, ПараметрыВыполненияКоманды)
 	УРЛ = "";
