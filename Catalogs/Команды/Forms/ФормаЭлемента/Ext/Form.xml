@@ -55,6 +55,100 @@
 						</InputField>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаМатчи" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Матчи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий состав</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Table name="Матчи" id="51">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Матчи</DataPath>
+							<RowPictureDataPath>Матчи.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="МатчиКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="МатчиКоманднаяПанель" id="53"/>
+							<ExtendedTooltip name="МатчиРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="МатчиСтрокаПоиска" id="55">
+								<AdditionSource>
+									<Item>Матчи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатчиСтрокаПоискаКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="МатчиСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МатчиСостояниеПросмотра" id="58">
+								<AdditionSource>
+									<Item>Матчи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатчиСостояниеПросмотраКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="МатчиСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МатчиУправлениеПоиском" id="61">
+								<AdditionSource>
+									<Item>Матчи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МатчиУправлениеПоискомКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="МатчиУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">МатчиВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="МатчиДата" id="64">
+									<DataPath>Матчи.Дата</DataPath>
+									<ContextMenu name="МатчиДатаКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="МатчиДатаРасширеннаяПодсказка" id="66"/>
+								</LabelField>
+								<LabelField name="МатчиСчет" id="73">
+									<DataPath>Матчи.Счет</DataPath>
+									<ContextMenu name="МатчиСчетКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="МатчиСчетРасширеннаяПодсказка" id="75"/>
+								</LabelField>
+								<LabelField name="МатчиМатч" id="67">
+									<DataPath>Матчи.Матч</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="МатчиМатчКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="МатчиМатчРасширеннаяПодсказка" id="69"/>
+								</LabelField>
+								<LabelField name="МатчиТур" id="70">
+									<DataPath>Матчи.Тур</DataPath>
+									<ContextMenu name="МатчиТурКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="МатчиТурРасширеннаяПодсказка" id="72"/>
+								</LabelField>
+								<LabelField name="МатчиКоличествоЗрителей" id="76">
+									<DataPath>Матчи.КоличествоЗрителей</DataPath>
+									<ContextMenu name="МатчиКоличествоЗрителейКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="МатчиКоличествоЗрителейРасширеннаяПодсказка" id="78"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаТекущийСостав" id="14">
 					<Title>
 						<v8:item>
@@ -207,6 +301,53 @@
 	Перемещения.Команда = &amp;Ссылка
 	И ГОД(Перемещения.Игрок.ДатаРождения) &gt; 1900</QueryText>
 				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Матчи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Матчи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Матчи.Дата</Field>
+				<Field>Матчи.Матч</Field>
+				<Field>Матчи.Тур</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Матч.Ссылка.Дата КАК Дата,
+	Матч.Счет КАК Счет,
+	Матч.Ссылка.Тур КАК Тур,
+	Матч.Ссылка КАК Матч,
+	Матч.КоличествоЗрителей КАК КоличествоЗрителей
+ИЗ
+	Документ.Матч КАК Матч
+ГДЕ
+	Матч.Ссылка.Проведен = ИСТИНА
+	И Матч.Команды.Команда = &amp;Ссылка</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
