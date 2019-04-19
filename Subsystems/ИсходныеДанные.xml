@@ -24,9 +24,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Амплуа</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Стадионы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Лига</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Чемпионаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортИгр</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Туры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыСпорта</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
