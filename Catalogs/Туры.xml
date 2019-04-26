@@ -315,6 +315,7 @@
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Чемпионаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Туры</xr:Item>
 			</BasedOn>
 			<DataLockFields/>
 			<DataLockControlMode>Managed</DataLockControlMode>

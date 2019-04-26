@@ -71,6 +71,8 @@
 					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="50"/>
 					<ChildItems>
 						<Table name="Матчи" id="51">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Матчи</DataPath>
@@ -121,27 +123,48 @@
 							<ChildItems>
 								<LabelField name="МатчиДата" id="64">
 									<DataPath>Матчи.Дата</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="МатчиДатаКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="МатчиДатаРасширеннаяПодсказка" id="66"/>
 								</LabelField>
 								<LabelField name="МатчиСчет" id="73">
 									<DataPath>Матчи.Счет</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="МатчиСчетКонтекстноеМеню" id="74"/>
 									<ExtendedTooltip name="МатчиСчетРасширеннаяПодсказка" id="75"/>
 								</LabelField>
 								<LabelField name="МатчиМатч" id="67">
 									<DataPath>Матчи.Матч</DataPath>
 									<Visible>false</Visible>
+									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="МатчиМатчКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="МатчиМатчРасширеннаяПодсказка" id="69"/>
 								</LabelField>
 								<LabelField name="МатчиТур" id="70">
 									<DataPath>Матчи.Тур</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="МатчиТурКонтекстноеМеню" id="71"/>
 									<ExtendedTooltip name="МатчиТурРасширеннаяПодсказка" id="72"/>
 								</LabelField>
+								<LabelField name="МатчиКоличествоГолов" id="79">
+									<DataPath>Матчи.КоличествоГолов</DataPath>
+									<ContextMenu name="МатчиКоличествоГоловКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="МатчиКоличествоГоловРасширеннаяПодсказка" id="81"/>
+								</LabelField>
+								<LabelField name="МатчиКоличествоОчков" id="82">
+									<DataPath>Матчи.КоличествоОчков</DataPath>
+									<ContextMenu name="МатчиКоличествоОчковКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="МатчиКоличествоОчковРасширеннаяПодсказка" id="84"/>
+								</LabelField>
 								<LabelField name="МатчиКоличествоЗрителей" id="76">
 									<DataPath>Матчи.КоличествоЗрителей</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=3,0</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="МатчиКоличествоЗрителейКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="МатчиКоличествоЗрителейРасширеннаяПодсказка" id="78"/>
 								</LabelField>
@@ -169,6 +192,7 @@
 					<ExtendedTooltip name="ГруппаТекущийСоставРасширеннаяПодсказка" id="15"/>
 					<ChildItems>
 						<Table name="ТекущийСостав" id="16">
+							<ChangeRowSet>false</ChangeRowSet>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
@@ -338,16 +362,17 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
-	Матч.Ссылка.Дата КАК Дата,
-	Матч.Счет КАК Счет,
-	Матч.Ссылка.Тур КАК Тур,
-	Матч.Ссылка КАК Матч,
-	Матч.КоличествоЗрителей КАК КоличествоЗрителей
+	ТурнирнаяТаблица.Период КАК Дата,
+	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
+	ТурнирнаяТаблица.Тур КАК Тур,
+	ТурнирнаяТаблица.Регистратор КАК Матч,
+	ТурнирнаяТаблица.КоличествоГолов КАК КоличествоГолов,
+	ТурнирнаяТаблица.КоличествоОчков КАК КоличествоОчков,
+	ТурнирнаяТаблица.Регистратор.КоличествоЗрителей КАК КоличествоЗрителей
 ИЗ
-	Документ.Матч КАК Матч
+	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 ГДЕ
-	Матч.Ссылка.Проведен = ИСТИНА
-	И Матч.Команды.Команда = &amp;Ссылка</QueryText>
+	ТурнирнаяТаблица.Команда = &amp;Ссылка</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
