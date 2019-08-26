@@ -93,7 +93,7 @@
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="bc7b3eae098b3a47ae068a6553f3394c00000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="17bda27daee6874abed50f8244234dd900000000"/>
 		<Metadata name="Document.Матч.ObjectModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.0" configVersion="de9b971ac99c484ab7280c7d3ab09d0b00000000"/>
-		<Metadata name="InformationRegister.ПеремещенияИгроков" id="b289b23f-402e-4ded-b372-bb419befed76" configVersion="356e75a0ecf6284793fe12b8cda2569e00000000">
+		<Metadata name="InformationRegister.ПеремещенияИгроков" id="b289b23f-402e-4ded-b372-bb419befed76" configVersion="b4509ea63f70224ca23b171923dcbbc700000000">
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Resource.Команда" id="12445eb9-e067-4ee2-870a-a41ea74949c3"/>
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Resource.Номер" id="1aad3e64-6fe1-40ee-9154-ebe382f6a884"/>
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Dimension.Игрок" id="2de4bc2c-8ffa-44bf-962c-478cea40dfcf"/>
