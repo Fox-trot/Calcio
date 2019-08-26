@@ -4,12 +4,6 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<InputField name="Код" id="1">
-			<DataPath>Объект.Code</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-		</InputField>
 		<InputField name="Наименование" id="4">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -110,7 +104,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
-				<Field>Объект.Code</Field>
+				<Field>1/-2</Field>
 				<Field>Объект.DeletionMark</Field>
 				<Field>Объект.Description</Field>
 				<Field>Объект.Owner</Field>
