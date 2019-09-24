@@ -141,6 +141,7 @@
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
 			<Subsystem>Биоритмы</Subsystem>
+			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
