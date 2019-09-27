@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -76,6 +79,7 @@
 				</LabelField>
 				<LabelField name="Код" id="19">
 					<DataPath>Список.Код</DataPath>
+					<Visible>false</Visible>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
@@ -94,6 +98,11 @@
 					<DataPath>Список.Амплуа</DataPath>
 					<ContextMenu name="АмплуаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Страна" id="28">
+					<DataPath>Список.Страна</DataPath>
+					<ContextMenu name="СтранаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -116,6 +125,7 @@
 	СправочникИгроки.Предопределенный КАК Предопределенный,
 	СправочникИгроки.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
 	Перемещения.Команда КАК ТекущаяКоманда,
+	СправочникИгроки.Страна КАК Страна,
 	ЕСТЬNULL(Перемещения.Амплуа, СправочникИгроки.Амплуа) КАК Амплуа
 ИЗ
 	Справочник.Игроки КАК СправочникИгроки
@@ -141,4 +151,16 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>FilterCriterion.МатчиСУчастием.StandardCommand.OpenByValue</Command>
+				<Type>Added</Type>
+				<Attribute>Items.Список.CurrentData.Ссылка</Attribute>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>

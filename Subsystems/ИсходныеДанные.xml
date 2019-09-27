@@ -26,6 +26,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Лига</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортИгр</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыСпорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Страны</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
