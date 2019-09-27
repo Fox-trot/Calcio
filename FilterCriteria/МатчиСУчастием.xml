@@ -27,12 +27,14 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Матч.TabularSection.СоставыКоманд.Attribute.Игрок</xr:Item>
 			</Content>
-			<DefaultForm/>
+			<DefaultForm>FilterCriterion.МатчиСУчастием.Form.ФормаСписка</DefaultForm>
 			<AuxiliaryForm/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
 	</FilterCriterion>
 </MetaDataObject>
