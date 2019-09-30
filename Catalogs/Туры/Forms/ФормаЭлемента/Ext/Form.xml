@@ -5,24 +5,32 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Код" id="1">
-			<DataPath>Объект.Code</DataPath>
-			<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-			<Events>
-				<Event name="OnChange">КодПриИзменении</Event>
-			</Events>
-		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
+		<UsualGroup name="Группа1" id="16">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">КодПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="Владелец" id="7">
 			<DataPath>Объект.Owner</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -32,18 +40,25 @@
 				<Event name="OnChange">ВладелецПриИзменении</Event>
 			</Events>
 		</InputField>
-		<InputField name="ДатаНачала" id="10">
-			<DataPath>Объект.ДатаНачала</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="12"/>
-		</InputField>
-		<InputField name="ДатаОкончания" id="13">
-			<DataPath>Объект.ДатаОкончания</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="15"/>
-		</InputField>
+		<UsualGroup name="Группа2" id="18">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<InputField name="ДатаНачала" id="10">
+					<DataPath>Объект.ДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДатаОкончания" id="13">
+					<DataPath>Объект.ДатаОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
