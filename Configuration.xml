@@ -133,21 +133,24 @@
 			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_3_12</CompatibilityMode>
+			<CompatibilityMode>Version8_3_13</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Subsystem>Биоритмы</Subsystem>
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
-			<Subsystem>Биоритмы</Subsystem>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
+			<CommonModule>Общий</CommonModule>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
+			<Constant>МояКоманда</Constant>
+			<CommonForm>Настройки</CommonForm>
 			<Catalog>Амплуа</Catalog>
 			<Catalog>ВидыСпорта</Catalog>
 			<Catalog>Игроки</Catalog>

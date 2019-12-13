@@ -93,6 +93,7 @@
 							<v8:content>Команды</v8:content>
 						</v8:item>
 					</Title>
+					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="19"/>
 					<ChildItems>
 						<Table name="Команды" id="20">
@@ -169,6 +170,11 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+						<InputField name="Комментарий" id="155">
+							<DataPath>Объект.Комментарий</DataPath>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="Анонс" id="148">
@@ -381,11 +387,12 @@
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<VerticalScrollBar>UseAlways</VerticalScrollBar>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ПрошлыеВстречи</DataPath>
 							<RowPictureDataPath>ПрошлыеВстречи.DefaultPicture</RowPictureDataPath>
-							<AutoRefresh>true</AutoRefresh>
+							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -395,7 +402,7 @@
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<RestoreCurrentRow>false</RestoreCurrentRow>
 							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
+							<ShowRoot>false</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ПрошлыеВстречиКонтекстноеМеню" id="124"/>
@@ -440,9 +447,15 @@
 									<ExtendedTooltip name="ПрошлыеВстречиСчетРасширеннаяПодсказка" id="141"/>
 								</LabelField>
 								<LabelField name="ПрошлыеВстречиРегистратор" id="142">
-									<DataPath>ПрошлыеВстречи.Регистратор</DataPath>
+									<DataPath>ПрошлыеВстречи.Матч</DataPath>
 									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Матч</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="ПрошлыеВстречиРегистраторКонтекстноеМеню" id="143"/>
 									<ExtendedTooltip name="ПрошлыеВстречиРегистраторРасширеннаяПодсказка" id="144"/>
 								</LabelField>
@@ -470,6 +483,7 @@
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<VerticalScrollBar>UseAlways</VerticalScrollBar>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
@@ -478,7 +492,7 @@
 							<CommandSet>
 								<ExcludedCommand>Change</ExcludedCommand>
 							</CommandSet>
-							<AutoRefresh>true</AutoRefresh>
+							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -488,7 +502,7 @@
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<RestoreCurrentRow>false</RestoreCurrentRow>
 							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
+							<ShowRoot>false</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ПрошлыеМатчиКонтекстноеМеню" id="100"/>
@@ -546,7 +560,7 @@
 									<ExtendedTooltip name="ПрошлыеМатчиСчетРасширеннаяПодсказка" id="117"/>
 								</LabelField>
 								<LabelField name="ПрошлыеМатчиРегистратор" id="145">
-									<DataPath>ПрошлыеМатчи.Регистратор</DataPath>
+									<DataPath>ПрошлыеМатчи.Матч</DataPath>
 									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<Title>
@@ -876,7 +890,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>ПрошлыеМатчи.Регистратор</Field>
+				<Field>~ПрошлыеМатчи.Регистратор</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -884,7 +898,7 @@
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ТурнирнаяТаблица.Период КАК Дата,
 	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
-	ТурнирнаяТаблица.Регистратор КАК Регистратор
+	ТурнирнаяТаблица.Регистратор КАК Матч
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 ГДЕ
@@ -924,7 +938,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>ПрошлыеВстречи.Регистратор</Field>
+				<Field>~ПрошлыеВстречи.Регистратор</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -932,7 +946,7 @@
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ТурнирнаяТаблица.Период КАК Дата,
 	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
-	ТурнирнаяТаблица.Регистратор КАК Регистратор
+	ТурнирнаяТаблица.Регистратор КАК Матч
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч.Команды КАК МатчКоманды

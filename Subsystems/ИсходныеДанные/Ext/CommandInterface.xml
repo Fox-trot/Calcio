@@ -11,16 +11,6 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.Туры.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
-		<Command name="Catalog.Чемпионаты.StandardCommand.OpenList">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
 		<Command name="Catalog.Игроки.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>

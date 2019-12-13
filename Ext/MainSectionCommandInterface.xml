@@ -16,6 +16,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="CommonForm.Настройки.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 	</CommandsVisibility>
 	<CommandsPlacement>
 		<Command name="Document.Матч.StandardCommand.OpenList">
@@ -28,6 +33,10 @@
 		</Command>
 		<Command name="Report.Биоритмы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="CommonForm.Настройки.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
 	</CommandsPlacement>
