@@ -63,8 +63,8 @@
 		<Metadata name="CommonCommand.Биоритмы.CommandModule" id="d8740f02-c55b-4cdb-b478-3b29a442558c.2" configVersion="2da322bd4c08a94c931c98a7a0b6cf1600000000"/>
 		<Metadata name="CommonCommand.ИмпортИгр" id="6866e7ff-9202-44a1-a9cd-11709ff44811" configVersion="927097145519634ab6870bae0b5c1d9100000000"/>
 		<Metadata name="CommonCommand.ИмпортИгр.CommandModule" id="6866e7ff-9202-44a1-a9cd-11709ff44811.2" configVersion="b2f2637581bc6d4b9a784641553d13c100000000"/>
-		<Metadata name="CommonCommand.ИмпортИгроков" id="a6019af9-e05e-45be-8f0b-e576c54f48eb" configVersion="814fa0d4a423d04b921d15ecf108954100000000"/>
-		<Metadata name="CommonCommand.ИмпортИгроков.CommandModule" id="a6019af9-e05e-45be-8f0b-e576c54f48eb.2" configVersion="2cd7c9abf24fa0499dd211c758dfe6d400000000"/>
+		<Metadata name="CommonCommand.ИмпортИгроков" id="a6019af9-e05e-45be-8f0b-e576c54f48eb" configVersion="a66447f3bb41df4391df9a5c9560280b00000000"/>
+		<Metadata name="CommonCommand.ИмпортИгроков.CommandModule" id="a6019af9-e05e-45be-8f0b-e576c54f48eb.2" configVersion="9adb51d6b25edb4e820762c78f7f183e00000000"/>
 		<Metadata name="CommonCommand.ОткрытьВВикипедии" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4" configVersion="d7a5df7dc0373e4e9aa95e180a15499c00000000"/>
 		<Metadata name="CommonCommand.ОткрытьВВикипедии.CommandModule" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4.2" configVersion="3536803000cfc5409ee26922cb7eb62900000000"/>
 		<Metadata name="CommonForm.Настройки" id="5140af2b-875b-41a1-a87e-6c03081d9b0d" configVersion="44cf74807e3e1144bf6587e835aa9eba00000000"/>
@@ -120,8 +120,8 @@
 			<Metadata name="Report.Биоритмы.Attribute.КомандаИлиИгрок" id="aee55f4d-0a62-4360-8200-e4504bc304a5"/>
 			<Metadata name="Report.Биоритмы.Attribute.НачальнаяДата" id="fa9e27c0-a0f0-44f9-8a36-90fc73c6d4e4"/>
 		</Metadata>
-		<Metadata name="Report.Биоритмы.Form.ФормаОтчета" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f" configVersion="4adc2f3ead5e7a4cbca2811c9f433c4a00000000"/>
-		<Metadata name="Report.Биоритмы.Form.ФормаОтчета.Form" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f.0" configVersion="bf3032dbde3ece41b4b6567dcae9994400000000"/>
+		<Metadata name="Report.Биоритмы.Form.ФормаОтчета" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f" configVersion="0a48beebe3f78c48840ae0838a4f599300000000"/>
+		<Metadata name="Report.Биоритмы.Form.ФормаОтчета.Form" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f.0" configVersion="196780e36cb16844881224f1a0958d5e00000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="4a907595e645c44980bdecc7f1fb7e9100000000">
 			<Metadata name="Report.ТурнирнаяТаблица.Attribute.Чемпионат" id="0fd771cb-5988-4706-9fed-db16b7fa6ec5"/>
 		</Metadata>
@@ -137,8 +137,8 @@
 			<Metadata name="Report.Хронология.Command.КомандаХронология" id="f1d2d318-378b-45c7-9066-2a368d73e996"/>
 		</Metadata>
 		<Metadata name="Report.Хронология.Command.КомандаХронология.CommandModule" id="f1d2d318-378b-45c7-9066-2a368d73e996.2" configVersion="aaa00299c6537b4d852cf32ceb96598e00000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="f2472a3383dc5e4593c35d918ee0255200000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="93133523dcf2ff428f7a204a81ef785c00000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="c11f5879fb12874f92b840c21f14c6cb00000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="8b5933b30c5a514d8e8584aab4d6202700000000"/>
 		<Metadata name="Subsystem.Биоритмы" id="b560f594-ff2e-4fbd-865f-83a65910aada" configVersion="4db7c22433d8d64480eafcefe2ae69db00000000"/>
 		<Metadata name="Subsystem.Биоритмы.Help" id="b560f594-ff2e-4fbd-865f-83a65910aada.0" configVersion="edcc2b4b3b7b6748ae96aca8592dadd900000000"/>
 		<Metadata name="Subsystem.ИсходныеДанные" id="a863f426-8d03-4454-a033-0b56c0665be5" configVersion="0fedcab28ee98348b073b7a91969c65700000000"/>

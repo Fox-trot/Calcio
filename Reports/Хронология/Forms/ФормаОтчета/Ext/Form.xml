@@ -141,7 +141,7 @@
 			</Type>
 			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
 				<d4p1:seriesCurId>1</d4p1:seriesCurId>
-				<d4p1:pointsCurId>0</d4p1:pointsCurId>
+				<d4p1:pointsCurId>2</d4p1:pointsCurId>
 				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
 				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
 				<d4p1:realExSeriesData>
@@ -159,12 +159,12 @@
 					</d4p1:text>
 					<d4p1:strIsChanged>false</d4p1:strIsChanged>
 					<d4p1:isExpand>false</d4p1:isExpand>
-					<d4p1:isIndicator>false</d4p1:isIndicator>
-					<d4p1:colorPriority>false</d4p1:colorPriority>
+					<d4p1:isIndicator>true</d4p1:isIndicator>
+					<d4p1:colorPriority>true</d4p1:colorPriority>
 					<d4p1:showGraphicalDataRepresentationInChartLegend>Auto</d4p1:showGraphicalDataRepresentationInChartLegend>
-					<d4p1:showGraphicalDataRepresentationInChart>DontShow</d4p1:showGraphicalDataRepresentationInChart>
+					<d4p1:showGraphicalDataRepresentationInChart>Auto</d4p1:showGraphicalDataRepresentationInChart>
 				</d4p1:realExSeriesData>
-				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:isPointsDesign>false</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
@@ -295,7 +295,7 @@
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
 				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
 				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
-				<d4p1:splineStrain>90</d4p1:splineStrain>
+				<d4p1:splineStrain>100</d4p1:splineStrain>
 				<d4p1:translucencePercent>0</d4p1:translucencePercent>
 				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
 				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
