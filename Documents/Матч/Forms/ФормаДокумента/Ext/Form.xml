@@ -201,16 +201,76 @@
 							<CommandName>Form.Command.АнонсОбновить</CommandName>
 							<ExtendedTooltip name="АнонсОбновитьРасширеннаяПодсказка" id="154"/>
 						</Button>
-						<SpreadSheetDocumentField name="ТабДок" id="150">
-							<DataPath>ТабДок</DataPath>
+						<Table name="Сезон" id="158">
 							<ReadOnly>true</ReadOnly>
-							<TitleLocation>None</TitleLocation>
-							<Width>1</Width>
-							<Height>1</Height>
-							<Protection>true</Protection>
-							<ContextMenu name="ТабДокКонтекстноеМеню" id="151"/>
-							<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="152"/>
-						</SpreadSheetDocumentField>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Header>false</Header>
+							<SearchOnInput>DontUse</SearchOnInput>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Сезон</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СезонКонтекстноеМеню" id="159"/>
+							<AutoCommandBar name="СезонКоманднаяПанель" id="160">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СезонАнонсОбновить" id="180">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.АнонсОбновить</CommandName>
+										<ExtendedTooltip name="СезонАнонсОбновитьРасширеннаяПодсказка" id="181"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="161"/>
+							<SearchStringAddition name="СезонСтрокаПоиска" id="162">
+								<AdditionSource>
+									<Item>Сезон</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонСтрокаПоискаКонтекстноеМеню" id="163"/>
+								<ExtendedTooltip name="СезонСтрокаПоискаРасширеннаяПодсказка" id="164"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СезонСостояниеПросмотра" id="165">
+								<AdditionSource>
+									<Item>Сезон</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонСостояниеПросмотраКонтекстноеМеню" id="166"/>
+								<ExtendedTooltip name="СезонСостояниеПросмотраРасширеннаяПодсказка" id="167"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СезонУправлениеПоиском" id="168">
+								<AdditionSource>
+									<Item>Сезон</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СезонУправлениеПоискомКонтекстноеМеню" id="169"/>
+								<ExtendedTooltip name="СезонУправлениеПоискомРасширеннаяПодсказка" id="170"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СезонКоманда" id="177">
+									<DataPath>Сезон.Команда</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СезонКомандаКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="СезонКомандаРасширеннаяПодсказка" id="179"/>
+								</InputField>
+								<InputField name="СезонКлюч" id="171">
+									<DataPath>Сезон.Ключ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СезонКлючКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="СезонКлючРасширеннаяПодсказка" id="173"/>
+								</InputField>
+								<InputField name="СезонЗначение" id="174">
+									<DataPath>Сезон.Значение</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СезонЗначениеКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="СезонЗначениеРасширеннаяПодсказка" id="176"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСоставыКоманд" id="42">
@@ -979,16 +1039,59 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
-		<Attribute name="ТабДок" id="7">
+		<Attribute name="Сезон" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Таб док</v8:content>
+					<v8:content>Сезон</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Команда" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
