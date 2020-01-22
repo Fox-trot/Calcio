@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoTime>CurrentOrLast</AutoTime>
@@ -691,11 +691,8 @@
 				<Field>Объект.RegisterRecords</Field>
 				<Field>Объект.КоличествоЗрителей</Field>
 				<Field>Объект.Команды.LineNumber</Field>
-				<Field>Объект.Команды.КоличествоГолов</Field>
 				<Field>Объект.СоставыКоманд</Field>
 				<Field>Объект.СоставыКоманд.LineNumber</Field>
-				<Field>Объект.СоставыКоманд.Игрок</Field>
-				<Field>Объект.СоставыКоманд.Команда</Field>
 				<Field>Объект.Стадион</Field>
 				<Field>Объект.Счет</Field>
 			</UseAlways>
@@ -951,6 +948,7 @@
 			</Type>
 			<UseAlways>
 				<Field>~ПрошлыеМатчи.Регистратор</Field>
+				<Field>ПрошлыеМатчи.Матч</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -999,6 +997,7 @@
 			</Type>
 			<UseAlways>
 				<Field>~ПрошлыеВстречи.Регистратор</Field>
+				<Field>ПрошлыеВстречи.Матч</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -1115,7 +1114,7 @@
 			<Action>ГрафикОбновить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
-			<AssociatedTableElementId>44</AssociatedTableElementId>
+			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
 		<Command name="ГрафикОбновить" id="2">
 			<Title>
@@ -1135,7 +1134,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ГрафикОбновить</Action>
-			<AssociatedTableElementId>44</AssociatedTableElementId>
+			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
 		<Command name="АнонсОбновить" id="3">
 			<Title>
