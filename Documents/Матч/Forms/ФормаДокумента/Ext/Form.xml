@@ -196,20 +196,25 @@
 					</Picture>
 					<ExtendedTooltip name="АнонсРасширеннаяПодсказка" id="149"/>
 					<ChildItems>
-						<Button name="АнонсОбновить" id="153">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.АнонсОбновить</CommandName>
-							<ExtendedTooltip name="АнонсОбновитьРасширеннаяПодсказка" id="154"/>
-						</Button>
 						<Table name="Сезон" id="158">
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<Header>false</Header>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<SearchOnInput>DontUse</SearchOnInput>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
 							<DataPath>Сезон</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статистика последних 10-и матчей каждой команды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СезонКонтекстноеМеню" id="159"/>
 							<AutoCommandBar name="СезонКоманднаяПанель" id="160">
@@ -498,6 +503,12 @@
 							<ChildItems>
 								<LabelField name="ПрошлыеВстречиДата" id="136">
 									<DataPath>ПрошлыеВстречи.Дата</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=D</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ПрошлыеВстречиДатаКонтекстноеМеню" id="137"/>
 									<ExtendedTooltip name="ПрошлыеВстречиДатаРасширеннаяПодсказка" id="138"/>
 								</LabelField>
@@ -608,7 +619,7 @@
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>ДФ='dd.MM.yyyy hh:mm'</v8:content>
+											<v8:content>ДЛФ=D</v8:content>
 										</v8:item>
 									</Format>
 									<ContextMenu name="ПрошлыеМатчиДатаКонтекстноеМеню" id="113"/>
