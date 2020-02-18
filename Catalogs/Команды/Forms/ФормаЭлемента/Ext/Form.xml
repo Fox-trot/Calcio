@@ -249,6 +249,9 @@
 								<ContextMenu name="ТекущийСоставУправлениеПоискомКонтекстноеМеню" id="27"/>
 								<ExtendedTooltip name="ТекущийСоставУправлениеПоискомРасширеннаяПодсказка" id="28"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТекущийСоставВыбор</Event>
+							</Events>
 							<ChildItems>
 								<CheckBoxField name="СписокИгрокПометкаУдаления" id="41">
 									<DataPath>ТекущийСостав.ИгрокПометкаУдаления</DataPath>
