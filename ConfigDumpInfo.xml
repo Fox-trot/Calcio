@@ -31,8 +31,8 @@
 		</Metadata>
 		<Metadata name="Catalog.Команды.Form.ФормаВыбора" id="06f0dadf-e310-4c91-b915-9eb3934afdca" configVersion="747149e1a17fa34c9896273ecc3508fe00000000"/>
 		<Metadata name="Catalog.Команды.Form.ФормаВыбора.Form" id="06f0dadf-e310-4c91-b915-9eb3934afdca.0" configVersion="2c7fe4d4229aa5449550038bef7a1f5a00000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="ed9acbee8ffa944f9096dfcb2a1a874900000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="49a05de59e5cc74cb57b843342342d9300000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="23309b7dd9bbe144b1ec4c136375b7c900000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="38810735edff7e49b3947b6925274ea300000000"/>
 		<Metadata name="Catalog.Лига" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2" configVersion="aa0d0c9437aed64ba3209be83316e4bc00000000">
 			<Metadata name="Catalog.Лига.Attribute.КоличествоКоманд" id="09430497-8688-4b1a-bc5c-9a28e5373f03"/>
 			<Metadata name="Catalog.Лига.Attribute.Страна" id="afd4be2b-3790-4db4-8a9f-cd8a5055cfbe"/>
@@ -99,8 +99,8 @@
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Игрок" id="c9ad558c-702e-482e-b9d9-1b280a464e6d"/>
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Команда" id="e3732354-c0ee-4318-b528-2b3d82d142ac"/>
 		</Metadata>
-		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="c14392e74ae1944d99fd03738f5e10ba00000000"/>
-		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="d8a0cc5b9007dd489c1d74f40c09e37000000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="91b630670035d34cbff096f043b2665200000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="f5b631e5507f314eade8bdf1b162301500000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка" id="ec0c34f6-3dd4-4666-8e39-b281b216548a" configVersion="09284ddeeae05044a9f5baadbb1d686b00000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="aae7fef127cfb042a672e5cacbe69fed00000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="2f2eb7247aeacb45b1291f522f27325400000000"/>
