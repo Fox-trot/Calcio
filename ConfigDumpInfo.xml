@@ -63,8 +63,8 @@
 		<Metadata name="Catalog.Чемпионаты.ObjectModule" id="b29771ac-03be-488f-8be8-b6592403cf0d.0" configVersion="47f99a4a53acd94eafed270a2f62f1b000000000"/>
 		<Metadata name="CommonCommand.Биоритмы" id="d8740f02-c55b-4cdb-b478-3b29a442558c" configVersion="4d3de9549056054da2e53436d5fd061a00000000"/>
 		<Metadata name="CommonCommand.Биоритмы.CommandModule" id="d8740f02-c55b-4cdb-b478-3b29a442558c.2" configVersion="2da322bd4c08a94c931c98a7a0b6cf1600000000"/>
-		<Metadata name="CommonCommand.ИмпортИгр" id="6866e7ff-9202-44a1-a9cd-11709ff44811" configVersion="5685af122b1f0544b8086da66ea27b1100000000"/>
-		<Metadata name="CommonCommand.ИмпортИгр.CommandModule" id="6866e7ff-9202-44a1-a9cd-11709ff44811.2" configVersion="5dcfcc3a2b3366488089343ebba621b300000000"/>
+		<Metadata name="CommonCommand.ИмпортИгр" id="6866e7ff-9202-44a1-a9cd-11709ff44811" configVersion="0630892fbc71174fb1986ba0c571941900000000"/>
+		<Metadata name="CommonCommand.ИмпортИгр.CommandModule" id="6866e7ff-9202-44a1-a9cd-11709ff44811.2" configVersion="2b97170f5d75474cbc55aa0aabbbb72800000000"/>
 		<Metadata name="CommonCommand.ИмпортИгроков" id="a6019af9-e05e-45be-8f0b-e576c54f48eb" configVersion="a66447f3bb41df4391df9a5c9560280b00000000"/>
 		<Metadata name="CommonCommand.ИмпортИгроков.CommandModule" id="a6019af9-e05e-45be-8f0b-e576c54f48eb.2" configVersion="9adb51d6b25edb4e820762c78f7f183e00000000"/>
 		<Metadata name="CommonCommand.ОткрытьВВикипедии" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4" configVersion="d7a5df7dc0373e4e9aa95e180a15499c00000000"/>
@@ -75,8 +75,8 @@
 		<Metadata name="CommonModule.Биоритмы.Module" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b.0" configVersion="8621dbbf13068449b90aeb2130a3264f00000000"/>
 		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="ac032d5e76ddd64b9cd3afac1efdfff500000000"/>
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="7d55a4aafba6d042a4d88939141956ef00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="8cb32b563001624ea3339ec9df72a4e700000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="41e4a8d5aa47c3458981c6d9852a38d200000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="a8bcb97b5ac23b4e82a441cdc7741c2e00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="47c6272f66a7794f92f26bd2676f941a00000000"/>
 		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="368a8f9e8a55074296efe3e873f090d400000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="d6122e82677ccd4397a570c1e3d6592200000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="62101c4a95779e489f7dd7065cda633300000000"/>
