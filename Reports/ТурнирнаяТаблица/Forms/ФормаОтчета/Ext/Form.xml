@@ -33,11 +33,30 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Чемпионат" id="7">
-			<DataPath>Отчет.Чемпионат</DataPath>
-			<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="9"/>
-		</InputField>
+		<UsualGroup name="ГруппаРеквизиты" id="12">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<InputField name="Чемпионат" id="7">
+					<DataPath>Отчет.Чемпионат</DataPath>
+					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<CheckBoxField name="ПоказыватьРазницуМячей" id="14">
+					<DataPath>Отчет.ПоказыватьРазницуМячей</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="16"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<SpreadSheetDocumentField name="Результат" id="4">
 			<DataPath>Результат</DataPath>
 			<TitleLocation>None</TitleLocation>
@@ -52,6 +71,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>Отчет.ПоказыватьРазницуМячей</Field>
 				<Field>Отчет.Чемпионат</Field>
 			</Save>
 		</Attribute>
