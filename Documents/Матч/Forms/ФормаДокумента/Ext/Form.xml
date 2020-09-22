@@ -98,6 +98,7 @@
 					<ChildItems>
 						<Table name="Команды" id="20">
 							<Representation>List</Representation>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -145,12 +146,14 @@
 								<LabelField name="КомандыНомерСтроки" id="33">
 									<DataPath>Объект.Команды.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="34"/>
 									<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="35"/>
 								</LabelField>
 								<InputField name="КомандыКоманда" id="36">
 									<DataPath>Объект.Команды.Команда</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="37"/>
 									<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="38"/>
 								</InputField>
@@ -158,7 +161,6 @@
 									<DataPath>Объект.Команды.КоличествоГолов</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>false</HorizontalStretch>
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -172,6 +174,8 @@
 						</Table>
 						<InputField name="Комментарий" id="155">
 							<DataPath>Объект.Комментарий</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChooseType>false</ChooseType>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
 						</InputField>
