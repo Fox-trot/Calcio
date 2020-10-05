@@ -45,7 +45,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>1.0</Version>
+			<Version>1.1</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -197,6 +197,7 @@
 			<Catalog>Туры</Catalog>
 			<Catalog>Чемпионаты</Catalog>
 			<Catalog>Страны</Catalog>
+			<Catalog>Города</Catalog>
 			<Document>Матч</Document>
 			<Report>Биоритмы</Report>
 			<Report>ТурнирнаяТаблица</Report>

@@ -51,6 +51,11 @@
 							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
 						</InputField>
+						<InputField name="Город" id="108">
+							<DataPath>Объект.Город</DataPath>
+							<ContextMenu name="ГородКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="110"/>
+						</InputField>
 						<InputField name="Примечание" id="44">
 							<DataPath>Объект.Примечание</DataPath>
 							<ContextMenu name="ПримечаниеКонтекстноеМеню" id="45"/>

@@ -51,6 +51,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ПраваяКолонка" id="11">
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -69,6 +70,17 @@
 							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 							<ContextMenu name="СчетКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="85"/>
+						</LabelField>
+						<LabelField name="ЭтоДерби" id="182">
+							<DataPath>ЭтоДерби</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:NegativeTextColor</TextColor>
+							<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
@@ -1106,6 +1118,15 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ЭтоДерби" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

@@ -46,6 +46,8 @@
 		</InputField>
 		<InputField name="Комментарий" id="16">
 			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
 		</InputField>

@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
-	<Catalog uuid="07425bdf-e35c-4b55-b985-d5c4b46c0f95">
+	<Catalog uuid="f8e298f9-db08-468b-a78c-0b1bf074d444">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.Команды" category="Object">
-				<xr:TypeId>0cde8488-82ee-4762-9243-1809b70e5ad0</xr:TypeId>
-				<xr:ValueId>cf875022-1807-451b-82de-acdbbbf2e7c7</xr:ValueId>
+			<xr:GeneratedType name="CatalogObject.Города" category="Object">
+				<xr:TypeId>311f9db1-359d-4322-812b-9ea25dde3553</xr:TypeId>
+				<xr:ValueId>eca7a64c-d66d-4f0c-9bb2-b278fddb32a7</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.Команды" category="Ref">
-				<xr:TypeId>98dc004f-ba9e-41ae-8105-6957006866aa</xr:TypeId>
-				<xr:ValueId>d30b902c-57d2-461c-8876-c7ce374abc54</xr:ValueId>
+			<xr:GeneratedType name="CatalogRef.Города" category="Ref">
+				<xr:TypeId>b780fbf0-7425-42b4-b098-3b25fb681413</xr:TypeId>
+				<xr:ValueId>91c44e8e-0f63-4a60-a5ec-8833e189174e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.Команды" category="Selection">
-				<xr:TypeId>2d81ab90-296b-4dd2-987d-ebcb4f349949</xr:TypeId>
-				<xr:ValueId>abedb6bd-d68c-4e7b-8d96-4042fce8aa5f</xr:ValueId>
+			<xr:GeneratedType name="CatalogSelection.Города" category="Selection">
+				<xr:TypeId>d4c260a0-691a-4e91-be36-d78f9c060347</xr:TypeId>
+				<xr:ValueId>b1aade26-747f-47cb-8745-900b61db2758</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.Команды" category="List">
-				<xr:TypeId>14e55b7b-8688-42e9-a2b7-a67e39d55d4d</xr:TypeId>
-				<xr:ValueId>738bf388-9113-4a20-82c8-3e6f0cf47132</xr:ValueId>
+			<xr:GeneratedType name="CatalogList.Города" category="List">
+				<xr:TypeId>96259794-6902-4a84-8aa5-df0aa0f3e3e5</xr:TypeId>
+				<xr:ValueId>30820710-9a52-4537-b972-bcafdebf1bbd</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.Команды" category="Manager">
-				<xr:TypeId>9607d524-a817-4ce6-9a3f-b2c2a32ebe0e</xr:TypeId>
-				<xr:ValueId>5067a3e2-4d90-4357-90f7-19f473795684</xr:ValueId>
+			<xr:GeneratedType name="CatalogManager.Города" category="Manager">
+				<xr:TypeId>6ee57d89-e3bb-485f-9caf-e45de6d9c598</xr:TypeId>
+				<xr:ValueId>1f017655-b79d-476a-b42d-7d4fa3ea5aed</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>Команды</Name>
+			<Name>Города</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команды</v8:content>
+					<v8:content>Города</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -37,18 +37,18 @@
 			<LimitLevelCount>false</LimitLevelCount>
 			<LevelCount>2</LevelCount>
 			<FoldersOnTop>true</FoldersOnTop>
-			<UseStandardCommands>true</UseStandardCommands>
+			<UseStandardCommands>false</UseStandardCommands>
 			<Owners>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыСпорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Страны</xr:Item>
 			</Owners>
 			<SubordinationUse>ToItems</SubordinationUse>
-			<CodeLength>9</CodeLength>
+			<CodeLength>0</CodeLength>
 			<DescriptionLength>25</DescriptionLength>
-			<CodeType>String</CodeType>
+			<CodeType>Number</CodeType>
 			<CodeAllowedLength>Variable</CodeAllowedLength>
 			<CodeSeries>WholeCatalog</CodeSeries>
-			<CheckUnique>true</CheckUnique>
-			<Autonumbering>true</Autonumbering>
+			<CheckUnique>false</CheckUnique>
+			<Autonumbering>false</Autonumbering>
 			<DefaultPresentation>AsDescription</DefaultPresentation>
 			<StandardAttributes>
 				<xr:StandardAttribute name="PredefinedDataName">
@@ -202,13 +202,13 @@
 					<xr:Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Вид спорта</v8:content>
+							<v8:content>Страна</v8:content>
 						</v8:item>
 					</xr:Synonym>
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
-					<xr:FillValue xsi:type="xr:DesignTimeRef">Catalog.ВидыСпорта.EmptyRef</xr:FillValue>
+					<xr:FillValue xsi:type="xr:DesignTimeRef">Catalog.Страны.EmptyRef</xr:FillValue>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
 				</xr:StandardAttribute>
@@ -256,12 +256,7 @@
 					<xr:DataHistory>Use</xr:DataHistory>
 					<xr:MarkNegatives>false</xr:MarkNegatives>
 					<xr:MinValue xsi:nil="true"/>
-					<xr:Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Название</v8:content>
-						</v8:item>
-					</xr:Synonym>
+					<xr:Synonym/>
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
@@ -302,13 +297,12 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.Команды.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.Команды.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.Города.StandardAttribute.Description</xr:Field>
 			</InputByString>
-			<SearchStringModeOnInputByString>AnyPart</SearchStringModeOnInputByString>
-			<FullTextSearchOnInputByString>Use</FullTextSearchOnInputByString>
-			<ChoiceDataGetModeOnInputByString>Background</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.Команды.Form.ФормаЭлемента</DefaultObjectForm>
+			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
+			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
+			<DefaultObjectForm/>
 			<DefaultFolderForm/>
 			<DefaultListForm/>
 			<DefaultChoiceForm/>
@@ -319,113 +313,28 @@
 			<AuxiliaryChoiceForm/>
 			<AuxiliaryFolderChoiceForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
-			<BasedOn/>
+			<BasedOn>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Страны</xr:Item>
+			</BasedOn>
 			<DataLockFields/>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>Use</FullTextSearch>
 			<ObjectPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команда</v8:content>
+					<v8:content>Город</v8:content>
 				</v8:item>
 			</ObjectPresentation>
 			<ExtendedObjectPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
-			<CreateOnInput>DontUse</CreateOnInput>
+			<CreateOnInput>Use</CreateOnInput>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
 			<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
 			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
 		</Properties>
-		<ChildObjects>
-			<Attribute uuid="15d0386b-bc30-47ff-a3ed-48c680085422">
-				<Properties>
-					<Name>Примечание</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Примечание</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>true</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillFromFillingValue>false</FillFromFillingValue>
-					<FillValue xsi:type="xs:string"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<Use>ForItem</Use>
-					<Indexing>DontIndex</Indexing>
-					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="05489f64-756d-490c-b59f-b4eac2e86193">
-				<Properties>
-					<Name>Город</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Город</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Города</v8:Type>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>false</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillFromFillingValue>false</FillFromFillingValue>
-					<FillValue xsi:nil="true"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<Use>ForItem</Use>
-					<Indexing>DontIndex</Indexing>
-					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
-				</Properties>
-			</Attribute>
-			<Form>ФормаЭлемента</Form>
-			<Form>ФормаВыбора</Form>
-		</ChildObjects>
+		<ChildObjects/>
 	</Catalog>
 </MetaDataObject>
