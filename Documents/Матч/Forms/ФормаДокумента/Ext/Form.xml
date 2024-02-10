@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoTime>CurrentOrLast</AutoTime>
@@ -21,6 +21,7 @@
 				</v8:item>
 			</Title>
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
@@ -32,6 +33,7 @@
 							<v8:content>Левая колонка</v8:content>
 						</v8:item>
 					</Title>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
@@ -58,6 +60,7 @@
 							<v8:content>Правая колонка</v8:content>
 						</v8:item>
 					</Title>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="12"/>
@@ -93,6 +96,7 @@
 					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
 			<Events>
 				<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
@@ -410,6 +414,7 @@
 					<ChildItems>
 						<UsualGroup name="Группа1" id="89">
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="90"/>
@@ -686,10 +691,13 @@
 						<InputField name="Стадион" id="13">
 							<DataPath>Объект.Стадион</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
 							<ContextMenu name="СтадионКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="СтадионРасширеннаяПодсказка" id="15"/>
 							<Events>
 								<Event name="OnChange">СтадионПриИзменении</Event>
+								<Event name="StartChoice">СтадионНачалоВыбора</Event>
 							</Events>
 						</InputField>
 						<InputField name="КоличествоЗрителей" id="80">
@@ -895,44 +903,8 @@
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
-				<d4p1:pointsScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:valuesScale>
-				<d4p1:seriesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:seriesScale>
 				<d4p1:legendPlacement>None</d4p1:legendPlacement>
-				<d4p1:plotAreaPlacement>Auto</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
-				<d4p1:colorPaletteDescription/>
-				<d4p1:referenceBandsColorPaletteDescription/>
 			</Settings>
 		</Attribute>
 		<Attribute name="Амплуа" id="3">

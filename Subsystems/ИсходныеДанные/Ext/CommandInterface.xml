@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
 	<CommandsVisibility>
 		<Command name="Catalog.Лига.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.Стадионы.StandardCommand.OpenList">
+		<Command name="0:2faab576-01c8-4ebc-95b2-eb8c3fd0819e">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -21,7 +21,7 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.Стадионы.StandardCommand.Create">
+		<Command name="1:2faab576-01c8-4ebc-95b2-eb8c3fd0819e">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
