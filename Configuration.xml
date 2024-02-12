@@ -210,7 +210,7 @@
 			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_3_13</CompatibilityMode>
+			<CompatibilityMode>Version8_3_20</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
@@ -218,6 +218,7 @@
 			<Subsystem>Биоритмы</Subsystem>
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
+			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
@@ -226,6 +227,7 @@
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
+			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<Catalog>Амплуа</Catalog>

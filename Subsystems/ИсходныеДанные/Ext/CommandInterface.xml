@@ -6,7 +6,7 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:2faab576-01c8-4ebc-95b2-eb8c3fd0819e">
+		<Command name="Catalog.Стадионы.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -21,7 +21,7 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="1:2faab576-01c8-4ebc-95b2-eb8c3fd0819e">
+		<Command name="Catalog.Стадионы.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
