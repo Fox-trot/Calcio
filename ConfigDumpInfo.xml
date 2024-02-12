@@ -82,8 +82,8 @@
 		<Metadata name="CommonForm.Настройки.Form" id="5140af2b-875b-41a1-a87e-6c03081d9b0d.0" configVersion="d9ca513235523041b62e4aaf126e593e00000000"/>
 		<Metadata name="CommonModule.Биоритмы" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b" configVersion="d7c5be05c68dc24e8f09d9af5aaa3ab800000000"/>
 		<Metadata name="CommonModule.Биоритмы.Module" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b.0" configVersion="b8c0aadf1500dd4ba6969864e7bb455500000000"/>
-		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="8cdbd168098ee24b87c3932aabe9a31400000000"/>
-		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="7b77af12f0e3454cb5b946064fe31c4b00000000"/>
+		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="46ea18300ecb704294a19c186351ddea00000000"/>
+		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="131f2d6e7cf992408f01b17dec9e2a4900000000"/>
 		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="81bc8a4652448743be615e500bf4340200000000"/>
 		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="35aa3c323e1e914f85e555da44bf919800000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d" configVersion="472aafb1a173a44bb5682c59eb8eec2200000000"/>
@@ -110,8 +110,8 @@
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Игрок" id="c9ad558c-702e-482e-b9d9-1b280a464e6d"/>
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд.Attribute.Команда" id="e3732354-c0ee-4318-b528-2b3d82d142ac"/>
 		</Metadata>
-		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="d1af2ef5b9e66e408250ac8ea4b8bb0500000000"/>
-		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="2d146a32d195e94bae728f89beb3b57300000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="2012f862a7033f46ab3b59ddd42fd4ed00000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="908ce69505b2c640bf60b7bbf5b8d82d00000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка" id="ec0c34f6-3dd4-4666-8e39-b281b216548a" configVersion="23393c42041d1f49b50324609e1f601500000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="3ed99e5337e4b24da90bd75de371042f00000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="d5734fea55c75f4b99175b96f2c0482700000000"/>
@@ -123,8 +123,8 @@
 			<Metadata name="Document.СнятиеОчков.TabularSection.Команды.Attribute.КоличествоОчков" id="707efb7a-f8da-4724-ac15-8ea64a8fa9ae"/>
 			<Metadata name="Document.СнятиеОчков.Attribute.Тур" id="9d4b00b4-6e13-410d-b6d6-ffb95cc4bdc9"/>
 		</Metadata>
-		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3" configVersion="9c2151996f199a4e902a8e6214da3c3a00000000"/>
-		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента.Form" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3.0" configVersion="1b111db4a53332419ae814faa25ba79000000000"/>
+		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3" configVersion="87b2b58bc1beb547bcf6b4a89e2823bb00000000"/>
+		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента.Form" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3.0" configVersion="9113f87091d3ef4f95ec4caa04bf632700000000"/>
 		<Metadata name="Document.СнятиеОчков.ObjectModule" id="b9fce1f6-1d0e-42f1-8930-42518b5860a7.0" configVersion="b352f5bd5e88f24186ac4a1a0093aea200000000"/>
 		<Metadata name="FilterCriterion.МатчиСУчастием" id="536ee29d-fbb4-4551-a3f4-dab2e99c618c" configVersion="038860e633c2ec48af134b4b0dd1776900000000"/>
 		<Metadata name="FilterCriterion.МатчиСУчастием.Form.ФормаСписка" id="d76346ee-43ea-4281-b84b-632c5deed56d" configVersion="cb4b5167c822c840bcd3f41b202698e200000000"/>
@@ -145,16 +145,16 @@
 		</Metadata>
 		<Metadata name="Report.Биоритмы.Form.ФормаОтчета" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f" configVersion="c7f43847c5839a43827ac2b978ef5bd600000000"/>
 		<Metadata name="Report.Биоритмы.Form.ФормаОтчета.Form" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f.0" configVersion="28346f942083f14ab6faedd4970f3c5900000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="f3bc6943a140bb4cba1701d20d471eb600000000">
+		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="badfbb2b38901440bfbb7b0da3edfd2300000000">
 			<Metadata name="Report.ТурнирнаяТаблица.Attribute.Чемпионат" id="0fd771cb-5988-4706-9fed-db16b7fa6ec5"/>
 			<Metadata name="Report.ТурнирнаяТаблица.Attribute.ПоказыватьРазницуМячей" id="a042e9d3-9e2b-491e-973b-f778def33ac8"/>
 		</Metadata>
 		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18" configVersion="8c4ebb8f2da242418712ca0cdce811a200000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета.Form" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18.0" configVersion="2b8719eaa7308e49ac078a44b33689d900000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица.ManagerModule" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0.2" configVersion="a0ec6d94fb47394985e2bf70bd85364600000000"/>
+		<Metadata name="Report.ТурнирнаяТаблица.ManagerModule" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0.2" configVersion="8ebbdfb013c1934d84bb0ef8c2ecbf9400000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица.ObjectModule" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0.0" configVersion="f674a52b42996349b31a8c562b0a117a00000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица.Template.Макет" id="86b34b13-1523-47c5-96c0-6e00e05229f1" configVersion="17476d6e6d097942aaffbd02eb8b524100000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица.Template.Макет.Template" id="86b34b13-1523-47c5-96c0-6e00e05229f1.0" configVersion="bff530c86e7e6844823dd45635ca7ed000000000"/>
+		<Metadata name="Report.ТурнирнаяТаблица.Template.Макет" id="86b34b13-1523-47c5-96c0-6e00e05229f1" configVersion="3a313c8b60d3ec49bccc4c0fae8b23ee00000000"/>
+		<Metadata name="Report.ТурнирнаяТаблица.Template.Макет.Template" id="86b34b13-1523-47c5-96c0-6e00e05229f1.0" configVersion="231eb839317e394194300982458df06600000000"/>
 		<Metadata name="Report.Хронология" id="2837c1c0-a424-496d-959c-b6dba680b2de" configVersion="529818b73c0a7542af89552d28e8068100000000">
 			<Metadata name="Report.Хронология.Attribute.Чемпионат" id="5adc5f2c-5f87-49c4-8975-76bed6e6e31a"/>
 			<Metadata name="Report.Хронология.Attribute.Команда" id="c439dcd5-da50-41fb-a65a-c9d180b8a7a8"/>
