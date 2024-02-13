@@ -223,6 +223,7 @@
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonModule>Общий</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
