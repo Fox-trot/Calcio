@@ -354,6 +354,12 @@
 									<ContextMenu name="СписокАмплуаКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="СписокАмплуаРасширеннаяПодсказка" id="31"/>
 								</LabelField>
+								<LabelField name="СписокСтрана" id="132">
+									<DataPath>ТекущийСостав.Страна</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СписокСтранаКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СписокСтранаРасширеннаяПодсказка" id="134"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -472,21 +478,86 @@
 				<Field>ТекущийСостав.Амплуа</Field>
 				<Field>ТекущийСостав.Игрок</Field>
 				<Field>ТекущийСостав.Команда</Field>
+				<Field>ТекущийСостав.Страна</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	Перемещения.Игрок КАК Игрок,
-	Перемещения.Амплуа КАК Амплуа,
+	ЕСТЬNULL(Роли.Ссылка, Игроки.Амплуа) КАК Амплуа,
+	Игроки.Страна КАК Страна,
 	Перемещения.Номер КАК Номер,
 	Перемещения.Команда КАК Команда,
 	Перемещения.Игрок.ПометкаУдаления КАК ИгрокПометкаУдаления
 ИЗ
 	РегистрСведений.ПеремещенияИгроков.СрезПоследних(, Игрок.Наименование &gt; "") КАК Перемещения
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Амплуа КАК Роли
+		ПО Перемещения.Амплуа = Роли.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
+		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
 	Перемещения.Команда = &amp;Ссылка
 	И ГОД(Перемещения.Игрок.ДатаРождения) &gt; 1900</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Игрок</dcssch:dataPath>
+					<dcssch:field>Игрок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Амплуа</dcssch:dataPath>
+					<dcssch:field>Амплуа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Команда</dcssch:dataPath>
+					<dcssch:field>Команда</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИгрокПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ИгрокПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Страна</dcssch:dataPath>
+					<dcssch:field>Страна</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>Период</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Ссылка</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
 				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
 				<ListSettings>
 					<dcsset:filter>
