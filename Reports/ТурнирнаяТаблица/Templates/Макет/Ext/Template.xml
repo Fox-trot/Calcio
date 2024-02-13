@@ -73,7 +73,18 @@
 			<c>
 				<c>
 					<f>5</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>6</f>
 					<parameter>Чемпионат</parameter>
+				</c>
+			</c>
+			<c>
+				<i>7</i>
+				<c>
+					<f>5</f>
 				</c>
 			</c>
 		</row>
@@ -81,17 +92,10 @@
 	<rowsItem>
 		<index>1</index>
 		<row>
-			<formatIndex>4</formatIndex>
-			<empty>true</empty>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>2</index>
-		<row>
-			<formatIndex>6</formatIndex>
+			<formatIndex>7</formatIndex>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -102,7 +106,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -113,7 +117,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -124,7 +128,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -135,7 +139,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -146,7 +150,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -157,7 +161,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -168,7 +172,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -179,7 +183,67 @@
 			</c>
 			<c>
 				<c>
-					<f>8</f>
+					<f>9</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>2</index>
+		<row>
+			<formatIndex>7</formatIndex>
+			<c>
+				<c>
+					<f>10</f>
+					<parameter>Место</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>11</f>
+					<parameter>Команда</parameter>
+					<detailParameter>Команда</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>КоличествоИгр</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>Выигрыш</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>Ничья</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>Проигрыш</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>Разница</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>КоличествоОчков</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>9</f>
 				</c>
 			</c>
 		</row>
@@ -187,59 +251,59 @@
 	<rowsItem>
 		<index>3</index>
 		<row>
-			<formatIndex>6</formatIndex>
+			<formatIndex>7</formatIndex>
 			<c>
 				<c>
-					<f>9</f>
+					<f>13</f>
 					<parameter>Место</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>10</f>
+					<f>14</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>Выигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>Ничья</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>Проигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>15</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>8</f>
+					<f>16</f>
 				</c>
 			</c>
 		</row>
@@ -247,86 +311,43 @@
 	<rowsItem>
 		<index>4</index>
 		<row>
-			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>12</f>
-					<parameter>Место</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>13</f>
-					<parameter>Команда</parameter>
-					<detailParameter>Команда</detailParameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>КоличествоИгр</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>Выигрыш</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>Ничья</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>Проигрыш</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>Разница</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>14</f>
-					<parameter>КоличествоОчков</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>15</f>
-				</c>
-			</c>
-		</row>
-	</rowsItem>
-	<rowsItem>
-		<index>5</index>
-		<row>
-			<c>
-				<c>
-					<f>16</f>
+					<f>17</f>
 					<parameter>Комментарий</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 		</row>
 	</rowsItem>
+	<drawing>
+		<drawingType>Picture</drawingType>
+		<id>2</id>
+		<formatIndex>18</formatIndex>
+		<beginRow>0</beginRow>
+		<beginRowOffset>270</beginRowOffset>
+		<endRow>0</endRow>
+		<endRowOffset>27</endRowOffset>
+		<beginColumn>5</beginColumn>
+		<beginColumnOffset>72</beginColumnOffset>
+		<endColumn>8</endColumn>
+		<endColumnOffset>18</endColumnOffset>
+		<autoSize>false</autoSize>
+		<pictureSize>Proportionally</pictureSize>
+		<zOrder>1</zOrder>
+		<pictureIndex>1</pictureIndex>
+	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>17</defaultFormatIndex>
-	<height>6</height>
-	<vgRows>6</vgRows>
+	<defaultFormatIndex>19</defaultFormatIndex>
+	<height>5</height>
+	<vgRows>5</vgRows>
 	<merge>
 		<r>0</r>
-		<c>0</c>
-		<w>7</w>
+		<c>1</c>
+		<w>5</w>
 	</merge>
 	<merge>
-		<r>5</r>
+		<r>4</r>
 		<c>0</c>
 		<w>7</w>
 	</merge>
@@ -334,8 +355,8 @@
 		<name>Детали</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>4</beginRow>
-			<endRow>4</endRow>
+			<beginRow>3</beginRow>
+			<endRow>3</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -345,7 +366,7 @@
 		<area>
 			<type>Rows</type>
 			<beginRow>0</beginRow>
-			<endRow>1</endRow>
+			<endRow>0</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -354,11 +375,15 @@
 		<name>Комментарий</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>5</beginRow>
-			<endRow>5</endRow>
+			<beginRow>4</beginRow>
+			<endRow>4</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemDrawing">
+		<name>Логотип</name>
+		<drawingID>2</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
 		<name>Основа</name>
@@ -374,8 +399,8 @@
 		<name>Пятерка</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>3</beginRow>
-			<endRow>3</endRow>
+			<beginRow>2</beginRow>
+			<endRow>2</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -394,14 +419,17 @@
 		<name>Шапка</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>2</beginRow>
-			<endRow>2</endRow>
+			<beginRow>1</beginRow>
+			<endRow>1</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
 	</namedItem>
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+	</line>
+	<line width="1" gap="false">
+		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
 	</line>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
@@ -414,12 +442,23 @@
 		<width>15</width>
 	</format>
 	<format>
+		<height>297</height>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
 		<font>0</font>
+		<height>231</height>
+		<width>47</width>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Bottom</verticalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+	</format>
+	<format>
+		<font>0</font>
+		<height>231</height>
+		<width>47</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
@@ -502,6 +541,13 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
+		<drawingBorder>1</drawingBorder>
+	</format>
+	<format>
 		<width>72</width>
 	</format>
+	<picture>
+		<index>0</index>
+		<picture/>
+	</picture>
 </document>
