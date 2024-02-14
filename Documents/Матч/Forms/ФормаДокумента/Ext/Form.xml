@@ -309,6 +309,7 @@
 						<xr:Ref>StdPicture.User</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<TitleDataPath>Объект.СоставыКоманд.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаСоставыКомандРасширеннаяПодсказка" id="43"/>
 					<ChildItems>
 						<Table name="СоставыКоманд" id="44">
