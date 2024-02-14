@@ -79,12 +79,7 @@
 				<c>
 					<f>6</f>
 					<parameter>Чемпионат</parameter>
-				</c>
-			</c>
-			<c>
-				<i>7</i>
-				<c>
-					<f>5</f>
+					<detailParameter>Чемпионат</detailParameter>
 				</c>
 			</c>
 		</row>
@@ -191,53 +186,53 @@
 	<rowsItem>
 		<index>2</index>
 		<row>
-			<formatIndex>7</formatIndex>
+			<formatIndex>10</formatIndex>
 			<c>
 				<c>
-					<f>10</f>
+					<f>11</f>
 					<parameter>Место</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>12</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>Выигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>Ничья</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>Проигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
@@ -251,59 +246,59 @@
 	<rowsItem>
 		<index>3</index>
 		<row>
-			<formatIndex>7</formatIndex>
+			<formatIndex>10</formatIndex>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 					<parameter>Место</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>Выигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>Ничья</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>Проигрыш</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>16</f>
+					<f>17</f>
 				</c>
 			</c>
 		</row>
@@ -313,7 +308,7 @@
 		<row>
 			<c>
 				<c>
-					<f>17</f>
+					<f>18</f>
 					<parameter>Комментарий</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
@@ -323,28 +318,29 @@
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>18</formatIndex>
+		<formatIndex>19</formatIndex>
+		<detailParameter>Чемпионат</detailParameter>
 		<beginRow>0</beginRow>
-		<beginRowOffset>270</beginRowOffset>
+		<beginRowOffset>234</beginRowOffset>
 		<endRow>0</endRow>
 		<endRowOffset>27</endRowOffset>
-		<beginColumn>5</beginColumn>
-		<beginColumnOffset>72</beginColumnOffset>
-		<endColumn>8</endColumn>
-		<endColumnOffset>18</endColumnOffset>
+		<beginColumn>0</beginColumn>
+		<beginColumnOffset>0</beginColumnOffset>
+		<endColumn>1</endColumn>
+		<endColumnOffset>150</endColumnOffset>
 		<autoSize>false</autoSize>
 		<pictureSize>Proportionally</pictureSize>
 		<zOrder>1</zOrder>
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>19</defaultFormatIndex>
+	<defaultFormatIndex>20</defaultFormatIndex>
 	<height>5</height>
 	<vgRows>5</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
-		<w>5</w>
+		<w>6</w>
 	</merge>
 	<merge>
 		<r>4</r>
@@ -442,7 +438,7 @@
 		<width>15</width>
 	</format>
 	<format>
-		<height>297</height>
+		<height>267</height>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
@@ -463,6 +459,7 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
+		<height>54</height>
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
@@ -475,6 +472,9 @@
 	<format>
 		<border>0</border>
 		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
 		<border>0</border>
@@ -542,6 +542,7 @@
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
+		<hyperLink>false</hyperLink>
 	</format>
 	<format>
 		<width>72</width>
