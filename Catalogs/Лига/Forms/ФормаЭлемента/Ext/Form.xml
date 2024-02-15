@@ -5,6 +5,7 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
@@ -32,6 +33,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СтранаКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">СтранаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<UsualGroup name="Группа1" id="38">
 					<Title>
@@ -57,15 +61,21 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа2" id="40">
+				<UsualGroup name="ГруппаУЕФА" id="40">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>УЕФА</v8:content>
 						</v8:item>
 					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа УЕФА</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Representation>None</Representation>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="41"/>
+					<ExtendedTooltip name="ГруппаУЕФАРасширеннаяПодсказка" id="41"/>
 					<ChildItems>
 						<InputField name="КвалификацияВЛигуЧемпионовУЕФА" id="32">
 							<DataPath>Объект.КвалификацияВЛигуЧемпионовУЕФА</DataPath>
@@ -74,7 +84,7 @@
 						</InputField>
 						<InputField name="КвалификацияВЛигуЕвропыУЕФА" id="35">
 							<DataPath>Объект.КвалификацияВЛигуЕвропыУЕФА</DataPath>
-							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
 							<ContextMenu name="КвалификацияВЛигуЕвропыУЕФАКонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="КвалификацияВЛигуЕвропыУЕФАРасширеннаяПодсказка" id="37"/>
 						</InputField>
