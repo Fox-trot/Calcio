@@ -41,12 +41,6 @@
 						<InputField name="Дата" id="8">
 							<DataPath>Объект.Date</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<EditFormat>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>ДФ='dd.MM.yyyy hh:mm'</v8:content>
-								</v8:item>
-							</EditFormat>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
 						</InputField>
