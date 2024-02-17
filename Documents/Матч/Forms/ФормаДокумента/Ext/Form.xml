@@ -362,10 +362,19 @@
 								<InputField name="СоставыКомандИгрок" id="60" DisplayImportance="Low">
 									<DataPath>Объект.СоставыКоманд.Игрок</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ChooseType>false</ChooseType>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Ссылка</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Игроки</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
 									<ContextMenu name="СоставыКомандИгрокКонтекстноеМеню" id="61"/>
 									<ExtendedTooltip name="СоставыКомандИгрокРасширеннаяПодсказка" id="62"/>
 									<Events>
 										<Event name="OnChange">СоставыКомандИгрокПриИзменении</Event>
+										<Event name="StartChoice">СоставыКомандИгрокНачалоВыбора</Event>
 									</Events>
 								</InputField>
 								<LabelField name="СоставыКомандИгрокАмплуа" id="118" DisplayImportance="Low">
@@ -459,7 +468,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Предыдущие встречи</v8:content>
+							<v8:content>Предыдущие очные встречи</v8:content>
 						</v8:item>
 					</ToolTip>
 					<ExtendedTooltip name="ПредыдущиеВстречиРасширеннаяПодсказка" id="122"/>
@@ -473,6 +482,12 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ПрошлыеВстречи</DataPath>
 							<RowPictureDataPath>~ПрошлыеВстречи.DefaultPicture</RowPictureDataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предыдущие очные встречи</v8:content>
+								</v8:item>
+							</ToolTip>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -1093,6 +1108,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Игроки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игроки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
