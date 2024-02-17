@@ -19,17 +19,7 @@
 	<AutoShowState>DontShow</AutoShowState>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="Сформировать" id="10">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.Сформировать</CommandName>
-				<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="11"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -48,6 +38,13 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
 			<ChildItems>
+				<Button name="Сформировать" id="10">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="11"/>
+				</Button>
 				<InputField name="Чемпионат" id="7">
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>

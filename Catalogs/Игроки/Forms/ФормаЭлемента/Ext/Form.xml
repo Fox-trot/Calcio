@@ -56,6 +56,8 @@
 				<PictureField name="Изображение" id="22">
 					<DataPath>Изображение</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="24"/>
 				</PictureField>
