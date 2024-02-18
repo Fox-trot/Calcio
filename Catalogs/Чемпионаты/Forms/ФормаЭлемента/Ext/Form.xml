@@ -96,6 +96,7 @@
 				<InputField name="КомандыКоманда" id="32">
 					<DataPath>Объект.Команды.Команда</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
 					<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
 				</InputField>
