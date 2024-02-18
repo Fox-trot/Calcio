@@ -436,7 +436,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.Report</xr:Ref>
+						<xr:Ref>StdPicture.Chart</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="СравнениеРасширеннаяПодсказка" id="67"/>

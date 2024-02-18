@@ -161,9 +161,8 @@
 					</d4p1:text>
 					<d4p1:strIsChanged>false</d4p1:strIsChanged>
 					<d4p1:isExpand>false</d4p1:isExpand>
-					<d4p1:isIndicator>true</d4p1:isIndicator>
-					<d4p1:colorPriority>true</d4p1:colorPriority>
-					<d4p1:visualType>Line</d4p1:visualType>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>false</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
@@ -296,7 +295,7 @@
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
 				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
 				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
-				<d4p1:splineStrain>100</d4p1:splineStrain>
+				<d4p1:splineStrain>90</d4p1:splineStrain>
 				<d4p1:translucencePercent>0</d4p1:translucencePercent>
 				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
 				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>

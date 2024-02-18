@@ -116,7 +116,7 @@
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
 				</d4p1:realExSeriesData>
-				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:isPointsDesign>false</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
@@ -246,6 +246,7 @@
 				<d4p1:dataSourceDescription/>
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
 				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
 				<d4p1:splineStrain>90</d4p1:splineStrain>
 				<d4p1:translucencePercent>0</d4p1:translucencePercent>
 				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
