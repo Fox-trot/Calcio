@@ -103,92 +103,117 @@
 							<v8:content>Команды</v8:content>
 						</v8:item>
 					</Title>
-					<Group>HorizontalIfPossible</Group>
+					<Picture>
+						<xr:Ref>CommonPicture.Goal</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>AlwaysHorizontal</Group>
 					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="19"/>
 					<ChildItems>
-						<Table name="Команды" id="20">
-							<Representation>List</Representation>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Объект.Команды</DataPath>
-							<CommandSet>
-								<ExcludedCommand>CancelSearch</ExcludedCommand>
-								<ExcludedCommand>Find</ExcludedCommand>
-								<ExcludedCommand>SortListAsc</ExcludedCommand>
-								<ExcludedCommand>SortListDesc</ExcludedCommand>
-							</CommandSet>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="КомандыКонтекстноеМеню" id="21"/>
-							<AutoCommandBar name="КомандыКоманднаяПанель" id="22"/>
-							<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="23"/>
-							<SearchStringAddition name="КомандыСтрокаПоиска" id="24">
-								<AdditionSource>
-									<Item>Команды</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="25"/>
-								<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="26"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="КомандыСостояниеПросмотра" id="27">
-								<AdditionSource>
-									<Item>Команды</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="28"/>
-								<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="КомандыУправлениеПоиском" id="30">
-								<AdditionSource>
-									<Item>Команды</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="31"/>
-								<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="32"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
-								<Event name="OnChange">КомандыПриИзменении</Event>
-							</Events>
+						<UsualGroup name="ГруппаКомандыЛевая" id="185">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыЛеваяРасширеннаяПодсказка" id="186"/>
 							<ChildItems>
-								<LabelField name="КомандыНомерСтроки" id="33">
-									<DataPath>Объект.Команды.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+								<Table name="Команды" id="20">
+									<Representation>List</Representation>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="34"/>
-									<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="35"/>
-								</LabelField>
-								<InputField name="КомандыКоманда" id="36">
-									<DataPath>Объект.Команды.Команда</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="37"/>
-									<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="38"/>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Команды</DataPath>
+									<CommandSet>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="КомандыКонтекстноеМеню" id="21"/>
+									<AutoCommandBar name="КомандыКоманднаяПанель" id="22"/>
+									<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="23"/>
+									<SearchStringAddition name="КомандыСтрокаПоиска" id="24">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="25"/>
+										<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КомандыСостояниеПросмотра" id="27">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="28"/>
+										<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КомандыУправлениеПоиском" id="30">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
+										<Event name="OnChange">КомандыПриИзменении</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="КомандыНомерСтроки" id="33">
+											<DataPath>Объект.Команды.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="35"/>
+										</LabelField>
+										<InputField name="КомандыКоманда" id="36">
+											<DataPath>Объект.Команды.Команда</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="38"/>
+										</InputField>
+										<InputField name="КомандыКоличествоГолов" id="39">
+											<DataPath>Объект.Команды.КоличествоГолов</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="КомандыКоличествоГоловКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="КомандыКоличествоГоловРасширеннаяПодсказка" id="41"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыПравая" id="187">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
+								<InputField name="Тур" id="94">
+									<DataPath>Объект.Тур</DataPath>
+									<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
 								</InputField>
-								<InputField name="КомандыКоличествоГолов" id="39">
-									<DataPath>Объект.Команды.КоличествоГолов</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+								<InputField name="Комментарий" id="155">
+									<DataPath>Объект.Комментарий</DataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ЧН=0</v8:content>
-										</v8:item>
-									</Format>
-									<ContextMenu name="КомандыКоличествоГоловКонтекстноеМеню" id="40"/>
-									<ExtendedTooltip name="КомандыКоличествоГоловРасширеннаяПодсказка" id="41"/>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
 								</InputField>
 							</ChildItems>
-						</Table>
-						<InputField name="Комментарий" id="155">
-							<DataPath>Объект.Комментарий</DataPath>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<ChooseType>false</ChooseType>
-							<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
-							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
-						</InputField>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="Анонс" id="148">
@@ -693,11 +718,6 @@
 					</ToolTip>
 					<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="76"/>
 					<ChildItems>
-						<InputField name="Тур" id="94">
-							<DataPath>Объект.Тур</DataPath>
-							<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
-							<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
-						</InputField>
 						<InputField name="Стадион" id="13">
 							<DataPath>Объект.Стадион</DataPath>
 							<EditMode>EnterOnInput</EditMode>

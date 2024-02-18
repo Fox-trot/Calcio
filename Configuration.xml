@@ -206,7 +206,7 @@
 			<VendorInformationAddress/>
 			<ConfigurationInformationAddress/>
 			<DataLockControlMode>Managed</DataLockControlMode>
-			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
+			<ObjectAutonumerationMode>AutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>TaxiEnableVersion8_2</InterfaceCompatibilityMode>
@@ -218,6 +218,7 @@
 			<Subsystem>Биоритмы</Subsystem>
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
+			<CommonPicture>Goal</CommonPicture>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>

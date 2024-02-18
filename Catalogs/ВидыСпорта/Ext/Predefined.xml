@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.13">
+	<Item id="cdfa1689-2adc-4670-9d0c-def157c5b165">
+		<Name>Футбол</Name>
+		<Code>33</Code>
+		<Description>Футбол</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>
