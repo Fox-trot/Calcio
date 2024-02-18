@@ -142,6 +142,10 @@
 							<v8:content>Текущий состав</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Goal</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="50"/>
 					<ChildItems>
 						<Table name="Матчи" id="51">
