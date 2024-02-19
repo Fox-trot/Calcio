@@ -721,7 +721,6 @@
 						<InputField name="Стадион" id="13">
 							<DataPath>Объект.Стадион</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<ListChoiceMode>true</ListChoiceMode>
 							<ChooseType>false</ChooseType>
 							<ContextMenu name="СтадионКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="СтадионРасширеннаяПодсказка" id="15"/>
