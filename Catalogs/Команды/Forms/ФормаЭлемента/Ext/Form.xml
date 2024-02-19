@@ -270,11 +270,15 @@
 					<ExtendedTooltip name="ГруппаТекущийСоставРасширеннаяПодсказка" id="15"/>
 					<ChildItems>
 						<Table name="ТекущийСостав" id="16">
-							<ChangeRowSet>false</ChangeRowSet>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>ТекущийСостав</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Create</ExcludedCommand>
+							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -325,6 +329,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ТекущийСоставВыбор</Event>
+								<Event name="BeforeDeleteRow">ТекущийСоставПередУдалением</Event>
 							</Events>
 							<ChildItems>
 								<CheckBoxField name="СписокИгрокПометкаУдаления" id="41">
@@ -595,7 +600,9 @@
 			</Type>
 			<UseAlways>
 				<Field>Матчи.Дата</Field>
+				<Field>Матчи.КоличествоОчков</Field>
 				<Field>Матчи.Матч</Field>
+				<Field>Матчи.Счет</Field>
 				<Field>Матчи.Тур</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -603,7 +610,11 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ТурнирнаяТаблица.Период КАК Дата,
-	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.СнятиеОчков)
+			ТОГДА "Снятие очков"
+		ИНАЧЕ ТурнирнаяТаблица.Регистратор.Счет
+	КОНЕЦ КАК Счет,
 	ТурнирнаяТаблица.Тур КАК Тур,
 	ТурнирнаяТаблица.Регистратор КАК Матч,
 	ТурнирнаяТаблица.КоличествоГолов КАК КоличествоГолов,
@@ -613,6 +624,72 @@
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 ГДЕ
 	ТурнирнаяТаблица.Команда = &amp;Ссылка</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Счет</dcssch:dataPath>
+					<dcssch:field>Счет</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоЗрителей</dcssch:dataPath>
+					<dcssch:field>КоличествоЗрителей</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество зрителей</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоОчков</dcssch:dataPath>
+					<dcssch:field>КоличествоОчков</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Тур</dcssch:dataPath>
+					<dcssch:field>Тур</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Матч</dcssch:dataPath>
+					<dcssch:field>Матч</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Матч</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоГолов</dcssch:dataPath>
+					<dcssch:field>КоличествоГолов</dcssch:field>
+				</Field>
+				<Parameter>
+					<dcssch:name>Ссылка</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -623,6 +700,32 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Счет</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Тур</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">КоличествоОчков</dcsset:left>
+									<dcsset:comparisonType>Less</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
