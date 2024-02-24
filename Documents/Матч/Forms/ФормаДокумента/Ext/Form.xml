@@ -722,6 +722,13 @@
 							<DataPath>Объект.Стадион</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<ChooseType>false</ChooseType>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.Команды.CurrentData.Команда</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ContextMenu name="СтадионКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="СтадионРасширеннаяПодсказка" id="15"/>
 							<Events>
@@ -1258,6 +1265,17 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Хозяева" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хозяева</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
