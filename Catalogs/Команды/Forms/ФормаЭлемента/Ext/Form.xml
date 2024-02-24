@@ -385,7 +385,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текущий сезон</v8:content>
+							<v8:content>Последний сезон</v8:content>
 						</v8:item>
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаСезонРасширеннаяПодсказка" id="86"/>
@@ -403,7 +403,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Текущий сезон</v8:content>
+									<v8:content>Последний сезон</v8:content>
 								</v8:item>
 							</ToolTip>
 							<RowFilter xsi:nil="true"/>
@@ -447,6 +447,12 @@
 								<InputField name="СезонКлюч" id="100">
 									<DataPath>Сезон.Ключ</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показатель</v8:content>
+										</v8:item>
+									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoCellHeight>true</AutoCellHeight>
 									<ChooseType>false</ChooseType>
@@ -456,6 +462,12 @@
 								<InputField name="СезонЗначение" id="103">
 									<DataPath>Сезон.Значение</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значение</v8:content>
+										</v8:item>
+									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="СезонЗначениеКонтекстноеМеню" id="104"/>
