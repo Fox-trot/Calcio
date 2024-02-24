@@ -247,6 +247,7 @@
 			<Report>Биоритмы</Report>
 			<Report>ТурнирнаяТаблица</Report>
 			<Report>Хронология</Report>
+			<Report>Гражданство</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>

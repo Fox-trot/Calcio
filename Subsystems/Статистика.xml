@@ -18,7 +18,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПеремещенияИгроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Биоритмы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Матч</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ТурнирнаяТаблица</xr:Item>
@@ -28,7 +27,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Туры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.МатчиСУчастием</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.СнятиеОчков</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">b2c300b4-a6f7-47df-8287-05363dbb296b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Гражданство</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
