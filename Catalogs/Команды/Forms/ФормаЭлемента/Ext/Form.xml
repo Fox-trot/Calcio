@@ -449,6 +449,7 @@
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoCellHeight>true</AutoCellHeight>
+									<ChooseType>false</ChooseType>
 									<ContextMenu name="СезонКлючКонтекстноеМеню" id="101"/>
 									<ExtendedTooltip name="СезонКлючРасширеннаяПодсказка" id="102"/>
 								</InputField>
@@ -502,14 +503,13 @@
 	Перемещения.Команда КАК Команда,
 	Перемещения.Игрок.ПометкаУдаления КАК ИгрокПометкаУдаления
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних(, Игрок.Наименование &gt; "") КАК Перемещения
+	РегистрСведений.ПеремещенияИгроков.СрезПоследних(, ГОД(Игрок.ДатаРождения) &gt; 1900) КАК Перемещения
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Амплуа КАК Роли
 		ПО Перемещения.Амплуа = Роли.Ссылка
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
 		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
-	Перемещения.Команда = &amp;Ссылка
-	И ГОД(Перемещения.Игрок.ДатаРождения) &gt; 1900</QueryText>
+	Перемещения.Команда = &amp;Ссылка</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Период</dcssch:dataPath>
 					<dcssch:field>Период</dcssch:field>
@@ -553,7 +553,7 @@
 						</v8:DateQualifiers>
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
-					<dcssch:useRestriction>false</dcssch:useRestriction>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<Parameter>
 					<dcssch:name>Ссылка</dcssch:name>
@@ -812,6 +812,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Исключить</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
 		<Command name="СезонОбновить" id="2">
