@@ -30,6 +30,7 @@
 		</InputField>
 		<InputField name="Команда" id="7">
 			<DataPath>Запись.Команда</DataPath>
+			<ClearButton>true</ClearButton>
 			<CreateButton>true</CreateButton>
 			<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>

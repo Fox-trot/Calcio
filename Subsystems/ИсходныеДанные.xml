@@ -30,6 +30,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Настройки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Города</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПервоначальноеЗаполнение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПеремещенияИгроков</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
