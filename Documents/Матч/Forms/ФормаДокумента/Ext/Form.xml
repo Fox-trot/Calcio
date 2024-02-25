@@ -1297,7 +1297,7 @@
 				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>ГрафикОбновить</Action>
+			<Action>СоставыЗаполнить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
@@ -1339,7 +1339,7 @@
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>ГрафикОбновить</Action>
+			<Action>АнонсОбновить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
