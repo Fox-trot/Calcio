@@ -74,6 +74,7 @@
 							<v8:content>Группа УЕФА</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Behavior>Collapsible</Behavior>
 					<Representation>None</Representation>
 					<ExtendedTooltip name="ГруппаУЕФАРасширеннаяПодсказка" id="41"/>
 					<ChildItems>
