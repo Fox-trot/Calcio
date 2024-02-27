@@ -8,43 +8,97 @@
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="Владелец" id="7">
-			<DataPath>Объект.Owner</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
-		</InputField>
-		<UsualGroup name="Даты" id="35">
-			<ToolTip>
+		<UsualGroup name="ГруппаШапка" id="40">
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Даты</v8:content>
+					<v8:content>Шапка</v8:content>
 				</v8:item>
-			</ToolTip>
+			</Title>
 			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ДатыРасширеннаяПодсказка" id="36"/>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="41"/>
 			<ChildItems>
-				<InputField name="ДатаНачала" id="10">
-					<DataPath>Объект.ДатаНачала</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="12"/>
-				</InputField>
-				<InputField name="ДатаОкончания" id="13">
-					<DataPath>Объект.ДатаОкончания</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="15"/>
-				</InputField>
+				<UsualGroup name="ГруппаЛевая" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Владелец" id="7">
+							<DataPath>Объект.Owner</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<UsualGroup name="Даты" id="35">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Даты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ДатыРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<InputField name="ДатаНачала" id="10">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="ДатаОкончания" id="13">
+									<DataPath>Объект.ДатаОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="15"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<CheckBoxField name="ОлимпийскаяСистема" id="37">
+							<DataPath>Объект.ОлимпийскаяСистема</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="39"/>
+						</CheckBoxField>
+						<InputField name="Комментарий" id="46">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Команды" id="16">
@@ -114,13 +168,8 @@
 				<Field>1/-2</Field>
 				<Field>Объект.DeletionMark</Field>
 				<Field>Объект.Description</Field>
-				<Field>Объект.Owner</Field>
 				<Field>Объект.Predefined</Field>
 				<Field>Объект.PredefinedDataName</Field>
-				<Field>Объект.Ref</Field>
-				<Field>Объект.ДатаНачала</Field>
-				<Field>Объект.ДатаОкончания</Field>
-				<Field>Объект.Команды</Field>
 			</UseAlways>
 		</Attribute>
 	</Attributes>

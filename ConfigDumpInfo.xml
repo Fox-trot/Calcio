@@ -60,8 +60,9 @@
 		<Metadata name="Catalog.Стадионы.ObjectModule" id="2faab576-01c8-4ebc-95b2-eb8c3fd0819e.0" configVersion="afe6c0194cb8db45be324bb76436b0c300000000"/>
 		<Metadata name="Catalog.Страны" id="9cad55bc-6fe5-41fb-b3e9-46695c87af74" configVersion="2c04c76c9445994490810e70a14c2b1e00000000"/>
 		<Metadata name="Catalog.Страны.ObjectModule" id="9cad55bc-6fe5-41fb-b3e9-46695c87af74.0" configVersion="01246840b612d647b742da5f3bf3f4fc00000000"/>
-		<Metadata name="Catalog.Туры" id="8bedfced-d5fd-404b-a71f-110de6d1ec29" configVersion="4364707ccc03e24db4d3c2da8def27ee00000000">
+		<Metadata name="Catalog.Туры" id="8bedfced-d5fd-404b-a71f-110de6d1ec29" configVersion="85b177a034b1f245bb0535c5be1a501000000000">
 			<Metadata name="Catalog.Туры.Attribute.Комментарий" id="3963305f-e1ff-4428-a2eb-bbf62c79baad"/>
+			<Metadata name="Catalog.Туры.Attribute.ОлимпийскаяСистема" id="638f48e3-eb9f-4e5e-9830-8c4dd6bb2591"/>
 			<Metadata name="Catalog.Туры.Attribute.ДатаОкончания" id="a180d35e-d749-40cc-9855-2dffffea8cbb"/>
 			<Metadata name="Catalog.Туры.Attribute.ДатаНачала" id="e78134ec-ac94-4288-8d09-62bec6b1024f"/>
 		</Metadata>
@@ -70,15 +71,17 @@
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента" id="20176894-388b-4c48-8bcc-b23abd1dfe18" configVersion="a9f73c3875b069429ffe1782ce261d8400000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента.Form" id="20176894-388b-4c48-8bcc-b23abd1dfe18.0" configVersion="b74bc5bb1dc0614db7b0b3a520331bd400000000"/>
 		<Metadata name="Catalog.Туры.ManagerModule" id="8bedfced-d5fd-404b-a71f-110de6d1ec29.3" configVersion="e7d6a10f8f144c4fbdbd6979a974b35f00000000"/>
-		<Metadata name="Catalog.Туры.ObjectModule" id="8bedfced-d5fd-404b-a71f-110de6d1ec29.0" configVersion="ad41580919ac384db28fc5e69530ce2800000000"/>
-		<Metadata name="Catalog.Чемпионаты" id="b29771ac-03be-488f-8be8-b6592403cf0d" configVersion="e3e6b1c5900afb4a914ae824b71c780e00000000">
+		<Metadata name="Catalog.Туры.ObjectModule" id="8bedfced-d5fd-404b-a71f-110de6d1ec29.0" configVersion="96b688b2b10a7444b487c165ecbb721400000000"/>
+		<Metadata name="Catalog.Чемпионаты" id="b29771ac-03be-488f-8be8-b6592403cf0d" configVersion="951296b0217a9a43a5cc3f60bfe4365200000000">
 			<Metadata name="Catalog.Чемпионаты.TabularSection.Команды.Attribute.Команда" id="344ab120-f9f2-4d06-8477-b9e388aba6b1"/>
 			<Metadata name="Catalog.Чемпионаты.Attribute.ДатаОкончания" id="67d2536a-29ad-4148-92ab-391c873409e6"/>
+			<Metadata name="Catalog.Чемпионаты.Attribute.ОлимпийскаяСистема" id="91f76251-ea38-4ad5-b325-0a1be80e40df"/>
 			<Metadata name="Catalog.Чемпионаты.Attribute.ДатаНачала" id="a59e43cf-726f-4e00-8323-6eba3c8b16cc"/>
 			<Metadata name="Catalog.Чемпионаты.TabularSection.Команды" id="ccf0adf4-c60f-42ae-a50a-dc44ca4f54cd"/>
+			<Metadata name="Catalog.Чемпионаты.Attribute.Комментарий" id="fa05ad9f-cf71-4659-8923-2d6932902e10"/>
 		</Metadata>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента" id="241ea06c-f800-4a92-b36a-81261b8d8768" configVersion="635f65f6575f2c40a2be365120dceb4700000000"/>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента.Form" id="241ea06c-f800-4a92-b36a-81261b8d8768.0" configVersion="92b9a92c63315e4c8361581f9989915900000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента" id="241ea06c-f800-4a92-b36a-81261b8d8768" configVersion="685cedcd496e1640a4a7da24e5c5b44600000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента.Form" id="241ea06c-f800-4a92-b36a-81261b8d8768.0" configVersion="3794ae1dfef8294485142a969ae7326300000000"/>
 		<Metadata name="Catalog.Чемпионаты.ObjectModule" id="b29771ac-03be-488f-8be8-b6592403cf0d.0" configVersion="0b0877bc6c35c04185cc43e87bc5784f00000000"/>
 		<Metadata name="CommonCommand.Биоритмы" id="d8740f02-c55b-4cdb-b478-3b29a442558c" configVersion="e46cb01c36f1fd42854aac07ffce43df00000000"/>
 		<Metadata name="CommonCommand.Биоритмы.CommandModule" id="d8740f02-c55b-4cdb-b478-3b29a442558c.2" configVersion="93058b67e1ba8048948a8989d9da45c100000000"/>
