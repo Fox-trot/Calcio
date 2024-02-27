@@ -220,6 +220,7 @@
 			<Subsystem>ИсходныеДанные</Subsystem>
 			<CommonPicture>Goal</CommonPicture>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
+			<CommonTemplate>Матчи</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
