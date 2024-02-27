@@ -285,9 +285,10 @@
 	<rowsItem>
 		<index>4</index>
 		<row>
+			<formatIndex>17</formatIndex>
 			<c>
 				<c>
-					<f>17</f>
+					<f>18</f>
 					<parameter>Комментарий</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
@@ -297,7 +298,7 @@
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>18</formatIndex>
+		<formatIndex>19</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>0</beginRow>
 		<beginRowOffset>234</beginRowOffset>
@@ -313,7 +314,7 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>19</defaultFormatIndex>
+	<defaultFormatIndex>20</defaultFormatIndex>
 	<height>5</height>
 	<vgRows>5</vgRows>
 	<merge>
@@ -387,11 +388,12 @@
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
 	</line>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
 		<width>47</width>
 	</format>
 	<format>
-		<width>176</width>
+		<width>184</width>
 	</format>
 	<format>
 		<height>267</height>
@@ -416,29 +418,29 @@
 	</format>
 	<format>
 		<height>54</height>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
 		<font>0</font>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 	</format>
 	<format>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<border>0</border>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
@@ -447,7 +449,7 @@
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
@@ -461,7 +463,7 @@
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
@@ -476,13 +478,13 @@
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<border>0</border>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<detailsUse>Row</detailsUse>
@@ -490,7 +492,7 @@
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<format>
@@ -503,7 +505,7 @@
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<markNegatives>true</markNegatives>
@@ -515,8 +517,15 @@
 		</format>
 	</format>
 	<format>
+		<height>0</height>
+		<verticalAlignment>Top</verticalAlignment>
+	</format>
+	<format>
+		<font>1</font>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
+		<indent>0</indent>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
