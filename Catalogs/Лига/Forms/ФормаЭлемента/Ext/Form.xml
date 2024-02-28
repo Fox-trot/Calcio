@@ -59,6 +59,12 @@
 							<ContextMenu name="КоличествоРотацияКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="КоличествоРотацияРасширеннаяПодсказка" id="12"/>
 						</InputField>
+						<CheckBoxField name="ОлимпийскаяСистема" id="42">
+							<DataPath>Объект.ОлимпийскаяСистема</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
+						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаУЕФА" id="40">
