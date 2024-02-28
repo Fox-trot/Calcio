@@ -601,8 +601,6 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
-				<Field>1/0:3f0c335c-4e4d-4cc8-a95e-baa2681b4a56</Field>
-				<Field>1/0:65ae804e-a521-42f4-92c7-f01df3251b2b/0:164644db-82b7-4148-8e3c-514c0d94dcb9</Field>
 				<Field>Объект.DeletionMark</Field>
 				<Field>Объект.Posted</Field>
 				<Field>Объект.RegisterRecords</Field>
