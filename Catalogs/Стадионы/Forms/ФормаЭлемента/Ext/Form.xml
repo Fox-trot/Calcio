@@ -31,6 +31,12 @@
 			<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="12"/>
 		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

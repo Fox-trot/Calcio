@@ -228,6 +228,7 @@
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
+			<CommonCommand>ИмпортМатча</CommonCommand>
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
