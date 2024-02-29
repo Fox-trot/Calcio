@@ -65,11 +65,12 @@
 									<ContextMenu name="ГородКонтекстноеМеню" id="109"/>
 									<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="110"/>
 								</InputField>
-								<InputField name="Примечание" id="44">
-									<DataPath>Объект.Примечание</DataPath>
+								<InputField name="Комментарий" id="135">
+									<DataPath>Объект.Комментарий</DataPath>
 									<TitleLocation>Left</TitleLocation>
-									<ContextMenu name="ПримечаниеКонтекстноеМеню" id="45"/>
-									<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="46"/>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="137"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
