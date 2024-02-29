@@ -161,6 +161,7 @@
 									</SearchControlAddition>
 									<Events>
 										<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
+										<Event name="NewWriteProcessing">КомандыОбработкаЗаписиНового</Event>
 										<Event name="AfterDeleteRow">КомандыПослеУдаления</Event>
 										<Event name="OnChange">КомандыПриИзменении</Event>
 									</Events>
@@ -388,6 +389,7 @@
 								<ExtendedTooltip name="СоставыКомандУправлениеПоискомРасширеннаяПодсказка" id="56"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="BeforeAddRow">СоставыКомандПередНачаломДобавления</Event>
 								<Event name="BeforeEditEnd">СоставыКомандПередОкончаниемРедактирования</Event>
 							</Events>
 							<ChildItems>
