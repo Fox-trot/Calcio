@@ -289,6 +289,13 @@
 			<c>
 				<c>
 					<f>18</f>
+					<parameter>Дата</parameter>
+					<detailParameter>Регистратор</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>19</f>
 					<parameter>Комментарий</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
@@ -298,7 +305,7 @@
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>19</formatIndex>
+		<formatIndex>20</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>0</beginRow>
 		<beginRowOffset>234</beginRowOffset>
@@ -314,7 +321,7 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>20</defaultFormatIndex>
+	<defaultFormatIndex>21</defaultFormatIndex>
 	<height>5</height>
 	<vgRows>5</vgRows>
 	<merge>
@@ -324,8 +331,8 @@
 	</merge>
 	<merge>
 		<r>4</r>
-		<c>0</c>
-		<w>7</w>
+		<c>1</c>
+		<w>6</w>
 	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>Детали</name>
@@ -522,6 +529,21 @@
 	</format>
 	<format>
 		<font>1</font>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДФ=d.M</v8:content>
+			</v8:item>
+		</format>
+		<indent>0</indent>
+	</format>
+	<format>
+		<font>1</font>
+		<height>0</height>
+		<width>47</width>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
