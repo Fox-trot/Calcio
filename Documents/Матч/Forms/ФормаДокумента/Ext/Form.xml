@@ -329,6 +329,21 @@
 								</InputField>
 							</ChildItems>
 						</Table>
+						<SpreadSheetDocumentField name="Предыдущие5" id="201">
+							<DataPath>Предыдущие5</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Последние 5 матчей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+							<Height>3</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Предыдущие5КонтекстноеМеню" id="202"/>
+							<ExtendedTooltip name="Предыдущие5РасширеннаяПодсказка" id="203"/>
+						</SpreadSheetDocumentField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСоставыКоманд" id="42">
@@ -944,6 +959,17 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Предыдущие5" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последние 5 матчей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
