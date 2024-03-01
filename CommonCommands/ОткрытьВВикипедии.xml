@@ -9,7 +9,7 @@
 					<v8:content>Открыть в Википедии</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Открыть в интернете</Comment>
 			<Group>FormCommandBarImportant</Group>
 			<Representation>Picture</Representation>
 			<ToolTip>
@@ -27,9 +27,11 @@
 			<CommandParameterType>
 				<v8:Type>cfg:CatalogRef.ВидыСпорта</v8:Type>
 				<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
+				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
+				<v8:Type>cfg:DocumentRef.Матч</v8:Type>
 			</CommandParameterType>
 			<ParameterUseMode>Single</ParameterUseMode>
 			<ModifiesData>false</ModifiesData>
