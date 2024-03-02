@@ -85,6 +85,13 @@
 								</LabelField>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="Комментарий" id="36">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>Left</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="38"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаПравая" id="20">
@@ -135,13 +142,6 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Комментарий" id="36">
-			<DataPath>Объект.Комментарий</DataPath>
-			<TitleLocation>Left</TitleLocation>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="37"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="38"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -256,6 +256,24 @@
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<DefaultVisible>false</DefaultVisible>
 			</Item>
+			<Item>
+				<Command>InformationRegister.ПеремещенияИгроков.StandardCommand.OpenByValue.Игрок</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
 		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>InformationRegister.ПеремещенияИгроков.Command.ПеремещенияИгрока</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
 	</CommandInterface>
 </Form>

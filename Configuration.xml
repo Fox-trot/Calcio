@@ -240,6 +240,7 @@
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonModule>Общий</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
+			<EventSubscription>СправочникиПередЗаписью</EventSubscription>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>

@@ -172,12 +172,7 @@
 				</v8:item>
 			</RecordPresentation>
 			<ExtendedRecordPresentation/>
-			<ListPresentation>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Перемещения игрока</v8:content>
-				</v8:item>
-			</ListPresentation>
+			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
 			<DataHistory>DontUse</DataHistory>
@@ -350,6 +345,29 @@
 				</Properties>
 			</Dimension>
 			<Form>ФормаЗаписи</Form>
+			<Command uuid="c8790fb5-7c10-43e7-a84d-5a5cb6873c05">
+				<Properties>
+					<Name>ПеремещенияИгрока</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перемещения игрока</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelSeeAlso</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

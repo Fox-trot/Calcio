@@ -19,6 +19,7 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
 			<Header>false</Header>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
@@ -72,12 +73,30 @@
 			<ChildItems>
 				<LabelField name="Ссылка" id="16">
 					<DataPath>Список.Ref</DataPath>
+					<Visible>false</Visible>
 					<DefaultItem>true</DefaultItem>
+					<ReadOnly>true</ReadOnly>
+					<AutoCellHeight>true</AutoCellHeight>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="СсылкаДата" id="22">
+					<DataPath>Список.Ref.Date</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoCellHeight>true</AutoCellHeight>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=D</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="СсылкаДатаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СсылкаДатаРасширеннаяПодсказка" id="24"/>
+				</LabelField>
 				<LabelField name="СсылкаСчет" id="19">
 					<DataPath>Список.Ref.Счет</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoCellHeight>true</AutoCellHeight>
 					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="21"/>
 				</LabelField>
@@ -90,9 +109,27 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
+				<Parameter>
+					<dcssch:name>Значение</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игрок</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+					<dcssch:use>Always</dcssch:use>
+				</Parameter>
 				<MainTable>FilterCriterion.МатчиСУчастием</MainTable>
 				<ListSettings>
 					<dcsset:filter>

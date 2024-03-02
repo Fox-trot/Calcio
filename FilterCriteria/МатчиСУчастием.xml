@@ -16,7 +16,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Матчи с участием игрока</v8:content>
+					<v8:content>Матчи с участием</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -31,7 +31,12 @@
 			<AuxiliaryForm/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
-			<Explanation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Матчи с участием игрока</v8:content>
+				</v8:item>
+			</Explanation>
 		</Properties>
 		<ChildObjects>
 			<Form>ФормаСписка</Form>
