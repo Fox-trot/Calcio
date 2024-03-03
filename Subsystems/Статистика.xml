@@ -29,6 +29,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.МатчиСУчастием</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.СнятиеОчков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Гражданство</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Посещаемость</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

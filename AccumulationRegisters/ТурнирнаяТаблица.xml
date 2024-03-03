@@ -37,7 +37,7 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultListForm/>
+			<DefaultListForm>AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryListForm/>
 			<RegisterType>Turnovers</RegisterType>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
@@ -326,6 +326,7 @@
 					<UseInTotals>true</UseInTotals>
 				</Properties>
 			</Dimension>
+			<Form>ФормаСписка</Form>
 			<Command uuid="720042ee-36b6-4c35-843f-4b33915f14f2">
 				<Properties>
 					<Name>МатчиКоманды</Name>
