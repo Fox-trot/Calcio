@@ -7,6 +7,10 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>Игрок</dataPath>
+			<field>Игрок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>Страна</dataPath>
 			<field>Страна</field>
 			<title xsi:type="v8:LocalStringType">
@@ -15,6 +19,13 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>25</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоИгроков</dataPath>
@@ -28,37 +39,31 @@
 			<valueType>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>4</v8:Digits>
+					<v8:Digits>10</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</valueType>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Игрок</dataPath>
-			<field>Игрок</field>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ ПЕРВЫЕ 10
-	Страны.Ссылка КАК Страна
+	Страны.Ссылка КАК Ссылка,
+	Страны.Наименование КАК Наименование
 ПОМЕСТИТЬ ВТ
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
-			ПО Игроки.Страна = Страны.Ссылка
-		ПО Перемещения.Игрок = Игроки.Ссылка
+	Справочник.Игроки КАК Игроки
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+		ПО Игроки.Страна = Страны.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
+		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
-	Перемещения.Команда В
-			(ВЫБРАТЬ РАЗЛИЧНЫЕ
-				ЧемпионатыКоманды.Команда
-			ИЗ
-				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-			ГДЕ
-				ЧемпионатыКоманды.Ссылка = &amp;Чемпионат)
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
 
 СГРУППИРОВАТЬ ПО
-	Страны.Ссылка
+	Страны.Ссылка,
+	Страны.Наименование
 
 УПОРЯДОЧИТЬ ПО
 	СУММА(1) УБЫВ
@@ -66,48 +71,25 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	ЕСТЬNULL(ВТ.Страна, "Прочие") КАК Страна,
-	СУММА(1) КАК КоличествоИгроков
+	ЕСТЬNULL(ВТ.Наименование, "Прочие") КАК Страна,
+	1 КАК КоличествоИгроков
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-			ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
-			ПО Игроки.Страна = ВТ.Страна
-		ПО Перемещения.Игрок = Игроки.Ссылка
+	Справочник.Игроки КАК Игроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
+		ПО Игроки.Страна = ВТ.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
+		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
-	Перемещения.Команда В
-			(ВЫБРАТЬ РАЗЛИЧНЫЕ
-				ЧемпионатыКоманды.Команда
-			ИЗ
-				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-			ГДЕ
-				ЧемпионатыКоманды.Ссылка = &amp;Чемпионат)
-
-СГРУППИРОВАТЬ ПО
-	ЕСТЬNULL(ВТ.Страна, "Прочие")</query>
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат</query>
 		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
 	</dataSet>
 	<totalField>
 		<dataPath>КоличествоИгроков</dataPath>
 		<expression>Сумма(КоличествоИгроков)</expression>
+		<group>Страна</group>
 	</totalField>
-	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-	</parameter>
 	<parameter>
 		<name>Чемпионат</name>
 		<title xsi:type="v8:LocalStringType">
@@ -123,6 +105,23 @@
 		<useRestriction>false</useRestriction>
 		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>

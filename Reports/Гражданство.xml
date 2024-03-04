@@ -21,7 +21,7 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm/>
+			<DefaultForm>Report.Гражданство.Form.ФормаОтчета</DefaultForm>
 			<AuxiliaryForm/>
 			<MainDataCompositionSchema>Report.Гражданство.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
 			<DefaultSettingsForm/>
@@ -34,6 +34,7 @@
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
+			<Form>ФормаОтчета</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
 			<Command uuid="7e8222c4-7531-4168-b4a3-60d66d1e03c6">
 				<Properties>
@@ -41,7 +42,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Гражданство</v8:content>
+							<v8:content>Гражданства</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
