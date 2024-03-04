@@ -100,7 +100,7 @@
 				<d4p1:pointsCurId>0</d4p1:pointsCurId>
 				<d4p1:isSeriesDesign>false</d4p1:isSeriesDesign>
 				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
-				<d4p1:isPointsDesign>false</d4p1:isPointsDesign>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>0</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
