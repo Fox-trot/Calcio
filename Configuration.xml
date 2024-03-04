@@ -248,6 +248,7 @@
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
 			<Constant>МояКоманда</Constant>
+			<Constant>Цвета</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<Catalog>Амплуа</Catalog>
 			<Catalog>ВидыСпорта</Catalog>

@@ -98,11 +98,29 @@
 			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
 				<d4p1:seriesCurId>1</d4p1:seriesCurId>
 				<d4p1:pointsCurId>0</d4p1:pointsCurId>
-				<d4p1:isSeriesDesign>false</d4p1:isSeriesDesign>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
 				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сводная</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>false</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
-				<d4p1:curSeries>0</d4p1:curSeries>
+				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
 				<d4p1:chartType>Line</d4p1:chartType>
 				<d4p1:circleLabelType>None</d4p1:circleLabelType>
