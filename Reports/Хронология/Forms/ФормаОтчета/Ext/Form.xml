@@ -170,7 +170,7 @@
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
 				</d4p1:realExSeriesData>
-				<d4p1:isPointsDesign>false</d4p1:isPointsDesign>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
@@ -231,7 +231,7 @@
 				</d4p1:scaleLine>
 				<d4p1:scaleColor>auto</d4p1:scaleColor>
 				<d4p1:isAutoSeriesName>false</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>false</d4p1:isAutoPointName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
 				<d4p1:maxMode>NotDefined</d4p1:maxMode>
 				<d4p1:maxSeries>4</d4p1:maxSeries>
 				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
