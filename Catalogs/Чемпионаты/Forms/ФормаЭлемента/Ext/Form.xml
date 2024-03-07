@@ -6,6 +6,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="40">
@@ -116,7 +117,15 @@
 			<DataPath>Объект.Команды</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
-			<AutoCommandBar name="КомандыКоманднаяПанель" id="18"/>
+			<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
+				<ChildItems>
+					<Button name="КомандаИмпортКоманд" id="49">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
+						<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
 			<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
 				<AdditionSource>
@@ -197,4 +206,41 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="КомандаИмпортКоманд" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт команд</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаИмпортКоманд</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:4994a503-08ac-4e15-8bb3-37f730e4566e</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>
