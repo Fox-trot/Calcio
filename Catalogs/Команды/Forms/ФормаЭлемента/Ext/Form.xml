@@ -93,6 +93,9 @@
 									<EnableDrag>true</EnableDrag>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="130"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="131"/>
+									<Events>
+										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+									</Events>
 								</PictureField>
 								<UsualGroup name="ГруппаАватар" id="123">
 									<EnableContentChange>true</EnableContentChange>

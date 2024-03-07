@@ -113,6 +113,9 @@
 							<EnableDrag>true</EnableDrag>
 							<ContextMenu name="ИзображениеКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+							</Events>
 						</PictureField>
 						<UsualGroup name="ГруппаИзображение" id="25">
 							<Title>
