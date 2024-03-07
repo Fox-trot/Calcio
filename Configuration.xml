@@ -267,6 +267,7 @@
 			<Report>Хронология</Report>
 			<Report>Гражданство</Report>
 			<Report>Посещаемость</Report>
+			<Report>Календарь</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
