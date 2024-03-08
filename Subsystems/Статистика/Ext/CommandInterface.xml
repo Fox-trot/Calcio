@@ -16,6 +16,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Report.Календарь.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 	</CommandsVisibility>
 	<CommandsPlacement>
 		<Command name="Document.СнятиеОчков.StandardCommand.OpenList">
@@ -24,6 +29,9 @@
 		</Command>
 	</CommandsPlacement>
 	<CommandsOrder>
+		<Command name="Report.Календарь.Command.КомандаКалендарь">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
 		<Command name="Document.СнятиеОчков.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
@@ -40,6 +48,9 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Посещаемость.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.Календарь.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 	</CommandsOrder>

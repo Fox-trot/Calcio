@@ -27,12 +27,12 @@
 	<ChildItems>
 		<UsualGroup name="ГруппаРеквизиты" id="12">
 			<EnableContentChange>true</EnableContentChange>
-			<ToolTip>
+			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа реквизиты</v8:content>
+					<v8:content>Реквизиты</v8:content>
 				</v8:item>
-			</ToolTip>
+			</Title>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
