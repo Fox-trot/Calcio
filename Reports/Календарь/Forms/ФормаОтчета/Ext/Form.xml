@@ -70,6 +70,7 @@
 					<DataPath>Отчет.Период</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<VerticalStretch>false</VerticalStretch>
 					<Font ref="style:NormalTextFont" kind="StyleItem" scale="133"/>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
@@ -80,6 +81,8 @@
 				<PictureField name="Изображение" id="34">
 					<DataPath>Изображение</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<Zoomable>true</Zoomable>
+					<EnableStartDrag>true</EnableStartDrag>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="36"/>
 				</PictureField>
@@ -209,6 +212,9 @@
 				<v8:Type>cfg:ReportObject.Календарь</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Отчет.SettingsComposer</Field>
+			</UseAlways>
 			<Save>
 				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Период</Field>
@@ -262,13 +268,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текущий месяц</v8:content>
+					<v8:content>Текущий период</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текущий месяц</v8:content>
+					<v8:content>Текущий период</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

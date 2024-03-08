@@ -101,23 +101,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="21"/>
 					<ChildItems>
-						<PictureField name="Изображение" id="22">
-							<DataPath>Изображение</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Изображение</v8:content>
-								</v8:item>
-							</ToolTip>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<ContextMenu name="ИзображениеКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="24"/>
-							<Events>
-								<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
-							</Events>
-						</PictureField>
 						<UsualGroup name="ГруппаИзображение" id="25">
 							<Title>
 								<v8:item>
@@ -142,6 +125,23 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
+						<PictureField name="Изображение" id="22">
+							<DataPath>Изображение</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изображение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<ContextMenu name="ИзображениеКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+							</Events>
+						</PictureField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>

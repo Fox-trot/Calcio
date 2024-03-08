@@ -112,17 +112,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="22"/>
 			<ChildItems>
-				<PictureField name="Изображение" id="23">
-					<DataPath>Изображение</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<ContextMenu name="ИзображениеКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="25"/>
-					<Events>
-						<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
-					</Events>
-				</PictureField>
 				<UsualGroup name="ГруппаИзображение" id="26">
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
@@ -141,6 +130,17 @@
 						</Button>
 					</ChildItems>
 				</UsualGroup>
+				<PictureField name="Изображение" id="23">
+					<DataPath>Изображение</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<ContextMenu name="ИзображениеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+					</Events>
+				</PictureField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
