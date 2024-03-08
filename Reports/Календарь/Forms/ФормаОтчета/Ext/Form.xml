@@ -34,31 +34,38 @@
 					<ContextMenu name="КомандаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="33"/>
 					<Events>
-						<Event name="OnChange">КомандаПриИзменении</Event>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CommandBar name="ГруппаКалендарь" id="41">
+				<UsualGroup name="ГруппаКалендарь" id="46">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Календарь</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Календарь</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="42"/>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="47"/>
 					<ChildItems>
 						<Button name="КомандаТекущийМесяц" id="39">
-							<Type>CommandBarButton</Type>
+							<Type>UsualButton</Type>
 							<CommandName>Form.Command.КомандаТекущийМесяц</CommandName>
 							<ExtendedTooltip name="КомандаТекущийМесяцРасширеннаяПодсказка" id="40"/>
 						</Button>
+						<CheckBoxField name="ТолькоДниРождения" id="48">
+							<DataPath>Отчет.ТолькоДниРождения</DataPath>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоДниРожденияКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ТолькоДниРожденияРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="OnChange">ЭлементПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 					</ChildItems>
-				</CommandBar>
+				</UsualGroup>
 				<PeriodField name="Период" id="1">
 					<DataPath>Отчет.Период</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -67,7 +74,7 @@
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
 					<Events>
-						<Event name="OnChange">ПериодПриИзменении</Event>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
 					</Events>
 				</PeriodField>
 				<PictureField name="Изображение" id="34">
@@ -104,7 +111,15 @@
 			</CommandSet>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ДанныеКонтекстноеМеню" id="5"/>
-			<AutoCommandBar name="ДанныеКоманднаяПанель" id="6"/>
+			<AutoCommandBar name="ДанныеКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="ДанныеКомандаОбновить" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОбновить</CommandName>
+						<ExtendedTooltip name="ДанныеКомандаОбновитьРасширеннаяПодсказка" id="55"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="7"/>
 			<SearchStringAddition name="ДанныеСтрокаПоиска" id="8">
 				<AdditionSource>
@@ -148,14 +163,25 @@
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoCellHeight>true</AutoCellHeight>
+					<Width>8</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
 					<TextEdit>false</TextEdit>
 					<ContextMenu name="ДанныеДатаКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ДанныеДатаРасширеннаяПодсказка" id="22"/>
 				</InputField>
+				<InputField name="ДанныеПредставление" id="51">
+					<DataPath>Отчет.Данные.Представление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДанныеПредставлениеКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДанныеПредставлениеРасширеннаяПодсказка" id="53"/>
+				</InputField>
 				<InputField name="ДанныеИгрокИлиМатч" id="26">
 					<DataPath>Отчет.Данные.ИгрокИлиМатч</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoCellHeight>true</AutoCellHeight>
@@ -186,6 +212,7 @@
 			<Save>
 				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Период</Field>
+				<Field>Отчет.ТолькоДниРождения</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="Изображение" id="2">
@@ -214,6 +241,21 @@
 				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ИзображениеДефолт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изображение дефолт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаТекущийМесяц" id="1">
@@ -235,6 +277,18 @@
 			</Picture>
 			<Action>КомандаСегодня</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаОбновить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>F5</Shortcut>
+			<Action>КомандаОбновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Данные</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
