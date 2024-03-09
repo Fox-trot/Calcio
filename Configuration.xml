@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>1.4</Version>
+			<Version>1.5</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -247,9 +247,11 @@
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
+			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<Constant>Цвета</Constant>
 			<CommonForm>Настройки</CommonForm>
+			<CommonForm>Календарь</CommonForm>
 			<Catalog>Амплуа</Catalog>
 			<Catalog>ВидыСпорта</Catalog>
 			<Catalog>Игроки</Catalog>
@@ -267,7 +269,6 @@
 			<Report>Хронология</Report>
 			<Report>Гражданство</Report>
 			<Report>Посещаемость</Report>
-			<Report>Календарь</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>

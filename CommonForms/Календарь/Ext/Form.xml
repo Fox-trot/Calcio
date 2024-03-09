@@ -2,10 +2,6 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Group>AlwaysHorizontal</Group>
-	<ReportFormType>Main</ReportFormType>
-	<AutoShowState>Auto</AutoShowState>
-	<ReportResultViewMode>Auto</ReportResultViewMode>
-	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -15,7 +11,6 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПараметры" id="29">
-			<EnableContentChange>true</EnableContentChange>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -29,7 +24,7 @@
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
 				<InputField name="Команда" id="31">
-					<DataPath>Отчет.Команда</DataPath>
+					<DataPath>МояКоманда</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="33"/>
@@ -37,26 +32,19 @@
 						<Event name="OnChange">ЭлементПриИзменении</Event>
 					</Events>
 				</InputField>
-				<UsualGroup name="ГруппаКалендарь" id="46">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Календарь</v8:content>
-						</v8:item>
-					</Title>
+				<UsualGroup name="ГруппаКалендарь" id="86">
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="47"/>
+					<ExtendedTooltip name="ГруппаКалендарьРасширеннаяПодсказка" id="87"/>
 					<ChildItems>
-						<Button name="КомандаТекущийМесяц" id="39">
+						<Button name="КомандаТекущийПериод" id="84">
 							<Type>UsualButton</Type>
-							<CommandName>Form.Command.КомандаТекущийМесяц</CommandName>
-							<ExtendedTooltip name="КомандаТекущийМесяцРасширеннаяПодсказка" id="40"/>
+							<CommandName>Form.Command.КомандаТекущийПериод</CommandName>
+							<ExtendedTooltip name="КомандаТекущийПериодРасширеннаяПодсказка" id="85"/>
 						</Button>
 						<CheckBoxField name="ТолькоДниРождения" id="48">
-							<DataPath>Отчет.ТолькоДниРождения</DataPath>
-							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<DataPath>ТолькоДниРождения</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ТолькоДниРожденияКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="ТолькоДниРожденияРасширеннаяПодсказка" id="50"/>
@@ -67,10 +55,9 @@
 					</ChildItems>
 				</UsualGroup>
 				<PeriodField name="Период" id="1">
-					<DataPath>Отчет.Период</DataPath>
+					<DataPath>Период</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
-					<VerticalStretch>false</VerticalStretch>
 					<Font ref="style:NormalTextFont" kind="StyleItem" scale="133"/>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
@@ -80,8 +67,8 @@
 				</PeriodField>
 				<PictureField name="Изображение" id="34">
 					<DataPath>Изображение</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
-					<Zoomable>true</Zoomable>
 					<EnableStartDrag>true</EnableStartDrag>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="36"/>
@@ -89,12 +76,15 @@
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Список" id="56">
+			<Representation>List</Representation>
+			<TitleLocation>Auto</TitleLocation>
 			<ReadOnly>true</ReadOnly>
 			<DefaultItem>true</DefaultItem>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
 			<SelectionMode>SingleRow</SelectionMode>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<HorizontalLines>false</HorizontalLines>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>~Список.DefaultPicture</RowPictureDataPath>
@@ -111,7 +101,7 @@
 			<ShowRoot>false</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<UserSettingsGroup>ГруппаКалендарь</UserSettingsGroup>
+			<UserSettingsGroup>46:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="57"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="58"/>
@@ -159,22 +149,10 @@
 					<ContextMenu name="СписокДатаКонтекстноеМеню" id="70"/>
 					<ExtendedTooltip name="СписокДатаРасширеннаяПодсказка" id="71"/>
 				</LabelField>
-				<LabelField name="СписокПредставление" id="78">
-					<DataPath>Список.Представление</DataPath>
-					<ContextMenu name="СписокПредставлениеКонтекстноеМеню" id="79"/>
-					<ExtendedTooltip name="СписокПредставлениеРасширеннаяПодсказка" id="80"/>
-				</LabelField>
 				<LabelField name="СписокИгрокИлиМатч" id="72">
 					<DataPath>Список.ИгрокИлиМатч</DataPath>
-					<Visible>false</Visible>
 					<ContextMenu name="СписокИгрокИлиМатчКонтекстноеМеню" id="73"/>
 					<ExtendedTooltip name="СписокИгрокИлиМатчРасширеннаяПодсказка" id="74"/>
-				</LabelField>
-				<LabelField name="СписокПорядок" id="75">
-					<DataPath>Список.Порядок</DataPath>
-					<Visible>false</Visible>
-					<ContextMenu name="СписокПорядокКонтекстноеМеню" id="76"/>
-					<ExtendedTooltip name="СписокПорядокРасширеннаяПодсказка" id="77"/>
 				</LabelField>
 				<CheckBoxField name="СписокЭтоИгрок" id="81">
 					<DataPath>Список.ЭтоИгрок</DataPath>
@@ -183,24 +161,22 @@
 					<ContextMenu name="СписокЭтоИгрокКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="СписокЭтоИгрокРасширеннаяПодсказка" id="83"/>
 				</CheckBoxField>
+				<LabelField name="СписокТур" id="88">
+					<DataPath>Список.Тур</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СписокТурКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="СписокТурРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="СписокВладелец" id="91">
+					<DataPath>Список.Владелец</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СписокВладелецКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="СписокВладелецРасширеннаяПодсказка" id="93"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Отчет" id="1">
-			<Type>
-				<v8:Type>cfg:ReportObject.Календарь</v8:Type>
-			</Type>
-			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Отчет.SettingsComposer</Field>
-			</UseAlways>
-			<Save>
-				<Field>Отчет.Команда</Field>
-				<Field>Отчет.Период</Field>
-				<Field>Отчет.ТолькоДниРождения</Field>
-			</Save>
-		</Attribute>
 		<Attribute name="Изображение" id="2">
 			<Title>
 				<v8:item>
@@ -255,39 +231,25 @@
 			<UseAlways>
 				<Field>Список.Дата</Field>
 				<Field>Список.ИгрокИлиМатч</Field>
-				<Field>Список.Представление</Field>
+				<Field>Список.КоличествоОчков</Field>
 				<Field>Список.ЭтоИгрок</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
-	НАЧАЛОПЕРИОДА(Игроки.ДатаРождения, ДЕНЬ) КАК Дата,
-	ПеремещенияИгроков.Игрок КАК ИгрокИлиМатч,
-	ИСТИНА КАК ЭтоИгрок,
-	МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) КАК Порядок,
-	Игроки.Представление КАК Представление,
-	-2 КАК КоличествоОчков
-ИЗ
-	РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроков
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-		ПО ПеремещенияИгроков.Игрок = Игроки.Ссылка
-ГДЕ
-	ПеремещенияИгроков.Команда = &amp;Команда
-	И МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) МЕЖДУ &amp;ММДД1 И &amp;ММДД2
-
-ОБЪЕДИНИТЬ ВСЕ
-
-ВЫБРАТЬ
-	Матч.Дата,
-	Матч.Ссылка,
-	ЛОЖЬ,
-	МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) + 0.1,
-	Матч.Представление,
-	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1)
+				<QueryText>ВЫБРАТЬ
+	Матч.Дата КАК Дата,
+	Матч.Ссылка КАК ИгрокИлиМатч,
+	ЛОЖЬ КАК ЭтоИгрок,
+	МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) + 0.1 КАК Порядок,
+	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1) КАК КоличествоОчков,
+	Матч.Тур КАК Тур,
+	Туры.Владелец КАК Владелец
 ИЗ
 	Документ.Матч.Команды КАК МатчКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Туры КАК Туры
+			ПО Матч.Тур = Туры.Ссылка
 		ПО МатчКоманды.Ссылка = Матч.Ссылка
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ПО МатчКоманды.Ссылка = ТурнирнаяТаблица.Регистратор
@@ -300,42 +262,88 @@
 			КОГДА Матч.Дата &lt;= &amp;Дата
 				ТОГДА Матч.Проведен = ИСТИНА
 			ИНАЧЕ Матч.ПометкаУдаления = ЛОЖЬ
-		КОНЕЦ</QueryText>
+		КОНЕЦ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	НАЧАЛОПЕРИОДА(Игроки.ДатаРождения, ДЕНЬ),
+	ПеремещенияИгроков.Игрок,
+	ИСТИНА,
+	МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения),
+	-2,
+	NULL,
+	NULL
+ИЗ
+	РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроков
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
+		ПО ПеремещенияИгроков.Игрок = Игроки.Ссылка
+ГДЕ
+	ПеремещенияИгроков.Команда = &amp;Команда
+	И МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) МЕЖДУ МЕСЯЦ(&amp;ДатаН) * 100 + ДЕНЬ(&amp;ДатаН) И МЕСЯЦ(&amp;ДатаК) * 100 + ДЕНЬ(&amp;ДатаК)
+</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Дата</dcssch:dataPath>
 					<dcssch:field>Дата</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата</v8:content>
-						</v8:item>
-					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ИгрокИлиМатч</dcssch:dataPath>
 					<dcssch:field>ИгрокИлиМатч</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игрок или матч</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+						<v8:Type>cfg:DocumentRef.Матч</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ЭтоИгрок</dcssch:dataPath>
 					<dcssch:field>ЭтоИгрок</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Порядок</dcssch:dataPath>
 					<dcssch:field>Порядок</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>КоличествоОчков</dcssch:dataPath>
 					<dcssch:field>КоличествоОчков</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Представление</dcssch:dataPath>
-					<dcssch:field>Представление</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Представление</v8:content>
-						</v8:item>
-					</dcssch:title>
+					<dcssch:dataPath>Тур</dcssch:dataPath>
+					<dcssch:field>Тур</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Дата</dcssch:name>
@@ -416,44 +424,10 @@
 					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
-				<Parameter>
-					<dcssch:name>ММДД1</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ММДД1</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>0</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</dcssch:valueType>
-					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-				</Parameter>
-				<Parameter>
-					<dcssch:name>ММДД2</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ММДД2</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>0</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</dcssch:valueType>
-					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-				</Parameter>
+				<KeyType>FieldValue</KeyType>
+				<KeyField>ИгрокИлиМатч</KeyField>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -461,6 +435,10 @@
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
 							<dcsset:field>Порядок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ИгрокИлиМатч</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -472,7 +450,7 @@
 									<dcsset:field>Дата</dcsset:field>
 								</dcsset:item>
 								<dcsset:item>
-									<dcsset:field>Представление</dcsset:field>
+									<dcsset:field>ИгрокИлиМатч</dcsset:field>
 								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
@@ -495,7 +473,7 @@
 									<dcsset:field>Дата</dcsset:field>
 								</dcsset:item>
 								<dcsset:item>
-									<dcsset:field>Представление</dcsset:field>
+									<dcsset:field>ИгрокИлиМатч</dcsset:field>
 								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
@@ -513,15 +491,59 @@
 							</dcsset:appearance>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>ecf1bc82-b087-4790-9250-7cb633f1db8d</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
-					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="Период" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>Период</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="МояКоманда" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+			<Save>
+				<Field>МояКоманда</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТолькоДниРождения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только дни рождения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТолькоДниРождения</Field>
+			</Save>
+		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="КомандаТекущийМесяц" id="1">
+		<Command name="КомандаТекущийПериод" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
