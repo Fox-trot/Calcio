@@ -287,6 +287,7 @@
 				<v8:content>ДЛФ=D</v8:content>
 			</v8:item>
 		</format>
+		<indent>1</indent>
 	</format>
 	<format>
 		<width>416</width>

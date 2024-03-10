@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
-	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -406,6 +405,58 @@
 													<TitleLocation>None</TitleLocation>
 													<ContextMenu name="ИгрСНачалаСезонаГостиКонтекстноеМеню" id="265"/>
 													<ExtendedTooltip name="ИгрСНачалаСезонаГостиРасширеннаяПодсказка" id="266"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияОчки" id="370">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Очки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОчкиКонтекстноеМеню" id="371"/>
+											<ExtendedTooltip name="ДекорацияОчкиРасширеннаяПодсказка" id="372"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаОчки" id="373">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа очки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа очки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОчкиРасширеннаяПодсказка" id="374"/>
+											<ChildItems>
+												<LabelField name="ОчкиХозяева" id="378">
+													<DataPath>Очки</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ОчкиХозяеваКонтекстноеМеню" id="379"/>
+													<ExtendedTooltip name="ОчкиХозяеваРасширеннаяПодсказка" id="380"/>
+												</LabelField>
+												<ProgressBarField name="Очки" id="375">
+													<DataPath>Очки</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ОчкиКонтекстноеМеню" id="376"/>
+													<ExtendedTooltip name="ОчкиРасширеннаяПодсказка" id="377"/>
+												</ProgressBarField>
+												<LabelField name="ОчкиГости" id="381">
+													<DataPath>ОчкиГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ОчкиГостиКонтекстноеМеню" id="382"/>
+													<ExtendedTooltip name="ОчкиГостиРасширеннаяПодсказка" id="383"/>
 												</LabelField>
 											</ChildItems>
 										</UsualGroup>
@@ -2108,6 +2159,38 @@
 					<v8:Length>1</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Очки" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчкиГости" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
