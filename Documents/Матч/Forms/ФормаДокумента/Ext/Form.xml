@@ -69,17 +69,6 @@
 							<ContextMenu name="СчетКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="85"/>
 						</LabelField>
-						<LabelField name="ЭтоДерби" id="182">
-							<DataPath>ЭтоДерби</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<TitleLocation>None</TitleLocation>
-							<HorizontalAlign>Right</HorizontalAlign>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<TextColor>style:NegativeTextColor</TextColor>
-							<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-							<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -211,14 +200,45 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
 							<ChildItems>
-								<InputField name="Тур" id="94">
-									<DataPath>Объект.Тур</DataPath>
-									<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
-									<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
-									<Events>
-										<Event name="OnChange">ТурПриИзменении</Event>
-									</Events>
-								</InputField>
+								<UsualGroup name="ГруппаТур" id="368">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тур</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тур</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТурРасширеннаяПодсказка" id="369"/>
+									<ChildItems>
+										<InputField name="Тур" id="94">
+											<DataPath>Объект.Тур</DataPath>
+											<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
+											<Events>
+												<Event name="OnChange">ТурПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelField name="ЭтоДерби" id="182">
+											<DataPath>ЭтоДерби</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:NegativeTextColor</TextColor>
+											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
 								<InputField name="Комментарий" id="155">
 									<DataPath>Объект.Комментарий</DataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -231,6 +251,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаАнонс" id="148">
+					<EnableContentChange>true</EnableContentChange>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -248,6 +269,651 @@
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="ГруппаАнонсРасширеннаяПодсказка" id="149"/>
+					<ChildItems>
+						<Button name="АнонсОбновить" id="321">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.АнонсОбновить</CommandName>
+							<ExtendedTooltip name="АнонсОбновитьРасширеннаяПодсказка" id="322"/>
+						</Button>
+						<UsualGroup name="ГруппаАнонсСтатистика" id="209">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Анонс статистика</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Анонс статистика</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАнонсСтатистикаРасширеннаяПодсказка" id="210"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаХозяева" id="211">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хозяева</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хозяева</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаХозяеваРасширеннаяПодсказка" id="212"/>
+									<ChildItems>
+										<LabelField name="Хозяева" id="241">
+											<DataPath>Хозяева</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
+										</LabelField>
+										<PictureField name="ИзображениеХозяева" id="233">
+											<DataPath>ИзображениеХозяева</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EnableStartDrag>true</EnableStartDrag>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="ИзображениеХозяеваКонтекстноеМеню" id="234"/>
+											<ExtendedTooltip name="ИзображениеХозяеваРасширеннаяПодсказка" id="235"/>
+										</PictureField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСтатистика" id="213">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статистика</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статистика</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>false</HorizontalStretch>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСтатистикаРасширеннаяПодсказка" id="214"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияИгрСНачалаСезона" id="247">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Игр с начала сезона</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияИгрСНачалаСезонаКонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="ДекорацияИгрСНачалаСезонаРасширеннаяПодсказка" id="249"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаИгрСНачалаСезона" id="259">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа игр с начала сезона</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа игр с начала сезона</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИгрСНачалаСезонаРасширеннаяПодсказка" id="260"/>
+											<ChildItems>
+												<LabelField name="ИгрСНачалаСезонаХозяева" id="261">
+													<DataPath>ИгрСНачалаСезона</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ИгрСНачалаСезонаХозяеваКонтекстноеМеню" id="262"/>
+													<ExtendedTooltip name="ИгрСНачалаСезонаХозяеваРасширеннаяПодсказка" id="263"/>
+												</LabelField>
+												<ProgressBarField name="ИгрСНачалаСезона" id="221">
+													<DataPath>ИгрСНачалаСезона</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<Width>1</Width>
+													<ContextMenu name="ИгрСНачалаСезонаКонтекстноеМеню" id="222"/>
+													<ExtendedTooltip name="ИгрСНачалаСезонаРасширеннаяПодсказка" id="223"/>
+												</ProgressBarField>
+												<LabelField name="ИгрСНачалаСезонаГости" id="264">
+													<DataPath>ИгрСНачалаСезонаГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ИгрСНачалаСезонаГостиКонтекстноеМеню" id="265"/>
+													<ExtendedTooltip name="ИгрСНачалаСезонаГостиРасширеннаяПодсказка" id="266"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияПобед" id="250">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Побед</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПобедКонтекстноеМеню" id="251"/>
+											<ExtendedTooltip name="ДекорацияПобедРасширеннаяПодсказка" id="252"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаПобед" id="267">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа побед</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа побед</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПобедРасширеннаяПодсказка" id="268"/>
+											<ChildItems>
+												<LabelField name="ПобедХозяева" id="269">
+													<DataPath>Побед</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ПобедХозяеваКонтекстноеМеню" id="270"/>
+													<ExtendedTooltip name="ПобедХозяеваРасширеннаяПодсказка" id="271"/>
+												</LabelField>
+												<ProgressBarField name="Побед" id="227">
+													<DataPath>Побед</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<ContextMenu name="ПобедКонтекстноеМеню" id="228"/>
+													<ExtendedTooltip name="ПобедРасширеннаяПодсказка" id="229"/>
+												</ProgressBarField>
+												<LabelField name="ПобедГости" id="272">
+													<DataPath>ПобедГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ПобедГостиКонтекстноеМеню" id="273"/>
+													<ExtendedTooltip name="ПобедГостиРасширеннаяПодсказка" id="274"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияНичьих" id="253">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ничьих</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНичьихКонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="ДекорацияНичьихРасширеннаяПодсказка" id="255"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаНичьих" id="275">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ничьих</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ничьих</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНичьихРасширеннаяПодсказка" id="276"/>
+											<ChildItems>
+												<LabelField name="НичьихХозяева" id="277">
+													<DataPath>Ничьих</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="НичьихХозяеваКонтекстноеМеню" id="278"/>
+													<ExtendedTooltip name="НичьихХозяеваРасширеннаяПодсказка" id="279"/>
+												</LabelField>
+												<ProgressBarField name="Ничьих" id="224">
+													<DataPath>Ничьих</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<ContextMenu name="НичьихКонтекстноеМеню" id="225"/>
+													<ExtendedTooltip name="НичьихРасширеннаяПодсказка" id="226"/>
+												</ProgressBarField>
+												<LabelField name="НичьихГости" id="280">
+													<DataPath>НичьихГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="НичьихГостиКонтекстноеМеню" id="281"/>
+													<ExtendedTooltip name="НичьихГостиРасширеннаяПодсказка" id="282"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияПроигрышей" id="256">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Проигрышей</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПроигрышейКонтекстноеМеню" id="257"/>
+											<ExtendedTooltip name="ДекорацияПроигрышейРасширеннаяПодсказка" id="258"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаПроигрышей" id="283">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа проигрышей</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа проигрышей</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроигрышейРасширеннаяПодсказка" id="284"/>
+											<ChildItems>
+												<LabelField name="ПроигрышейХозяева" id="285">
+													<DataPath>Проигрышей</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ПроигрышейХозяеваКонтекстноеМеню" id="286"/>
+													<ExtendedTooltip name="ПроигрышейХозяеваРасширеннаяПодсказка" id="287"/>
+												</LabelField>
+												<ProgressBarField name="Проигрышей" id="230">
+													<DataPath>Проигрышей</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<ContextMenu name="ПроигрышейКонтекстноеМеню" id="231"/>
+													<ExtendedTooltip name="ПроигрышейРасширеннаяПодсказка" id="232"/>
+												</ProgressBarField>
+												<LabelField name="ПроигрышейГости" id="288">
+													<DataPath>ПроигрышейГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ПроигрышейГостиКонтекстноеМеню" id="289"/>
+													<ExtendedTooltip name="ПроигрышейГостиРасширеннаяПодсказка" id="290"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияКоличествоГолов" id="291">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результативность</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Голов забито</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="ДекорацияКоличествоГоловКонтекстноеМеню" id="292"/>
+											<ExtendedTooltip name="ДекорацияКоличествоГоловРасширеннаяПодсказка" id="293"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаКоличествоГолов" id="297">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество голов</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа количество голов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКоличествоГоловРасширеннаяПодсказка" id="298"/>
+											<ChildItems>
+												<LabelField name="КоличествоГоловХозяева" id="299">
+													<DataPath>КоличествоГолов</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="КоличествоГоловХозяеваКонтекстноеМеню" id="300"/>
+													<ExtendedTooltip name="КоличествоГоловХозяеваРасширеннаяПодсказка" id="301"/>
+												</LabelField>
+												<ProgressBarField name="КоличествоГолов" id="294">
+													<DataPath>КоличествоГолов</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="КоличествоГоловКонтекстноеМеню" id="295"/>
+													<ExtendedTooltip name="КоличествоГоловРасширеннаяПодсказка" id="296"/>
+												</ProgressBarField>
+												<LabelField name="КоличествоГоловГости" id="302">
+													<DataPath>КоличествоГоловГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="КоличествоГоловГостиКонтекстноеМеню" id="303"/>
+													<ExtendedTooltip name="КоличествоГоловГостиРасширеннаяПодсказка" id="304"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияРезультативностьСредняя" id="305">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результативность средняя</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияРезультативностьСредняяКонтекстноеМеню" id="306"/>
+											<ExtendedTooltip name="ДекорацияРезультативностьСредняяРасширеннаяПодсказка" id="307"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаРезультативностьСредняя" id="308">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результативность средняя</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результативность средняя</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРезультативностьСредняяРасширеннаяПодсказка" id="309"/>
+											<ChildItems>
+												<LabelField name="РезультативностьХозяева" id="313">
+													<DataPath>Результативность</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="РезультативностьХозяеваКонтекстноеМеню" id="314"/>
+													<ExtendedTooltip name="РезультативностьХозяеваРасширеннаяПодсказка" id="315"/>
+												</LabelField>
+												<ProgressBarField name="Результативность" id="310">
+													<DataPath>Результативность</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="РезультативностьКонтекстноеМеню" id="311"/>
+													<ExtendedTooltip name="РезультативностьРасширеннаяПодсказка" id="312"/>
+												</ProgressBarField>
+												<LabelField name="РезультативностьГости" id="316">
+													<DataPath>РезультативностьГости</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="РезультативностьГостиКонтекстноеМеню" id="317"/>
+													<ExtendedTooltip name="РезультативностьГостиРасширеннаяПодсказка" id="318"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПредыдущие5" id="348">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПредыдущие5РасширеннаяПодсказка" id="349"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияПредыдущие5" id="345">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предыдущие 5 игр</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПредыдущие5КонтекстноеМеню" id="346"/>
+													<ExtendedTooltip name="ДекорацияПредыдущие5РасширеннаяПодсказка" id="347"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаПредыдущие5Хозяева" id="323">
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПредыдущие5ХозяеваРасширеннаяПодсказка" id="324"/>
+													<ChildItems>
+														<LabelField name="Предыдущие5Хозяева" id="327">
+															<DataPath>Хозяева</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="Предыдущие5ХозяеваКонтекстноеМеню" id="328"/>
+															<ExtendedTooltip name="Предыдущие5ХозяеваРасширеннаяПодсказка" id="329"/>
+														</LabelField>
+														<InputField name="ИграХозяева1" id="342">
+															<DataPath>ИграХозяева1</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграХозяева1КонтекстноеМеню" id="343"/>
+															<ExtendedTooltip name="ИграХозяева1РасширеннаяПодсказка" id="344"/>
+														</InputField>
+														<InputField name="ИграХозяева2" id="330">
+															<DataPath>ИграХозяева2</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграХозяева2КонтекстноеМеню" id="331"/>
+															<ExtendedTooltip name="ИграХозяева2РасширеннаяПодсказка" id="332"/>
+														</InputField>
+														<InputField name="ИграХозяева3" id="333">
+															<DataPath>ИграХозяева3</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграХозяева3КонтекстноеМеню" id="334"/>
+															<ExtendedTooltip name="ИграХозяева3РасширеннаяПодсказка" id="335"/>
+														</InputField>
+														<InputField name="ИграХозяева4" id="336">
+															<DataPath>ИграХозяева4</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграХозяева4КонтекстноеМеню" id="337"/>
+															<ExtendedTooltip name="ИграХозяева4РасширеннаяПодсказка" id="338"/>
+														</InputField>
+														<InputField name="ИграХозяева5" id="339">
+															<DataPath>ИграХозяева5</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграХозяева5КонтекстноеМеню" id="340"/>
+															<ExtendedTooltip name="ИграХозяева5РасширеннаяПодсказка" id="341"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПредыдущие5Гости" id="325">
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предыдущие 5 игр (гости)</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предыдущие 5 игр (гости)</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПредыдущие5ГостиРасширеннаяПодсказка" id="326"/>
+													<ChildItems>
+														<LabelField name="Предыдущие5Гости" id="350">
+															<DataPath>Гости</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<ContextMenu name="Предыдущие5ГостиКонтекстноеМеню" id="351"/>
+															<ExtendedTooltip name="Предыдущие5ГостиРасширеннаяПодсказка" id="352"/>
+														</LabelField>
+														<InputField name="ИграГости1" id="365">
+															<DataPath>ИграГости1</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграГости1КонтекстноеМеню" id="366"/>
+															<ExtendedTooltip name="ИграГости1РасширеннаяПодсказка" id="367"/>
+														</InputField>
+														<InputField name="ИграГости2" id="353">
+															<DataPath>ИграГости2</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграГости2КонтекстноеМеню" id="354"/>
+															<ExtendedTooltip name="ИграГости2РасширеннаяПодсказка" id="355"/>
+														</InputField>
+														<InputField name="ИграГости3" id="356">
+															<DataPath>ИграГости3</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграГости3КонтекстноеМеню" id="357"/>
+															<ExtendedTooltip name="ИграГости3РасширеннаяПодсказка" id="358"/>
+														</InputField>
+														<InputField name="ИграГости4" id="359">
+															<DataPath>ИграГости4</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграГости4КонтекстноеМеню" id="360"/>
+															<ExtendedTooltip name="ИграГости4РасширеннаяПодсказка" id="361"/>
+														</InputField>
+														<InputField name="ИграГости5" id="362">
+															<DataPath>ИграГости5</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<TitleLocation>None</TitleLocation>
+															<HorizontalAlign>Center</HorizontalAlign>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ИграГости5КонтекстноеМеню" id="363"/>
+															<ExtendedTooltip name="ИграГости5РасширеннаяПодсказка" id="364"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаГости" id="239">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гости</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Гости</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаГостиРасширеннаяПодсказка" id="240"/>
+									<ChildItems>
+										<LabelField name="Гости" id="244">
+											<DataPath>Гости</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
+											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
+										</LabelField>
+										<PictureField name="ИзображениеГости" id="236">
+											<DataPath>ИзображениеГости</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EnableStartDrag>true</EnableStartDrag>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="ИзображениеГостиКонтекстноеМеню" id="237"/>
+											<ExtendedTooltip name="ИзображениеГостиРасширеннаяПодсказка" id="238"/>
+										</PictureField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАнонс2" id="319">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Анонс</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаАнонс2РасширеннаяПодсказка" id="320"/>
 					<ChildItems>
 						<Table name="Сезон" id="158">
 							<ReadOnly>true</ReadOnly>
@@ -275,7 +941,7 @@
 								<ChildItems>
 									<Button name="СезонАнонсОбновить" id="180">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.АнонсОбновить</CommandName>
+										<CommandName>Form.Command.АнонсОбновить2</CommandName>
 										<ExtendedTooltip name="СезонАнонсОбновитьРасширеннаяПодсказка" id="181"/>
 									</Button>
 								</ChildItems>
@@ -341,6 +1007,8 @@
 							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
 							<Height>3</Height>
 							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalScrollBar>false</VerticalScrollBar>
+							<HorizontalScrollBar>false</HorizontalScrollBar>
 							<ContextMenu name="Предыдущие5КонтекстноеМеню" id="202"/>
 							<ExtendedTooltip name="Предыдущие5РасширеннаяПодсказка" id="203"/>
 						</SpreadSheetDocumentField>
@@ -471,12 +1139,24 @@
 					</Picture>
 					<ExtendedTooltip name="ГруппаСравнениеРасширеннаяПодсказка" id="67"/>
 					<ChildItems>
-						<UsualGroup name="Группа1" id="89">
+						<UsualGroup name="ГруппаСравнениеПараметры" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сравнение параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сравнение параметры</v8:content>
+								</v8:item>
+							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="90"/>
+							<ExtendedTooltip name="ГруппаСравнениеПараметрыРасширеннаяПодсказка" id="90"/>
 							<ChildItems>
 								<InputField name="Амплуа" id="86">
 									<DataPath>Амплуа</DataPath>
@@ -1066,6 +1746,370 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Гости" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гости</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИгрСНачалаСезона" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игр с начала сезона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ничьих" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ничьих</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Побед" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Побед</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Проигрышей" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проигрышей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Чемпионат" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чемпионат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзображениеХозяева" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзображениеГости" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИгрСНачалаСезонаГости" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игр с начала сезона</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПобедГости" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Побед</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроигрышейГости" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проигрышей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НичьихГости" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ничьих</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоГолов" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество голов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоГоловГости" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество голов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результативность" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результативность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультативностьГости" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результативность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграХозяева1" id="32">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграХозяева2" id="33">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграХозяева3" id="34">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграХозяева4" id="35">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграХозяева5" id="36">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграГости1" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игра гости1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграГости2" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игра гости1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграГости3" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игра гости1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграГости4" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игра гости1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИграГости5" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игра гости1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="СоставыЗаполнить" id="1">
@@ -1110,7 +2154,7 @@
 			<Action>ГрафикОбновить</Action>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
-		<Command name="АнонсОбновить" id="3">
+		<Command name="АнонсОбновить2" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1120,7 +2164,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Анонс обновить</v8:content>
+					<v8:content>Анонс обновить2</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1128,7 +2172,8 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>АнонсОбновить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+			<Representation>Picture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">Сезон</AssociatedTableElementId>
 		</Command>
 		<Command name="МатчиОбновить" id="4">
 			<Title>
@@ -1148,6 +2193,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПредыдущиеВстречиОбновить</Action>
+		</Command>
+		<Command name="АнонсОбновить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анонс обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>АнонсОбновить</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

@@ -59,6 +59,12 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<CheckBoxField name="СтарыйВидАнонсов" id="15">
+			<DataPath>НаборКонстант.СтарыйВидАнонсов</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СтарыйВидАнонсовКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="СтарыйВидАнонсовРасширеннаяПодсказка" id="17"/>
+		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
@@ -69,6 +75,7 @@
 			<SavedData>true</SavedData>
 			<UseAlways>
 				<Field>НаборКонстант.МояКоманда</Field>
+				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
 			</UseAlways>
 		</Attribute>
 		<Attribute name="Физический" id="2">

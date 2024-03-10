@@ -250,6 +250,7 @@
 			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<Constant>Цвета</Constant>
+			<Constant>СтарыйВидАнонсов</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<Catalog>Амплуа</Catalog>
