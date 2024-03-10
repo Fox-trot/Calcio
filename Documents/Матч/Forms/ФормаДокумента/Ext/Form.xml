@@ -320,6 +320,75 @@
 											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
 											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
 										</LabelField>
+										<UsualGroup name="ГруппаПредыдущие5Хозяева" id="323">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Double</HorizontalSpacing>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПредыдущие5ХозяеваРасширеннаяПодсказка" id="324"/>
+											<ChildItems>
+												<InputField name="ИграХозяева1" id="342">
+													<DataPath>ИграХозяева1</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграХозяева1КонтекстноеМеню" id="343"/>
+													<ExtendedTooltip name="ИграХозяева1РасширеннаяПодсказка" id="344"/>
+												</InputField>
+												<InputField name="ИграХозяева2" id="330">
+													<DataPath>ИграХозяева2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграХозяева2КонтекстноеМеню" id="331"/>
+													<ExtendedTooltip name="ИграХозяева2РасширеннаяПодсказка" id="332"/>
+												</InputField>
+												<InputField name="ИграХозяева3" id="333">
+													<DataPath>ИграХозяева3</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграХозяева3КонтекстноеМеню" id="334"/>
+													<ExtendedTooltip name="ИграХозяева3РасширеннаяПодсказка" id="335"/>
+												</InputField>
+												<InputField name="ИграХозяева4" id="336">
+													<DataPath>ИграХозяева4</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграХозяева4КонтекстноеМеню" id="337"/>
+													<ExtendedTooltip name="ИграХозяева4РасширеннаяПодсказка" id="338"/>
+												</InputField>
+												<InputField name="ИграХозяева5" id="339">
+													<DataPath>ИграХозяева5</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграХозяева5КонтекстноеМеню" id="340"/>
+													<ExtendedTooltip name="ИграХозяева5РасширеннаяПодсказка" id="341"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 										<PictureField name="ИзображениеХозяева" id="233">
 											<DataPath>ИзображениеХозяева</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -349,6 +418,7 @@
 									<HorizontalStretch>false</HorizontalStretch>
 									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 									<Group>Vertical</Group>
+									<VerticalSpacing>Half</VerticalSpacing>
 									<HorizontalAlign>Center</HorizontalAlign>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -728,183 +798,6 @@
 												</LabelField>
 											</ChildItems>
 										</UsualGroup>
-										<UsualGroup name="ГруппаПредыдущие5" id="348">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Vertical</Group>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаПредыдущие5РасширеннаяПодсказка" id="349"/>
-											<ChildItems>
-												<LabelDecoration name="ДекорацияПредыдущие5" id="345">
-													<Title formatted="false">
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предыдущие 5 игр</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="ДекорацияПредыдущие5КонтекстноеМеню" id="346"/>
-													<ExtendedTooltip name="ДекорацияПредыдущие5РасширеннаяПодсказка" id="347"/>
-												</LabelDecoration>
-												<UsualGroup name="ГруппаПредыдущие5Хозяева" id="323">
-													<ReadOnly>true</ReadOnly>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
-														</v8:item>
-													</ToolTip>
-													<Group>AlwaysHorizontal</Group>
-													<HorizontalAlign>Center</HorizontalAlign>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаПредыдущие5ХозяеваРасширеннаяПодсказка" id="324"/>
-													<ChildItems>
-														<LabelField name="Предыдущие5Хозяева" id="327">
-															<DataPath>Хозяева</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<ContextMenu name="Предыдущие5ХозяеваКонтекстноеМеню" id="328"/>
-															<ExtendedTooltip name="Предыдущие5ХозяеваРасширеннаяПодсказка" id="329"/>
-														</LabelField>
-														<InputField name="ИграХозяева1" id="342">
-															<DataPath>ИграХозяева1</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграХозяева1КонтекстноеМеню" id="343"/>
-															<ExtendedTooltip name="ИграХозяева1РасширеннаяПодсказка" id="344"/>
-														</InputField>
-														<InputField name="ИграХозяева2" id="330">
-															<DataPath>ИграХозяева2</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграХозяева2КонтекстноеМеню" id="331"/>
-															<ExtendedTooltip name="ИграХозяева2РасширеннаяПодсказка" id="332"/>
-														</InputField>
-														<InputField name="ИграХозяева3" id="333">
-															<DataPath>ИграХозяева3</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграХозяева3КонтекстноеМеню" id="334"/>
-															<ExtendedTooltip name="ИграХозяева3РасширеннаяПодсказка" id="335"/>
-														</InputField>
-														<InputField name="ИграХозяева4" id="336">
-															<DataPath>ИграХозяева4</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграХозяева4КонтекстноеМеню" id="337"/>
-															<ExtendedTooltip name="ИграХозяева4РасширеннаяПодсказка" id="338"/>
-														</InputField>
-														<InputField name="ИграХозяева5" id="339">
-															<DataPath>ИграХозяева5</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграХозяева5КонтекстноеМеню" id="340"/>
-															<ExtendedTooltip name="ИграХозяева5РасширеннаяПодсказка" id="341"/>
-														</InputField>
-													</ChildItems>
-												</UsualGroup>
-												<UsualGroup name="ГруппаПредыдущие5Гости" id="325">
-													<ReadOnly>true</ReadOnly>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предыдущие 5 игр (гости)</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предыдущие 5 игр (гости)</v8:content>
-														</v8:item>
-													</ToolTip>
-													<Group>AlwaysHorizontal</Group>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаПредыдущие5ГостиРасширеннаяПодсказка" id="326"/>
-													<ChildItems>
-														<LabelField name="Предыдущие5Гости" id="350">
-															<DataPath>Гости</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<ContextMenu name="Предыдущие5ГостиКонтекстноеМеню" id="351"/>
-															<ExtendedTooltip name="Предыдущие5ГостиРасширеннаяПодсказка" id="352"/>
-														</LabelField>
-														<InputField name="ИграГости1" id="365">
-															<DataPath>ИграГости1</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграГости1КонтекстноеМеню" id="366"/>
-															<ExtendedTooltip name="ИграГости1РасширеннаяПодсказка" id="367"/>
-														</InputField>
-														<InputField name="ИграГости2" id="353">
-															<DataPath>ИграГости2</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграГости2КонтекстноеМеню" id="354"/>
-															<ExtendedTooltip name="ИграГости2РасширеннаяПодсказка" id="355"/>
-														</InputField>
-														<InputField name="ИграГости3" id="356">
-															<DataPath>ИграГости3</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграГости3КонтекстноеМеню" id="357"/>
-															<ExtendedTooltip name="ИграГости3РасширеннаяПодсказка" id="358"/>
-														</InputField>
-														<InputField name="ИграГости4" id="359">
-															<DataPath>ИграГости4</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграГости4КонтекстноеМеню" id="360"/>
-															<ExtendedTooltip name="ИграГости4РасширеннаяПодсказка" id="361"/>
-														</InputField>
-														<InputField name="ИграГости5" id="362">
-															<DataPath>ИграГости5</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<TitleLocation>None</TitleLocation>
-															<HorizontalAlign>Center</HorizontalAlign>
-															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-															<ContextMenu name="ИграГости5КонтекстноеМеню" id="363"/>
-															<ExtendedTooltip name="ИграГости5РасширеннаяПодсказка" id="364"/>
-														</InputField>
-													</ChildItems>
-												</UsualGroup>
-											</ChildItems>
-										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаГости" id="239">
@@ -935,6 +828,74 @@
 											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
 											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
 										</LabelField>
+										<UsualGroup name="ГруппаПредыдущие5Гости" id="325">
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр (гости)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предыдущие 5 игр (гости)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Double</HorizontalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПредыдущие5ГостиРасширеннаяПодсказка" id="326"/>
+											<ChildItems>
+												<InputField name="ИграГости1" id="365">
+													<DataPath>ИграГости1</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграГости1КонтекстноеМеню" id="366"/>
+													<ExtendedTooltip name="ИграГости1РасширеннаяПодсказка" id="367"/>
+												</InputField>
+												<InputField name="ИграГости2" id="353">
+													<DataPath>ИграГости2</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграГости2КонтекстноеМеню" id="354"/>
+													<ExtendedTooltip name="ИграГости2РасширеннаяПодсказка" id="355"/>
+												</InputField>
+												<InputField name="ИграГости3" id="356">
+													<DataPath>ИграГости3</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграГости3КонтекстноеМеню" id="357"/>
+													<ExtendedTooltip name="ИграГости3РасширеннаяПодсказка" id="358"/>
+												</InputField>
+												<InputField name="ИграГости4" id="359">
+													<DataPath>ИграГости4</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграГости4КонтекстноеМеню" id="360"/>
+													<ExtendedTooltip name="ИграГости4РасширеннаяПодсказка" id="361"/>
+												</InputField>
+												<InputField name="ИграГости5" id="362">
+													<DataPath>ИграГости5</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИграГости5КонтекстноеМеню" id="363"/>
+													<ExtendedTooltip name="ИграГости5РасширеннаяПодсказка" id="364"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 										<PictureField name="ИзображениеГости" id="236">
 											<DataPath>ИзображениеГости</DataPath>
 											<ReadOnly>true</ReadOnly>
