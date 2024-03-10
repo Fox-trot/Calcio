@@ -32,7 +32,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Турнирная таблица</v8:content>
+					<v8:content>Результаты матчей</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -165,8 +165,18 @@
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>Use</FullTextSearch>
 			<EnableTotalsSplitting>false</EnableTotalsSplitting>
-			<ListPresentation/>
-			<ExtendedListPresentation/>
+			<ListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты матча</v8:content>
+				</v8:item>
+			</ListPresentation>
+			<ExtendedListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты матчей</v8:content>
+				</v8:item>
+			</ExtendedListPresentation>
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
