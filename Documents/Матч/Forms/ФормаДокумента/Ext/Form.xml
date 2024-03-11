@@ -696,6 +696,7 @@
 													<v8:content>Группа количество голов</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКоличествоГоловРасширеннаяПодсказка" id="298"/>
