@@ -246,10 +246,19 @@
 									<ChildItems>
 										<InputField name="Тур" id="94">
 											<DataPath>Объект.Тур</DataPath>
+											<ChooseType>false</ChooseType>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Ссылка</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Туры</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
 											<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
 											<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
 											<Events>
 												<Event name="OnChange">ТурПриИзменении</Event>
+												<Event name="StartChoice">ТурНачалоВыбора</Event>
 											</Events>
 										</InputField>
 										<LabelField name="ЭтоДерби" id="182">
@@ -1937,6 +1946,17 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Туры" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Туры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
