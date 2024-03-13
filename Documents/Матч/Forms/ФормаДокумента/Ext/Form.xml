@@ -143,16 +143,6 @@
 												<Event name="StartChoice">ТурНачалоВыбора</Event>
 											</Events>
 										</InputField>
-										<LabelField name="ЭтоДерби" id="182">
-											<DataPath>ЭтоДерби</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-											<TextColor>style:NegativeTextColor</TextColor>
-											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<Table name="Команды" id="20">
@@ -290,6 +280,17 @@
 											<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="81"/>
 											<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="82"/>
 										</InputField>
+										<LabelField name="ЭтоДерби" id="182">
+											<DataPath>ЭтоДерби</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:NegativeTextColor</TextColor>
+											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<InputField name="Комментарий" id="155">
@@ -379,18 +380,17 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+													<v8:content>Предыдущие игры (хозяева)</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр (хозяева)</v8:content>
+													<v8:content>Предыдущие игры (хозяева)</v8:content>
 												</v8:item>
 											</ToolTip>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
-											<HorizontalSpacing>Double</HorizontalSpacing>
 											<HorizontalAlign>Center</HorizontalAlign>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
@@ -925,18 +925,17 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр (гости)</v8:content>
+													<v8:content>Предыдущие игры (гости)</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Предыдущие 5 игр (гости)</v8:content>
+													<v8:content>Предыдущие игры (гости)</v8:content>
 												</v8:item>
 											</ToolTip>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
-											<HorizontalSpacing>Double</HorizontalSpacing>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаПредыдущие5ГостиРасширеннаяПодсказка" id="326"/>
@@ -1058,7 +1057,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Последние 5 матчей</v8:content>
+									<v8:content>Последние матчи</v8:content>
 								</v8:item>
 							</ToolTip>
 							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
