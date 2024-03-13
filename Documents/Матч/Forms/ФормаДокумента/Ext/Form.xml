@@ -464,6 +464,12 @@
 													<DataPath>ИгрСНачалаСезона</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ИгрСНачалаСезонаХозяеваКонтекстноеМеню" id="262"/>
 													<ExtendedTooltip name="ИгрСНачалаСезонаХозяеваРасширеннаяПодсказка" id="263"/>
 												</LabelField>
@@ -480,6 +486,12 @@
 													<DataPath>ИгрСНачалаСезонаГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ИгрСНачалаСезонаГостиКонтекстноеМеню" id="265"/>
 													<ExtendedTooltip name="ИгрСНачалаСезонаГостиРасширеннаяПодсказка" id="266"/>
 												</LabelField>
@@ -518,6 +530,12 @@
 													<DataPath>Очки</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ОчкиХозяеваКонтекстноеМеню" id="379"/>
 													<ExtendedTooltip name="ОчкиХозяеваРасширеннаяПодсказка" id="380"/>
 												</LabelField>
@@ -532,6 +550,12 @@
 													<DataPath>ОчкиГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ОчкиГостиКонтекстноеМеню" id="382"/>
 													<ExtendedTooltip name="ОчкиГостиРасширеннаяПодсказка" id="383"/>
 												</LabelField>
@@ -570,6 +594,12 @@
 													<DataPath>Побед</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ПобедХозяеваКонтекстноеМеню" id="270"/>
 													<ExtendedTooltip name="ПобедХозяеваРасширеннаяПодсказка" id="271"/>
 												</LabelField>
@@ -585,6 +615,12 @@
 													<DataPath>ПобедГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ПобедГостиКонтекстноеМеню" id="273"/>
 													<ExtendedTooltip name="ПобедГостиРасширеннаяПодсказка" id="274"/>
 												</LabelField>
@@ -623,6 +659,12 @@
 													<DataPath>Ничьих</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="НичьихХозяеваКонтекстноеМеню" id="278"/>
 													<ExtendedTooltip name="НичьихХозяеваРасширеннаяПодсказка" id="279"/>
 												</LabelField>
@@ -638,6 +680,12 @@
 													<DataPath>НичьихГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="НичьихГостиКонтекстноеМеню" id="281"/>
 													<ExtendedTooltip name="НичьихГостиРасширеннаяПодсказка" id="282"/>
 												</LabelField>
@@ -676,6 +724,12 @@
 													<DataPath>Проигрышей</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ПроигрышейХозяеваКонтекстноеМеню" id="286"/>
 													<ExtendedTooltip name="ПроигрышейХозяеваРасширеннаяПодсказка" id="287"/>
 												</LabelField>
@@ -691,6 +745,12 @@
 													<DataPath>ПроигрышейГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="ПроигрышейГостиКонтекстноеМеню" id="289"/>
 													<ExtendedTooltip name="ПроигрышейГостиРасширеннаяПодсказка" id="290"/>
 												</LabelField>
@@ -735,6 +795,12 @@
 													<DataPath>КоличествоГолов</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="КоличествоГоловХозяеваКонтекстноеМеню" id="300"/>
 													<ExtendedTooltip name="КоличествоГоловХозяеваРасширеннаяПодсказка" id="301"/>
 												</LabelField>
@@ -749,6 +815,12 @@
 													<DataPath>КоличествоГоловГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="КоличествоГоловГостиКонтекстноеМеню" id="303"/>
 													<ExtendedTooltip name="КоличествоГоловГостиРасширеннаяПодсказка" id="304"/>
 												</LabelField>
@@ -787,6 +859,12 @@
 													<DataPath>Результативность</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="РезультативностьХозяеваКонтекстноеМеню" id="314"/>
 													<ExtendedTooltip name="РезультативностьХозяеваРасширеннаяПодсказка" id="315"/>
 												</LabelField>
@@ -801,6 +879,12 @@
 													<DataPath>РезультативностьГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0</v8:content>
+														</v8:item>
+													</Format>
 													<ContextMenu name="РезультативностьГостиКонтекстноеМеню" id="317"/>
 													<ExtendedTooltip name="РезультативностьГостиРасширеннаяПодсказка" id="318"/>
 												</LabelField>
