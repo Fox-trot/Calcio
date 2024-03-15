@@ -88,6 +88,9 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>~Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+			</CommandSet>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -104,7 +107,15 @@
 			<UserSettingsGroup>46:02023637-7868-4a5f-8576-835a76e0c9ba</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="57"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="58"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="58">
+				<ChildItems>
+					<Button name="СписокКомандаОбновить" id="94">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОбновить</CommandName>
+						<ExtendedTooltip name="СписокКомандаОбновитьРасширеннаяПодсказка" id="95"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="59"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="60">
 				<AdditionSource>
@@ -562,6 +573,25 @@
 			</Picture>
 			<Action>КомандаСегодня</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаОбновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОбновить</Action>
 		</Command>
 	</Commands>
 </Form>
