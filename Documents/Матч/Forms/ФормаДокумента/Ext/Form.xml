@@ -143,6 +143,17 @@
 												<Event name="StartChoice">ТурНачалоВыбора</Event>
 											</Events>
 										</InputField>
+										<LabelField name="ЭтоДерби" id="182">
+											<DataPath>ЭтоДерби</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:NegativeTextColor</TextColor>
+											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<Table name="Команды" id="20">
@@ -232,14 +243,6 @@
 										</InputField>
 									</ChildItems>
 								</Table>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаКомандыПравая" id="187">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
-							<ChildItems>
 								<UsualGroup name="ГруппаСтадион" id="384">
 									<Title>
 										<v8:item>
@@ -280,21 +283,19 @@
 											<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="81"/>
 											<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="82"/>
 										</InputField>
-										<LabelField name="ЭтоДерби" id="182">
-											<DataPath>ЭтоДерби</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Right</HorizontalAlign>
-											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<TextColor>style:NegativeTextColor</TextColor>
-											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-										</LabelField>
 									</ChildItems>
 								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыПравая" id="187">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
 								<InputField name="Комментарий" id="155">
 									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<ChooseType>false</ChooseType>
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
