@@ -29,7 +29,7 @@
 					<ContextMenu name="КомандаКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="33"/>
 					<Events>
-						<Event name="OnChange">ЭлементПриИзменении</Event>
+						<Event name="OnChange">КомандаПриИзменении</Event>
 					</Events>
 				</InputField>
 				<UsualGroup name="ГруппаКалендарь" id="86">
@@ -49,7 +49,7 @@
 							<ContextMenu name="ТолькоДниРожденияКонтекстноеМеню" id="49"/>
 							<ExtendedTooltip name="ТолькоДниРожденияРасширеннаяПодсказка" id="50"/>
 							<Events>
-								<Event name="OnChange">ЭлементПриИзменении</Event>
+								<Event name="OnChange">ТолькоДниРожденияПриИзменении</Event>
 							</Events>
 						</CheckBoxField>
 					</ChildItems>
@@ -284,15 +284,16 @@
 	МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения),
 	-2,
 	NULL,
-	NULL
+	СрезПоследних.Команда
 ИЗ
 	РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроков
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
 		ПО ПеремещенияИгроков.Игрок = Игроки.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК СрезПоследних
+		ПО ПеремещенияИгроков.Игрок = СрезПоследних.Игрок
 ГДЕ
 	ПеремещенияИгроков.Команда = &amp;Команда
-	И МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) МЕЖДУ МЕСЯЦ(&amp;ДатаН) * 100 + ДЕНЬ(&amp;ДатаН) И МЕСЯЦ(&amp;ДатаК) * 100 + ДЕНЬ(&amp;ДатаК)
-</QueryText>
+	И МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) МЕЖДУ МЕСЯЦ(&amp;ДатаН) * 100 + ДЕНЬ(&amp;ДатаН) И МЕСЯЦ(&amp;ДатаК) * 100 + ДЕНЬ(&amp;ДатаК)</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Дата</dcssch:dataPath>
 					<dcssch:field>Дата</dcssch:field>
@@ -309,7 +310,7 @@
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Игрок или матч</v8:content>
+							<v8:content>Игрок | Матч</v8:content>
 						</v8:item>
 					</dcssch:title>
 					<dcssch:valueType>
@@ -355,6 +356,16 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Владелец</dcssch:dataPath>
 					<dcssch:field>Владелец</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда | Чемпионат</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Игрок</dcssch:dataPath>
+					<dcssch:field>Игрок</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Дата</dcssch:name>
@@ -434,6 +445,23 @@
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Период</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
 				</Parameter>
 				<KeyType>FieldValue</KeyType>
 				<KeyField>ИгрокИлиМатч</KeyField>
