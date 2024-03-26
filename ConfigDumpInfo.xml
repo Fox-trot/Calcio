@@ -108,18 +108,16 @@
 		<Metadata name="CommonCommand.ИмпортМатча.CommandModule" id="f7952c22-b4c1-42b7-a2b0-a9b8010cbd2f.2" configVersion="f9e13118146b35468ce080d5cd50c58900000000"/>
 		<Metadata name="CommonCommand.КомандаКалендарь" id="acde6b56-6f1c-4d53-9446-fe70aa528c0e" configVersion="1964584614f9c94594ea97c6d525102a00000000"/>
 		<Metadata name="CommonCommand.КомандаКалендарь.CommandModule" id="acde6b56-6f1c-4d53-9446-fe70aa528c0e.2" configVersion="5808954d3890dd438ef73c9390663def00000000"/>
-		<Metadata name="CommonCommand.ОткрытьВYandex" id="cbc6d535-f16d-40a5-8f8d-5f5700db0b43" configVersion="deac6565d24b5243b59d84d5c27b9d8a00000000"/>
-		<Metadata name="CommonCommand.ОткрытьВYandex.CommandModule" id="cbc6d535-f16d-40a5-8f8d-5f5700db0b43.2" configVersion="81e247cbcd6ebb49992443c92301163b00000000"/>
-		<Metadata name="CommonCommand.ОткрытьВYandex.Help" id="cbc6d535-f16d-40a5-8f8d-5f5700db0b43.1" configVersion="33d1e088f6fed34fac82180e9028ef4500000000"/>
-		<Metadata name="CommonCommand.ОткрытьВВикипедии" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4" configVersion="0eeb4b3136a88544a629355b3f7c616f00000000"/>
-		<Metadata name="CommonCommand.ОткрытьВВикипедии.CommandModule" id="de1440c8-6b2a-4af9-b91f-d52ad68422a4.2" configVersion="da213b93de77d84a808e6e63c8a91a7600000000"/>
+		<Metadata name="CommonCommand.ОткрытьВИнтернете" id="8d40f3c3-cd8e-4b40-a23e-ac40d8405a2b" configVersion="9c59b0f536b9fa4b858bd2b95bb5002000000000"/>
+		<Metadata name="CommonCommand.ОткрытьВИнтернете.CommandModule" id="8d40f3c3-cd8e-4b40-a23e-ac40d8405a2b.2" configVersion="6230a47e640cd14f98dd17664a4fb33400000000"/>
+		<Metadata name="CommonCommand.ОткрытьВИнтернете.Help" id="8d40f3c3-cd8e-4b40-a23e-ac40d8405a2b.1" configVersion="4c5df2419725764083c534dedb19c33c00000000"/>
 		<Metadata name="CommonCommand.ПервоначальноеЗаполнение" id="95d3ee36-f6b1-452f-b9e2-f2474b0d8e72" configVersion="119b72e2db41c6438fadc90144fd3f0e00000000"/>
 		<Metadata name="CommonCommand.ПервоначальноеЗаполнение.CommandModule" id="95d3ee36-f6b1-452f-b9e2-f2474b0d8e72.2" configVersion="dbf0c0af68b43241af6171020439282500000000"/>
-		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="8a46bfd52fab784389aa4030bb383b8600000000"/>
-		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="513d28da88be354eb4542d8d713f5c7a00000000"/>
+		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="454aa21f88478742afa35eafc7e3194200000000"/>
+		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="5490b7dcc1930244b62d55215b72b4f700000000"/>
 		<Metadata name="CommonForm.Календарь.Help" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.1" configVersion="3767d7b1f89f0f488fd2207d2e94c37100000000"/>
-		<Metadata name="CommonForm.Настройки" id="5140af2b-875b-41a1-a87e-6c03081d9b0d" configVersion="eee7607d7292d0499f88e3fa20687a7b00000000"/>
-		<Metadata name="CommonForm.Настройки.Form" id="5140af2b-875b-41a1-a87e-6c03081d9b0d.0" configVersion="1615c11692370d418637e208500436ab00000000"/>
+		<Metadata name="CommonForm.Настройки" id="5140af2b-875b-41a1-a87e-6c03081d9b0d" configVersion="1ce0fb2a23bb294194610e34840c631500000000"/>
+		<Metadata name="CommonForm.Настройки.Form" id="5140af2b-875b-41a1-a87e-6c03081d9b0d.0" configVersion="03d5ea041c86994fb61f9517d397d8a400000000"/>
 		<Metadata name="CommonModule.Биоритмы" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b" configVersion="6dc5c022b60ab641a84031add06f38e100000000"/>
 		<Metadata name="CommonModule.Биоритмы.Module" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b.0" configVersion="cd2b79b5131b6b4a9a28d64f4d4bb8eb00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначения" id="c0feb1f6-aeb0-4a8b-a2fd-56a29c968411" configVersion="40311bceeb23f14d9832e80265eac14900000000"/>
@@ -134,7 +132,7 @@
 		<Metadata name="CommonTemplate.Матчи.Template" id="f88841db-8ac3-4714-b3a7-0b5f54d14108.0" configVersion="884431d1356d4e43851e2233735f673f00000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d" configVersion="25744d6d3b2a604699305991e4eef34900000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение.Template" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d.0" configVersion="07bebed4666861488de5995b68b2078800000000"/>
-		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="4336c4de1588e045b454265d88edcb6100000000"/>
+		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="c4b9dc60c4dcaa459fbfddfeb46cc6ef00000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="ca37b8d56072cd409aed14476fe0132200000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="4a77ca64e4998f4a86334b8da93112d700000000"/>
 		<Metadata name="Configuration.Calcio.HomePageWorkArea" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.8" configVersion="c1e870c65b1f814a8a8a13043669a24500000000"/>
