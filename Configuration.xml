@@ -245,6 +245,7 @@
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>
 			<CommonCommand>ОткрытьВВикипедии</CommonCommand>
+			<CommonCommand>ОткрытьВYandex</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
 			<CommonCommand>КомандаКалендарь</CommonCommand>
