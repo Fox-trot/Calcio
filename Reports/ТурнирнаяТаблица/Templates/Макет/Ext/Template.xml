@@ -403,7 +403,7 @@
 		<width>184</width>
 	</format>
 	<format>
-		<height>267</height>
+		<height>252</height>
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
@@ -425,13 +425,13 @@
 	</format>
 	<format>
 		<height>54</height>
-		<verticalAlignment>Top</verticalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
 		<font>0</font>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Top</verticalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 	</format>
 	<format>

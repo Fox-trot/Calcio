@@ -12,33 +12,39 @@
 	<columns>
 		<size>6</size>
 		<columnsItem>
-			<index>1</index>
+			<index>0</index>
 			<column>
 				<formatIndex>1</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
-			<index>2</index>
+			<index>1</index>
 			<column>
 				<formatIndex>2</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>2</index>
+			<column>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>3</index>
 			<column>
-				<formatIndex>2</formatIndex>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>4</index>
 			<column>
-				<formatIndex>2</formatIndex>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>5</index>
 			<column>
-				<formatIndex>2</formatIndex>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 	</columns>
@@ -47,7 +53,7 @@
 		<row>
 			<c>
 				<c>
-					<f>3</f>
+					<f>4</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -58,7 +64,7 @@
 			</c>
 			<c>
 				<c>
-					<f>4</f>
+					<f>5</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -72,16 +78,16 @@
 	<rowsItem>
 		<index>1</index>
 		<row>
-			<formatIndex>5</formatIndex>
+			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>6</f>
+					<f>7</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -93,7 +99,7 @@
 		<row>
 			<c>
 				<c>
-					<f>8</f>
+					<f>9</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -101,7 +107,7 @@
 			<c>
 				<i>2</i>
 				<c>
-					<f>9</f>
+					<f>10</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -113,7 +119,7 @@
 			</c>
 			<c>
 				<c>
-					<f>10</f>
+					<f>11</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -125,7 +131,7 @@
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -137,7 +143,7 @@
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 				</c>
 			</c>
 		</row>
@@ -153,41 +159,41 @@
 		<row>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 				</c>
 			</c>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>16</defaultFormatIndex>
+	<defaultFormatIndex>17</defaultFormatIndex>
 	<height>5</height>
 	<vgRows>5</vgRows>
 	<merge>
@@ -313,6 +319,9 @@
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
 	</line>
+	<format>
+		<width>80</width>
+	</format>
 	<format>
 		<width>262</width>
 	</format>
