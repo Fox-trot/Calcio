@@ -6,7 +6,7 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Catalog.Чемпионаты.StandardCommand.OpenList">
+		<Command name="CommonCommand.КомандаКалендарь">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>
@@ -27,8 +27,8 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
-		<Command name="Catalog.Чемпионаты.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		<Command name="CommonCommand.КомандаКалендарь">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 			<Placement>Manual</Placement>
 		</Command>
 		<Command name="Report.Биоритмы.StandardCommand.Open">
@@ -40,4 +40,16 @@
 			<Placement>Manual</Placement>
 		</Command>
 	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.КомандаКалендарь">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Report.Биоритмы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelSeeAlso</Group>
+		<Group>ActionsPanelReports</Group>
+	</GroupsOrder>
 </CommandInterface>
