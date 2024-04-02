@@ -39,6 +39,13 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Item>
+		<Item>
+			<Form>Report.Противостояние.Form.ФормаОтчета</Form>
+			<Height>10</Height>
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Item>
 	</RightColumn>
 	<MACommandInterfaceDisplays>Top</MACommandInterfaceDisplays>
 </HomePageWorkArea>

@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>1.6</Version>
+			<Version>1.7</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -271,6 +271,7 @@
 			<Report>Хронология</Report>
 			<Report>Гражданство</Report>
 			<Report>Посещаемость</Report>
+			<Report>Противостояние</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>

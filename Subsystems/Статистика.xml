@@ -30,9 +30,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.СнятиеОчков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Гражданство</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Посещаемость</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">82b1603a-e9ad-44aa-a935-d10e0555ab95</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Календарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.КомандаКалендарь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">807192c6-3b8d-4f44-8579-8749ae717f67</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

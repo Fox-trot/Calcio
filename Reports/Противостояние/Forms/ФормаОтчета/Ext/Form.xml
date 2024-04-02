@@ -3,82 +3,72 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<CommandSet>
-		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
-		<ExcludedCommand>ChangeVariant</ExcludedCommand>
-		<ExcludedCommand>Generate</ExcludedCommand>
-		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
-		<ExcludedCommand>LoadVariant</ExcludedCommand>
-		<ExcludedCommand>ReportSettings</ExcludedCommand>
-		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
-		<ExcludedCommand>SaveVariant</ExcludedCommand>
-		<ExcludedCommand>StandardSettings</ExcludedCommand>
-	</CommandSet>
-	<ReportResult>Результат</ReportResult>
 	<ReportFormType>Main</ReportFormType>
 	<AutoShowState>DontShow</AutoShowState>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
-		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаРеквизиты" id="12">
-			<EnableContentChange>true</EnableContentChange>
+		<UsualGroup name="Шапка" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Реквизиты</v8:content>
+					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<Behavior>Usual</Behavior>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<Button name="Сформировать" id="10">
+				<Button name="Сформировать" id="16">
 					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
 					<DefaultButton>true</DefaultButton>
 					<CommandName>Form.Command.Сформировать</CommandName>
-					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="11"/>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="17"/>
 				</Button>
-				<InputField name="Чемпионат" id="7">
+				<InputField name="Чемпионат" id="5">
 					<DataPath>Отчет.Чемпионат</DataPath>
-					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="9"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="7"/>
 					<Events>
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CheckBoxField name="ПоказыватьРазницуМячей" id="14">
-					<DataPath>Отчет.ПоказыватьРазницуМячей</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="16"/>
-					<Events>
-						<Event name="OnChange">ПоказыватьРазницуМячейПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
+				<InputField name="Команда" id="10">
+					<DataPath>Отчет.Команда</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="КомандаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="12"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<SpreadSheetDocumentField name="Результат" id="4">
+		<SpreadSheetDocumentField name="Результат" id="13">
 			<DataPath>Результат</DataPath>
 			<TitleLocation>None</TitleLocation>
-			<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
 		</SpreadSheetDocumentField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Отчет" id="1">
 			<Type>
-				<v8:Type>cfg:ReportObject.ТурнирнаяТаблица</v8:Type>
+				<v8:Type>cfg:ReportObject.Противостояние</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
-				<Field>Отчет.ПоказыватьРазницуМячей</Field>
+				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Чемпионат</Field>
 			</Save>
 		</Attribute>
