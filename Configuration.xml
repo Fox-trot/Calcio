@@ -252,6 +252,7 @@
 			<Constant>Цвета</Constant>
 			<Constant>СтарыйВидАнонсов</Constant>
 			<Constant>КоличествоМатчейВАнонсе</Constant>
+			<Constant>ТурнирнаяТаблицаКакНаBBC</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<Catalog>Амплуа</Catalog>

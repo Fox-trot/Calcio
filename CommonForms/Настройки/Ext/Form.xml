@@ -14,6 +14,13 @@
 			<ContextMenu name="МояКомандаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="МояКомандаРасширеннаяПодсказка" id="3"/>
 		</InputField>
+		<CheckBoxField name="ТурнирнаяТаблицаКакНаBBC" id="38">
+			<DataPath>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТурнирнаяТаблицаКакНаBBCКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ТурнирнаяТаблицаКакНаBBCРасширеннаяПодсказка" id="40"/>
+		</CheckBoxField>
 		<UsualGroup name="ГруппаЦвета" id="4">
 			<Title>
 				<v8:item>
@@ -143,6 +150,7 @@
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
 				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
+				<Field>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</Field>
 			</UseAlways>
 		</Attribute>
 		<Attribute name="Физический" id="2">
