@@ -51,6 +51,9 @@
 					<ChooseType>false</ChooseType>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
