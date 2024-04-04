@@ -527,7 +527,9 @@
 			<UseAlways>
 				<Field>ТекущийСостав.Амплуа</Field>
 				<Field>ТекущийСостав.Игрок</Field>
+				<Field>ТекущийСостав.ИгрокПометкаУдаления</Field>
 				<Field>ТекущийСостав.Команда</Field>
+				<Field>ТекущийСостав.Номер</Field>
 				<Field>ТекущийСостав.Страна</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -608,6 +610,7 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
+				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
