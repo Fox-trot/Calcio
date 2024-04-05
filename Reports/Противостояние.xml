@@ -93,13 +93,19 @@
 					<MaxValue xsi:nil="true"/>
 					<FillChecking>ShowError</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Чемпионат</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Report.Противостояние.Attribute.Чемпионат</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ChoiceParameters/>
 					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>DontUse</CreateOnInput>
-					<ChoiceForm/>
+					<ChoiceForm>Catalog.Команды.Form.ФормаВыбора</ChoiceForm>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
 			<Form>ФормаОтчета</Form>

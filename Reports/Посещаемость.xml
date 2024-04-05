@@ -93,13 +93,19 @@
 					<MaxValue xsi:nil="true"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Чемпионат</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Report.Посещаемость.Attribute.Чемпионат</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ChoiceParameters/>
 					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>DontUse</CreateOnInput>
-					<ChoiceForm/>
+					<ChoiceForm>Catalog.Стадионы.Form.ФормаВыбора</ChoiceForm>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
 			<TabularSection uuid="cc1e1fa7-376d-4ffc-8602-8eae2fecd46b">
