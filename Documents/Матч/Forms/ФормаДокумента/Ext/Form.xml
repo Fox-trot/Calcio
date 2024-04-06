@@ -1139,7 +1139,7 @@
 									<ContextMenu name="СоставыКомандНомерСтрокиКонтекстноеМеню" id="58"/>
 									<ExtendedTooltip name="СоставыКомандНомерСтрокиРасширеннаяПодсказка" id="59"/>
 								</LabelField>
-								<InputField name="СоставыКомандИгрок" id="60" DisplayImportance="Low">
+								<InputField name="СоставыКомандИгрок" id="60">
 									<DataPath>Объект.СоставыКоманд.Игрок</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChooseType>false</ChooseType>
@@ -1711,6 +1711,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+			</Settings>
 		</Attribute>
 		<Attribute name="Хозяева" id="10">
 			<Title>
@@ -1755,6 +1758,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
 		</Attribute>
 		<Attribute name="Стадионы" id="12">
 			<Title>
@@ -1766,6 +1772,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
+			</Settings>
 		</Attribute>
 		<Attribute name="Предыдущие5" id="13">
 			<Title>
@@ -2099,6 +2108,14 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<UseAlways>
+				<Field>Туры.Check</Field>
+				<Field>Туры.Picture</Field>
+				<Field>Туры.ValueType</Field>
+			</UseAlways>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Туры</v8:Type>
+			</Settings>
 		</Attribute>
 		<Attribute name="ГрафикКоманда" id="33">
 			<Title>
