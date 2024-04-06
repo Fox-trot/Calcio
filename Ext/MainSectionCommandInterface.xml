@@ -28,10 +28,10 @@
 		<Command name="InformationRegister.ПеремещенияИгроков.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Catalog.Чемпионаты.StandardCommand.OpenList">
+		<Command name="Catalog.Туры.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Catalog.Туры.StandardCommand.OpenList">
+		<Command name="Catalog.Чемпионаты.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Лига.StandardCommand.OpenList">

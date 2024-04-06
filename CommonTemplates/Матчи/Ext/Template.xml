@@ -10,7 +10,7 @@
 		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>6</size>
+		<size>7</size>
 		<columnsItem>
 			<index>0</index>
 			<column>
@@ -73,6 +73,17 @@
 					</tl>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>4</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чемпионат</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -92,6 +103,13 @@
 					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>9</f>
+					<parameter>Чемпионат</parameter>
+					<detailParameter>Чемпионат</detailParameter>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -99,7 +117,7 @@
 		<row>
 			<c>
 				<c>
-					<f>9</f>
+					<f>10</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -107,7 +125,7 @@
 			<c>
 				<i>2</i>
 				<c>
-					<f>10</f>
+					<f>11</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -119,7 +137,7 @@
 			</c>
 			<c>
 				<c>
-					<f>11</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -131,7 +149,7 @@
 			</c>
 			<c>
 				<c>
-					<f>12</f>
+					<f>13</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -143,7 +161,7 @@
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>14</f>
 				</c>
 			</c>
 		</row>
@@ -159,51 +177,38 @@
 		<row>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>16</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>16</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>16</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>16</f>
+					<f>17</f>
+					<parameter>Чемпионат</parameter>
+					<detailParameter>Чемпионат</detailParameter>
 				</c>
 			</c>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>17</defaultFormatIndex>
+	<defaultFormatIndex>18</defaultFormatIndex>
 	<height>5</height>
 	<vgRows>5</vgRows>
 	<merge>
 		<r>0</r>
-		<c>1</c>
+		<c>2</c>
 		<w>4</w>
 	</merge>
 	<merge>
 		<r>1</r>
-		<c>1</c>
+		<c>2</c>
 		<w>4</w>
 	</merge>
 	<merge>
@@ -213,7 +218,7 @@
 	</merge>
 	<merge>
 		<r>4</r>
-		<c>1</c>
+		<c>2</c>
 		<w>4</w>
 	</merge>
 	<namedItem xsi:type="NamedItemCells">
@@ -335,7 +340,9 @@
 		<backColor>style:ReportHeaderBackColor</backColor>
 	</format>
 	<format>
-		<border>0</border>
+		<leftBorder>0</leftBorder>
+		<topBorder>0</topBorder>
+		<bottomBorder>0</bottomBorder>
 		<width>416</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -358,7 +365,17 @@
 		<indent>1</indent>
 	</format>
 	<format>
+		<border>0</border>
 		<width>416</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
+	</format>
+	<format>
+		<topBorder>0</topBorder>
+		<rightBorder>0</rightBorder>
+		<bottomBorder>0</bottomBorder>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
@@ -375,23 +392,20 @@
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<textColor>style:FormBackColor</textColor>
-		<backColor>style:NegativeTextColor</backColor>
+		<textColor>style:NegativeTextColor</textColor>
 		<fillType>Text</fillType>
 	</format>
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<backColor>style:BorderColor</backColor>
 		<fillType>Text</fillType>
 	</format>
 	<format>
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<textColor>style:FormBackColor</textColor>
-		<backColor>style:AccentColor</backColor>
+		<textColor>style:AccentColor</textColor>
 		<fillType>Text</fillType>
 	</format>
 	<format>
@@ -415,6 +429,7 @@
 		<indent>1</indent>
 	</format>
 	<format>
+		<border>0</border>
 		<width>416</width>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportGroup1BackColor</backColor>
@@ -423,8 +438,15 @@
 		<detailsUse>Row</detailsUse>
 	</format>
 	<format>
+		<topBorder>0</topBorder>
+		<rightBorder>0</rightBorder>
+		<bottomBorder>0</bottomBorder>
 		<width>45</width>
 		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
 	</format>
 	<format>
 		<width>72</width>

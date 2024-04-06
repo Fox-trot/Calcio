@@ -1066,6 +1066,7 @@
 							<AutoMaxHeight>false</AutoMaxHeight>
 							<VerticalScrollBar>false</VerticalScrollBar>
 							<HorizontalScrollBar>false</HorizontalScrollBar>
+							<Protection>true</Protection>
 							<ContextMenu name="Предыдущие5КонтекстноеМеню" id="202"/>
 							<ExtendedTooltip name="Предыдущие5РасширеннаяПодсказка" id="203"/>
 						</SpreadSheetDocumentField>
@@ -1320,7 +1321,6 @@
 								</Button>
 								<SpreadSheetDocumentField name="ПредыдущиеВстречи" id="189">
 									<DataPath>ПредыдущиеВстречи</DataPath>
-									<ReadOnly>true</ReadOnly>
 									<TitleLocation>Top</TitleLocation>
 									<ToolTip>
 										<v8:item>
@@ -1328,6 +1328,9 @@
 											<v8:content>Предыдущие очные встречи</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Protection>true</Protection>
+									<ShowGroups>false</ShowGroups>
+									<EnableDrag>false</EnableDrag>
 									<ContextMenu name="ПредыдущиеВстречиКонтекстноеМеню" id="190"/>
 									<ExtendedTooltip name="ПредыдущиеВстречиРасширеннаяПодсказка" id="191"/>
 								</SpreadSheetDocumentField>
@@ -1401,7 +1404,6 @@
 								</InputField>
 								<SpreadSheetDocumentField name="ПредыдущиеМатчи" id="198">
 									<DataPath>ПредыдущиеМатчи</DataPath>
-									<ReadOnly>true</ReadOnly>
 									<TitleLocation>Top</TitleLocation>
 									<ToolTip>
 										<v8:item>
@@ -1409,6 +1411,9 @@
 											<v8:content>Предыдущие матчи команд</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Protection>true</Protection>
+									<ShowGroups>false</ShowGroups>
+									<EnableDrag>false</EnableDrag>
 									<ContextMenu name="ПредыдущиеМатчиКонтекстноеМеню" id="199"/>
 									<ExtendedTooltip name="ПредыдущиеМатчиРасширеннаяПодсказка" id="200"/>
 								</SpreadSheetDocumentField>
