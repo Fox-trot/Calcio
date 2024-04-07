@@ -20,7 +20,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Турнирная таблица как на BBC</v8:content>
+					<v8:content>Турнирная таблица как на BBC Sport</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -37,8 +37,8 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Турнирная таблица как на BBC Match Of The Day
-иначе как на football.kulichki.net</v8:content>
+					<v8:content>Турнирная таблица как на BBC Sport Match Of The Day
+иначе как у football.kulichki.net</v8:content>
 				</v8:item>
 			</ToolTip>
 			<MarkNegatives>false</MarkNegatives>

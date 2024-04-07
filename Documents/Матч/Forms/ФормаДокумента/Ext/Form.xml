@@ -1303,6 +1303,7 @@
 					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="98"/>
 					<ChildItems>
 						<UsualGroup name="Группа2Очные" id="204">
+							<EnableContentChange>true</EnableContentChange>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
