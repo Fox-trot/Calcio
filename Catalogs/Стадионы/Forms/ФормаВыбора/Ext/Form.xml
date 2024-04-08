@@ -155,54 +155,6 @@
 					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
 					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ПометкаУдаления1</dcssch:dataPath>
-					<dcssch:field>ПометкаУдаления1</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пометка удаления1</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Владелец1</dcssch:dataPath>
-					<dcssch:field>Владелец1</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Владелец1</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Наименование1</dcssch:dataPath>
-					<dcssch:field>Наименование1</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование1</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Ссылка1</dcssch:dataPath>
-					<dcssch:field>Ссылка1</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Ссылка1</v8:content>
-						</v8:item>
-					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Код</dcssch:dataPath>
-					<dcssch:field>Код</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Изображение</dcssch:dataPath>
-					<dcssch:field>Изображение</dcssch:field>
-				</Field>
 				<Parameter>
 					<dcssch:name>Чемпионат</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -217,7 +169,7 @@
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
-				<MainTable>Catalog.Команды</MainTable>
+				<MainTable>Catalog.Стадионы</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
