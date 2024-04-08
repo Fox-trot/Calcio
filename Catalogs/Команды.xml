@@ -311,7 +311,7 @@
 			<DefaultObjectForm>Catalog.Команды.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
 			<DefaultListForm/>
-			<DefaultChoiceForm/>
+			<DefaultChoiceForm>Catalog.Команды.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -471,6 +471,7 @@
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаВыбора</Form>
+			<Form>ФормаВыбораЧемпионат</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

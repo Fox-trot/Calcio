@@ -8,6 +8,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -81,12 +84,6 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<InputField name="Страна" id="22">
-					<DataPath>Список.Страна</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="СтранаКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="24"/>
-				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -96,83 +93,96 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Список.Ссылка</Field>
-			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ
-	СправочникКоманды.Ссылка КАК Ссылка,
-	СправочникКоманды.ПометкаУдаления КАК ПометкаУдаления,
-	СправочникКоманды.Владелец КАК Владелец,
-	СправочникКоманды.Код КАК Код,
-	СправочникКоманды.Наименование КАК Наименование,
-	СправочникКоманды.Город КАК Город,
-	СправочникКоманды.Изображение КАК Изображение,
-	СправочникКоманды.Комментарий КАК Комментарий,
-	СправочникКоманды.Предопределенный КАК Предопределенный,
-	СправочникКоманды.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
-	Города.Владелец КАК Страна
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЧемпионатыКоманды.Команда.Наименование КАК Наименование,
+	ЧемпионатыКоманды.Команда.Код КАК Код,
+	ЧемпионатыКоманды.Команда.Ссылка КАК Ссылка
 ИЗ
-	Справочник.Команды КАК СправочникКоманды
-		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Города КАК Города
-		ПО СправочникКоманды.Город = Города.Ссылка</QueryText>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Комментарий</dcssch:dataPath>
-					<dcssch:field>Комментарий</dcssch:field>
-				</Field>
+	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Команды КАК Команды
+		ПО ЧемпионатыКоманды.Команда = Команды.Ссылка
+ГДЕ
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Ссылка</dcssch:dataPath>
 					<dcssch:field>Ссылка</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Изображение</dcssch:dataPath>
-					<dcssch:field>Изображение</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
-					<dcssch:field>ПометкаУдаления</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Код</dcssch:dataPath>
-					<dcssch:field>Код</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Город</dcssch:dataPath>
-					<dcssch:field>Город</dcssch:field>
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Город</v8:content>
+							<v8:content>Ссылка</v8:content>
 						</v8:item>
 					</dcssch:title>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Владелец</dcssch:dataPath>
-					<dcssch:field>Владелец</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Наименование</dcssch:dataPath>
-					<dcssch:field>Наименование</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
-					<dcssch:field>Предопределенный</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
 					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Страна</dcssch:dataPath>
-					<dcssch:field>Страна</dcssch:field>
+					<dcssch:dataPath>Наименование1</dcssch:dataPath>
+					<dcssch:field>Наименование1</dcssch:field>
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страна</v8:content>
+							<v8:content>Наименование1</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка1</dcssch:dataPath>
+					<dcssch:field>Ссылка1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Город</dcssch:dataPath>
+					<dcssch:field>Город</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Изображение</dcssch:dataPath>
+					<dcssch:field>Изображение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Чемпионат</dcssch:name>
