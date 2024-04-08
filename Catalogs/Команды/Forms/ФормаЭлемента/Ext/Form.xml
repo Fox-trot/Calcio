@@ -252,6 +252,12 @@
 									<ContextMenu name="МатчиКоличествоЗрителейКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="МатчиКоличествоЗрителейРасширеннаяПодсказка" id="78"/>
 								</LabelField>
+								<LabelField name="МатчиЧемпионат" id="147">
+									<DataPath>Матчи.Чемпионат</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="МатчиЧемпионатКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="МатчиЧемпионатРасширеннаяПодсказка" id="149"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -658,10 +664,11 @@
 				<Field>Матчи.Матч</Field>
 				<Field>Матчи.Счет</Field>
 				<Field>Матчи.Тур</Field>
+				<Field>Матчи.Чемпионат</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ТурнирнаяТаблица.Период КАК Дата,
 	ВЫБОР
@@ -673,9 +680,12 @@
 	ТурнирнаяТаблица.Регистратор КАК Матч,
 	ТурнирнаяТаблица.КоличествоГолов КАК КоличествоГолов,
 	ТурнирнаяТаблица.КоличествоОчков КАК КоличествоОчков,
-	ТурнирнаяТаблица.Регистратор.КоличествоЗрителей КАК КоличествоЗрителей
+	ТурнирнаяТаблица.Регистратор.КоличествоЗрителей КАК КоличествоЗрителей,
+	Туры.Владелец КАК Чемпионат
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Туры КАК Туры
+		ПО ТурнирнаяТаблица.Тур = Туры.Ссылка
 ГДЕ
 	ТурнирнаяТаблица.Команда = &amp;Ссылка</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
@@ -730,6 +740,40 @@
 					<dcssch:dataPath>КоличествоГолов</dcssch:dataPath>
 					<dcssch:field>КоличествоГолов</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Период</dcssch:dataPath>
+					<dcssch:field>Период</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Регистратор</dcssch:dataPath>
+					<dcssch:field>Регистратор</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Активность</dcssch:dataPath>
+					<dcssch:field>Активность</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Команда</dcssch:dataPath>
+					<dcssch:field>Команда</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСтроки</dcssch:dataPath>
+					<dcssch:field>НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Чемпионат</dcssch:dataPath>
+					<dcssch:field>Чемпионат</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чемпионат</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
 				<Parameter>
 					<dcssch:name>Ссылка</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -744,6 +788,7 @@
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
+				<MainTable>AccumulationRegister.ТурнирнаяТаблица</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
