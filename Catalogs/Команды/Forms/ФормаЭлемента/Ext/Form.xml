@@ -387,7 +387,7 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаСезон" id="85">
+				<Page name="СтраницаСезон" id="85">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -401,8 +401,29 @@
 						</v8:item>
 					</ToolTip>
 					<VerticalSpacing>Half</VerticalSpacing>
-					<ExtendedTooltip name="ГруппаСезонРасширеннаяПодсказка" id="86"/>
+					<ExtendedTooltip name="СтраницаСезонРасширеннаяПодсказка" id="86"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаСезон" id="142">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСезонРасширеннаяПодсказка" id="143"/>
+							<ChildItems>
+								<InputField name="Чемпионат" id="144">
+									<DataPath>Чемпионат</DataPath>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЧемпионатКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="146"/>
+									<Events>
+										<Event name="OnChange">ЧемпионатПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="СезонСезонОбновить" id="106">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СезонОбновить</CommandName>
+									<ExtendedTooltip name="СезонСезонОбновитьРасширеннаяПодсказка" id="107"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаПредыдущие5" id="140">
 							<ReadOnly>true</ReadOnly>
 							<ToolTip>
@@ -437,13 +458,6 @@
 							<ContextMenu name="СезонКонтекстноеМеню" id="88"/>
 							<AutoCommandBar name="СезонКоманднаяПанель" id="89">
 								<Autofill>false</Autofill>
-								<ChildItems>
-									<Button name="СезонСезонОбновить" id="106">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.СезонОбновить</CommandName>
-										<ExtendedTooltip name="СезонСезонОбновитьРасширеннаяПодсказка" id="107"/>
-									</Button>
-								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="90"/>
 							<SearchStringAddition name="СезонСтрокаПоиска" id="91">
@@ -544,7 +558,7 @@
 	Перемещения.Команда КАК Команда,
 	Перемещения.Игрок.ПометкаУдаления КАК ИгрокПометкаУдаления
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних(, ГОД(Игрок.ДатаРождения) &gt; 1900) КАК Перемещения
+	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Амплуа КАК Роли
 		ПО Перемещения.Амплуа = Роли.Ссылка
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
@@ -611,11 +625,9 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
-				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -735,7 +747,6 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -886,6 +897,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СезонОбновить</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="ВыбратьИзображение" id="3">
 			<Title>

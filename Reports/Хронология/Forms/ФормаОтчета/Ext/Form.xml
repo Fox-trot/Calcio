@@ -378,7 +378,6 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-			<SavedData>true</SavedData>
 			<Save>
 				<Field>ТипГрафика</Field>
 			</Save>
