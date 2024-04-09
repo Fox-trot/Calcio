@@ -6,6 +6,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Шапка" id="1">
@@ -43,8 +44,19 @@
 						<InputField name="Тур" id="8">
 							<DataPath>Объект.Тур</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Ссылка</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Туры</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ContextMenu name="ТурКонтекстноеМеню" id="9"/>
 							<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="10"/>
+							<Events>
+								<Event name="OnChange">ТурПриИзменении</Event>
+								<Event name="StartChoice">ТурНачалоВыбора</Event>
+							</Events>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
@@ -62,6 +74,7 @@
 					<ChildItems>
 						<InputField name="Комментарий" id="13">
 							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>Left</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
@@ -104,6 +117,9 @@
 				<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
 				<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">КомандыПриИзменении</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="КомандыНомерСтроки" id="29">
 					<DataPath>Объект.Команды.LineNumber</DataPath>
@@ -136,6 +152,50 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="КомандыТура" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды тура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Туры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Туры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Туры.Check</Field>
+				<Field>Туры.Picture</Field>
+				<Field>Туры.ValueType</Field>
+			</UseAlways>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Туры</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Чемпионат" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чемпионат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<CommandInterface>

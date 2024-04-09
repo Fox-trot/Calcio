@@ -76,6 +76,11 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="Владелец" id="19">
+					<DataPath>Список.Owner</DataPath>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="21"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
