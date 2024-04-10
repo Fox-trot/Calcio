@@ -256,16 +256,16 @@
 			<Constant>ТурнирнаяТаблицаКакНаBBC</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
-			<Catalog>Амплуа</Catalog>
 			<Catalog>ВидыСпорта</Catalog>
+			<Catalog>Амплуа</Catalog>
 			<Catalog>Игроки</Catalog>
 			<Catalog>Команды</Catalog>
 			<Catalog>Лига</Catalog>
-			<Catalog>Стадионы</Catalog>
 			<Catalog>Туры</Catalog>
 			<Catalog>Чемпионаты</Catalog>
 			<Catalog>Страны</Catalog>
 			<Catalog>Города</Catalog>
+			<Catalog>Стадионы</Catalog>
 			<Document>Матч</Document>
 			<Document>СнятиеОчков</Document>
 			<Report>Биоритмы</Report>

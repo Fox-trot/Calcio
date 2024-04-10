@@ -62,7 +62,7 @@
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
 					<Events>
-						<Event name="OnChange">ЭлементПриИзменении</Event>
+						<Event name="OnChange">ПериодПриИзменении</Event>
 					</Events>
 				</PeriodField>
 				<PictureField name="Изображение" id="34">
@@ -488,6 +488,12 @@
 								<dcsset:item>
 									<dcsset:field>ИгрокИлиМатч</dcsset:field>
 								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Тур</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Владелец</dcsset:field>
+								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -510,6 +516,12 @@
 								</dcsset:item>
 								<dcsset:item>
 									<dcsset:field>ИгрокИлиМатч</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Тур</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>Владелец</dcsset:field>
 								</dcsset:item>
 							</dcsset:selection>
 							<dcsset:filter>
