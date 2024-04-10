@@ -69,6 +69,7 @@
 								</InputField>
 								<InputField name="Город" id="108">
 									<DataPath>Объект.Город</DataPath>
+									<ChooseType>false</ChooseType>
 									<ChoiceParameterLinks>
 										<xr:Link>
 											<xr:Name>Отбор.Владелец</xr:Name>

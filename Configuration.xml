@@ -76,7 +76,7 @@
 			<UsedMobileApplicationFunctionalities>
 				<app:functionality>
 					<app:functionality>Biometrics</app:functionality>
-					<app:use>true</app:use>
+					<app:use>false</app:use>
 				</app:functionality>
 				<app:functionality>
 					<app:functionality>Location</app:functionality>
@@ -261,8 +261,8 @@
 			<Catalog>Игроки</Catalog>
 			<Catalog>Команды</Catalog>
 			<Catalog>Лига</Catalog>
-			<Catalog>Туры</Catalog>
 			<Catalog>Чемпионаты</Catalog>
+			<Catalog>Туры</Catalog>
 			<Catalog>Страны</Catalog>
 			<Catalog>Города</Catalog>
 			<Catalog>Стадионы</Catalog>
