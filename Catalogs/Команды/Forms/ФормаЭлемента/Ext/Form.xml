@@ -973,7 +973,7 @@
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 			<Settings xsi:type="v8:TypeDescription">
-				<v8:Type>cfg:CatalogObject.Страны</v8:Type>
+				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
 			</Settings>
 		</Attribute>
 		<Attribute name="График2" id="8">
