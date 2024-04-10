@@ -537,6 +537,7 @@
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаВыбора</Form>
+			<Form>ФормаВыбораСтраны</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

@@ -71,15 +71,20 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Наименование" id="16">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
 				<LabelField name="Владелец" id="19">
-					<DataPath>Список.Owner</DataPath>
+					<DataPath>Список.Владелец</DataPath>
 					<ContextMenu name="ВладелецКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="Страна" id="22">
+					<DataPath>Список.Страна</DataPath>
+					<ContextMenu name="СтранаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -91,12 +96,73 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>Список.Owner</Field>
-				<Field>Список.Ref</Field>
+				<Field>Список.Владелец</Field>
+				<Field>Список.Ссылка</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЧемпионаты.Ссылка КАК Ссылка,
+	СправочникЧемпионаты.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникЧемпионаты.Владелец КАК Владелец,
+	СправочникЧемпионаты.Наименование КАК Наименование,
+	СправочникЧемпионаты.ДатаНачала КАК ДатаНачала,
+	СправочникЧемпионаты.ДатаОкончания КАК ДатаОкончания,
+	СправочникЧемпионаты.Комментарий КАК Комментарий,
+	Лига.Страна КАК Страна
+ИЗ
+	Справочник.Чемпионаты КАК СправочникЧемпионаты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+			ПО Лига.Страна = Страны.Ссылка
+		ПО СправочникЧемпионаты.Владелец = Лига.Ссылка
+ГДЕ
+	Лига.ОлимпийскаяСистема = ЛОЖЬ</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачала</dcssch:dataPath>
+					<dcssch:field>ДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Владелец</dcssch:dataPath>
+					<dcssch:field>Владелец</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>Команды</dcssch:dataPath>
+					<dcssch:field>Команды</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Страна</dcssch:dataPath>
+					<dcssch:field>Страна</dcssch:field>
+				</Field>
 				<MainTable>Catalog.Чемпионаты</MainTable>
 				<ListSettings>
 					<dcsset:filter>
