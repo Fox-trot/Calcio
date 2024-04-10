@@ -194,7 +194,6 @@
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
 					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
 				</PictureField>
