@@ -142,7 +142,6 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаОтчета</Form>
-			<Template>Макет</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>

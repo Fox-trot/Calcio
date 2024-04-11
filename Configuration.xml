@@ -235,6 +235,7 @@
 			<CommonPicture>Goal</CommonPicture>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<CommonTemplate>Матчи</CommonTemplate>
+			<CommonTemplate>ТурнирнаяТаблица</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
