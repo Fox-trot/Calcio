@@ -90,7 +90,7 @@
 						</InputField>
 						<InputField name="КвалификацияВЛигуЕвропыУЕФА" id="35">
 							<DataPath>Объект.КвалификацияВЛигуЕвропыУЕФА</DataPath>
-							<ReadOnly>true</ReadOnly>
+							<ChooseType>false</ChooseType>
 							<ContextMenu name="КвалификацияВЛигуЕвропыУЕФАКонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="КвалификацияВЛигуЕвропыУЕФАРасширеннаяПодсказка" id="37"/>
 						</InputField>
