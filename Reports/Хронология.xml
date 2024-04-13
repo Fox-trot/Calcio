@@ -105,7 +105,7 @@
 					<CreateOnInput>DontUse</CreateOnInput>
 					<ChoiceForm>Catalog.Команды.Form.ФормаВыбораЧемпионат</ChoiceForm>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
 			<TabularSection uuid="5aace793-d116-46ef-9ae8-c1548065d32d">
