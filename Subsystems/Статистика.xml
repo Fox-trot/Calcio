@@ -32,7 +32,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Посещаемость</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Календарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.КомандаКалендарь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">807192c6-3b8d-4f44-8579-8749ae717f67</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Противостояние</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Саммит</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

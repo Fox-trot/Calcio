@@ -46,6 +46,13 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Item>
+		<Item>
+			<Form>Report.Саммит.Form.ФормаОтчета</Form>
+			<Height>10</Height>
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Item>
 	</RightColumn>
 	<MACommandInterfaceDisplays>Top</MACommandInterfaceDisplays>
 </HomePageWorkArea>
