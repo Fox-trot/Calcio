@@ -59,6 +59,7 @@
 			<DataPath>Результат</DataPath>
 			<TitleLocation>None</TitleLocation>
 			<VerticalScrollBar>false</VerticalScrollBar>
+			<HorizontalScrollBar>false</HorizontalScrollBar>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
 		</SpreadSheetDocumentField>
