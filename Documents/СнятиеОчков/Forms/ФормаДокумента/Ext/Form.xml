@@ -130,6 +130,13 @@
 				<InputField name="КомандыКоманда" id="32">
 					<DataPath>Объект.Команды.Команда</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">КомандыТура</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
 				</InputField>

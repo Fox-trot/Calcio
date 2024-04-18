@@ -174,20 +174,6 @@
 						</v8:item>
 					</dcssch:title>
 				</Field>
-				<Parameter>
-					<dcssch:name>Чемпионат</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Чемпионат</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
-					</dcssch:valueType>
-					<dcssch:value xsi:nil="true"/>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-				</Parameter>
 				<MainTable>Catalog.Команды</MainTable>
 				<ListSettings>
 					<dcsset:filter>
