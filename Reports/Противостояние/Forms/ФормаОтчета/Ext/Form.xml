@@ -60,6 +60,9 @@
 			<TitleLocation>None</TitleLocation>
 			<VerticalScrollBar>false</VerticalScrollBar>
 			<HorizontalScrollBar>false</HorizontalScrollBar>
+			<ShowGroups>false</ShowGroups>
+			<EnableStartDrag>false</EnableStartDrag>
+			<EnableDrag>false</EnableDrag>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
 		</SpreadSheetDocumentField>
