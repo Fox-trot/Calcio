@@ -89,15 +89,15 @@
 	ЕСТЬNULL(ВТ.Наименование, "Прочие") КАК Страна,
 	1 КАК КоличествоИгроков
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Чемпионаты КАК Чемпионаты
-			ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
-		ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-			ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
-			ПО Игроки.Страна = ВТ.Ссылка
-		ПО Перемещения.Игрок = Игроки.Ссылка</query>
+	Справочник.Игроки КАК Игроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
+		ПО Игроки.Страна = ВТ.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Чемпионаты КАК Чемпионаты
+				ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
+		ПО Игроки.Ссылка = Перемещения.Игрок</query>
 		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
 	</dataSet>
 	<totalField>
@@ -118,6 +118,21 @@
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameters">
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item>
+				<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
+				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">Items</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
 		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
 	</parameter>
@@ -231,6 +246,7 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
