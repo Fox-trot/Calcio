@@ -133,7 +133,6 @@
 				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">Items</dcscor:value>
 			</dcscor:item>
 		</inputParameters>
-		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
 	</parameter>
 	<parameter>
@@ -246,7 +245,6 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
