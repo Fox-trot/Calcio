@@ -42,13 +42,13 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыСпорта</xr:Item>
 			</Owners>
 			<SubordinationUse>ToItems</SubordinationUse>
-			<CodeLength>0</CodeLength>
+			<CodeLength>9</CodeLength>
 			<DescriptionLength>40</DescriptionLength>
 			<CodeType>String</CodeType>
 			<CodeAllowedLength>Variable</CodeAllowedLength>
 			<CodeSeries>WholeCatalog</CodeSeries>
-			<CheckUnique>false</CheckUnique>
-			<Autonumbering>false</Autonumbering>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>true</Autonumbering>
 			<DefaultPresentation>AsDescription</DefaultPresentation>
 			<StandardAttributes>
 				<xr:StandardAttribute name="PredefinedDataName">
@@ -771,7 +771,7 @@
 							<ChoiceForm/>
 							<LinkByType/>
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-							<Indexing>DontIndex</Indexing>
+							<Indexing>Index</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
 							<DataHistory>Use</DataHistory>
 						</Properties>
