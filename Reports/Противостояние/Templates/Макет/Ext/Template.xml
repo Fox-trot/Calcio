@@ -233,6 +233,7 @@
 							<v8:content>L</v8:content>
 						</v8:item>
 					</tl>
+					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 			<c>
@@ -244,6 +245,7 @@
 							<v8:content>D</v8:content>
 						</v8:item>
 					</tl>
+					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 			<c>
@@ -255,11 +257,13 @@
 							<v8:content>W</v8:content>
 						</v8:item>
 					</tl>
+					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>20</f>
+					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 		</row>
