@@ -312,10 +312,28 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>5</index>
+		<row>
+			<c>
+				<c>
+					<f>27</f>
+					<parameter>Дата</parameter>
+					<detailParameter>Регистратор</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>28</f>
+					<parameter>Комментарий</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>1</id>
-		<formatIndex>27</formatIndex>
+		<formatIndex>29</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>1</beginRow>
 		<beginRowOffset>60</beginRowOffset>
@@ -331,9 +349,9 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>28</defaultFormatIndex>
-	<height>5</height>
-	<vgRows>5</vgRows>
+	<defaultFormatIndex>30</defaultFormatIndex>
+	<height>6</height>
+	<vgRows>6</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
@@ -358,6 +376,11 @@
 		<r>4</r>
 		<c>0</c>
 		<w>1</w>
+	</merge>
+	<merge>
+		<r>5</r>
+		<c>1</c>
+		<w>5</w>
 	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
@@ -430,6 +453,16 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
+		<name>Комментарий</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>5</beginRow>
+			<endRow>5</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
 		<name>Конец</name>
 		<area>
 			<type>Columns</type>
@@ -470,11 +503,12 @@
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
 	</line>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
-		<width>88</width>
+		<width>47</width>
 	</format>
 	<format>
-		<width>96</width>
+		<width>184</width>
 	</format>
 	<format>
 		<width>48</width>
@@ -657,6 +691,22 @@
 				<v8:content>ЧН=0</v8:content>
 			</v8:item>
 		</format>
+	</format>
+	<format>
+		<font>1</font>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДФ=d.M</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<font>1</font>
+		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>

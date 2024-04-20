@@ -309,7 +309,6 @@
 				<c>
 					<f>21</f>
 					<parameter>Комментарий</parameter>
-					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 		</row>
@@ -780,13 +779,14 @@
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
 		<format>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>ДФ=d.M</v8:content>
 			</v8:item>
 		</format>
-		<indent>0</indent>
+		<indent>1</indent>
 	</format>
 	<format>
 		<font>1</font>
