@@ -3,7 +3,7 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
-		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаДатаНомер" id="16">
@@ -34,6 +34,9 @@
 			<CreateButton>true</CreateButton>
 			<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">КомандаПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="Амплуа" id="10">
 			<DataPath>Запись.Амплуа</DataPath>
