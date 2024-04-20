@@ -169,12 +169,6 @@
 					<ContextMenu name="СписокЭтоИгрокКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="СписокЭтоИгрокРасширеннаяПодсказка" id="83"/>
 				</CheckBoxField>
-				<LabelField name="СписокТур" id="88">
-					<DataPath>Список.Тур</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СписокТурКонтекстноеМеню" id="89"/>
-					<ExtendedTooltip name="СписокТурРасширеннаяПодсказка" id="90"/>
-				</LabelField>
 				<LabelField name="СписокВладелец" id="91">
 					<DataPath>Список.Владелец</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -251,8 +245,7 @@
 	ЛОЖЬ КАК ЭтоИгрок,
 	МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) + 0.1 КАК Порядок,
 	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1) КАК КоличествоОчков,
-	Матч.Тур КАК Тур,
-	Туры.Владелец КАК Владелец
+	Матч.Тур КАК Владелец
 ИЗ
 	Документ.Матч.Команды КАК МатчКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
@@ -280,7 +273,6 @@
 	ИСТИНА,
 	МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения),
 	-2,
-	NULL,
 	СрезПоследних.Команда
 ИЗ
 	РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроков
@@ -347,16 +339,12 @@
 					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Тур</dcssch:dataPath>
-					<dcssch:field>Тур</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Владелец</dcssch:dataPath>
 					<dcssch:field>Владелец</dcssch:field>
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Команда | Чемпионат</v8:content>
+							<v8:content>Команда | Тур</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</Field>
