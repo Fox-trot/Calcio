@@ -71,6 +71,17 @@
 							<ContextMenu name="СчетКонтекстноеМеню" id="84"/>
 							<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="85"/>
 						</LabelField>
+						<LabelField name="ЭтоДерби" id="182">
+							<DataPath>ЭтоДерби</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:NegativeTextColor</TextColor>
+							<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+							<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -143,17 +154,6 @@
 												<Event name="StartChoice">ТурНачалоВыбора</Event>
 											</Events>
 										</InputField>
-										<LabelField name="ЭтоДерби" id="182">
-											<DataPath>ЭтоДерби</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Right</HorizontalAlign>
-											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<TextColor>style:NegativeTextColor</TextColor>
-											<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-											<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<Table name="Команды" id="20">
