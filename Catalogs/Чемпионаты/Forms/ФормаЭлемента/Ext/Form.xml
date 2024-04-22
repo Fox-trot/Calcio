@@ -208,7 +208,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
-				<Field>1/-2</Field>
+				<Field>Объект.Code</Field>
 				<Field>Объект.DeletionMark</Field>
 				<Field>Объект.Description</Field>
 				<Field>Объект.Predefined</Field>
