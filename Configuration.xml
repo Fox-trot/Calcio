@@ -255,6 +255,7 @@
 			<Constant>СтарыйВидАнонсов</Constant>
 			<Constant>КоличествоМатчейВАнонсе</Constant>
 			<Constant>ТурнирнаяТаблицаКакНаBBC</Constant>
+			<Constant>ВыводитьТурВместоЧемпионата</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<Catalog>ВидыСпорта</Catalog>

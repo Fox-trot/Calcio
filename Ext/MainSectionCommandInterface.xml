@@ -11,7 +11,7 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="InformationRegister.ПеремещенияИгроков.StandardCommand.Create">
+		<Command name="Catalog.Чемпионаты.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>
 			</Visibility>

@@ -325,13 +325,13 @@
 					<v8:content>Сезон</v8:content>
 				</v8:item>
 			</ObjectPresentation>
-			<ExtendedObjectPresentation>
+			<ExtendedObjectPresentation/>
+			<ListPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Чемпионат</v8:content>
+					<v8:content>Сезоны</v8:content>
 				</v8:item>
-			</ExtendedObjectPresentation>
-			<ListPresentation/>
+			</ListPresentation>
 			<ExtendedListPresentation/>
 			<Explanation/>
 			<CreateOnInput>Use</CreateOnInput>

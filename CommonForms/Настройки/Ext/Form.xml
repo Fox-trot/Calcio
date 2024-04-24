@@ -14,13 +14,33 @@
 			<ContextMenu name="МояКомандаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="МояКомандаРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<CheckBoxField name="ТурнирнаяТаблицаКакНаBBC" id="38">
-			<DataPath>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</DataPath>
-			<ToolTipRepresentation>Button</ToolTipRepresentation>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ТурнирнаяТаблицаКакНаBBCКонтекстноеМеню" id="39"/>
-			<ExtendedTooltip name="ТурнирнаяТаблицаКакНаBBCРасширеннаяПодсказка" id="40"/>
-		</CheckBoxField>
+		<UsualGroup name="ГруппаТурнираяТаблица" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Турнирая таблица</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаТурнираяТаблицаРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<CheckBoxField name="ТурнирнаяТаблицаКакНаBBC" id="38">
+					<DataPath>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТурнирнаяТаблицаКакНаBBCКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТурнирнаяТаблицаКакНаBBCРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыводитьТурВместоЧемпионата" id="43">
+					<DataPath>НаборКонстант.ВыводитьТурВместоЧемпионата</DataPath>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыводитьТурВместоЧемпионатаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ВыводитьТурВместоЧемпионатаРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаЦвета" id="4">
 			<Title>
 				<v8:item>
@@ -147,6 +167,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
+				<Field>НаборКонстант.ВыводитьТурВместоЧемпионата</Field>
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
 				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
