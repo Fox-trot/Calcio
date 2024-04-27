@@ -480,10 +480,91 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>8</index>
+		<row>
+			<c>
+				<c>
+					<f>31</f>
+					<parameter>Дата</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>32</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Матч</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>9</index>
+		<row>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>10</index>
+		<row>
+			<c>
+				<c>
+					<f>33</f>
+					<parameter>Дата</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>34</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Матч</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>31</formatIndex>
+		<formatIndex>35</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>1</beginRow>
 		<beginRowOffset>72</beginRowOffset>
@@ -499,9 +580,9 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>32</defaultFormatIndex>
-	<height>8</height>
-	<vgRows>8</vgRows>
+	<defaultFormatIndex>36</defaultFormatIndex>
+	<height>11</height>
+	<vgRows>11</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
@@ -521,6 +602,16 @@
 		<r>6</r>
 		<c>5</c>
 		<w>4</w>
+	</merge>
+	<merge>
+		<r>8</r>
+		<c>1</c>
+		<w>6</w>
+	</merge>
+	<merge>
+		<r>10</r>
+		<c>1</c>
+		<w>6</w>
 	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
@@ -607,6 +698,16 @@
 		<drawingID>2</drawingID>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
+		<name>Матчи</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>8</beginRow>
+			<endRow>8</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
 		<name>Начало</name>
 		<area>
 			<type>Columns</type>
@@ -617,11 +718,31 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
+		<name>Пробел</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>9</beginRow>
+			<endRow>9</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
 		<name>Пятерка</name>
 		<area>
 			<type>Rows</type>
 			<beginRow>3</beginRow>
 			<endRow>3</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Хозяева</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>10</beginRow>
+			<endRow>10</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -882,6 +1003,52 @@
 	</format>
 	<format>
 		<border>0</border>
+	</format>
+	<format>
+		<border>0</border>
+		<width>80</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДФ=dd.MM</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<border>0</border>
+		<width>416</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
+	</format>
+	<format>
+		<border>0</border>
+		<width>80</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДФ=dd.MM</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<border>0</border>
+		<width>416</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
