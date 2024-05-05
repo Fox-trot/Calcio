@@ -90,6 +90,11 @@
 					<ContextMenu name="ТурКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="24"/>
 				</LabelField>
+				<LabelField name="Стадион" id="25">
+					<DataPath>Список.Стадион</DataPath>
+					<ContextMenu name="СтадионКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СтадионРасширеннаяПодсказка" id="27"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -99,6 +104,9 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
