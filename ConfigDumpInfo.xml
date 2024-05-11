@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.16">
 	<ConfigVersions>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица" id="94617236-0587-403c-88ce-66a45546d10d" configVersion="2dc5bb3a3f7da245b4a0b04ef4687e7300000000">
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица" id="94617236-0587-403c-88ce-66a45546d10d" configVersion="2312087e8de11a40984235caa2a32f5900000000">
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Dimension.Команда" id="0e794d59-d1a8-434e-8df0-bb650cfe44a5"/>
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Resource.КоличествоГолов" id="17b800b7-cc4f-447d-b0f1-4ec4e29f30bb"/>
 			<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.МатчиКоманды" id="720042ee-36b6-4c35-843f-4b33915f14f2"/>
@@ -50,8 +50,8 @@
 		<Metadata name="Catalog.Команды.Form.ФормаВыбораЧемпионат.Form" id="0ce9706d-0df3-4f55-bb91-c89aea59a798.0" configVersion="ff3531a30516f94cbadd9e0b0fa290b900000000"/>
 		<Metadata name="Catalog.Команды.Form.ФормаСписка" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf" configVersion="618d222fc41f324bb019f5b9423ae31500000000"/>
 		<Metadata name="Catalog.Команды.Form.ФормаСписка.Form" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf.0" configVersion="bd7d477a3140ae46a69bc2eba904866a00000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="931bb83920e73f44919357e73f8a7f2800000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="1a6246438cb76340bd5c4d7ed8a946e400000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="39ff0bbadb61e94cae79341d3f96607600000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="197a7673cffba6449f9e704199a86b0d00000000"/>
 		<Metadata name="Catalog.Команды.ObjectModule" id="07425bdf-e35c-4b55-b985-d5c4b46c0f95.0" configVersion="7c891bacd09dd0409cd0ba942f75280800000000"/>
 		<Metadata name="Catalog.Лига" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2" configVersion="a67c02245421814db9e8b846e6da001700000000">
 			<Metadata name="Catalog.Лига.Attribute.КоличествоКоманд" id="09430497-8688-4b1a-bc5c-9a28e5373f03"/>
@@ -127,8 +127,8 @@
 		<Metadata name="CommonCommand.ОткрытьВИнтернете.CommandModule" id="8d40f3c3-cd8e-4b40-a23e-ac40d8405a2b.2" configVersion="e2ac4652199e2846a28b9f5b518e43e400000000"/>
 		<Metadata name="CommonCommand.ПервоначальноеЗаполнение" id="95d3ee36-f6b1-452f-b9e2-f2474b0d8e72" configVersion="f5cf0269898cec48b09dcc0c625c6d1400000000"/>
 		<Metadata name="CommonCommand.ПервоначальноеЗаполнение.CommandModule" id="95d3ee36-f6b1-452f-b9e2-f2474b0d8e72.2" configVersion="248e6a0613a08b4ca799a86bff33743400000000"/>
-		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="cad40da53da4ee469bfe9aff8eeedbb600000000"/>
-		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="3737094dbc687646bab3b5c656e6b13200000000"/>
+		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="02448381f4720a46b0a7602a35df3bc700000000"/>
+		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="f3a6666160d8f54a8345b1f8ba10a8b900000000"/>
 		<Metadata name="CommonForm.Настройки" id="5140af2b-875b-41a1-a87e-6c03081d9b0d" configVersion="e053b07e65903049b2a95c05e440cf1f00000000"/>
 		<Metadata name="CommonForm.Настройки.Form" id="5140af2b-875b-41a1-a87e-6c03081d9b0d.0" configVersion="4e4b3aee5b071c4a97f71513cfb1874700000000"/>
 		<Metadata name="CommonModule.Биоритмы" id="c4b218ed-e5fc-4f7f-9d2a-c6fc2f69565b" configVersion="84abf411ab8c6c468a861ce4e6d0f5ca00000000"/>
