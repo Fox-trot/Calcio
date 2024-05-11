@@ -216,8 +216,18 @@
 			<BriefInformation/>
 			<DetailedInformation/>
 			<Copyright/>
-			<VendorInformationAddress/>
-			<ConfigurationInformationAddress/>
+			<VendorInformationAddress>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://infostart.ru/profile/131897/</v8:content>
+				</v8:item>
+			</VendorInformationAddress>
+			<ConfigurationInformationAddress>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://github.com/Fox-trot/Calcio</v8:content>
+				</v8:item>
+			</ConfigurationInformationAddress>
 			<DataLockControlMode>Automatic</DataLockControlMode>
 			<ObjectAutonumerationMode>AutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>DontUse</ModalityUseMode>
