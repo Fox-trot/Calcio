@@ -1221,15 +1221,6 @@
 										<Event name="OnChange">АмплуаПриИзменении</Event>
 									</Events>
 								</InputField>
-								<CheckBoxField name="Раздельно" id="91">
-									<DataPath>Раздельно</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="РаздельноКонтекстноеМеню" id="92"/>
-									<ExtendedTooltip name="РаздельноРасширеннаяПодсказка" id="93"/>
-									<Events>
-										<Event name="OnChange">РаздельноПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
 								<Button name="ГрафикОбновить" id="73">
 									<Type>UsualButton</Type>
 									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
@@ -1487,7 +1478,7 @@
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
-				<d4p1:chartType>StackedColumn3D</d4p1:chartType>
+				<d4p1:chartType>Column3D</d4p1:chartType>
 				<d4p1:circleLabelType>None</d4p1:circleLabelType>
 				<d4p1:labelsDelimiter/>
 				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
@@ -1565,7 +1556,7 @@
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Auto</d4p1:paletteKind>
 				<d4p1:animation>Auto</d4p1:animation>
-				<d4p1:rebuildTime>7081741</d4p1:rebuildTime>
+				<d4p1:rebuildTime>9594264</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>true</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
@@ -1641,20 +1632,6 @@
 			</Type>
 			<Save>
 				<Field>Амплуа</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="Раздельно" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Раздельно</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-			<Save>
-				<Field>Раздельно</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="Сезон" id="8">
