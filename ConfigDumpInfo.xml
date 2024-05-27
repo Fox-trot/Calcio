@@ -11,8 +11,8 @@
 		</Metadata>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.МатчиКоманды.CommandModule" id="720042ee-36b6-4c35-843f-4b33915f14f2.2" configVersion="203d975109fdf545b0138e86932a309b00000000"/>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.МатчиТура.CommandModule" id="ad932bbd-8bbc-4cea-8b7d-48c83020e94f.2" configVersion="545c6751d6ec4d4184297e672e48743500000000"/>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b" configVersion="bf5355929016d94c9c28b2fc817d05f300000000"/>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка.Form" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b.0" configVersion="4a0d21b1e85b264596b37d1575458d7700000000"/>
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b" configVersion="67c89a30c76b0b4e93d6101453f89fde00000000"/>
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка.Form" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b.0" configVersion="ab25b3770384e542b6e4a8204a1d906300000000"/>
 		<Metadata name="Catalog.Амплуа" id="e693f8f8-ae53-49a4-b110-260a44c87e29" configVersion="958a3411f83e8646b5d60dc31dad233800000000"/>
 		<Metadata name="Catalog.Амплуа.ObjectModule" id="e693f8f8-ae53-49a4-b110-260a44c87e29.0" configVersion="bd142abeeb5f6340ac60e6e9ceae83ab00000000"/>
 		<Metadata name="Catalog.ВидыСпорта" id="9668ab5d-6926-4b6d-86c4-170e23196591" configVersion="213b25ccdae279418d9cc79eb7a5601900000000">
@@ -117,8 +117,8 @@
 		<Metadata name="CommonCommand.ИмпортИгр.CommandModule" id="6866e7ff-9202-44a1-a9cd-11709ff44811.2" configVersion="5c072e7740e23a44b9f3ccd170d7fb5b00000000"/>
 		<Metadata name="CommonCommand.ИмпортИгроков" id="a6019af9-e05e-45be-8f0b-e576c54f48eb" configVersion="b19952114f7a1241a9843d2a7587691300000000"/>
 		<Metadata name="CommonCommand.ИмпортИгроков.CommandModule" id="a6019af9-e05e-45be-8f0b-e576c54f48eb.2" configVersion="610e51858837654a91c00c6d4a3c7b2500000000"/>
-		<Metadata name="CommonCommand.ИмпортМатча" id="f7952c22-b4c1-42b7-a2b0-a9b8010cbd2f" configVersion="bf8a6ddea3985f4d903e40513436944400000000"/>
-		<Metadata name="CommonCommand.ИмпортМатча.CommandModule" id="f7952c22-b4c1-42b7-a2b0-a9b8010cbd2f.2" configVersion="895ab2174fcd024282e08209829cc6eb00000000"/>
+		<Metadata name="CommonCommand.ИмпортМатча" id="f7952c22-b4c1-42b7-a2b0-a9b8010cbd2f" configVersion="44334b69e411214d9979eda1be7168e700000000"/>
+		<Metadata name="CommonCommand.ИмпортМатча.CommandModule" id="f7952c22-b4c1-42b7-a2b0-a9b8010cbd2f.2" configVersion="e819096842a91445929b12ac091cc13000000000"/>
 		<Metadata name="CommonCommand.ИмпортЧемпионата" id="72a464db-abad-47f6-bbe1-cb27b03491c0" configVersion="362df546a1a8034892e43ea84201eb1800000000"/>
 		<Metadata name="CommonCommand.ИмпортЧемпионата.CommandModule" id="72a464db-abad-47f6-bbe1-cb27b03491c0.2" configVersion="d97a842c1a052148aa700649582d82c600000000"/>
 		<Metadata name="CommonCommand.КомандаКалендарь" id="acde6b56-6f1c-4d53-9446-fe70aa528c0e" configVersion="22c0f046451cf04b9d8df6f95480193a00000000"/>
@@ -137,8 +137,8 @@
 		<Metadata name="CommonModule.ОбщегоНазначения.Module" id="c0feb1f6-aeb0-4a8b-a2fd-56a29c968411.0" configVersion="9c994ac7b9f0144f9cc0a812be6d52de00000000"/>
 		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="d333451373613341ac12c9f696d741d000000000"/>
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="73560343a70cd545b1856c7e44ee80ce00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="fd46a90e452a7048a03241985b96b7f900000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="9924cbee4823764ab10d4b58bcc1fd6300000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="e1e497c0f82a8c4c9fbe17389812390600000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="0d876b23802d7c478b8062dff018fcaf00000000"/>
 		<Metadata name="CommonPicture.Goal" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2" configVersion="423a0513847b624bb58462b49d8dd16100000000"/>
 		<Metadata name="CommonPicture.Goal.Picture" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2.0" configVersion="688a87d3bb9690419138fbf0bdd6417000000000"/>
 		<Metadata name="CommonTemplate.Матчи" id="f88841db-8ac3-4714-b3a7-0b5f54d14108" configVersion="5242eb47c9b3d540bf5cab7829875eeb00000000"/>
@@ -162,7 +162,7 @@
 		<Metadata name="Constant.СтарыйВидАнонсов" id="e7267b68-72c0-4e07-b5ae-47ae446afc74" configVersion="a0227c1fe716c04b9c1fe29d9e6d82b700000000"/>
 		<Metadata name="Constant.ТурнирнаяТаблицаКакНаBBC" id="b51c6522-47ab-4d34-ad58-3fcfa6be3b06" configVersion="18b0136a7a56db41835b5ef7e113adef00000000"/>
 		<Metadata name="Constant.Цвета" id="85c385f2-76c0-4d5a-9376-4adbb1cce56f" configVersion="c8e46729efbb874c824dd098f6d421de00000000"/>
-		<Metadata name="Document.Матч" id="968fdade-8bba-49c0-9187-90aea4d5194a" configVersion="002b504bf4ceab48973e31cc1a65b5d600000000">
+		<Metadata name="Document.Матч" id="968fdade-8bba-49c0-9187-90aea4d5194a" configVersion="06d4210af2653b489819372e1e32d71900000000">
 			<Metadata name="Document.Матч.TabularSection.СоставыКоманд" id="11a0963e-f1f2-416e-b2a0-57e6722fea8c"/>
 			<Metadata name="Document.Матч.Attribute.Тур" id="1cace6f1-b7ee-4379-8a08-9bcbe06b8300"/>
 			<Metadata name="Document.Матч.TabularSection.Команды.Attribute.КоличествоГолов" id="2be74b46-7504-4994-9a46-e975cfd3e9cd"/>
@@ -180,7 +180,7 @@
 		<Metadata name="Document.Матч.Form.ФормаСписка" id="ec0c34f6-3dd4-4666-8e39-b281b216548a" configVersion="557e6808201d4a428c91dc58d28944aa00000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="31f5dc3f9306d2438d8e74dcaec81d1700000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="a93407409cdfd143a1fb9b3005a647c700000000"/>
-		<Metadata name="Document.Матч.ObjectModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.0" configVersion="8821b5ce5da65d4180e401413ecb150600000000"/>
+		<Metadata name="Document.Матч.ObjectModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.0" configVersion="91cec8d2bc2d41469405e9544e8fdbe900000000"/>
 		<Metadata name="Document.СнятиеОчков" id="b9fce1f6-1d0e-42f1-8930-42518b5860a7" configVersion="93e455c312959742b3c3681f5ee1298b00000000">
 			<Metadata name="Document.СнятиеОчков.TabularSection.Команды" id="0f160997-549a-44c8-9f59-3d6d7b0804d5"/>
 			<Metadata name="Document.СнятиеОчков.TabularSection.Команды.Attribute.Команда" id="45695cab-2d97-4fc2-9a8f-f72466330e88"/>
