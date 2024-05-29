@@ -137,8 +137,8 @@
 		<Metadata name="CommonModule.ОбщегоНазначения.Module" id="c0feb1f6-aeb0-4a8b-a2fd-56a29c968411.0" configVersion="9c994ac7b9f0144f9cc0a812be6d52de00000000"/>
 		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="d333451373613341ac12c9f696d741d000000000"/>
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="73560343a70cd545b1856c7e44ee80ce00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="fb4a5db9513b2a448e83e19dcdab5ff500000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="e70412bd8bfc054fb84ebe426314db1800000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="2af4e2abaf2f924da273accc19fc02ca00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="c9d14208720223489f80cca17655287b00000000"/>
 		<Metadata name="CommonPicture.Goal" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2" configVersion="423a0513847b624bb58462b49d8dd16100000000"/>
 		<Metadata name="CommonPicture.Goal.Picture" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2.0" configVersion="688a87d3bb9690419138fbf0bdd6417000000000"/>
 		<Metadata name="CommonTemplate.Матчи" id="f88841db-8ac3-4714-b3a7-0b5f54d14108" configVersion="5242eb47c9b3d540bf5cab7829875eeb00000000"/>
@@ -215,8 +215,8 @@
 			<Metadata name="Report.Биоритмы.Attribute.КомандаИлиИгрок" id="aee55f4d-0a62-4360-8200-e4504bc304a5"/>
 			<Metadata name="Report.Биоритмы.Attribute.НачальнаяДата" id="fa9e27c0-a0f0-44f9-8a36-90fc73c6d4e4"/>
 		</Metadata>
-		<Metadata name="Report.Биоритмы.Form.ФормаОтчета" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f" configVersion="df50e0bf80c5f94b85fd5731173b21d500000000"/>
-		<Metadata name="Report.Биоритмы.Form.ФормаОтчета.Form" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f.0" configVersion="8fdd66d72eb9214787b4a1bd70b8773200000000"/>
+		<Metadata name="Report.Биоритмы.Form.ФормаОтчета" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f" configVersion="a4221da1a84692408d1067c7fad5ee7300000000"/>
+		<Metadata name="Report.Биоритмы.Form.ФормаОтчета.Form" id="85e99f9d-30c6-47a1-9efc-582af49e4d3f.0" configVersion="82129d1cc8ff53498955242cccf6199b00000000"/>
 		<Metadata name="Report.Гражданство" id="d19dd898-ed63-46bd-9ee9-db8a3ba941b3" configVersion="3b83e1fcfb3362428cb35213902fdb4100000000">
 			<Metadata name="Report.Гражданство.Command.КомандаГражданство" id="7e8222c4-7531-4168-b4a3-60d66d1e03c6"/>
 		</Metadata>
