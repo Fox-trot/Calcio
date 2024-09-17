@@ -58,6 +58,28 @@
 								<Event name="StartChoice">ТурНачалоВыбора</Event>
 							</Events>
 						</InputField>
+						<InputField name="Команда" id="38">
+							<DataPath>Объект.Команда</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Ссылка</xr:Name>
+									<xr:DataPath xsi:type="xs:string">КомандыТура</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="КомандаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="40"/>
+							<Events>
+								<Event name="OnChange">КомандаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КоличествоОчков" id="41">
+							<DataPath>Объект.КоличествоОчков</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="КоличествоОчковРасширеннаяПодсказка" id="43"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ПраваяКолонка" id="11">
@@ -83,71 +105,6 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="Команды" id="16">
-			<Representation>List</Representation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Команды</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
-			<AutoCommandBar name="КомандыКоманднаяПанель" id="18"/>
-			<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
-			<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
-				<AdditionSource>
-					<Item>Команды</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="21"/>
-				<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="КомандыСостояниеПросмотра" id="23">
-				<AdditionSource>
-					<Item>Команды</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="КомандыУправлениеПоиском" id="26">
-				<AdditionSource>
-					<Item>Команды</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
-			</SearchControlAddition>
-			<Events>
-				<Event name="OnChange">КомандыПриИзменении</Event>
-			</Events>
-			<ChildItems>
-				<LabelField name="КомандыНомерСтроки" id="29">
-					<DataPath>Объект.Команды.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
-				</LabelField>
-				<InputField name="КомандыКоманда" id="32">
-					<DataPath>Объект.Команды.Команда</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Ссылка</xr:Name>
-							<xr:DataPath xsi:type="xs:string">КомандыТура</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-					<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
-				</InputField>
-				<InputField name="КомандыКоличествоОчков" id="35">
-					<DataPath>Объект.Команды.КоличествоОчков</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="КомандыКоличествоОчковКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="КомандыКоличествоОчковРасширеннаяПодсказка" id="37"/>
-				</InputField>
-			</ChildItems>
-		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
