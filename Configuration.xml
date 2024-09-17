@@ -228,7 +228,7 @@
 					<v8:content>https://github.com/Fox-trot/Calcio</v8:content>
 				</v8:item>
 			</ConfigurationInformationAddress>
-			<DataLockControlMode>Automatic</DataLockControlMode>
+			<DataLockControlMode>Managed</DataLockControlMode>
 			<ObjectAutonumerationMode>AutoFree</ObjectAutonumerationMode>
 			<ModalityUseMode>DontUse</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
