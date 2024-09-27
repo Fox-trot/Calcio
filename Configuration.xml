@@ -251,7 +251,8 @@
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonModule>Общий</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
-			<EventSubscription>СправочникиПередЗаписью</EventSubscription>
+			<EventSubscription>ОбъектыПередЗаписью</EventSubscription>
+			<EventSubscription>ОбъектыПриКопировании</EventSubscription>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>
