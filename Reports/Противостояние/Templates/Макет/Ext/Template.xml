@@ -344,9 +344,9 @@
 		<endRow>0</endRow>
 		<endRowOffset>27</endRowOffset>
 		<beginColumn>0</beginColumn>
-		<beginColumnOffset>0</beginColumnOffset>
+		<beginColumnOffset>18</beginColumnOffset>
 		<endColumn>1</endColumn>
-		<endColumnOffset>54</endColumnOffset>
+		<endColumnOffset>135</endColumnOffset>
 		<autoSize>false</autoSize>
 		<pictureSize>Proportionally</pictureSize>
 		<zOrder>1</zOrder>
