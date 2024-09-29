@@ -33,9 +33,6 @@
 		<Command name="Report.Биоритмы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.ТурнирнаяТаблица.StandardCommand.Open">
-			<CommandGroup>ActionsPanelReports</CommandGroup>
-		</Command>
 		<Command name="Report.Хронология.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
@@ -43,6 +40,15 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Посещаемость.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.ТурнирнаяТаблица.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.Противостояние.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.Саммит.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 	</CommandsOrder>
