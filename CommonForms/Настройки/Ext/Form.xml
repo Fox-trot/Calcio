@@ -158,6 +158,12 @@
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
+		<CheckBoxField name="АвтоудалениеНапоминаний" id="46">
+			<DataPath>НаборКонстант.АвтоудалениеНапоминаний</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АвтоудалениеНапоминанийКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="АвтоудалениеНапоминанийРасширеннаяПодсказка" id="48"/>
+		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">
@@ -167,6 +173,7 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 			<UseAlways>
+				<Field>НаборКонстант.АвтоудалениеНапоминаний</Field>
 				<Field>НаборКонстант.ВыводитьТурВместоЧемпионата</Field>
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
