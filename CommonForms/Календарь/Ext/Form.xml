@@ -88,6 +88,9 @@
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>~Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+			</CommandSet>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -110,6 +113,12 @@
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.КомандаОбновить</CommandName>
 						<ExtendedTooltip name="СписокКомандаОбновитьРасширеннаяПодсказка" id="95"/>
+					</Button>
+					<Button name="КомандаИмпорт" id="96">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаИмпорт</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="КомандаИмпортРасширеннаяПодсказка" id="97"/>
 					</Button>
 				</ChildItems>
 			</AutoCommandBar>
@@ -231,6 +240,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
+				<Field>Список.Владелец</Field>
 				<Field>Список.Дата</Field>
 				<Field>Список.ИгрокИлиМатч</Field>
 				<Field>Список.КоличествоОчков</Field>
@@ -245,7 +255,7 @@
 	ЛОЖЬ КАК ЭтоИгрок,
 	МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) + 0.1 КАК Порядок,
 	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1) КАК КоличествоОчков,
-	Матч.Тур КАК Владелец
+	ЕСТЬNULL(Туры.Ссылка, Матч.Стадион) КАК Владелец
 ИЗ
 	Документ.Матч.Команды КАК МатчКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
@@ -315,18 +325,6 @@
 					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Порядок</dcssch:dataPath>
-					<dcssch:field>Порядок</dcssch:field>
-					<dcssch:valueType>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>6</v8:Digits>
-							<v8:FractionDigits>1</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</dcssch:valueType>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>КоличествоОчков</dcssch:dataPath>
 					<dcssch:field>КоличествоОчков</dcssch:field>
 					<dcssch:valueType>
@@ -344,13 +342,23 @@
 					<dcssch:title xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Команда | Тур</v8:content>
+							<v8:content>Команда | Тур | Стадион</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Игрок</dcssch:dataPath>
 					<dcssch:field>Игрок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Порядок</dcssch:dataPath>
+					<dcssch:field>Порядок</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Parameter>
 					<dcssch:name>Дата</dcssch:name>
@@ -471,13 +479,7 @@
 						<dcsset:item>
 							<dcsset:selection>
 								<dcsset:item>
-									<dcsset:field>Дата</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
 									<dcsset:field>ИгрокИлиМатч</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Тур</dcsset:field>
 								</dcsset:item>
 								<dcsset:item>
 									<dcsset:field>Владелец</dcsset:field>
@@ -500,13 +502,7 @@
 						<dcsset:item>
 							<dcsset:selection>
 								<dcsset:item>
-									<dcsset:field>Дата</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
 									<dcsset:field>ИгрокИлиМатч</dcsset:field>
-								</dcsset:item>
-								<dcsset:item>
-									<dcsset:field>Тур</dcsset:field>
 								</dcsset:item>
 								<dcsset:item>
 									<dcsset:field>Владелец</dcsset:field>
@@ -523,6 +519,26 @@
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
 									<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Дата</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЭтоИгрок</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -577,6 +593,24 @@
 				<Field>ТолькоДниРождения</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="УРЛ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УРЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>УРЛ</Field>
+			</Save>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаТекущийПериод" id="2">
@@ -617,6 +651,30 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаОбновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаИмпорт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт (iCal)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда импорт календаря (iCal)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаИмпорт</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>

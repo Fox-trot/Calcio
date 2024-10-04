@@ -209,7 +209,7 @@
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
-					<xr:FillValue xsi:type="xr:DesignTimeRef"/>
+					<xr:FillValue xsi:type="xr:DesignTimeRef">Catalog.Команды.EmptyRef</xr:FillValue>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
 				</xr:StandardAttribute>
