@@ -253,6 +253,7 @@
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<EventSubscription>ОбъектыПередЗаписью</EventSubscription>
 			<EventSubscription>ОбъектыПриКопировании</EventSubscription>
+			<EventSubscription>СправочникПередУдалением</EventSubscription>
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>
