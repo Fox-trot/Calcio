@@ -9,11 +9,13 @@
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Шапка" id="1">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -26,15 +28,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<InputField name="Дата" id="8">
-					<DataPath>Объект.Date</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
-					<Events>
-						<Event name="OnChange">ДатаПриИзменении</Event>
-					</Events>
-				</InputField>
 				<LabelField name="Счет" id="83">
 					<DataPath>Объект.Счет</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -108,6 +101,15 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТурРасширеннаяПодсказка" id="369"/>
 									<ChildItems>
+										<InputField name="Дата" id="8">
+											<DataPath>Объект.Date</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+											<Events>
+												<Event name="OnChange">ДатаПриИзменении</Event>
+											</Events>
+										</InputField>
 										<InputField name="Тур" id="94">
 											<DataPath>Объект.Тур</DataPath>
 											<ChooseType>false</ChooseType>
@@ -130,7 +132,12 @@
 								<Table name="Команды" id="20">
 									<Representation>List</Representation>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+									<VerticalScrollBar>DontUse</VerticalScrollBar>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<VerticalStretch>false</VerticalStretch>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
@@ -256,14 +263,6 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаКомандыПравая" id="187">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
-							<ChildItems>
 								<InputField name="Комментарий" id="155">
 									<DataPath>Объект.Комментарий</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -272,6 +271,55 @@
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
 									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
 								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыПравая" id="187">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИзображение" id="411">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изображение</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="412"/>
+									<ChildItems>
+										<Button name="ВыбратьИзображение" id="413">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыбратьИзображение</CommandName>
+											<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="414"/>
+										</Button>
+										<Button name="УдалитьИзображение" id="415">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УдалитьИзображение</CommandName>
+											<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="416"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<PictureField name="Изображение" id="408">
+									<DataPath>Изображение</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изображение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<ContextMenu name="ИзображениеКонтекстноеМеню" id="409"/>
+									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="410"/>
+									<Events>
+										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+									</Events>
+								</PictureField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -2276,6 +2324,21 @@
 				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
 			</Settings>
 		</Attribute>
+		<Attribute name="Изображение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изображение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="СоставыЗаполнить" id="1">
@@ -2402,6 +2465,50 @@
 			<Action>График2Обновить</Action>
 			<Representation>Picture</Representation>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
+		</Command>
+		<Command name="ВыбратьИзображение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать изображение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать изображение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Select</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьИзображение</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьИзображение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить изображение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить изображение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьИзображение</Action>
+			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 	<CommandInterface>
