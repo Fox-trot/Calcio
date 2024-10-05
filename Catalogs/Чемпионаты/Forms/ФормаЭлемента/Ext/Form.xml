@@ -80,6 +80,91 @@
 									<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="15"/>
 								</InputField>
+								<CheckBoxField name="ОлимпийскаяСистема" id="37">
+									<DataPath>1/0:91f76251-ea38-4ad5-b325-0a1be80e40df</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="39"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоманды" id="54">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<Table name="Команды" id="16">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.Команды</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
+									<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
+										<ChildItems>
+											<Button name="КомандаИмпортКоманд" id="49">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
+												<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
+									<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="21"/>
+										<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КомандыСостояниеПросмотра" id="23">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="24"/>
+										<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КомандыУправлениеПоиском" id="26">
+										<AdditionSource>
+											<Item>Команды</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
+										<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="КомандыНомерСтроки" id="29">
+											<DataPath>Объект.Команды.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
+											<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
+										</LabelField>
+										<InputField name="КомандыКоманда" id="32">
+											<DataPath>Объект.Команды.Команда</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CreateButton>true</CreateButton>
+											<ChooseType>false</ChooseType>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Ссылка</xr:Name>
+													<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
+										</InputField>
+									</ChildItems>
+								</Table>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -96,107 +181,21 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="45"/>
 					<ChildItems>
-						<CheckBoxField name="ОлимпийскаяСистема" id="37">
-							<DataPath>1/0:91f76251-ea38-4ad5-b325-0a1be80e40df</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="38"/>
-							<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="39"/>
-						</CheckBoxField>
+						<PictureField name="Изображение" id="51">
+							<DataPath>Изображение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
+						</PictureField>
 						<InputField name="Комментарий" id="46">
 							<DataPath>Объект.Комментарий</DataPath>
-							<TitleLocation>Left</TitleLocation>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="Группа1" id="54">
-			<Group>AlwaysHorizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="55"/>
-			<ChildItems>
-				<Table name="Команды" id="16">
-					<Representation>List</Representation>
-					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<EnableStartDrag>true</EnableStartDrag>
-					<EnableDrag>true</EnableDrag>
-					<FileDragMode>AsFile</FileDragMode>
-					<DataPath>Объект.Команды</DataPath>
-					<RowFilter xsi:nil="true"/>
-					<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
-					<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
-						<ChildItems>
-							<Button name="КомандаИмпортКоманд" id="49">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
-								<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
-							</Button>
-						</ChildItems>
-					</AutoCommandBar>
-					<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
-					<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
-						<AdditionSource>
-							<Item>Команды</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="21"/>
-						<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="КомандыСостояниеПросмотра" id="23">
-						<AdditionSource>
-							<Item>Команды</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="24"/>
-						<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="КомандыУправлениеПоиском" id="26">
-						<AdditionSource>
-							<Item>Команды</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
-						<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
-						<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
-					</Events>
-					<ChildItems>
-						<LabelField name="КомандыНомерСтроки" id="29">
-							<DataPath>Объект.Команды.LineNumber</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
-						</LabelField>
-						<InputField name="КомандыКоманда" id="32">
-							<DataPath>Объект.Команды.Команда</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<CreateButton>true</CreateButton>
-							<ChooseType>false</ChooseType>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>Отбор.Ссылка</xr:Name>
-									<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
-							<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
-						</InputField>
-					</ChildItems>
-				</Table>
-				<PictureField name="Изображение" id="51">
-					<DataPath>Изображение</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleLocation>None</TitleLocation>
-					<EnableStartDrag>true</EnableStartDrag>
-					<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
-					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
-				</PictureField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
