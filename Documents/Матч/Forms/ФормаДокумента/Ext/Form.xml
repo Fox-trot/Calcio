@@ -312,7 +312,6 @@
 											<v8:content>Изображение</v8:content>
 										</v8:item>
 									</ToolTip>
-									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="409"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="410"/>
