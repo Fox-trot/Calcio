@@ -69,9 +69,12 @@
 					<DataPath>Изображение</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
-					<EnableStartDrag>true</EnableStartDrag>
+					<Hyperlink>true</Hyperlink>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="Click">ИзображениеНажатие</Event>
+					</Events>
 				</PictureField>
 			</ChildItems>
 		</UsualGroup>

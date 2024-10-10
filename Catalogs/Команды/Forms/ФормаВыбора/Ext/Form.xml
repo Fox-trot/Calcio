@@ -97,7 +97,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.Владелец</Field>
 				<Field>Список.Ссылка</Field>
+				<Field>Список.Страна</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -109,11 +111,9 @@
 	СправочникКоманды.Код КАК Код,
 	СправочникКоманды.Наименование КАК Наименование,
 	СправочникКоманды.Город КАК Город,
-	СправочникКоманды.Изображение КАК Изображение,
 	СправочникКоманды.Комментарий КАК Комментарий,
 	СправочникКоманды.Предопределенный КАК Предопределенный,
-	СправочникКоманды.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
-	Города.Владелец КАК Страна
+	ЕСТЬNULL(Города.Владелец, ЗНАЧЕНИЕ(Справочник.Страны.ПустаяСсылка)) КАК Страна
 ИЗ
 	Справочник.Команды КАК СправочникКоманды
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Города КАК Города
@@ -151,10 +151,22 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Владелец</dcssch:dataPath>
 					<dcssch:field>Владелец</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид спорта</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Наименование</dcssch:dataPath>
 					<dcssch:field>Наименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
@@ -173,6 +185,9 @@
 							<v8:content>Страна</v8:content>
 						</v8:item>
 					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Страны</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<MainTable>Catalog.Команды</MainTable>
 				<ListSettings>
