@@ -11,11 +11,11 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Шапка" id="1">
 			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -36,17 +36,6 @@
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<ContextMenu name="СчетКонтекстноеМеню" id="84"/>
 					<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="85"/>
-				</LabelField>
-				<LabelField name="ЭтоДерби" id="182">
-					<DataPath>ЭтоДерби</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalAlign>Right</HorizontalAlign>
-					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<TextColor>style:NegativeTextColor</TextColor>
-					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
@@ -78,6 +67,7 @@
 					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="19"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаКомандыЛевая" id="185">
+							<HorizontalStretch>false</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -144,10 +134,17 @@
 									<DataPath>Объект.Команды</DataPath>
 									<CommandSet>
 										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
 										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+										<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
 										<ExcludedCommand>SortListAsc</ExcludedCommand>
 										<ExcludedCommand>SortListDesc</ExcludedCommand>
 									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="КомандыКонтекстноеМеню" id="21"/>
 									<AutoCommandBar name="КомандыКоманднаяПанель" id="22"/>
@@ -241,6 +238,7 @@
 										<InputField name="Стадион" id="13">
 											<DataPath>Объект.Стадион</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
 											<ChooseType>false</ChooseType>
 											<ChoiceParameterLinks>
 												<xr:Link>
@@ -263,22 +261,6 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
-								<InputField name="Комментарий" id="155">
-									<DataPath>Объект.Комментарий</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ChooseType>false</ChooseType>
-									<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
-									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаКомандыПравая" id="187">
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
-							<ChildItems>
 								<UsualGroup name="ГруппаИзображение" id="411">
 									<Title>
 										<v8:item>
@@ -286,21 +268,35 @@
 											<v8:content>Изображение</v8:content>
 										</v8:item>
 									</Title>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="412"/>
 									<ChildItems>
-										<Button name="ВыбратьИзображение" id="413">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.ВыбратьИзображение</CommandName>
-											<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="414"/>
-										</Button>
-										<Button name="УдалитьИзображение" id="415">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.УдалитьИзображение</CommandName>
-											<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="416"/>
-										</Button>
+										<UsualGroup name="ГруппаКомандИзображение" id="417">
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команд изображение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКомандИзображениеРасширеннаяПодсказка" id="418"/>
+											<ChildItems>
+												<Button name="ВыбратьИзображение" id="413">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ВыбратьИзображение</CommandName>
+													<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="414"/>
+												</Button>
+												<Button name="УдалитьИзображение" id="415">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УдалитьИзображение</CommandName>
+													<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="416"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 								<PictureField name="Изображение" id="408">
@@ -319,6 +315,34 @@
 										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
 									</Events>
 								</PictureField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыПравая" id="187">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
+							<ChildItems>
+								<LabelField name="ЭтоДерби" id="182">
+									<DataPath>ЭтоДерби</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:NegativeTextColor</TextColor>
+									<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
+								</LabelField>
+								<InputField name="Комментарий" id="155">
+									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="157"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1233,6 +1257,13 @@
 									<ClearButton>true</ClearButton>
 									<OpenButton>false</OpenButton>
 									<CreateButton>false</CreateButton>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">ВидСпорта</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
 									<ContextMenu name="АмплуаКонтекстноеМеню" id="87"/>
 									<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="88"/>
 									<Events>
@@ -2336,6 +2367,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидСпорта" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид спорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыСпорта</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
