@@ -79,6 +79,11 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="Город" id="28">
+					<DataPath>Список.Город</DataPath>
+					<ContextMenu name="ГородКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="30"/>
+				</LabelField>
 				<LabelField name="Страна" id="22">
 					<DataPath>Список.Страна</DataPath>
 					<ContextMenu name="СтранаКонтекстноеМеню" id="23"/>
@@ -98,6 +103,10 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Владелец</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
