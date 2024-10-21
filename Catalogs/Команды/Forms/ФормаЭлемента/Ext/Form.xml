@@ -490,6 +490,7 @@
 								<InputField name="Амплуа" id="162">
 									<DataPath>Амплуа</DataPath>
 									<ClearButton>true</ClearButton>
+									<CreateButton>false</CreateButton>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="АмплуаКонтекстноеМеню" id="163"/>
 									<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="164"/>
