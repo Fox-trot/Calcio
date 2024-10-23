@@ -251,6 +251,7 @@
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonModule>Общий</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
+			<CommonModule>НаКлиенте</CommonModule>
 			<EventSubscription>ОбъектыПередЗаписью</EventSubscription>
 			<EventSubscription>ОбъектыПриКопировании</EventSubscription>
 			<EventSubscription>СправочникПередУдалением</EventSubscription>
