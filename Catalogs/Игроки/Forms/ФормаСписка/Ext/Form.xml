@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -19,7 +18,6 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<ChoiceMode>true</ChoiceMode>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -78,7 +76,6 @@
 				</LabelField>
 				<LabelField name="Код" id="19">
 					<DataPath>Список.Код</DataPath>
-					<Visible>false</Visible>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
@@ -87,16 +84,25 @@
 					<ContextMenu name="АмплуаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<InputField name="Команда" id="28">
+				<LabelField name="ДатаРождения" id="25">
+					<DataPath>Список.ДатаРождения</DataPath>
+					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Команда" id="31">
 					<DataPath>Список.Команда</DataPath>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="КомандаКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="30"/>
-				</InputField>
-				<LabelField name="Страна" id="25">
+					<ContextMenu name="КомандаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Номер" id="34">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="Страна" id="28">
 					<DataPath>Список.Страна</DataPath>
-					<ContextMenu name="СтранаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="27"/>
+					<ContextMenu name="СтранаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -108,8 +114,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>Список.Амплуа</Field>
-				<Field>Список.Команда</Field>
 				<Field>Список.Ссылка</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -127,7 +131,8 @@
 	СправочникИгроки.Комментарий КАК Комментарий,
 	СправочникИгроки.Предопределенный КАК Предопределенный,
 	СправочникИгроки.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
-	ПеремещенияИгроковСрезПоследних.Команда КАК Команда
+	ПеремещенияИгроковСрезПоследних.Команда КАК Команда,
+	ПеремещенияИгроковСрезПоследних.Номер КАК Номер
 ИЗ
 	Справочник.Игроки КАК СправочникИгроки
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК ПеремещенияИгроковСрезПоследних
@@ -183,6 +188,10 @@
 					<dcssch:field>Команда</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Игрок</dcssch:dataPath>
 					<dcssch:field>Игрок</dcssch:field>
 				</Field>
@@ -204,24 +213,11 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 					<dcssch:availableAsField>false</dcssch:availableAsField>
 				</Parameter>
-				<Parameter>
-					<dcssch:name>Команда</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Команда</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
-					</dcssch:valueType>
-					<dcssch:value xsi:nil="true"/>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-				</Parameter>
 				<MainTable>Catalog.Игроки</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
