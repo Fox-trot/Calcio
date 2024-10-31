@@ -20,97 +20,73 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<Group>Vertical</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<LabelField name="Счет" id="83">
-					<DataPath>Объект.Счет</DataPath>
-					<Visible>false</Visible>
+				<InputField name="Дата" id="8">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Чемпионат" id="419">
+					<DataPath>Чемпионат</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Чемпионаты</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="420"/>
+					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="421"/>
+					<Events>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+						<Event name="StartChoice">ЧемпионатНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Тур" id="94">
+					<DataPath>Объект.Тур</DataPath>
+					<ChooseType>false</ChooseType>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Туры</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Чемпионат</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
+					<Events>
+						<Event name="OnChange">ТурПриИзменении</Event>
+						<Event name="StartChoice">ТурНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ЭтоДерби" id="182">
+					<DataPath>ЭтоДерби</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<SkipOnInput>true</SkipOnInput>
 					<TitleLocation>None</TitleLocation>
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-					<ContextMenu name="СчетКонтекстноеМеню" id="84"/>
-					<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="85"/>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>8</MaxWidth>
+					<TextColor>style:NegativeTextColor</TextColor>
+					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
+					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
 				</LabelField>
-				<UsualGroup name="ГруппаТур" id="368">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Тур</v8:content>
-						</v8:item>
-					</Title>
-					<Group>AlwaysHorizontal</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаТурРасширеннаяПодсказка" id="369"/>
-					<ChildItems>
-						<InputField name="Дата" id="8">
-							<DataPath>Объект.Date</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
-							<Events>
-								<Event name="OnChange">ДатаПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Чемпионат" id="419">
-							<DataPath>Чемпионат</DataPath>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ChooseType>false</ChooseType>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>Отбор.Ссылка</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Чемпионаты</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="ЧемпионатКонтекстноеМеню" id="420"/>
-							<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="421"/>
-							<Events>
-								<Event name="OnChange">ЧемпионатПриИзменении</Event>
-								<Event name="StartChoice">ЧемпионатНачалоВыбора</Event>
-							</Events>
-						</InputField>
-						<InputField name="Тур" id="94">
-							<DataPath>Объект.Тур</DataPath>
-							<ChooseType>false</ChooseType>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>Отбор.Ссылка</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Туры</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-								<xr:Link>
-									<xr:Name>Отбор.Владелец</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Чемпионат</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="ТурКонтекстноеМеню" id="95"/>
-							<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="96"/>
-							<Events>
-								<Event name="OnChange">ТурПриИзменении</Event>
-								<Event name="StartChoice">ТурНачалоВыбора</Event>
-							</Events>
-						</InputField>
-						<LabelField name="ЭтоДерби" id="182">
-							<DataPath>ЭтоДерби</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<SkipOnInput>true</SkipOnInput>
-							<TitleLocation>None</TitleLocation>
-							<HorizontalAlign>Right</HorizontalAlign>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<TextColor>style:NegativeTextColor</TextColor>
-							<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-							<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-						</LabelField>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="Страницы" id="16">
