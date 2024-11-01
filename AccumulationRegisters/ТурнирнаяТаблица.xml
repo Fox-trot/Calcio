@@ -368,37 +368,6 @@
 					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 				</Properties>
 			</Command>
-			<Command uuid="ad932bbd-8bbc-4cea-8b7d-48c83020e94f">
-				<Properties>
-					<Name>МатчиТура</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Матчи тура</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Group>FormNavigationPanelImportant</Group>
-					<CommandParameterType>
-						<v8:Type>cfg:CatalogRef.Туры</v8:Type>
-					</CommandParameterType>
-					<ParameterUseMode>Single</ParameterUseMode>
-					<ModifiesData>false</ModifiesData>
-					<Representation>Auto</Representation>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Все игры тура</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>CommonPicture.Goal</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<Shortcut/>
-					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
-				</Properties>
-			</Command>
 		</ChildObjects>
 	</AccumulationRegister>
 </MetaDataObject>

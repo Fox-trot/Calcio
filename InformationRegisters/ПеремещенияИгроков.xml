@@ -172,7 +172,12 @@
 				</v8:item>
 			</RecordPresentation>
 			<ExtendedRecordPresentation/>
-			<ListPresentation/>
+			<ListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трансферы</v8:content>
+				</v8:item>
+			</ListPresentation>
 			<ExtendedListPresentation/>
 			<Explanation/>
 			<DataHistory>DontUse</DataHistory>
@@ -361,7 +366,7 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormNavigationPanelSeeAlso</Group>
+					<Group>FormNavigationPanelImportant</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 					</CommandParameterType>

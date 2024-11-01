@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
-	<Events>
-		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
-	</Events>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -71,41 +68,31 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Период" id="16">
-					<DataPath>Список.Period</DataPath>
+				<LabelField name="Наименование" id="16">
+					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="Регистратор" id="19">
-					<DataPath>Список.Recorder</DataPath>
-					<ContextMenu name="РегистраторКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="21"/>
+				<LabelField name="Код" id="19">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<LabelField name="НомерСтроки" id="22">
-					<DataPath>Список.LineNumber</DataPath>
-					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="24"/>
+				<LabelField name="Владелец" id="22">
+					<DataPath>Список.Owner</DataPath>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="Команда" id="25">
-					<DataPath>Список.Команда</DataPath>
-					<ContextMenu name="КомандаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="27"/>
+				<LabelField name="ДатаНачала" id="25">
+					<DataPath>Список.ДатаНачала</DataPath>
+					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="Тур" id="28">
-					<DataPath>Список.Тур</DataPath>
-					<ContextMenu name="ТурКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="30"/>
-				</LabelField>
-				<LabelField name="КоличествоГолов" id="31">
-					<DataPath>Список.КоличествоГолов</DataPath>
-					<ContextMenu name="КоличествоГоловКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="КоличествоГоловРасширеннаяПодсказка" id="33"/>
-				</LabelField>
-				<LabelField name="КоличествоОчков" id="34">
-					<DataPath>Список.КоличествоОчков</DataPath>
-					<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="КоличествоОчковРасширеннаяПодсказка" id="36"/>
+				<LabelField name="ДатаОкончания" id="28">
+					<DataPath>Список.ДатаОкончания</DataPath>
+					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -116,14 +103,10 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Список.Recorder</Field>
-				<Field>Список.Тур</Field>
-			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>AccumulationRegister.ТурнирнаяТаблица</MainTable>
+				<MainTable>Catalog.Туры</MainTable>
 				<AutoSaveUserSettings>false</AutoSaveUserSettings>
 				<ListSettings>
 					<dcsset:filter>
