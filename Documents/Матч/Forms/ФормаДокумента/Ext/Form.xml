@@ -1140,10 +1140,15 @@
 							<ContextMenu name="СоставыКомандКонтекстноеМеню" id="45"/>
 							<AutoCommandBar name="СоставыКомандКоманднаяПанель" id="46">
 								<ChildItems>
-									<Button name="СоставыКомандСоставыЗаполнить" id="71">
+									<Button name="СоставыЗаполнить" id="71">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.СоставыЗаполнить</CommandName>
-										<ExtendedTooltip name="СоставыКомандСоставыЗаполнитьРасширеннаяПодсказка" id="72"/>
+										<ExtendedTooltip name="СоставыЗаполнитьРасширеннаяПодсказка" id="72"/>
+									</Button>
+									<Button name="СоставыСортировать" id="422">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоставыСортировать</CommandName>
+										<ExtendedTooltip name="СоставыСортироватьРасширеннаяПодсказка" id="423"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -2551,6 +2556,24 @@
 			<Representation>Picture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоставыСортировать" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Составы сортировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоставыСортировать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>
