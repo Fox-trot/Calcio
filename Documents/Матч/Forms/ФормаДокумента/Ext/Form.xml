@@ -2385,6 +2385,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
