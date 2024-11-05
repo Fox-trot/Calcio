@@ -713,29 +713,25 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Command uuid="76267cab-2822-4c0c-b642-8d15cb147d78">
+			<Command uuid="bbf4639c-3e4a-4275-89fb-6602f5e3b4d9">
 				<Properties>
-					<Name>МатчиТура</Name>
+					<Name>Матчи</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Матчи тура</v8:content>
+							<v8:content>Матчи</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Group>FormNavigationPanelImportant</Group>
 					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 						<v8:Type>cfg:CatalogRef.Туры</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
 					<Representation>Auto</Representation>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Все игры тура</v8:content>
-						</v8:item>
-					</ToolTip>
+					<ToolTip/>
 					<Picture>
 						<xr:Ref>CommonPicture.Goal</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
