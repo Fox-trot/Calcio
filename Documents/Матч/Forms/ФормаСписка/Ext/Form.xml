@@ -96,6 +96,17 @@
 					<ContextMenu name="СтадионКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="СтадионРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<InputField name="КоличествоЗрителей" id="31">
+					<DataPath>Список.КоличествоЗрителей</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<LabelField name="Комментарий" id="28">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
