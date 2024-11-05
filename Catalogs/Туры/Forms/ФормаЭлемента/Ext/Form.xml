@@ -92,13 +92,6 @@
 						</Button>
 					</ChildItems>
 				</UsualGroup>
-				<InputField name="Комментарий" id="16">
-					<DataPath>Объект.Комментарий</DataPath>
-					<TitleLocation>Left</TitleLocation>
-					<ChooseType>false</ChooseType>
-					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ПраваяКолонка" id="30">
@@ -111,6 +104,15 @@
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="16">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
