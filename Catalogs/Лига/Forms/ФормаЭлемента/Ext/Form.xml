@@ -55,6 +55,13 @@
 										<Event name="OnChange">СтранаПриИзменении</Event>
 									</Events>
 								</InputField>
+								<InputField name="Квалификация" id="70">
+									<DataPath>Объект.Квалификация</DataPath>
+									<ClearButton>true</ClearButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КвалификацияКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="КвалификацияРасширеннаяПодсказка" id="72"/>
+								</InputField>
 								<UsualGroup name="Группа1" id="38">
 									<Title>
 										<v8:item>
@@ -83,36 +90,6 @@
 											<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
 											<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
 										</CheckBoxField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаУЕФА" id="40">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>УЕФА</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа УЕФА</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Behavior>Collapsible</Behavior>
-									<Representation>None</Representation>
-									<ExtendedTooltip name="ГруппаУЕФАРасширеннаяПодсказка" id="41"/>
-									<ChildItems>
-										<InputField name="КвалификацияВЛигуЧемпионовУЕФА" id="32">
-											<DataPath>Объект.КвалификацияВЛигуЧемпионовУЕФА</DataPath>
-											<ContextMenu name="КвалификацияВЛигуЧемпионовУЕФАКонтекстноеМеню" id="33"/>
-											<ExtendedTooltip name="КвалификацияВЛигуЧемпионовУЕФАРасширеннаяПодсказка" id="34"/>
-										</InputField>
-										<InputField name="КвалификацияВЛигуЕвропыУЕФА" id="35">
-											<DataPath>Объект.КвалификацияВЛигуЕвропыУЕФА</DataPath>
-											<ChooseType>false</ChooseType>
-											<ContextMenu name="КвалификацияВЛигуЕвропыУЕФАКонтекстноеМеню" id="36"/>
-											<ExtendedTooltip name="КвалификацияВЛигуЕвропыУЕФАРасширеннаяПодсказка" id="37"/>
-										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<InputField name="Комментарий" id="16">

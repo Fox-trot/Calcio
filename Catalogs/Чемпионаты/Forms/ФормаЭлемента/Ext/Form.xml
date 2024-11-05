@@ -206,13 +206,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
-			<UseAlways>
-				<Field>Объект.Code</Field>
-				<Field>Объект.DeletionMark</Field>
-				<Field>Объект.Description</Field>
-				<Field>Объект.Predefined</Field>
-				<Field>Объект.PredefinedDataName</Field>
-			</UseAlways>
 		</Attribute>
 		<Attribute name="КомандыЛиги" id="2">
 			<Title>
