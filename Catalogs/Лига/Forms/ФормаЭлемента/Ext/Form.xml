@@ -130,6 +130,7 @@
 								<PictureField name="Изображение" id="23">
 									<DataPath>Изображение</DataPath>
 									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<EnableDrag>true</EnableDrag>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="24"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="25"/>
@@ -253,6 +254,17 @@
 			<Settings xsi:type="v8:TypeDescription">
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Settings>
+		</Attribute>
+		<Attribute name="ЕстьИстория" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть история</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
