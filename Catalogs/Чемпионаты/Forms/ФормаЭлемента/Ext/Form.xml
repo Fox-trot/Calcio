@@ -101,6 +101,13 @@
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.Команды</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>CommandBar</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>CommandBar</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
 									<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
@@ -185,12 +192,17 @@
 							<DataPath>Изображение</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxHeight>false</AutoMaxHeight>
 							<EnableStartDrag>true</EnableStartDrag>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
 							<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
 							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
 						</PictureField>
 						<InputField name="Комментарий" id="46">
 							<DataPath>Объект.Комментарий</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
 						</InputField>
