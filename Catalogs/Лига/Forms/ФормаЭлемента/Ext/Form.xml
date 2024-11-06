@@ -49,20 +49,14 @@
 								<InputField name="Страна" id="13">
 									<DataPath>Объект.Страна</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
 									<ContextMenu name="СтранаКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="15"/>
 									<Events>
 										<Event name="OnChange">СтранаПриИзменении</Event>
 									</Events>
 								</InputField>
-								<InputField name="Квалификация" id="70">
-									<DataPath>Объект.Квалификация</DataPath>
-									<ClearButton>true</ClearButton>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="КвалификацияКонтекстноеМеню" id="71"/>
-									<ExtendedTooltip name="КвалификацияРасширеннаяПодсказка" id="72"/>
-								</InputField>
-								<UsualGroup name="Группа1" id="38">
+								<UsualGroup name="ГруппаКоличество" id="38">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -70,7 +64,7 @@
 										</v8:item>
 									</Title>
 									<Representation>None</Representation>
-									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="39"/>
+									<ExtendedTooltip name="ГруппаКоличествоРасширеннаяПодсказка" id="39"/>
 									<ChildItems>
 										<InputField name="КоличествоКоманд" id="7">
 											<DataPath>Объект.КоличествоКоманд</DataPath>
@@ -78,20 +72,28 @@
 											<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="8"/>
 											<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="9"/>
 										</InputField>
+										<InputField name="Квалификация" id="70">
+											<DataPath>Объект.Квалификация</DataPath>
+											<ClearButton>true</ClearButton>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КвалификацияКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="КвалификацияРасширеннаяПодсказка" id="72"/>
+										</InputField>
 										<InputField name="КоличествоРотация" id="10">
 											<DataPath>Объект.КоличествоРотация</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<ClearButton>true</ClearButton>
 											<ContextMenu name="КоличествоРотацияКонтекстноеМеню" id="11"/>
 											<ExtendedTooltip name="КоличествоРотацияРасширеннаяПодсказка" id="12"/>
 										</InputField>
-										<CheckBoxField name="ОлимпийскаяСистема" id="42">
-											<DataPath>Объект.ОлимпийскаяСистема</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
-											<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
-										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
+								<CheckBoxField name="ОлимпийскаяСистема" id="42">
+									<DataPath>Объект.ОлимпийскаяСистема</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
+								</CheckBoxField>
 								<InputField name="Комментарий" id="16">
 									<DataPath>Объект.Комментарий</DataPath>
 									<TitleLocation>Left</TitleLocation>
