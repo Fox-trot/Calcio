@@ -37,7 +37,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выводится тур, если он не последний в сезоне</v8:content>
+					<v8:content>В турнирной таблице выводится тур, если он не последний в сезоне, иначе чемпионат</v8:content>
 				</v8:item>
 			</ToolTip>
 			<MarkNegatives>false</MarkNegatives>
