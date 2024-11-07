@@ -98,6 +98,11 @@
 					<ContextMenu name="ТурКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="30"/>
 				</LabelField>
+				<LabelField name="ТурВладелец" id="37">
+					<DataPath>Список.Тур.Owner</DataPath>
+					<ContextMenu name="ТурВладелецКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТурВладелецРасширеннаяПодсказка" id="39"/>
+				</LabelField>
 				<LabelField name="КоличествоГолов" id="31">
 					<DataPath>Список.КоличествоГолов</DataPath>
 					<ContextMenu name="КоличествоГоловКонтекстноеМеню" id="32"/>
