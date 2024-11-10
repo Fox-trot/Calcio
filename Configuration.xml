@@ -259,7 +259,6 @@
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
-			<CommonCommand>ПервоначальноеЗаполнение</CommonCommand>
 			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<CommonCommand>ОткрытьВИнтернете</CommonCommand>
 			<CommonCommand>ИмпортЧемпионата</CommonCommand>
