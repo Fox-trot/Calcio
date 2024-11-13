@@ -593,10 +593,93 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>11</index>
+		<row>
+			<c>
+				<c>
+					<f>26</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>37</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>4</i>
+				<c>
+					<f>26</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мячи</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>6</i>
+				<c>
+					<f>26</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очки</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>12</index>
+		<row>
+			<c>
+				<c>
+					<f>38</f>
+					<parameter>Год</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>39</f>
+					<parameter>Команда</parameter>
+					<detailParameter>Команда</detailParameter>
+				</c>
+			</c>
+			<c>
+				<i>4</i>
+				<c>
+					<f>27</f>
+					<parameter>КоличествоГолов</parameter>
+				</c>
+			</c>
+			<c>
+				<i>6</i>
+				<c>
+					<f>28</f>
+					<parameter>КоличествоОчков</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>37</formatIndex>
+		<formatIndex>40</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>1</beginRow>
 		<beginRowOffset>72</beginRowOffset>
@@ -612,9 +695,9 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>38</defaultFormatIndex>
-	<height>11</height>
-	<vgRows>11</vgRows>
+	<defaultFormatIndex>41</defaultFormatIndex>
+	<height>13</height>
+	<vgRows>13</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
@@ -644,6 +727,36 @@
 		<r>10</r>
 		<c>1</c>
 		<w>6</w>
+	</merge>
+	<merge>
+		<r>11</r>
+		<c>1</c>
+		<w>2</w>
+	</merge>
+	<merge>
+		<r>11</r>
+		<c>4</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>11</r>
+		<c>6</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>12</r>
+		<c>1</c>
+		<w>2</w>
+	</merge>
+	<merge>
+		<r>12</r>
+		<c>4</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>12</r>
+		<c>6</c>
+		<w>1</w>
 	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
@@ -701,6 +814,16 @@
 			<type>Rows</type>
 			<beginRow>7</beginRow>
 			<endRow>7</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Детали2</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>12</beginRow>
+			<endRow>12</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -795,6 +918,16 @@
 			<type>Rows</type>
 			<beginRow>6</beginRow>
 			<endRow>6</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Шапка2</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>11</beginRow>
+			<endRow>11</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -1090,6 +1223,37 @@
 		<width>416</width>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
+	</format>
+	<format>
+		<font>0</font>
+		<border>0</border>
+		<height>54</height>
+		<width>184</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<border>0</border>
+		<width>47</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ЧГ=0</v8:content>
+			</v8:item>
+		</format>
+	</format>
+	<format>
+		<border>0</border>
+		<width>184</width>
+		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<detailsUse>Row</detailsUse>
