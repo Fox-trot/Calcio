@@ -117,6 +117,11 @@
 												<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
 												<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
 											</Button>
+											<Button name="КомандыУпорядочить" id="56">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Упорядочить</CommandName>
+												<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
+											</Button>
 										</ChildItems>
 									</AutoCommandBar>
 									<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
@@ -272,6 +277,24 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаИмпортКоманд</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
+		</Command>
+		<Command name="Упорядочить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упорядочить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упорядочить согласно турнирной таблице</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Упорядочить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
