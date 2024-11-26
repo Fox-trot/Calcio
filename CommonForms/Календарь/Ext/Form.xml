@@ -272,11 +272,7 @@
 	&amp;ТолькоДниРождения = ЛОЖЬ
 	И Матч.Дата МЕЖДУ &amp;ДатаН И &amp;ДатаК
 	И МатчКоманды.Команда = &amp;Команда
-	И ВЫБОР
-			КОГДА Матч.Дата &lt;= &amp;Дата
-				ТОГДА Матч.Проведен = ИСТИНА
-			ИНАЧЕ Матч.ПометкаУдаления = ЛОЖЬ
-		КОНЕЦ
+	И Матч.ПометкаУдаления = ЛОЖЬ
 
 ОБЪЕДИНИТЬ ВСЕ
 
@@ -376,23 +372,6 @@
 						</v8:NumberQualifiers>
 					</dcssch:valueType>
 				</Field>
-				<Parameter>
-					<dcssch:name>Дата</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дата</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>xs:dateTime</v8:Type>
-						<v8:DateQualifiers>
-							<v8:DateFractions>DateTime</v8:DateFractions>
-						</v8:DateQualifiers>
-					</dcssch:valueType>
-					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-				</Parameter>
 				<Parameter>
 					<dcssch:name>ДатаК</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
