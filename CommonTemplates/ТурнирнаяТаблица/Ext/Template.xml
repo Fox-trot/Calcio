@@ -1244,6 +1244,7 @@
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
 		<format>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -1257,7 +1258,7 @@
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
-		<detailsUse>Row</detailsUse>
+		<detailsUse>Cell</detailsUse>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
