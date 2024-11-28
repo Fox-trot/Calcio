@@ -108,27 +108,6 @@
 										<Event name="StartChoice">ГородНачалоВыбора</Event>
 									</Events>
 								</InputField>
-								<InputField name="Комментарий" id="135">
-									<DataPath>Объект.Комментарий</DataPath>
-									<TitleLocation>Left</TitleLocation>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="КомментарийКонтекстноеМеню" id="136"/>
-									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="137"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПравая" id="113">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Лого</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="114"/>
-							<ChildItems>
 								<UsualGroup name="ГруппаАватар" id="123">
 									<EnableContentChange>true</EnableContentChange>
 									<Title>
@@ -171,6 +150,28 @@
 										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
 									</Events>
 								</PictureField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПравая" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Лого</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<InputField name="Комментарий" id="135">
+									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="137"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
