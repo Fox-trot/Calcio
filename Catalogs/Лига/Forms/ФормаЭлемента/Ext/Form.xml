@@ -143,6 +143,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаКоманды" id="49">
+					<EnableContentChange>true</EnableContentChange>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -155,6 +156,7 @@
 							<v8:content>Список Топ 6</v8:content>
 						</v8:item>
 					</ToolTip>
+					<TitleDataPath>Объект.Команды.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="СтраницаКомандыРасширеннаяПодсказка" id="50"/>
 					<ChildItems>
 						<Table name="Команды" id="51">
