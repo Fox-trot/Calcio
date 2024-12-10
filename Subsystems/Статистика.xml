@@ -34,7 +34,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.КомандаКалендарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Противостояние</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Саммит</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.Чемпионы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Непобедимые</xr:Item>
 			</Content>
 		</Properties>

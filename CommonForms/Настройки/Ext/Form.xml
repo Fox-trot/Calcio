@@ -62,8 +62,11 @@
 			<ChildItems>
 				<InputField name="Физический" id="6">
 					<DataPath>Физический</DataPath>
+					<Wrap>false</Wrap>
 					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
 					<ContextMenu name="ФизическийКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="ФизическийРасширеннаяПодсказка" id="8"/>
 					<Events>
