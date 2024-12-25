@@ -21,11 +21,6 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="0:195245fd-1183-4faf-b2f7-a53f07379942">
-			<Visibility>
-				<xr:Common>false</xr:Common>
-			</Visibility>
-		</Command>
 	</CommandsVisibility>
 	<CommandsOrder>
 		<Command name="Document.Матч.StandardCommand.OpenList">
@@ -91,6 +86,9 @@
 		<Command name="Report.Биоритмы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
+		<Command name="Report.ВозрастныеГруппы.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
 		<Command name="Report.Хронология.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
@@ -107,9 +105,6 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Саммит.StandardCommand.Open">
-			<CommandGroup>ActionsPanelReports</CommandGroup>
-		</Command>
-		<Command name="0:195245fd-1183-4faf-b2f7-a53f07379942">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Непобедимые.StandardCommand.Open">

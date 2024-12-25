@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>1.13</Version>
+			<Version>1.14</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -293,6 +293,7 @@
 			<Report>Саммит</Report>
 			<Report>Чемпионы</Report>
 			<Report>Непобедимые</Report>
+			<Report>ВозрастныеГруппы</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
