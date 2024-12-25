@@ -85,21 +85,6 @@
 								</LabelField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="Комментарий" id="36">
-							<DataPath>Объект.Комментарий</DataPath>
-							<TitleLocation>Left</TitleLocation>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ContextMenu name="КомментарийКонтекстноеМеню" id="37"/>
-							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="38"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаПравая" id="20">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="21"/>
-					<ChildItems>
 						<UsualGroup name="ГруппаИзображение" id="25">
 							<Title>
 								<v8:item>
@@ -107,6 +92,7 @@
 									<v8:content>Изображение</v8:content>
 								</v8:item>
 							</Title>
+							<VerticalStretch>false</VerticalStretch>
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -140,6 +126,22 @@
 								<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
 							</Events>
 						</PictureField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="20">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="36">
+							<DataPath>Объект.Комментарий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="38"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
