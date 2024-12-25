@@ -387,6 +387,8 @@
 					</d4p1:scaleLine>
 				</d4p1:seriesScale>
 				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
+				<d4p1:nonnumericValuesUse>Skip</d4p1:nonnumericValuesUse>
+				<d4p1:pointConnectionAcrossSkippedValues>ConnectUnskippedValues</d4p1:pointConnectionAcrossSkippedValues>
 			</Settings>
 		</Attribute>
 		<Attribute name="ТипГрафика" id="3">
