@@ -38,6 +38,7 @@
 		<SpreadSheetDocumentField name="Результат" id="3">
 			<DataPath>Результат</DataPath>
 			<DefaultItem>true</DefaultItem>
+			<ReadOnly>true</ReadOnly>
 			<TitleLocation>None</TitleLocation>
 			<Width>100</Width>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
