@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Команда</dataPath>
+			<field>Команда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Игрок</dataPath>
+			<field>Игрок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Страна</dataPath>
+			<field>Страна</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЧемпионатыКоманды.Команда КАК Команда,
+	Лига.Страна КАК Страна
+ПОМЕСТИТЬ Команды
+ИЗ
+	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+				ПО Лига.Страна = Страны.Ссылка
+			ПО Чемпионаты.Владелец = Лига.Ссылка
+		ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+ГДЕ
+	Лига.Ссылка = &amp;Лига
+	И Лига.ПометкаУдаления = ЛОЖЬ
+	И Лига.ОлимпийскаяСистема = ЛОЖЬ
+	И Чемпионаты.ДатаОкончания В
+			(ВЫБРАТЬ
+				МАКСИМУМ(Чемпионаты.ДатаОкончания)
+			ИЗ
+				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
+							ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+							ПО
+								Лига.Страна = Страны.Ссылка
+						ПО
+							Чемпионаты.Владелец = Лига.Ссылка
+					ПО
+						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+			ГДЕ
+				Лига.Ссылка = &amp;Лига
+				И Лига.ПометкаУдаления = ЛОЖЬ
+				И Лига.ОлимпийскаяСистема = ЛОЖЬ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПеремещенияИгроков.Команда КАК Команда,
+	Игроки.Страна КАК Страна
+ПОМЕСТИТЬ ПеремещенияИгроков
+ИЗ
+	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК ПеремещенияИгроков
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
+		ПО ПеремещенияИгроков.Игрок = Игроки.Ссылка
+ГДЕ
+	ПеремещенияИгроков.Команда В
+			(ВЫБРАТЬ
+				Команды.Команда
+			ИЗ
+				Команды)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Команды.Команда КАК Команда,
+	ВЫБОР
+		КОГДА Команды.Страна = ПеремещенияИгроков.Страна
+			ТОГДА Команды.Страна
+		ИНАЧЕ "Легионеры"
+	КОНЕЦ КАК Страна,
+	СУММА(ВЫБОР
+			КОГДА ПеремещенияИгроков.Страна ЕСТЬ NULL
+				ТОГДА 0
+			ИНАЧЕ 1
+		КОНЕЦ) КАК Количество
+ИЗ
+	Команды КАК Команды
+		ЛЕВОЕ СОЕДИНЕНИЕ ПеремещенияИгроков КАК ПеремещенияИгроков
+		ПО Команды.Команда = ПеремещенияИгроков.Команда
+
+СГРУППИРОВАТЬ ПО
+	Команды.Команда,
+	ВЫБОР
+		КОГДА Команды.Страна = ПеремещенияИгроков.Страна
+			ТОГДА Команды.Страна
+		ИНАЧЕ "Легионеры"
+	КОНЕЦ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Лига</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лига</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Лига</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameters">
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
+				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">Items</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Лига</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>4fc1dcd3-5c9b-4902-8aae-1de82b235296</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Команда</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">StackedColumn3D</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ПропускатьБазовоеЗначение</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Команда</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Страна</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
