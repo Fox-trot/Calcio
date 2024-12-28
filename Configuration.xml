@@ -285,16 +285,16 @@
 			<Document>Матч</Document>
 			<Document>СнятиеОчков</Document>
 			<Report>Биоритмы</Report>
-			<Report>ТурнирнаяТаблица</Report>
-			<Report>Хронология</Report>
+			<Report>ВозрастныеГруппы</Report>
 			<Report>Гражданство</Report>
+			<Report>Легионеры</Report>
 			<Report>Посещаемость</Report>
+			<Report>Хронология</Report>
+			<Report>ТурнирнаяТаблица</Report>
 			<Report>Противостояние</Report>
 			<Report>Саммит</Report>
-			<Report>Чемпионы</Report>
 			<Report>Непобедимые</Report>
-			<Report>ВозрастныеГруппы</Report>
-			<Report>Легионеры</Report>
+			<Report>Чемпионы</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
