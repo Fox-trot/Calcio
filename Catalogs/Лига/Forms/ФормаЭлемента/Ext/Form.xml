@@ -131,6 +131,7 @@
 									<DataPath>Изображение</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="24"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="25"/>
