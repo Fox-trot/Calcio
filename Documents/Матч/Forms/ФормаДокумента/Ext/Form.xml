@@ -883,6 +883,7 @@
 										</LabelDecoration>
 										<UsualGroup name="ГруппаРезультативностьСредняя" id="308">
 											<ReadOnly>true</ReadOnly>
+											<EnableContentChange>true</EnableContentChange>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -932,6 +933,79 @@
 													</Format>
 													<ContextMenu name="РезультативностьГостиКонтекстноеМеню" id="317"/>
 													<ExtendedTooltip name="РезультативностьГостиРасширеннаяПодсказка" id="318"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ДекорацияПоследняяСерия" id="435">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Последняя беспроигрышная серия</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПоследняяСерияКонтекстноеМеню" id="436"/>
+											<ExtendedTooltip name="ДекорацияПоследняяСерияРасширеннаяПодсказка" id="437"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаПоследняяСерия" id="424">
+											<ReadOnly>true</ReadOnly>
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Последняя серия</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Последняя серия</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПоследняяСерияРасширеннаяПодсказка" id="425"/>
+											<ChildItems>
+												<LabelField name="ПоследняяСерияДомашняя" id="426">
+													<DataPath>ПоследняяСерия</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Последняя беспроигрышная домашняя серия</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0; ЧГ=0</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ПоследняяСерияДомашняяКонтекстноеМеню" id="427"/>
+													<ExtendedTooltip name="ПоследняяСерияДомашняяРасширеннаяПодсказка" id="428"/>
+												</LabelField>
+												<ProgressBarField name="ПоследняяСерия" id="429">
+													<DataPath>ПоследняяСерия</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ПоследняяСерияКонтекстноеМеню" id="430"/>
+													<ExtendedTooltip name="ПоследняяСерияРасширеннаяПодсказка" id="431"/>
+												</ProgressBarField>
+												<LabelField name="ПоследняяСерияГостевая" id="432">
+													<DataPath>ПоследняяСерияГостевая</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Последняя беспроигрышная гостевая серия</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН=0; ЧГ=0</v8:content>
+														</v8:item>
+													</Format>
+													<ContextMenu name="ПоследняяСерияГостеваяКонтекстноеМеню" id="433"/>
+													<ExtendedTooltip name="ПоследняяСерияГостеваяРасширеннаяПодсказка" id="434"/>
 												</LabelField>
 											</ChildItems>
 										</UsualGroup>
@@ -2410,6 +2484,38 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВидыСпорта</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоследняяСерия" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последняя серия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоследняяСерияГостевая" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последняя серия гостевая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
