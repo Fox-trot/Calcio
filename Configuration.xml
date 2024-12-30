@@ -293,8 +293,8 @@
 			<Report>ТурнирнаяТаблица</Report>
 			<Report>Противостояние</Report>
 			<Report>Саммит</Report>
-			<Report>Непобедимые</Report>
 			<Report>Чемпионы</Report>
+			<Report>Непобедимые</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
