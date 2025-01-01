@@ -6,6 +6,7 @@
 			<Button name="ФормаПервоначальноеЗаполнение" id="52">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПервоначальноеЗаполнение</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПервоначальноеЗаполнениеРасширеннаяПодсказка" id="53"/>
 			</Button>
 		</ChildItems>
