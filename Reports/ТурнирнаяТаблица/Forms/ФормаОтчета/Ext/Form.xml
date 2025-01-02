@@ -26,18 +26,18 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаРеквизиты" id="12">
+		<UsualGroup name="ГруппаПараметры" id="12">
 			<EnableContentChange>true</EnableContentChange>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Реквизиты</v8:content>
+					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="13"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="13"/>
 			<ChildItems>
 				<Button name="Сформировать" id="10">
 					<Type>UsualButton</Type>
