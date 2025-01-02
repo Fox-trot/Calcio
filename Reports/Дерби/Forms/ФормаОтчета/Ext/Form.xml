@@ -12,22 +12,22 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаШапка" id="9">
+		<UsualGroup name="ГруппаПараметры" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка</v8:content>
+					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа шапка</v8:content>
+					<v8:content>Группа параметры</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="10"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="10"/>
 			<ChildItems>
 				<Button name="ФормаСформировать" id="4">
 					<Type>UsualButton</Type>
