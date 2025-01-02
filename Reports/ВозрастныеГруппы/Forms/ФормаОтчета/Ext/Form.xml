@@ -24,10 +24,18 @@
 					<v8:content>Группа параметры</v8:content>
 				</v8:item>
 			</ToolTip>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
+				<Button name="Сформировать" id="17">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="18"/>
+				</Button>
 				<InputField name="Команды" id="12">
 					<DataPath>_Команды</DataPath>
 					<Wrap>false</Wrap>
@@ -42,11 +50,16 @@
 						<Event name="Clearing">КомандыОчистка</Event>
 					</Events>
 				</InputField>
-				<Button name="Заполнить" id="15">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.Заполнить</CommandName>
-					<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="16"/>
-				</Button>
+				<CommandBar name="ГруппаКоманды" id="19">
+					<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<Button name="Заполнить" id="15">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.Заполнить</CommandName>
+							<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="16"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
 			</ChildItems>
 		</UsualGroup>
 		<ChartField name="График" id="9">
@@ -318,6 +331,26 @@
 			</Picture>
 			<Action>Заполнить</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Сформировать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Сформировать</Action>
 		</Command>
 	</Commands>
 </Form>
