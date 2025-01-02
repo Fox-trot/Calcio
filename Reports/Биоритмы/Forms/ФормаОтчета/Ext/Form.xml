@@ -14,24 +14,24 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Настройки" id="10">
+		<UsualGroup name="ГруппаПараметры" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки</v8:content>
+					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки</v8:content>
+					<v8:content>Группа параметры</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="11"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
 				<InputField name="КомандаИлиИгрок" id="18">
 					<DataPath>Отчет.КомандаИлиИгрок</DataPath>
