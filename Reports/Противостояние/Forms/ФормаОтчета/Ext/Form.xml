@@ -14,17 +14,23 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Шапка" id="1">
+		<UsualGroup name="ГруппаПараметры" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка</v8:content>
+					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<Button name="Сформировать" id="16">
 					<Type>UsualButton</Type>
