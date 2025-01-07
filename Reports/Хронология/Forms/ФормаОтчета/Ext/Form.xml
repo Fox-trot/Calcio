@@ -302,7 +302,7 @@
 				<d4p1:animation>Auto</d4p1:animation>
 				<d4p1:rebuildTime>6256442</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
-				<d4p1:autoTransposition>true</d4p1:autoTransposition>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
 				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
 				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
@@ -389,6 +389,7 @@
 				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
 				<d4p1:nonnumericValuesUse>Skip</d4p1:nonnumericValuesUse>
 				<d4p1:pointConnectionAcrossSkippedValues>ConnectUnskippedValues</d4p1:pointConnectionAcrossSkippedValues>
+				<d4p1:valuesEditMode>DontUse</d4p1:valuesEditMode>
 			</Settings>
 		</Attribute>
 		<Attribute name="ТипГрафика" id="3">
