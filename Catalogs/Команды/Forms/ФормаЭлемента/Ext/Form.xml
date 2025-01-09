@@ -70,16 +70,14 @@
 										<InputField name="Код" id="1">
 											<DataPath>Объект.Code</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 										</InputField>
-										<Button name="КомментарийДополнить" id="172">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.КомментарийДополнить</CommandName>
-											<ExtendedTooltip name="КомментарийДополнитьРасширеннаяПодсказка" id="173"/>
-										</Button>
 										<InputField name="Цвет" id="174">
 											<DataPath>Цвет</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>16</MaxWidth>
 											<Wrap>false</Wrap>
 											<ClearButton>true</ClearButton>
 											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -92,6 +90,12 @@
 												<Event name="Clearing">ЦветОчистка</Event>
 											</Events>
 										</InputField>
+										<Button name="КомментарийДополнить" id="172">
+											<Type>UsualButton</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<CommandName>Form.Command.КомментарийДополнить</CommandName>
+											<ExtendedTooltip name="КомментарийДополнитьРасширеннаяПодсказка" id="173"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<InputField name="Наименование" id="4">
