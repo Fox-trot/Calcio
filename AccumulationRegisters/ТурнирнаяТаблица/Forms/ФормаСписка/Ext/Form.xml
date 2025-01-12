@@ -123,6 +123,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.Period</Field>
 				<Field>Список.Recorder</Field>
 				<Field>Список.Тур</Field>
 			</UseAlways>

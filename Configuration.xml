@@ -243,6 +243,7 @@
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
 			<CommonPicture>Goal</CommonPicture>
+			<SessionParameter>КаталогаФайлов</SessionParameter>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<CommonTemplate>Матчи</CommonTemplate>
 			<CommonTemplate>ТурнирнаяТаблица</CommonTemplate>
@@ -272,6 +273,7 @@
 			<Constant>ВключитьНапоминания</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
+			<CommonForm>КаталогаФайловУстановить</CommonForm>
 			<Catalog>ВидыСпорта</Catalog>
 			<Catalog>Амплуа</Catalog>
 			<Catalog>Игроки</Catalog>
