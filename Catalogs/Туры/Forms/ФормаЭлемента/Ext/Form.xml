@@ -41,6 +41,9 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="OnChange">ОлимпийскаяСистемаПриИзменении</Event>
+							</Events>
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
