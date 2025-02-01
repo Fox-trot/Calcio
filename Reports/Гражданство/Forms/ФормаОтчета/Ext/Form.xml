@@ -42,8 +42,13 @@
 			<ReadOnly>true</ReadOnly>
 			<TitleLocation>None</TitleLocation>
 			<Width>100</Width>
+			<EnableStartDrag>false</EnableStartDrag>
+			<EnableDrag>false</EnableDrag>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
+			<Events>
+				<Event name="DetailProcessing">РезультатОбработкаРасшифровки</Event>
+			</Events>
 		</SpreadSheetDocumentField>
 	</ChildItems>
 	<Attributes>
