@@ -93,6 +93,9 @@
 					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="ГрафикКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="Selection">ГрафикВыбор</Event>
+					</Events>
 				</ChartField>
 			</ChildItems>
 		</UsualGroup>
@@ -181,7 +184,7 @@
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
 				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
 				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:labelsBorder>
 				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
@@ -201,13 +204,13 @@
 					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:chBorder>
 				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
-				<d4p1:transparent>false</d4p1:transparent>
+				<d4p1:transparent>true</d4p1:transparent>
 				<d4p1:bkgColor>style:FieldBackColor</d4p1:bkgColor>
 				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
 				<d4p1:ttlColor>style:FieldBackColor</d4p1:ttlColor>
-				<d4p1:isTrnspLeg>false</d4p1:isTrnspLeg>
+				<d4p1:isTrnspLeg>true</d4p1:isTrnspLeg>
 				<d4p1:legColor>style:FieldBackColor</d4p1:legColor>
-				<d4p1:isTrnspCh>false</d4p1:isTrnspCh>
+				<d4p1:isTrnspCh>true</d4p1:isTrnspCh>
 				<d4p1:chColor>style:FieldBackColor</d4p1:chColor>
 				<d4p1:ttlTxtColor>style:FormTextColor</d4p1:ttlTxtColor>
 				<d4p1:legTxtColor>style:FormTextColor</d4p1:legTxtColor>
@@ -250,7 +253,7 @@
 				<d4p1:animation>Auto</d4p1:animation>
 				<d4p1:rebuildTime>5174073</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
-				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:autoTransposition>true</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
 				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
 				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
@@ -291,7 +294,7 @@
 				</d4p1:elementsTitle>
 				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
 				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:border>
 				<d4p1:dataSourceDescription/>
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
