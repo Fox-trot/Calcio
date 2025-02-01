@@ -636,6 +636,8 @@
 	</format>
 	<format>
 		<font>1</font>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<detailsUse>Row</detailsUse>
 		<format>
@@ -648,6 +650,8 @@
 	</format>
 	<format>
 		<font>1</font>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
