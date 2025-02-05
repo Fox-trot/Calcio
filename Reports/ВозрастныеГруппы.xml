@@ -283,6 +283,31 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаОтчета</Form>
+			<Command uuid="0bca8601-502f-4d2e-ab6d-784f7fbc7d19">
+				<Properties>
+					<Name>ВозрастныеГруппы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возрастные группы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelSeeAlso</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+						<v8:Type>cfg:CatalogRef.Лига</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>
