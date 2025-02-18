@@ -34,6 +34,7 @@
 					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
+			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -61,13 +62,67 @@
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
+				<InputField name="ТипМатчей" id="22">
+					<DataPath>Отчет.ТипМатчей</DataPath>
+					<Visible>false</Visible>
+					<ClearButton>true</ClearButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Все</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Домашние</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выезд</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ТипМатчейКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТипМатчейРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+					</Events>
+				</InputField>
 				<CheckBoxField name="ПоказыватьРазницуМячей" id="14">
 					<DataPath>Отчет.ПоказыватьРазницуМячей</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="16"/>
 					<Events>
-						<Event name="OnChange">ПоказыватьРазницуМячейПриИзменении</Event>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
 			</ChildItems>
