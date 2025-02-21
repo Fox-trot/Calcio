@@ -1420,7 +1420,7 @@
 						</v8:item>
 					</Title>
 					<Group>AlwaysHorizontal</Group>
-					<TitleDataPath>ПредыдущиеМатчиКоличество</TitleDataPath>
+					<TitleDataPath>ПредыдущиеВстречиКоличество</TitleDataPath>
 					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="98"/>
 					<ChildItems>
 						<UsualGroup name="Группа2Очные" id="204">
@@ -1932,11 +1932,11 @@
 				<Field>МатчиФильтр</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="ПредыдущиеМатчиКоличество" id="15">
+		<Attribute name="ПредыдущиеВстречиКоличество" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Предыдущие матчи количество</v8:content>
+					<v8:content>Предыдущие встречи количество</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
