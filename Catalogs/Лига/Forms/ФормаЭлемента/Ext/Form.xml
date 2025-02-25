@@ -97,14 +97,16 @@
 								</CheckBoxField>
 								<InputField name="Комментарий" id="16">
 									<DataPath>Объект.Комментарий</DataPath>
-									<TitleLocation>Left</TitleLocation>
+									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаПравая" id="21">
+							<Width>30</Width>
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -134,6 +136,9 @@
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="24"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="25"/>
 									<Events>

@@ -167,8 +167,13 @@
 											<v8:content>Логотип команды</v8:content>
 										</v8:item>
 									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
 									<ContextMenu name="ИзображениеКонтекстноеМеню" id="130"/>
 									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="131"/>
 									<Events>
