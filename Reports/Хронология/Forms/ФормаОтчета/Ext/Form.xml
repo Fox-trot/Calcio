@@ -156,7 +156,7 @@
 					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="14"/>
 					<Events>
-						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+						<Event name="OnChange">ТипГрафикаПриИзменении</Event>
 					</Events>
 				</InputField>
 			</ChildItems>
