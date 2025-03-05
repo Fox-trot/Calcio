@@ -281,11 +281,28 @@
 											<v8:content>Изображение</v8:content>
 										</v8:item>
 									</Title>
-									<Group>Vertical</Group>
+									<Group>AlwaysHorizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="412"/>
 									<ChildItems>
+										<PictureField name="Изображение" id="408">
+											<DataPath>Изображение</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изображение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<ContextMenu name="ИзображениеКонтекстноеМеню" id="409"/>
+											<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="410"/>
+											<Events>
+												<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+											</Events>
+										</PictureField>
 										<UsualGroup name="ГруппаКомандИзображение" id="417">
 											<ToolTip>
 												<v8:item>
@@ -293,7 +310,7 @@
 													<v8:content>Группа команд изображение</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Group>AlwaysHorizontal</Group>
+											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаКомандИзображениеРасширеннаяПодсказка" id="418"/>
@@ -312,23 +329,6 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
-								<PictureField name="Изображение" id="408">
-									<DataPath>Изображение</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Изображение</v8:content>
-										</v8:item>
-									</ToolTip>
-									<EnableStartDrag>true</EnableStartDrag>
-									<EnableDrag>true</EnableDrag>
-									<ContextMenu name="ИзображениеКонтекстноеМеню" id="409"/>
-									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="410"/>
-									<Events>
-										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
-									</Events>
-								</PictureField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаКомандыПравая" id="187">
