@@ -40,15 +40,6 @@
 						<Event name="OnChange">ЛигаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CheckBoxField name="ОтображатьТаблицуДанных" id="15">
-					<DataPath>ОтображатьТаблицуДанных</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОтображатьТаблицуДанныхКонтекстноеМеню" id="16"/>
-					<ExtendedTooltip name="ОтображатьТаблицуДанныхРасширеннаяПодсказка" id="17"/>
-					<Events>
-						<Event name="OnChange">ОтображатьТаблицуДанныхПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
 				<CheckBoxField name="ПростойОтчет" id="21">
 					<DataPath>ПростойОтчет</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
@@ -56,6 +47,15 @@
 					<ExtendedTooltip name="ПростойОтчетРасширеннаяПодсказка" id="23"/>
 					<Events>
 						<Event name="OnChange">ПростойОтчетПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОтображатьТаблицуДанных" id="15">
+					<DataPath>ОтображатьТаблицуДанных</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтображатьТаблицуДанныхКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ОтображатьТаблицуДанныхРасширеннаяПодсказка" id="17"/>
+					<Events>
+						<Event name="OnChange">ОтображатьТаблицуДанныхПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
 			</ChildItems>
