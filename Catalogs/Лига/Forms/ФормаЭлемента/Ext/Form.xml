@@ -99,23 +99,6 @@
 									<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
 									<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
 								</CheckBoxField>
-								<InputField name="Комментарий" id="16">
-									<DataPath>Объект.Комментарий</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<EditMode>EnterOnInput</EditMode>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
-									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаПравая" id="21">
-							<Width>30</Width>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="22"/>
-							<ChildItems>
 								<UsualGroup name="ГруппаИзображение" id="26">
 									<Group>AlwaysHorizontal</Group>
 									<Representation>None</Representation>
@@ -137,7 +120,6 @@
 								<PictureField name="Изображение" id="23">
 									<DataPath>Изображение</DataPath>
 									<TitleLocation>None</TitleLocation>
-									<AutoMaxWidth>false</AutoMaxWidth>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<Border width="1">
@@ -149,6 +131,23 @@
 										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
 									</Events>
 								</PictureField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПравая" id="21">
+							<Width>30</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<InputField name="Комментарий" id="16">
+									<DataPath>Объект.Комментарий</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>

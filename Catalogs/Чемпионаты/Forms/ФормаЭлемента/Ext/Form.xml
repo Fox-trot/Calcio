@@ -98,12 +98,30 @@
 									<v8:content>Логотип</v8:content>
 								</v8:item>
 							</ToolTip>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
 							<Border width="1">
 								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 							</Border>
 							<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
 							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
 						</PictureField>
+						<LabelField name="Чемпион" id="58">
+							<DataPath>Чемпион</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Чемпион</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ЧемпионКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ЧемпионРасширеннаяПодсказка" id="60"/>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаПравая" id="44">
@@ -252,6 +270,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Чемпион" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чемпион</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

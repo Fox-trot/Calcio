@@ -416,6 +416,7 @@
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<HorizontalAlign>Center</HorizontalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Hiperlink>true</Hiperlink>
 											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
 											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
@@ -445,6 +446,7 @@
 											<DataPath>ИзображениеХозяева</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<EnableStartDrag>true</EnableStartDrag>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
@@ -1035,6 +1037,7 @@
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<HorizontalAlign>Center</HorizontalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Hiperlink>true</Hiperlink>
 											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
 											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
@@ -1063,6 +1066,7 @@
 											<DataPath>ИзображениеГости</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<EnableStartDrag>true</EnableStartDrag>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
