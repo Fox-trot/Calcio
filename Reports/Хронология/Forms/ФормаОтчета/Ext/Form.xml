@@ -151,6 +151,19 @@
 								<Value xsi:type="xs:decimal">6</Value>
 							</xr:Value>
 						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>"Сухие" победы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">7</Value>
+							</xr:Value>
+						</xr:Item>
 					</ChoiceList>
 					<HeightControlVariant>UseContentHeight</HeightControlVariant>
 					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="13"/>
@@ -233,7 +246,7 @@
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
 				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
 				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:labelsBorder>
 				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
@@ -278,7 +291,7 @@
 					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
 				</d4p1:scaleLine>
 				<d4p1:scaleColor>auto</d4p1:scaleColor>
-				<d4p1:isAutoSeriesName>false</d4p1:isAutoSeriesName>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
 				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
 				<d4p1:maxMode>NotDefined</d4p1:maxMode>
 				<d4p1:maxSeries>4</d4p1:maxSeries>
