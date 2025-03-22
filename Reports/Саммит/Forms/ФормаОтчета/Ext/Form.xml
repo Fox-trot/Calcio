@@ -277,7 +277,7 @@
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
 				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
 				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:labelsBorder>
 				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
@@ -297,7 +297,7 @@
 					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:chBorder>
 				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
-				<d4p1:transparent>false</d4p1:transparent>
+				<d4p1:transparent>true</d4p1:transparent>
 				<d4p1:bkgColor>style:FieldBackColor</d4p1:bkgColor>
 				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
 				<d4p1:ttlColor>style:FieldBackColor</d4p1:ttlColor>
@@ -335,7 +335,7 @@
 				<d4p1:isLight>true</d4p1:isLight>
 				<d4p1:isGradient>false</d4p1:isGradient>
 				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:hideBaseVal>true</d4p1:hideBaseVal>
 				<d4p1:dataTable>false</d4p1:dataTable>
 				<d4p1:dtVerLines>true</d4p1:dtVerLines>
 				<d4p1:dtHorLines>true</d4p1:dtHorLines>
@@ -344,7 +344,7 @@
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Auto</d4p1:paletteKind>
 				<d4p1:animation>Auto</d4p1:animation>
-				<d4p1:rebuildTime>5174073</d4p1:rebuildTime>
+				<d4p1:rebuildTime>1657400</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>false</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
@@ -387,7 +387,7 @@
 				</d4p1:elementsTitle>
 				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
 				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:border>
 				<d4p1:dataSourceDescription/>
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
@@ -401,8 +401,10 @@
 					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
 				</d4p1:multiStageLinkLine>
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:seriesOrderInLegend>Direct</d4p1:seriesOrderInLegend>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
+				<d4p1:maxBubbleSize>40</d4p1:maxBubbleSize>
 			</Settings>
 		</Attribute>
 		<Attribute name="ТипГрафика" id="5">
@@ -585,6 +587,7 @@
 					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
 				</d4p1:multiStageLinkLine>
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:seriesOrderInLegend>Direct</d4p1:seriesOrderInLegend>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
 				<d4p1:valuesScale>

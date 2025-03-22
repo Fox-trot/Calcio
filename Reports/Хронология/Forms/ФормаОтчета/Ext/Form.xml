@@ -304,7 +304,7 @@
 				<d4p1:isLight>true</d4p1:isLight>
 				<d4p1:isGradient>false</d4p1:isGradient>
 				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:hideBaseVal>true</d4p1:hideBaseVal>
 				<d4p1:dataTable>false</d4p1:dataTable>
 				<d4p1:dtVerLines>true</d4p1:dtVerLines>
 				<d4p1:dtHorLines>true</d4p1:dtHorLines>
@@ -362,7 +362,7 @@
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
 				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
 				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
-				<d4p1:splineStrain>90</d4p1:splineStrain>
+				<d4p1:splineStrain>80</d4p1:splineStrain>
 				<d4p1:translucencePercent>0</d4p1:translucencePercent>
 				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
 				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
