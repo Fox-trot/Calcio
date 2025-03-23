@@ -9,8 +9,41 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Команда</dataPath>
 			<field>Команда</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоМатчей</dataPath>
+			<field>КоличествоМатчей</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество матчей</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОчков</dataPath>
+			<field>КоличествоОчков</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -25,21 +58,57 @@
 			<valueType>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>4</v8:Digits>
+					<v8:Digits>10</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</valueType>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
-					<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
-				</dcscor:item>
-			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Дата</dataPath>
-			<field>Дата</field>
+			<dataPath>Забито</dataPath>
+			<field>Забито</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забито</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пропущено</dataPath>
+			<field>Пропущено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
 			<valueType>
 				<v8:Type>xs:dateTime</v8:Type>
 				<v8:DateQualifiers>
@@ -58,79 +127,6 @@
 				</dcscor:item>
 			</appearance>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Период</dataPath>
-			<field>Период</field>
-			<useRestriction>
-				<condition>true</condition>
-			</useRestriction>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Пропущено</dataPath>
-			<field>Пропущено</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пропущено</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Забито</dataPath>
-			<field>Забито</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Забито</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоОчков</dataPath>
-			<field>КоличествоОчков</field>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоМатчей</dataPath>
-			<field>КоличествоМатчей</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Количество матчей</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ТурнирнаяТаблица.Тур.Владелец.Владелец КАК Лига,
@@ -142,27 +138,11 @@
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК МатчКоманды
 		ПО ТурнирнаяТаблица.Регистратор = МатчКоманды.Регистратор
+			И ТурнирнаяТаблица.Команда &lt;&gt; МатчКоманды.Команда
 ГДЕ
 	МатчКоманды.Команда = &amp;Команда
-	И (МатчКоманды.Тур.Владелец, МатчКоманды.Тур.Владелец.ДатаОкончания) В
-			(ВЫБРАТЬ РАЗЛИЧНЫЕ
-				Чемпионаты.Ссылка КАК Чемпионат,
-				Чемпионаты.ДатаОкончания КАК ДатаОкончания
-			ИЗ
-				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-						ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
-							ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
-							ПО
-								Лига.Страна = Страны.Ссылка
-						ПО
-							Чемпионаты.Владелец = Лига.Ссылка
-					ПО
-						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
-			ГДЕ
-				ЧемпионатыКоманды.Команда = &amp;Команда
-				И Лига.ОлимпийскаяСистема = ЛОЖЬ)
-	И ТурнирнаяТаблица.Команда &lt;&gt; &amp;Команда
+	И МатчКоманды.Тур.Владелец.Владелец.ОлимпийскаяСистема = ЛОЖЬ
+	И (МатчКоманды.Тур.Владелец.Владелец.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ
 
 СГРУППИРОВАТЬ ПО
 	ТурнирнаяТаблица.Команда,
@@ -174,7 +154,7 @@
 ВЫБРАТЬ
 	Даты.Команда КАК Команда,
 	МИНИМУМ(РАЗНОСТЬДАТ(Проигрыши.Период, Сегодня.Период, ДЕНЬ)) КАК КоличествоДней,
-	МАКСИМУМ(Проигрыши.Период) КАК Дата,
+	МАКСИМУМ(Проигрыши.Период) КАК Период,
 	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ МатчКоманды.Регистратор) КАК КоличествоМатчей,
 	СУММА(МатчКоманды.КоличествоОчков) КАК КоличествоОчков,
 	СУММА(МатчКоманды.КоличествоГолов) КАК Забито,
@@ -184,9 +164,7 @@
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			МАКСИМУМ(Даты.Период) КАК Период
 		ИЗ
-			Даты КАК Даты
-		ГДЕ
-			Даты.Проигрыш = ЛОЖЬ) КАК Сегодня
+			Даты КАК Даты) КАК Сегодня
 		ПО (ИСТИНА)
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Даты КАК Проигрыши
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
@@ -197,9 +175,9 @@
 		ПО Даты.Команда = Проигрыши.Команда
 			И Даты.Период &gt; Проигрыши.Период
 ГДЕ
-	Даты.Проигрыш = ЛОЖЬ
-	И Даты.Лига = ТурнирнаяТаблица.Тур.Владелец.Владелец
-	И Проигрыши.Проигрыш = ИСТИНА
+	Проигрыши.Проигрыш = ИСТИНА
+	И Даты.Проигрыш = ЛОЖЬ
+	И Даты.Лига = МатчКоманды.Тур.Владелец.Владелец
 	И МатчКоманды.Команда = &amp;Команда
 
 СГРУППИРОВАТЬ ПО
@@ -246,17 +224,13 @@
 ИЗ
 	Справочник.Лига.Команды КАК ЛигаКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-				ПО Чемпионаты.Ссылка = ЧемпионатыКоманды.Ссылка
-			ПО Лига.Ссылка = Чемпионаты.Владелец
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
-			ПО Лига.Страна = Страны.Ссылка
 		ПО ЛигаКоманды.Ссылка = Лига.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+		ПО ЛигаКоманды.Ссылка = ЧемпионатыКоманды.Ссылка.Владелец
 ГДЕ
 	ЧемпионатыКоманды.Команда = &amp;Команда
-	И Лига.Владелец = ЧемпионатыКоманды.Команда.Владелец
-	И Лига.ОлимпийскаяСистема = ЛОЖЬ</query>
+	И Лига.ОлимпийскаяСистема = ЛОЖЬ
+	И (Лига.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
@@ -282,6 +256,22 @@
 		<dataPath>Пропущено</dataPath>
 		<expression>Сумма(Пропущено)</expression>
 	</totalField>
+	<totalField>
+		<dataPath>КоличествоДней</dataPath>
+		<expression>Минимум(КоличествоДней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоМатчей</dataPath>
+		<expression>0</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОчков</dataPath>
+		<expression>0</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Период</dataPath>
+		<expression>Количество(Команда)</expression>
+	</totalField>
 	<parameter>
 		<name>Команда</name>
 		<title xsi:type="v8:LocalStringType">
@@ -299,15 +289,20 @@
 		<use>Always</use>
 	</parameter>
 	<settingsVariant>
-		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:name>Список</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Команда</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Дата</dcsset:field>
+					<dcsset:field>Период</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоДней</dcsset:field>
@@ -380,6 +375,25 @@
 						</v8:item>
 					</dcsset:presentation>
 				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
 			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -400,6 +414,66 @@
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Диаграмма</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Диаграмма</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Команда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДней</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Команда</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>11590f3c-f2d3-456b-8536-7161c2d7662f</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>КоличествоДней</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Column</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Команда</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
