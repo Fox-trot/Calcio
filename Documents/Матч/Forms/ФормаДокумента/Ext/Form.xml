@@ -11,6 +11,7 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Шапка" id="1">
@@ -20,7 +21,6 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</Title>
-			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -80,9 +80,8 @@
 					<ReadOnly>true</ReadOnly>
 					<SkipOnInput>true</SkipOnInput>
 					<TitleLocation>None</TitleLocation>
-					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<MaxWidth>8</MaxWidth>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<HorizontalStretch>true</HorizontalStretch>
 					<TextColor>style:NegativeTextColor</TextColor>
 					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
 					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
@@ -1228,6 +1227,11 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.СоставыСортировать</CommandName>
 										<ExtendedTooltip name="СоставыСортироватьРасширеннаяПодсказка" id="423"/>
+									</Button>
+									<Button name="СоставыОчистить" id="438">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоставыОчистить</CommandName>
+										<ExtendedTooltip name="СоставыОчиститьРасширеннаяПодсказка" id="439"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -2707,6 +2711,28 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоставыСортировать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
+		</Command>
+		<Command name="СоставыОчистить" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Составы очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоставыОчистить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>

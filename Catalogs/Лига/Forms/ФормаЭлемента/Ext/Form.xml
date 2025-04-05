@@ -256,7 +256,9 @@
 							<ChildItems>
 								<InputField name="Команда" id="85">
 									<DataPath>Тим</DataPath>
+									<ClearButton>true</ClearButton>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
 									<ChoiceParameterLinks>
 										<xr:Link>
 											<xr:Name>Отбор.Ссылка</xr:Name>
@@ -468,7 +470,7 @@
 				</d4p1:scaleLine>
 				<d4p1:scaleColor>auto</d4p1:scaleColor>
 				<d4p1:isAutoSeriesName>false</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:isAutoPointName>false</d4p1:isAutoPointName>
 				<d4p1:maxMode>NotDefined</d4p1:maxMode>
 				<d4p1:maxSeries>4</d4p1:maxSeries>
 				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
