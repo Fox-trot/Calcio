@@ -251,13 +251,8 @@
 						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
 					</d4p1:line>
 					<d4p1:marker>Auto</d4p1:marker>
-					<d4p1:text>
-						<v8:item>
-							<v8:lang>#</v8:lang>
-							<v8:content>Сводная</v8:content>
-						</v8:item>
-					</d4p1:text>
-					<d4p1:strIsChanged>false</d4p1:strIsChanged>
+					<d4p1:text/>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
 					<d4p1:isExpand>false</d4p1:isExpand>
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
@@ -323,7 +318,7 @@
 				</d4p1:scaleLine>
 				<d4p1:scaleColor>auto</d4p1:scaleColor>
 				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:isAutoPointName>false</d4p1:isAutoPointName>
 				<d4p1:maxMode>NotDefined</d4p1:maxMode>
 				<d4p1:maxSeries>4</d4p1:maxSeries>
 				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
@@ -495,7 +490,7 @@
 				<d4p1:legTxtColor>style:FormTextColor</d4p1:legTxtColor>
 				<d4p1:chTxtColor>style:FormTextColor</d4p1:chTxtColor>
 				<d4p1:ttlFont kind="AutoFont"/>
-				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:legFont ref="style:NormalTextFont" height="8" kind="StyleItem" scale="100"/>
 				<d4p1:chFont kind="AutoFont"/>
 				<d4p1:isShowScale>false</d4p1:isShowScale>
 				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
