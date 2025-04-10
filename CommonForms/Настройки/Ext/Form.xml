@@ -15,6 +15,7 @@
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="МояКоманда" id="1">
@@ -40,6 +41,15 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТурнирнаяТаблицаКакНаBBCКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ТурнирнаяТаблицаКакНаBBCРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ТурнирнаяТаблицаКакНаBBCПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ПоказыватьРазницуМячей" id="54">
+					<DataPath>НаборКонстант.ПоказыватьРазницуМячей</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="56"/>
 				</CheckBoxField>
 				<CheckBoxField name="ВыводитьТурВместоЧемпионата" id="43">
 					<DataPath>НаборКонстант.ВыводитьТурВместоЧемпионата</DataPath>
@@ -58,11 +68,13 @@
 				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
 			<Representation>None</Representation>
 			<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="5"/>
 			<ChildItems>
 				<InputField name="Физический" id="6">
 					<DataPath>Физический</DataPath>
+					<AutoMaxHeight>false</AutoMaxHeight>
 					<Wrap>false</Wrap>
 					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -77,6 +89,7 @@
 				</InputField>
 				<InputField name="Эмоциональный" id="9">
 					<DataPath>Эмоциональный</DataPath>
+					<AutoMaxHeight>false</AutoMaxHeight>
 					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ЭмоциональныйКонтекстноеМеню" id="10"/>
@@ -88,6 +101,7 @@
 				</InputField>
 				<InputField name="Интеллектуальный" id="12">
 					<DataPath>Интеллектуальный</DataPath>
+					<AutoMaxHeight>false</AutoMaxHeight>
 					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ИнтеллектуальныйКонтекстноеМеню" id="13"/>
@@ -201,6 +215,7 @@
 				<Field>НаборКонстант.ВыводитьТурВместоЧемпионата</Field>
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
+				<Field>НаборКонстант.ПоказыватьРазницуМячей</Field>
 				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
 				<Field>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</Field>
 			</UseAlways>

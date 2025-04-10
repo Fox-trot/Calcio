@@ -116,11 +116,17 @@
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CheckBoxField name="ПоказыватьРазницуМячей" id="14">
-					<DataPath>Отчет.ПоказыватьРазницуМячей</DataPath>
+				<CheckBoxField name="ПоказыватьРазницуМячей" id="25">
+					<DataPath>ПоказыватьРазницуМячей</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать разницу в колонке Мячи</v8:content>
+						</v8:item>
+					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="16"/>
+					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="27"/>
 					<Events>
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
@@ -162,7 +168,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
-				<Field>Отчет.ПоказыватьРазницуМячей</Field>
+				<Field>1/0:a042e9d3-9e2b-491e-973b-f778def33ac8</Field>
 				<Field>Отчет.Чемпионат</Field>
 			</Save>
 		</Attribute>
@@ -366,6 +372,17 @@
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
 			</Settings>
+		</Attribute>
+		<Attribute name="ПоказыватьРазницуМячей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать разницу мячей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
