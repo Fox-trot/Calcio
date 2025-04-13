@@ -49,6 +49,9 @@
 					</ChoiceParameterLinks>
 					<ContextMenu name="ГородКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ГородПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТипГрафика" id="16">
 					<DataPath>ТипГрафика</DataPath>
@@ -219,7 +222,7 @@
 				</d4p1:scaleLine>
 				<d4p1:scaleColor>auto</d4p1:scaleColor>
 				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:isAutoPointName>false</d4p1:isAutoPointName>
 				<d4p1:maxMode>NotDefined</d4p1:maxMode>
 				<d4p1:maxSeries>4</d4p1:maxSeries>
 				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
@@ -242,7 +245,7 @@
 				<d4p1:animation>Auto</d4p1:animation>
 				<d4p1:rebuildTime>5174073</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
-				<d4p1:autoTransposition>true</d4p1:autoTransposition>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
 				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
 				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
@@ -313,12 +316,23 @@
 				<v8:NumberQualifiers>
 					<v8:Digits>1</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
 			<Save>
 				<Field>ТипГрафика</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="МойГород" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мой город</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Города</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

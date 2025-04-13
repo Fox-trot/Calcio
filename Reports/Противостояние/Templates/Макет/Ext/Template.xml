@@ -198,7 +198,7 @@
 			<c>
 				<c>
 					<f>14</f>
-					<parameter>КоличествоГолов</parameter>
+					<parameter>КоличествоЗабито</parameter>
 				</c>
 			</c>
 			<c>
@@ -292,7 +292,7 @@
 			<c>
 				<c>
 					<f>25</f>
-					<parameter>КоличествоГолов</parameter>
+					<parameter>КоличествоЗабито</parameter>
 				</c>
 			</c>
 			<c>
