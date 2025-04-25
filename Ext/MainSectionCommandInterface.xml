@@ -21,6 +21,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Catalog.Игроки.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 	</CommandsVisibility>
 	<CommandsOrder>
 		<Command name="Document.Матч.StandardCommand.OpenList">
@@ -118,6 +123,7 @@
 		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
 		<Group>NavigationPanelOrdinary</Group>
 		<Group>NavigationPanelSeeAlso</Group>
 		<Group>ActionsPanelCreate</Group>

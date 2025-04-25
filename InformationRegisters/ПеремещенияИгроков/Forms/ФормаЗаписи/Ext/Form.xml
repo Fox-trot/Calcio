@@ -43,6 +43,13 @@
 			<ContextMenu name="АмплуаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="12"/>
 		</InputField>
+		<InputField name="Комментарий" id="18">
+			<DataPath>Запись.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="20"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">
