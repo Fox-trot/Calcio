@@ -330,7 +330,7 @@
 				<d4p1:isLight>true</d4p1:isLight>
 				<d4p1:isGradient>false</d4p1:isGradient>
 				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:hideBaseVal>true</d4p1:hideBaseVal>
 				<d4p1:dataTable>false</d4p1:dataTable>
 				<d4p1:dtVerLines>true</d4p1:dtVerLines>
 				<d4p1:dtHorLines>true</d4p1:dtHorLines>
