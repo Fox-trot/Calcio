@@ -354,6 +354,7 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаОтчета</Form>
+			<Template>Хронология</Template>
 			<Command uuid="494567b9-152b-4120-97a2-a7d230fdaa83">
 				<Properties>
 					<Name>КомандаСаммит</Name>

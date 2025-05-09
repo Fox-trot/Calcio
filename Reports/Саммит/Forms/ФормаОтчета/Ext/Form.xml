@@ -129,6 +129,10 @@
 									<v8:content>Группа график раздельно</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.Chart</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
 							<ExtendedTooltip name="ГруппаГрафикРаздельноРасширеннаяПодсказка" id="24"/>
 							<ChildItems>
 								<UsualGroup name="Группа1" id="28">
@@ -187,6 +191,36 @@
 										</ChartField>
 									</ChildItems>
 								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаХронология" id="47">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Хронология</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа хронология</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.Report</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаХронологияРасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="Хронология" id="49">
+									<DataPath>Хронология</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ShowHeaders>true</ShowHeaders>
+									<VerticalScrollBar>false</VerticalScrollBar>
+									<EnableDrag>false</EnableDrag>
+									<ContextMenu name="ХронологияКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ХронологияРасширеннаяПодсказка" id="51"/>
+								</SpreadSheetDocumentField>
 							</ChildItems>
 						</Page>
 					</ChildItems>
@@ -1470,6 +1504,17 @@
 				<d4p1:pointsAxis/>
 				<d4p1:legendPlacement>None</d4p1:legendPlacement>
 			</Settings>
+		</Attribute>
+		<Attribute name="Хронология" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хронология</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
