@@ -665,11 +665,15 @@
 				<i>4</i>
 				<c>
 					<f>27</f>
-					<parameter>КоличествоГолов</parameter>
+					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
-				<i>6</i>
+				<c>
+					<f>3</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>28</f>
 					<parameter>КоличествоОчков</parameter>
@@ -698,11 +702,15 @@
 				<i>4</i>
 				<c>
 					<f>42</f>
-					<parameter>КоличествоГолов</parameter>
+					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
-				<i>6</i>
+				<c>
+					<f>3</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>43</f>
 					<parameter>КоличествоОчков</parameter>
