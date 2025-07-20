@@ -330,6 +330,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
+								<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
 								<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
