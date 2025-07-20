@@ -40,15 +40,23 @@
 						<Event name="OnChange">ЛигаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<CheckBoxField name="ПростойОтчет" id="21">
-					<DataPath>ПростойОтчет</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ПростойОтчетКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="ПростойОтчетРасширеннаяПодсказка" id="23"/>
+				<InputField name="Команда" id="27">
+					<DataPath>Отчет.Команда</DataPath>
+					<ClearButton>true</ClearButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="КомандаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="29"/>
 					<Events>
-						<Event name="OnChange">ПростойОтчетПриИзменении</Event>
+						<Event name="OnChange">КомандаПриИзменении</Event>
 					</Events>
-				</CheckBoxField>
+				</InputField>
 				<InputField name="ТипГрафика" id="24">
 					<DataPath>ТипГрафика</DataPath>
 					<ListChoiceMode>true</ListChoiceMode>
@@ -120,6 +128,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Лига</Field>
 			</Save>
 		</Attribute>
@@ -171,7 +180,7 @@
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
 				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
 				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:labelsBorder>
 				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
@@ -364,9 +373,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПростойОтчет</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ТипГрафика" id="6">
 			<Title>
@@ -386,6 +392,20 @@
 			<Save>
 				<Field>ТипГрафика</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="КомандыЛиги" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды лиги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 </Form>
