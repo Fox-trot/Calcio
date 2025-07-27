@@ -332,29 +332,26 @@
 				</Properties>
 			</Dimension>
 			<Form>ФормаСписка</Form>
-			<Command uuid="720042ee-36b6-4c35-843f-4b33915f14f2">
+			<Command uuid="4b99963f-ba52-4bba-885c-c663d7cf92f0">
 				<Properties>
-					<Name>МатчиКоманды</Name>
+					<Name>Результаты</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Матчи команды</v8:content>
+							<v8:content>Результаты</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Group>FormNavigationPanelImportant</Group>
 					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+						<v8:Type>cfg:CatalogRef.Туры</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
 					<Representation>Auto</Representation>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Все игры команды</v8:content>
-						</v8:item>
-					</ToolTip>
+					<ToolTip/>
 					<Picture>
 						<xr:Ref>CommonPicture.Goal</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
