@@ -474,6 +474,10 @@
 					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
 					<dcscor:value xsi:type="v8ui:ChartType">Column</dcscor:value>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemChart">
 				<dcsset:point>
