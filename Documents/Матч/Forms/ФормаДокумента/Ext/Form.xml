@@ -520,12 +520,6 @@
 													<DataPath>ИгрСНачалаСезона</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество домашних игр</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -548,12 +542,6 @@
 													<DataPath>ИгрСНачалаСезонаГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество гостевых игр</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -604,12 +592,6 @@
 													<DataPath>Очки</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество очков в домашних играх</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -630,12 +612,6 @@
 													<DataPath>ОчкиГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество очков в гостевых играх</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -651,7 +627,7 @@
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Побед</v8:content>
+													<v8:content>Победы</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -686,12 +662,6 @@
 													<DataPath>Побед</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество домашних побед</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -713,12 +683,6 @@
 													<DataPath>ПобедГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество гостевых побед</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -734,7 +698,7 @@
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Ничьих</v8:content>
+													<v8:content>Ничьи</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -769,12 +733,6 @@
 													<DataPath>Ничьих</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество доммашних ничьих</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -796,12 +754,6 @@
 													<DataPath>НичьихГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество гостевых ничьих</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -817,7 +769,7 @@
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Проигрышей</v8:content>
+													<v8:content>Проигрыши</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -852,12 +804,6 @@
 													<DataPath>Проигрышей</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество домашних проигрышей</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -879,12 +825,6 @@
 													<DataPath>ПроигрышейГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Количество гостевых проигрышей</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -935,12 +875,6 @@
 													<DataPath>КоличествоГолов</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Голов забито дома</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -961,12 +895,6 @@
 													<DataPath>КоличествоГоловГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Голов забито в гостях</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1012,12 +940,6 @@
 													<DataPath>Результативность</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Средняя домашняя результативность</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1038,12 +960,6 @@
 													<DataPath>РезультативностьГости</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Средняя гостевая результативность</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1087,12 +1003,6 @@
 												<LabelField name="ПоследняяСерияДомашняя" id="426">
 													<DataPath>ПоследняяСерия</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Последняя беспроигрышная домашняя серия</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1111,12 +1021,6 @@
 												<LabelField name="ПоследняяСерияГостевая" id="432">
 													<DataPath>ПоследняяСерияГостевая</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Последняя беспроигрышная гостевая серия</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
