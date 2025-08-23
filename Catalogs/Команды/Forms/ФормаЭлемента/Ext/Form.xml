@@ -1637,7 +1637,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Исключить</Action>
-			<CurrentRowUse>Use</CurrentRowUse>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
 		<Command name="СезонОбновить" id="2">
