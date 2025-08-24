@@ -41,6 +41,7 @@
 				<InputField name="Чемпионат" id="5">
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="6"/>
 					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="7"/>
@@ -57,6 +58,7 @@
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="12"/>
 					<Events>
 						<Event name="OnChange">КомандаПриИзменении</Event>
+						<Event name="StartChoice">КомандаНачалоВыбора</Event>
 					</Events>
 				</InputField>
 				<CheckBoxField name="ПоказыватьТолькоЗабитыеМячи" id="23">
@@ -306,6 +308,9 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+			<Save>
+				<Field>ПоказыватьТолькоЗабитыеМячи</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
