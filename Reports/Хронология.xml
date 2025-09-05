@@ -97,7 +97,7 @@
 						<xr:Link>
 							<xr:Name>Чемпионат</xr:Name>
 							<xr:DataPath xsi:type="xs:string">Report.Хронология.Attribute.Чемпионат</xr:DataPath>
-							<xr:ValueChange>DontChange</xr:ValueChange>
+							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
 					<ChoiceParameters/>
@@ -105,7 +105,7 @@
 					<CreateOnInput>DontUse</CreateOnInput>
 					<ChoiceForm>Catalog.Команды.Form.ФормаВыбораЧемпионат</ChoiceForm>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
 			<TabularSection uuid="5aace793-d116-46ef-9ae8-c1548065d32d">
@@ -330,7 +330,6 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
 								<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
