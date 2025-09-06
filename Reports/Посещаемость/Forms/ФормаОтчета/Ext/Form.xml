@@ -44,7 +44,7 @@
 					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="9"/>
 					<Events>
-						<Event name="OnChange">ПриИзменении</Event>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
 				<InputField name="Стадион" id="1">
@@ -327,6 +327,11 @@
 			<Save>
 				<Field>ТипГрафика</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="Кеш" id="4">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>
