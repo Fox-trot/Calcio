@@ -441,5 +441,10 @@
 				<Field>ТипГрафика</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="Кеш" id="5">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 </Form>

@@ -99,7 +99,7 @@
 					<CreateOnInput>DontUse</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
 			<TabularSection uuid="9cc8e4cd-0991-49d3-a5e9-755f3ebeb5ec">
