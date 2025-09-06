@@ -312,6 +312,11 @@
 				<Field>ПоказыватьТолькоЗабитыеМячи</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="Кеш" id="4">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Сформировать" id="1">
