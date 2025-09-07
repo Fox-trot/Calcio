@@ -41,6 +41,13 @@
 					<DataPath>Отчет.Команда</DataPath>
 					<ClearButton>true</ClearButton>
 					<ChooseType>false</ChooseType>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>
 					<Events>
@@ -445,6 +452,20 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="КомандыЛиги" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды лиги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 </Form>
