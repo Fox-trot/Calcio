@@ -44,7 +44,7 @@
 					<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>
 					<Events>
-						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+						<Event name="OnChange">ТипГрафикаПриИзменении</Event>
 					</Events>
 				</InputField>
 				<InputField name="ТипГрафика" id="12">

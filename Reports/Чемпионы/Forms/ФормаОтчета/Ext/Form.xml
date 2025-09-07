@@ -407,5 +407,10 @@
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Settings>
 		</Attribute>
+		<Attribute name="Кеш" id="8">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 </Form>
