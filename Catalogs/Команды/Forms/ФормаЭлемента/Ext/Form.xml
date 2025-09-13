@@ -800,6 +800,11 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Амплуа</dcssch:dataPath>
 					<dcssch:field>Амплуа</dcssch:field>
+					<dcssch:orderExpression>
+						<expression xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Амплуа.Код</expression>
+						<orderType xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Asc</orderType>
+						<autoOrder xmlns="http://v8.1c.ru/8.1/data-composition-system/common">false</autoOrder>
+					</dcssch:orderExpression>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Номер</dcssch:dataPath>
@@ -816,6 +821,10 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Страна</dcssch:dataPath>
 					<dcssch:field>Страна</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>

@@ -141,18 +141,42 @@
 	ТурнирнаяТаблица.Команда КАК Команда,
 	МАКСИМУМ(ТурнирнаяТаблица.Период) КАК Период,
 	МИНИМУМ(ТурнирнаяТаблица.Период) КАК Период2,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ТурнирнаяТаблица.Регистратор) КАК КоличествоМатчей,
+	СУММА(МатчКоманды.КоличествоОчков) КАК КоличествоОчков,
+	СУММА(МатчКоманды.КоличествоГолов) КАК Забито,
+	СУММА(ТурнирнаяТаблица.КоличествоГолов) КАК Пропущено,
 	МатчКоманды.КоличествоОчков = 0 КАК ЭтоПроигрыш
 ПОМЕСТИТЬ Даты
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК МатчКоманды
 		ПО ТурнирнаяТаблица.Регистратор = МатчКоманды.Регистратор
-			И ТурнирнаяТаблица.Команда &lt;&gt; МатчКоманды.Команда
+			И ТурнирнаяТаблица.НомерСтроки &lt;&gt; МатчКоманды.НомерСтроки
 ГДЕ
 	МатчКоманды.Команда = &amp;Команда
 	И МатчКоманды.Тур.Владелец.Владелец.ОлимпийскаяСистема = ЛОЖЬ
 	И (МатчКоманды.Тур.Владелец.Владелец.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ
-	И ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.Матч)
+	И ВЫБОР
+			КОГДА &amp;ТолькоТекущийЧемпионат
+				ТОГДА ТурнирнаяТаблица.Команда В
+						(ВЫБРАТЬ
+							Чемпионаты.Команда
+						ИЗ
+							Справочник.Чемпионаты.Команды КАК Чемпионаты
+						ГДЕ
+							(Чемпионаты.Ссылка.Владелец, Чемпионаты.Ссылка.ДатаОкончания) В
+								(ВЫБРАТЬ
+									Чемпионаты.Тур.Владелец.Владелец,
+									МАКСИМУМ(Чемпионаты.Тур.Владелец.ДатаОкончания)
+								ИЗ
+									РегистрНакопления.ТурнирнаяТаблица КАК Чемпионаты
+								ГДЕ
+									Чемпионаты.Тур.Владелец.Владелец.ОлимпийскаяСистема = ЛОЖЬ
+									И (Чемпионаты.Тур.Владелец.Владелец.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ
+								СГРУППИРОВАТЬ ПО
+									Чемпионаты.Тур.Владелец.Владелец))
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
 
 СГРУППИРОВАТЬ ПО
 	ТурнирнаяТаблица.Команда,
@@ -167,46 +191,60 @@
 ВЫБРАТЬ
 	Даты.Команда КАК Команда,
 	МИНИМУМ(РАЗНОСТЬДАТ(ВЫБОР
-				КОГДА Даты.Период = Проигрыши.Период
+				КОГДА Даты.Период = ЕСТЬNULL(Проигрыши.Период, Даты.Период)
 					ТОГДА Даты.Период2
 				ИНАЧЕ Проигрыши.Период
 			КОНЕЦ, Сегодня.Период, ДЕНЬ)) КАК КоличествоДней,
 	МАКСИМУМ(ВЫБОР
-			КОГДА Даты.Период = Проигрыши.Период
+			КОГДА Даты.Период = ЕСТЬNULL(Проигрыши.Период, Даты.Период)
 				ТОГДА Даты.Период2
 			ИНАЧЕ Проигрыши.Период
 		КОНЕЦ) КАК Период,
-	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ МатчКоманды.Регистратор) КАК КоличествоМатчей,
-	СУММА(МатчКоманды.КоличествоОчков) КАК КоличествоОчков,
-	СУММА(МатчКоманды.КоличествоГолов) КАК Забито,
-	СУММА(ТурнирнаяТаблица.КоличествоГолов) КАК Пропущено
+	СУММА(ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.КоличествоМатчей
+			ИНАЧЕ 1
+		КОНЕЦ) КАК КоличествоМатчей,
+	СУММА(ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.КоличествоОчков
+			ИНАЧЕ МатчКоманды.КоличествоОчков
+		КОНЕЦ) КАК КоличествоОчков,
+	СУММА(ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.Забито
+			ИНАЧЕ МатчКоманды.КоличествоГолов
+		КОНЕЦ) КАК Забито,
+	СУММА(ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.Пропущено
+			ИНАЧЕ ТурнирнаяТаблица.КоличествоГолов
+		КОНЕЦ) КАК Пропущено
 ИЗ
 	Даты КАК Даты
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			МАКСИМУМ(Даты.Период) КАК Период
 		ИЗ
-			Даты КАК Даты
-		ГДЕ
-			Даты.ЭтоПроигрыш = ЛОЖЬ) КАК Сегодня
+			Даты КАК Даты) КАК Сегодня
 		ПО (ИСТИНА)
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Даты КАК Проигрыши
+		ЛЕВОЕ СОЕДИНЕНИЕ Даты КАК Проигрыши
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК МатчКоманды
 				ПО ТурнирнаяТаблица.Регистратор = МатчКоманды.Регистратор
-					И ТурнирнаяТаблица.Команда &lt;&gt; МатчКоманды.Команда
+					И (МатчКоманды.Команда = &amp;Команда)
 			ПО Проигрыши.Команда = ТурнирнаяТаблица.Команда
 		ПО Даты.Команда = Проигрыши.Команда
+			И (Проигрыши.ЭтоПроигрыш = ИСТИНА)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+		ПО Даты.Команда = ЧемпионатыКоманды.Команда
 ГДЕ
-	Даты.Лига = МатчКоманды.Тур.Владелец.Владелец
-	И Даты.ЭтоПроигрыш = ЛОЖЬ
+	Даты.ЭтоПроигрыш = ЛОЖЬ
 	И ВЫБОР
-			КОГДА Даты.Период = Проигрыши.Период
-				ТОГДА Даты.ЭтоПроигрыш = Проигрыши.ЭтоПроигрыш
-			КОГДА Даты.Период &gt; Проигрыши.Период
-				ТОГДА Даты.ЭтоПроигрыш &lt; Проигрыши.ЭтоПроигрыш
-			ИНАЧЕ ЛОЖЬ
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА ИСТИНА
+			ИНАЧЕ Даты.Лига = ТурнирнаяТаблица.Тур.Владелец.Владелец
+					И Даты.Период &gt; Проигрыши.Период
 		КОНЕЦ
-	И МатчКоманды.Команда = &amp;Команда
 
 СГРУППИРОВАТЬ ПО
 	Даты.Команда</query>
@@ -216,34 +254,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Команда</dataPath>
 			<field>Команда</field>
-			<useRestriction>
-				<condition>true</condition>
-			</useRestriction>
-			<attributeUseRestriction>
-				<condition>true</condition>
-			</attributeUseRestriction>
-			<valueType>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Лига</dataPath>
 			<field>Лига</field>
-			<useRestriction>
-				<field>true</field>
-				<condition>true</condition>
-				<group>true</group>
-				<order>true</order>
-			</useRestriction>
-			<attributeUseRestriction>
-				<field>true</field>
-				<condition>true</condition>
-				<group>true</group>
-				<order>true</order>
-			</attributeUseRestriction>
-			<valueType>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Лига</v8:Type>
-			</valueType>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лига</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
@@ -258,7 +278,7 @@
 ГДЕ
 	ЧемпионатыКоманды.Команда = &amp;Команда
 	И Лига.ОлимпийскаяСистема = ЛОЖЬ
-	И (Лига.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ</query>
+	И (Лига.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ	</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
@@ -316,6 +336,28 @@
 		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
 	</parameter>
+	<parameter>
+		<name>ТолькоТекущийЧемпионат</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Только команды текущего чемпионата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<use>Always</use>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Список</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -362,6 +404,11 @@
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>f786cb39-99a1-4a3a-a785-2b68edb38589</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТолькоТекущийЧемпионат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					<dcsset:userSettingID>70e59370-9043-4edc-b23a-5712adfcf1bb</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
@@ -410,6 +457,10 @@
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
@@ -470,6 +521,11 @@
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>11590f3c-f2d3-456b-8536-7161c2d7662f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТолькоТекущийЧемпионат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					<dcsset:userSettingID>0f031f2a-9220-4b76-b378-073b6ea3fd3f</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

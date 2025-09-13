@@ -184,6 +184,19 @@
 								<Value xsi:type="xs:decimal">8</Value>
 							</xr:Value>
 						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дома/Выезд</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">9</Value>
+							</xr:Value>
+						</xr:Item>
 					</ChoiceList>
 					<HeightControlVariant>UseContentHeight</HeightControlVariant>
 					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="13"/>
@@ -212,7 +225,6 @@
 				<v8:Type>cfg:ReportObject.Хронология</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<SavedData>true</SavedData>
 			<Save>
 				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Чемпионат</Field>
