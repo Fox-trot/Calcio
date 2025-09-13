@@ -43,8 +43,6 @@
 		ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 ГДЕ
 	Лига.Ссылка = &amp;Лига
-	И Лига.ПометкаУдаления = ЛОЖЬ
-	И Лига.ОлимпийскаяСистема = ЛОЖЬ
 	И Чемпионаты.ДатаОкончания В
 			(ВЫБРАТЬ
 				МАКСИМУМ(Чемпионаты.ДатаОкончания)
@@ -60,9 +58,7 @@
 					ПО
 						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 			ГДЕ
-				Лига.Ссылка = &amp;Лига
-				И Лига.ПометкаУдаления = ЛОЖЬ
-				И Лига.ОлимпийскаяСистема = ЛОЖЬ)
+				Лига.Ссылка = &amp;Лига)
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -148,7 +144,11 @@
 				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
 				<dcscor:value xsi:type="dcscor:ChoiceParameters">
 					<dcscor:item>
-						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
+						<dcscor:choiceParameter>ОлимпийскаяСистема</dcscor:choiceParameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item>
+						<dcscor:choiceParameter>ПометкаУдаления</dcscor:choiceParameter>
 						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 					</dcscor:item>
 				</dcscor:value>
