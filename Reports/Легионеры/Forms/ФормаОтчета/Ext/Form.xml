@@ -45,8 +45,12 @@
 			<Width>100</Width>
 			<VerticalScrollBar>false</VerticalScrollBar>
 			<HorizontalScrollBar>false</HorizontalScrollBar>
+			<Protection>true</Protection>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
+			<Events>
+				<Event name="DetailProcessing">РезультатОбработкаРасшифровки</Event>
+			</Events>
 		</SpreadSheetDocumentField>
 	</ChildItems>
 	<Attributes>
