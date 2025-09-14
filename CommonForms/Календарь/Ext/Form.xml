@@ -59,7 +59,13 @@
 					<DataPath>Период</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<VerticalStretch>false</VerticalStretch>
 					<Font ref="style:NormalTextFont" kind="StyleItem" scale="133"/>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
 					<Events>
@@ -71,6 +77,9 @@
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
 					<Hyperlink>true</Hyperlink>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="36"/>
 					<Events>
