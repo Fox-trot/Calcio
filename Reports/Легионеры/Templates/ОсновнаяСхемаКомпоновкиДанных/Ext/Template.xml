@@ -9,6 +9,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Команда</dataPath>
 			<field>Команда</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
 			</valueType>
@@ -33,13 +36,13 @@
 			<dataPath>Страна</dataPath>
 			<field>Страна</field>
 			<useRestriction>
-				<condition>true</condition>
 				<group>true</group>
 			</useRestriction>
 			<attributeUseRestriction>
 				<field>true</field>
 				<condition>true</condition>
 				<group>true</group>
+				<order>true</order>
 			</attributeUseRestriction>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Страны</v8:Type>
