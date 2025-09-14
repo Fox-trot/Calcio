@@ -29,7 +29,7 @@
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ЧемпионатыКоманды.Команда КАК Команда,
 	Лига.Страна КАК Страна
 ПОМЕСТИТЬ Команды
@@ -154,6 +154,7 @@
 				</dcscor:value>
 			</dcscor:item>
 			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
 				<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
 				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">Items</dcscor:value>
 			</dcscor:item>
