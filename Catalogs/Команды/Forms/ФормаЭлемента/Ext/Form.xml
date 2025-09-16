@@ -404,11 +404,34 @@
 						<xr:Ref>StdPicture.User</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>AlwaysHorizontal</Group>
 					<TitleDataPath>ТекущийСоставКоличество</TitleDataPath>
 					<ExtendedTooltip name="ГруппаТекущийСоставРасширеннаяПодсказка" id="15"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаИгрок" id="182">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<TitleDataPath>ТекущийИгрок</TitleDataPath>
+							<ExtendedTooltip name="ГруппаИгрокРасширеннаяПодсказка" id="183"/>
+							<ChildItems>
+								<PictureField name="ИЗО" id="184">
+									<DataPath>ИЗО</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<EnableStartDrag>true</EnableStartDrag>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="ИЗОКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="ИЗОРасширеннаяПодсказка" id="186"/>
+								</PictureField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="ТекущийСостав" id="16">
 							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>ТекущийСостав</DataPath>
@@ -480,6 +503,7 @@
 							<Events>
 								<Event name="Selection">ТекущийСоставВыбор</Event>
 								<Event name="BeforeDeleteRow">ТекущийСоставПередУдалением</Event>
+								<Event name="OnActivateRow">ТекущийСоставПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<CheckBoxField name="СписокИгрокПометкаУдаления" id="41">
@@ -898,11 +922,7 @@
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ТурнирнаяТаблица.Период КАК Дата,
-	ВЫБОР
-		КОГДА ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.СнятиеОчков)
-			ТОГДА "Снятие очков"
-		ИНАЧЕ ТурнирнаяТаблица.Регистратор.Счет
-	КОНЕЦ КАК Счет,
+	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
 	ТурнирнаяТаблица.Тур КАК Тур,
 	ТурнирнаяТаблица.Регистратор КАК Матч,
 	ТурнирнаяТаблица.КоличествоГолов КАК КоличествоГолов,
@@ -1041,6 +1061,7 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>AccumulationRegister.ТурнирнаяТаблица</MainTable>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -1625,6 +1646,37 @@
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
 			</Settings>
+		</Attribute>
+		<Attribute name="ИЗО" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИЗО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийИгрок" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий игрок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Кеш" id="17">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
