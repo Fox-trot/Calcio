@@ -1223,9 +1223,40 @@
 						<xr:Ref>StdPicture.User</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>AlwaysHorizontal</Group>
 					<TitleDataPath>Объект.СоставыКоманд.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаСоставыКомандРасширеннаяПодсказка" id="43"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаИгрок" id="442">
+							<Group>Vertical</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИгрокРасширеннаяПодсказка" id="443"/>
+							<ChildItems>
+								<PictureField name="ИЗО" id="444">
+									<DataPath>ИЗО</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<EnableStartDrag>true</EnableStartDrag>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="ИЗОКонтекстноеМеню" id="445"/>
+									<ExtendedTooltip name="ИЗОРасширеннаяПодсказка" id="446"/>
+								</PictureField>
+								<LabelField name="ТекущийИгрок" id="447">
+									<DataPath>ТекущийИгрок</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ТекущийИгрокКонтекстноеМеню" id="448"/>
+									<ExtendedTooltip name="ТекущийИгрокРасширеннаяПодсказка" id="449"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="СоставыКоманд" id="44">
 							<Representation>List</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -1282,6 +1313,7 @@
 							<Events>
 								<Event name="BeforeAddRow">СоставыКомандПередНачаломДобавления</Event>
 								<Event name="BeforeEditEnd">СоставыКомандПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">СоставыКомандПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<LabelField name="СоставыКомандНомерСтроки" id="57" DisplayImportance="VeryLow">
@@ -2540,6 +2572,37 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.Города</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИЗО" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИЗО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Кеш" id="41">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийИгрок" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий игрок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

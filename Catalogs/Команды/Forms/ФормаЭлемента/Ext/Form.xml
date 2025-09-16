@@ -412,7 +412,6 @@
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<TitleDataPath>ТекущийИгрок</TitleDataPath>
 							<ExtendedTooltip name="ГруппаИгрокРасширеннаяПодсказка" id="183"/>
 							<ChildItems>
 								<PictureField name="ИЗО" id="184">
@@ -427,6 +426,15 @@
 									<ContextMenu name="ИЗОКонтекстноеМеню" id="185"/>
 									<ExtendedTooltip name="ИЗОРасширеннаяПодсказка" id="186"/>
 								</PictureField>
+								<LabelField name="ТекущийИгрок" id="187">
+									<DataPath>ТекущийИгрок</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ТекущийИгрокКонтекстноеМеню" id="188"/>
+									<ExtendedTooltip name="ТекущийИгрокРасширеннаяПодсказка" id="189"/>
+								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ТекущийСостав" id="16">
