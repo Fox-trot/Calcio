@@ -216,17 +216,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="Игрок" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Игрок</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ИзображениеДефолт" id="4">
 			<Title>
 				<v8:item>
@@ -612,6 +601,17 @@
 			<Save>
 				<Field>УРЛ</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="ТекущийИгрок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий игрок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
