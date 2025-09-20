@@ -52,13 +52,14 @@
 							<ContextMenu name="СтранаКонтекстноеМеню" id="16"/>
 							<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="17"/>
 						</InputField>
-						<InputField name="ТекущаяКоманда" id="41">
+						<LabelField name="ТекущаяКоманда" id="41">
 							<DataPath>ТекущаяКоманда</DataPath>
 							<ReadOnly>true</ReadOnly>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<SkipOnInput>true</SkipOnInput>
+							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ТекущаяКомандаКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="ТекущаяКомандаРасширеннаяПодсказка" id="43"/>
-						</InputField>
+						</LabelField>
 						<UsualGroup name="ГруппаВозраст" id="31">
 							<Title>
 								<v8:item>
