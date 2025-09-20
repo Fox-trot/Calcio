@@ -134,12 +134,6 @@
 											<v8:content>Группа аватар</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа аватар</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Group>AlwaysHorizontal</Group>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
@@ -167,6 +161,7 @@
 											<v8:content>Логотип команды</v8:content>
 										</v8:item>
 									</ToolTip>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>30</MaxWidth>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -225,59 +220,79 @@
 					</Picture>
 					<ExtendedTooltip name="ГруппаМатчиРасширеннаяПодсказка" id="50"/>
 					<ChildItems>
-						<InputField name="Дома" id="167">
-							<DataPath>Дома</DataPath>
-							<ListChoiceMode>true</ListChoiceMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ChooseType>false</ChooseType>
-							<TextEdit>false</TextEdit>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Все</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">0</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Дома</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">1</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Выезд</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">2</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="ДомаКонтекстноеМеню" id="168"/>
-							<ExtendedTooltip name="ДомаРасширеннаяПодсказка" id="169"/>
-							<Events>
-								<Event name="OnChange">ДомаПриИзменении</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="ГруппаМатчиОтбор" id="193">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМатчиОтборРасширеннаяПодсказка" id="194"/>
+							<ChildItems>
+								<InputField name="Дома" id="167">
+									<DataPath>Дома</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дома</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выезд</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДомаКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="ДомаРасширеннаяПодсказка" id="169"/>
+									<Events>
+										<Event name="OnChange">ДомаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Лига" id="195">
+									<DataPath>Лига</DataPath>
+									<CreateButton>false</CreateButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ЛигаКонтекстноеМеню" id="196"/>
+									<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="197"/>
+									<Events>
+										<Event name="OnChange">ЛигаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="Матчи" id="51">
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
@@ -647,6 +662,7 @@
 									<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="146"/>
 									<Events>
 										<Event name="OnChange">ЧемпионатПриИзменении</Event>
+										<Event name="StartChoice">ЧемпионатНачалоВыбора</Event>
 									</Events>
 								</InputField>
 								<Button name="СезонСезонОбновить" id="106">
@@ -948,7 +964,12 @@
 				ТОГДА ИСТИНА
 			ИНАЧЕ ТурнирнаяТаблица.НомерСтроки = &amp;Дома
 		КОНЕЦ
-	И ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.Матч)</QueryText>
+	И ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.Матч)
+	И ВЫБОР
+			КОГДА &amp;Лига = ЗНАЧЕНИЕ(Справочник.Лига.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ Туры.Владелец.Владелец = &amp;Лига
+		КОНЕЦ</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Дата</dcssch:dataPath>
 					<dcssch:field>Дата</dcssch:field>
@@ -1048,6 +1069,7 @@
 					</dcssch:valueType>
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:availableAsField>false</dcssch:availableAsField>
 				</Parameter>
 				<Parameter>
 					<dcssch:name>Дома</dcssch:name>
@@ -1067,6 +1089,22 @@
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:availableAsField>false</dcssch:availableAsField>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>Лига</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лига</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Лига</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+					<dcssch:availableAsField>false</dcssch:availableAsField>
 				</Parameter>
 				<MainTable>AccumulationRegister.ТурнирнаяТаблица</MainTable>
 				<AutoSaveUserSettings>false</AutoSaveUserSettings>
@@ -1160,7 +1198,7 @@
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>20</v8:Length>
+							<v8:Length>30</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -1684,6 +1722,29 @@
 		<Attribute name="Кеш" id="17">
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяСтраницаИмя" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ТекущаяСтраницаИмя</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Лига" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лига</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
