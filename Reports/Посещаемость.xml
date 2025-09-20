@@ -97,7 +97,7 @@
 						<xr:Link>
 							<xr:Name>Чемпионат</xr:Name>
 							<xr:DataPath xsi:type="xs:string">Report.Посещаемость.Attribute.Чемпионат</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
+							<xr:ValueChange>DontChange</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
 					<ChoiceParameters/>
