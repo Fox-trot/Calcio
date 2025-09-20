@@ -30,15 +30,9 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Kевая</v8:content>
+							<v8:content>Левая</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа левая</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -68,6 +62,7 @@
 						<InputField name="КоличествоЗрителей" id="10">
 							<DataPath>Объект.КоличествоЗрителей</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="12"/>
 						</InputField>
@@ -92,6 +87,10 @@
 						<PictureField name="Изображение" id="28">
 							<DataPath>Изображение</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
 							<ContextMenu name="ИзображениеКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="30"/>
 							<Events>
@@ -107,12 +106,7 @@
 							<v8:content>Правая</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа правая</v8:content>
-						</v8:item>
-					</ToolTip>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="21"/>
@@ -121,6 +115,7 @@
 							<DataPath>Объект.Комментарий</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChooseType>false</ChooseType>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
 						</InputField>
