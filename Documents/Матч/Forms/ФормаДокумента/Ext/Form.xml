@@ -129,19 +129,21 @@
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 							<ExtendedTooltip name="ГруппаКомандыЛеваяРасширеннаяПодсказка" id="186"/>
 							<ChildItems>
 								<Table name="Команды" id="20">
 									<Representation>List</Representation>
-									<CommandBarLocation>None</CommandBarLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<Height>3</Height>
 									<AutoMaxHeight>false</AutoMaxHeight>
 									<AutoMaxRowsCount>false</AutoMaxRowsCount>
 									<HorizontalScrollBar>DontUse</HorizontalScrollBar>
 									<VerticalScrollBar>DontUse</VerticalScrollBar>
+									<HorizontalLines>false</HorizontalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<SearchOnInput>DontUse</SearchOnInput>
+									<InitialListView>Beginning</InitialListView>
 									<VerticalStretch>false</VerticalStretch>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -160,9 +162,18 @@
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
+									<CurrentRowUse>SelectionPresentation</CurrentRowUse>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="КомандыКонтекстноеМеню" id="21"/>
-									<AutoCommandBar name="КомандыКоманднаяПанель" id="22"/>
+									<AutoCommandBar name="КомандыКоманднаяПанель" id="22">
+										<ChildItems>
+											<Button name="КомандыСоставЗаполнить" id="450">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СоставЗаполнить</CommandName>
+												<ExtendedTooltip name="КомандыСоставЗаполнитьРасширеннаяПодсказка" id="451"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
 									<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="23"/>
 									<SearchStringAddition name="КомандыСтрокаПоиска" id="24">
 										<AdditionSource>
@@ -2815,6 +2826,28 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
+		</Command>
+		<Command name="СоставЗаполнить" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить состав команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоставЗаполнить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>
