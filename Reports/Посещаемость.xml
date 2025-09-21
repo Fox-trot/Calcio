@@ -103,7 +103,7 @@
 					<ChoiceParameters/>
 					<QuickChoice>Auto</QuickChoice>
 					<CreateOnInput>DontUse</CreateOnInput>
-					<ChoiceForm>Catalog.Стадионы.Form.ФормаВыбора</ChoiceForm>
+					<ChoiceForm>Catalog.Стадионы.Form.ФормаВыбораЧемпионат</ChoiceForm>
 					<LinkByType/>
 					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 				</Properties>

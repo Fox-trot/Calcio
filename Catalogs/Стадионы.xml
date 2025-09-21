@@ -543,8 +543,8 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
-			<Form>ФормаВыбора</Form>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбораЧемпионат</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

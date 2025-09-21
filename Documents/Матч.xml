@@ -272,7 +272,7 @@
 					<CreateOnInput>Auto</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
