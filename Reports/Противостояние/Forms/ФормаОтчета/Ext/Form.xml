@@ -91,6 +91,7 @@
 				</SpreadSheetDocumentField>
 				<ChartField name="График" id="20">
 					<DataPath>График</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="ГрафикКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="22"/>
 					<Events>
