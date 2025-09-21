@@ -199,6 +199,9 @@
 								<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="62"/>
 								<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="63"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="КомандыНомерСтроки" id="64">
 									<DataPath>Объект.Команды.LineNumber</DataPath>
