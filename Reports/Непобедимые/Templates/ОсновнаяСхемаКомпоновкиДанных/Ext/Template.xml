@@ -113,7 +113,6 @@
 			И ТурнирнаяТаблица.НомерСтроки &lt;&gt; МатчКоманды.НомерСтроки
 ГДЕ
 	МатчКоманды.Команда = &amp;Команда
-	И МатчКоманды.Тур.Владелец.Владелец.ОлимпийскаяСистема = ЛОЖЬ
 	И (МатчКоманды.Тур.Владелец.Владелец.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ
 	И ВЫБОР
 			КОГДА &amp;ТолькоТекущийЧемпионат
@@ -305,7 +304,7 @@
 		<valueType>
 			<v8:Type>xs:boolean</v8:Type>
 		</valueType>
-		<value xsi:type="xs:boolean">true</value>
+		<value xsi:type="xs:boolean">false</value>
 		<useRestriction>false</useRestriction>
 		<inputParameters>
 			<dcscor:item>
