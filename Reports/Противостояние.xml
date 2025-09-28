@@ -389,7 +389,6 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаОтчета</Form>
-			<Template>Макет</Template>
 			<Command uuid="799b7c9b-9f99-4466-8af1-361a7f485f44">
 				<Properties>
 					<Name>КомандаПротивостояние</Name>

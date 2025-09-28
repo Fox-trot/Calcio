@@ -44,6 +44,7 @@
 						<InputField name="Чемпионат" id="44">
 							<DataPath>Чемпионат</DataPath>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChooseType>false</ChooseType>
 							<ChoiceParameterLinks>
 								<xr:Link>
 									<xr:Name>Отбор.Ссылка</xr:Name>
@@ -92,9 +93,6 @@
 							</ChoiceParameterLinks>
 							<ContextMenu name="КомандаКонтекстноеМеню" id="39"/>
 							<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="40"/>
-							<Events>
-								<Event name="OnChange">КомандаПриИзменении</Event>
-							</Events>
 						</InputField>
 						<InputField name="КоличествоОчков" id="41">
 							<DataPath>Объект.КоличествоОчков</DataPath>
@@ -197,6 +195,11 @@
 			<Settings xsi:type="v8:TypeDescription">
 				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 			</Settings>
+		</Attribute>
+		<Attribute name="Кеш" id="6">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<CommandInterface>

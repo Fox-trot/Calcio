@@ -437,16 +437,6 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаХозяеваРасширеннаяПодсказка" id="212"/>
 									<ChildItems>
-										<LabelField name="Хозяева" id="241">
-											<DataPath>Хозяева</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
-											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
-										</LabelField>
 										<UsualGroup name="ГруппаПредыдущие5Хозяева" id="323">
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -480,6 +470,16 @@
 											<ContextMenu name="ИзображениеХозяеваКонтекстноеМеню" id="234"/>
 											<ExtendedTooltip name="ИзображениеХозяеваРасширеннаяПодсказка" id="235"/>
 										</PictureField>
+										<LabelField name="Хозяева" id="241">
+											<DataPath>Хозяева</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаСтатистика" id="213">
@@ -1070,16 +1070,6 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаГостиРасширеннаяПодсказка" id="240"/>
 									<ChildItems>
-										<LabelField name="Гости" id="244">
-											<DataPath>Гости</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
-											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
-										</LabelField>
 										<UsualGroup name="ГруппаПредыдущие5Гости" id="325">
 											<ReadOnly>true</ReadOnly>
 											<Title>
@@ -1112,6 +1102,16 @@
 											<ContextMenu name="ИзображениеГостиКонтекстноеМеню" id="237"/>
 											<ExtendedTooltip name="ИзображениеГостиРасширеннаяПодсказка" id="238"/>
 										</PictureField>
+										<LabelField name="Гости" id="244">
+											<DataPath>Гости</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
+											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>

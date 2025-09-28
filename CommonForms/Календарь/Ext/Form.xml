@@ -613,6 +613,11 @@
 				<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ТекстовыйДокумент" id="10">
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаТекущийПериод" id="2">

@@ -200,7 +200,7 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.Матч.Form.ФормаДокумента</DefaultObjectForm>
 			<DefaultListForm>Document.Матч.Form.ФормаСписка</DefaultListForm>
-			<DefaultChoiceForm/>
+			<DefaultChoiceForm>Document.Матч.Form.ФормаВыбора</DefaultChoiceForm>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
 			<AuxiliaryChoiceForm/>
@@ -354,7 +354,7 @@
 					<CreateOnInput>Auto</CreateOnInput>
 					<ChoiceForm/>
 					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<Indexing>Index</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
@@ -508,6 +508,7 @@
 			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбора</Form>
 			<TabularSection uuid="65ae804e-a521-42f4-92c7-f01df3251b2b">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.Матч.Команды" category="TabularSection">
@@ -563,7 +564,7 @@
 							<CreateOnInput>DontUse</CreateOnInput>
 							<ChoiceForm/>
 							<LinkByType/>
-							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 							<Indexing>Index</Indexing>
 							<FullTextSearch>Use</FullTextSearch>
 							<DataHistory>Use</DataHistory>
