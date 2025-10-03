@@ -108,6 +108,11 @@
 					<ContextMenu name="КоличествоГоловКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КоличествоГоловРасширеннаяПодсказка" id="33"/>
 				</LabelField>
+				<LabelField name="Пенальти" id="40">
+					<DataPath>Список.Пенальти</DataPath>
+					<ContextMenu name="ПенальтиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПенальтиРасширеннаяПодсказка" id="42"/>
+				</LabelField>
 				<LabelField name="КоличествоОчков" id="34">
 					<DataPath>Список.КоличествоОчков</DataPath>
 					<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="35"/>

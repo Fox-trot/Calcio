@@ -85,17 +85,23 @@
 						<Event name="StartChoice">ТурНачалоВыбора</Event>
 					</Events>
 				</InputField>
-				<LabelField name="ЭтоДерби" id="182">
-					<DataPath>ЭтоДерби</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<SkipOnInput>true</SkipOnInput>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalAlign>Center</HorizontalAlign>
+				<LabelDecoration name="ЭтоДерби" id="455">
 					<HorizontalStretch>true</HorizontalStretch>
-					<TextColor>style:NegativeTextColor</TextColor>
-					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="183"/>
-					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="184"/>
-				</LabelField>
+					<TextColor>style:SpecialTextColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЕРБИ</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="456"/>
+					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="457"/>
+					<Events>
+						<Event name="Click">ЭтоДербиНажатие</Event>
+					</Events>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="Страницы" id="16">
@@ -243,6 +249,15 @@
 											</Format>
 											<ContextMenu name="КомандыКоличествоГоловКонтекстноеМеню" id="40"/>
 											<ExtendedTooltip name="КомандыКоличествоГоловРасширеннаяПодсказка" id="41"/>
+										</InputField>
+										<InputField name="КомандыПенальти" id="452">
+											<DataPath>Объект.Команды.Пенальти</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="КомандыПенальтиКонтекстноеМеню" id="453"/>
+											<ExtendedTooltip name="КомандыПенальтиРасширеннаяПодсказка" id="454"/>
 										</InputField>
 									</ChildItems>
 								</Table>
@@ -954,7 +969,7 @@
 											<ExtendedTooltip name="ГруппаРезультативностьСредняяРасширеннаяПодсказка" id="309"/>
 											<ChildItems>
 												<LabelField name="РезультативностьХозяева" id="313">
-													<DataPath>Результативность</DataPath>
+													<DataPath>РезультативностьХозяева</DataPath>
 													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
 													<Format>
@@ -1897,15 +1912,6 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="ЭтоДерби" id="7">
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>8</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
 		<Attribute name="Игроки" id="9">
 			<Title>
 				<v8:item>
@@ -2236,7 +2242,7 @@
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
 					<v8:Digits>4</v8:Digits>
-					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
@@ -2638,6 +2644,22 @@
 			<Settings xsi:type="v8:TypeDescription">
 				<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
 			</Settings>
+		</Attribute>
+		<Attribute name="РезультативностьХозяева" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результативность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>1</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

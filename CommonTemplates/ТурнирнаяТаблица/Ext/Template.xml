@@ -1685,23 +1685,36 @@
 				</c>
 			</c>
 			<c>
-				<i>2</i>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>62</f>
 					<parameter>КоличествоГолов</parameter>
-					<detailParameter>Регистратор</detailParameter>
+					<detailParameter>Первая</detailParameter>
 				</c>
 			</c>
 			<c>
 				<i>4</i>
 				<c>
 					<f>63</f>
-					<parameter>Тур</parameter>
-					<detailParameter>Тур</detailParameter>
+					<parameter>Наименование</parameter>
+					<detailParameter>Ссылка</detailParameter>
 				</c>
 			</c>
 			<c>
-				<i>7</i>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>7</f>
 				</c>
@@ -1746,6 +1759,7 @@
 				<c>
 					<f>64</f>
 					<parameter>Команда2</parameter>
+					<detailParameter>Команда2</detailParameter>
 				</c>
 			</c>
 			<c>
@@ -1757,11 +1771,26 @@
 				<c>
 					<f>65</f>
 					<parameter>КоличествоГолов2</parameter>
-					<detailParameter>Регистратор</detailParameter>
+					<detailParameter>Вторая</detailParameter>
 				</c>
 			</c>
 			<c>
-				<i>7</i>
+				<i>4</i>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>17</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>7</f>
 				</c>
@@ -2834,16 +2863,25 @@
 	</format>
 	<format>
 		<border>0</border>
+		<width>47</width>
 		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<border>0</border>
+		<width>48</width>
+		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
+		<font>0</font>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
@@ -2856,6 +2894,8 @@
 	</format>
 	<format>
 		<border>0</border>
+		<width>48</width>
+		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<format>

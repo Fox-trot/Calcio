@@ -207,52 +207,6 @@
 СГРУППИРОВАТЬ ПО
 	Даты.Команда</query>
 	</dataSet>
-	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных2</name>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КомандаТоп</dataPath>
-			<field>КомандаТоп</field>
-			<useRestriction>
-				<condition>true</condition>
-			</useRestriction>
-			<attributeUseRestriction>
-				<condition>true</condition>
-			</attributeUseRestriction>
-		</field>
-		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
-	ЛигаКоманды.Команда КАК КомандаТоп
-ИЗ
-	Справочник.Лига.Команды КАК ЛигаКоманды
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
-		ПО ЛигаКоманды.Ссылка = Лига.Ссылка
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-		ПО ЛигаКоманды.Ссылка = ЧемпионатыКоманды.Ссылка.Владелец
-ГДЕ
-	ЧемпионатыКоманды.Команда = &amp;Команда
-	И Лига.ОлимпийскаяСистема = ЛОЖЬ
-	И (Лига.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ</query>
-	</dataSet>
-	<dataSetLink>
-		<sourceDataSet>НаборДанных1</sourceDataSet>
-		<destinationDataSet>НаборДанных2</destinationDataSet>
-		<sourceExpression>Команда</sourceExpression>
-		<destinationExpression>КомандаТоп</destinationExpression>
-		<required>false</required>
-	</dataSetLink>
-	<calculatedField>
-		<dataPath>Топ</dataPath>
-		<expression>(КомандаТоп ЕСТЬ NULL) = ЛОЖЬ</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Топ</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:boolean</v8:Type>
-		</valueType>
-	</calculatedField>
 	<totalField>
 		<dataPath>Забито</dataPath>
 		<expression>Сумма(Забито)</expression>
@@ -271,7 +225,7 @@
 	</totalField>
 	<totalField>
 		<dataPath>КоличествоОчков</dataPath>
-		<expression>0</expression>
+		<expression>Сумма(КоличествоОчков)</expression>
 	</totalField>
 	<totalField>
 		<dataPath>Период</dataPath>
