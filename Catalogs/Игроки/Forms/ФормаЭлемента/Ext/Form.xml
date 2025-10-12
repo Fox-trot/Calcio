@@ -117,7 +117,6 @@
 									</ToolTip>
 									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 									<MaxWidth>30</MaxWidth>
-									<PictureSize>Proportionally</PictureSize>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<Border width="1">

@@ -94,6 +94,16 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоТоп</dataPath>
+			<field>ЭтоТоп</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это топ</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ТурнирнаяТаблица.Тур.Владелец.Владелец КАК Лига,
@@ -177,7 +187,21 @@
 			КОГДА Проигрыши.Период ЕСТЬ NULL
 				ТОГДА Даты.Пропущено
 			ИНАЧЕ ТурнирнаяТаблица.КоличествоГолов
-		КОНЕЦ) КАК Пропущено
+		КОНЕЦ) КАК Пропущено,
+	Даты.Команда В
+		(ВЫБРАТЬ
+			ЛигаКоманды.Команда КАК Команда
+		ИЗ
+			Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига.Команды КАК ЛигаКоманды
+					ПО
+						Чемпионаты.Владелец = ЛигаКоманды.Ссылка
+				ПО
+					ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+		ГДЕ
+			ЧемпионатыКоманды.Команда = &amp;Команда
+			И (ЛигаКоманды.Ссылка.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ) КАК ЭтоТоп
 ИЗ
 	Даты КАК Даты
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -269,6 +293,32 @@
 		</inputParameters>
 		<use>Always</use>
 	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Команда</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">Команда</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Команда</dcsat:name>
+			<dcsat:expression>Команда</dcsat:expression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>Команда</field>
+		<template>Макет1</template>
+	</fieldTemplate>
 	<settingsVariant>
 		<dcsset:name>Список</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -356,7 +406,7 @@
 					</dcsset:selection>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Топ</dcsset:left>
+							<dcsset:left xsi:type="dcscor:Field">ЭтоТоп</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 						</dcsset:item>

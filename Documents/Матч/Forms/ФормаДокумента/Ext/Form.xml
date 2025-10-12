@@ -478,23 +478,17 @@
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Hyperlink>true</Hyperlink>
 											<EnableStartDrag>true</EnableStartDrag>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 											</Border>
 											<ContextMenu name="ИзображениеХозяеваКонтекстноеМеню" id="234"/>
 											<ExtendedTooltip name="ИзображениеХозяеваРасширеннаяПодсказка" id="235"/>
+											<Events>
+												<Event name="Click">ИзображениеХозяеваНажатие</Event>
+											</Events>
 										</PictureField>
-										<LabelField name="Хозяева" id="241">
-											<DataPath>Хозяева</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="ХозяеваКонтекстноеМеню" id="242"/>
-											<ExtendedTooltip name="ХозяеваРасширеннаяПодсказка" id="243"/>
-										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаСтатистика" id="213">
@@ -1110,23 +1104,17 @@
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<Hyperlink>true</Hyperlink>
 											<EnableStartDrag>true</EnableStartDrag>
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 											</Border>
 											<ContextMenu name="ИзображениеГостиКонтекстноеМеню" id="237"/>
 											<ExtendedTooltip name="ИзображениеГостиРасширеннаяПодсказка" id="238"/>
+											<Events>
+												<Event name="Click">ИзображениеГостиНажатие</Event>
+											</Events>
 										</PictureField>
-										<LabelField name="Гости" id="244">
-											<DataPath>Гости</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<TitleLocation>None</TitleLocation>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="ГостиКонтекстноеМеню" id="245"/>
-											<ExtendedTooltip name="ГостиРасширеннаяПодсказка" id="246"/>
-										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1274,22 +1262,17 @@
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hyperlink>true</Hyperlink>
 									<EnableStartDrag>true</EnableStartDrag>
 									<Border width="1">
 										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 									</Border>
 									<ContextMenu name="ИЗОКонтекстноеМеню" id="445"/>
 									<ExtendedTooltip name="ИЗОРасширеннаяПодсказка" id="446"/>
+									<Events>
+										<Event name="Click">ИЗОНажатие</Event>
+									</Events>
 								</PictureField>
-								<LabelField name="ТекущийИгрок" id="447">
-									<DataPath>ТекущийИгрок</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<TitleLocation>None</TitleLocation>
-									<HorizontalAlign>Center</HorizontalAlign>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="ТекущийИгрокКонтекстноеМеню" id="448"/>
-									<ExtendedTooltip name="ТекущийИгрокРасширеннаяПодсказка" id="449"/>
-								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="СоставыКоманд" id="44">
@@ -2845,6 +2828,10 @@
 					<v8:content>Составы сортировать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SortListAsc</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СоставыСортировать</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>

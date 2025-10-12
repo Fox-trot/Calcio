@@ -49,6 +49,7 @@
 				</Button>
 				<InputField name="Чемпионат" id="7">
 					<DataPath>Отчет.Чемпионат</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="9"/>
 					<Events>
@@ -120,6 +121,22 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="27"/>
+					<Events>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="Сравнить" id="28">
+					<DataPath>Сравнить</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сравнение с прошлым сезоном
+Если установлен флаг "Показывать разницу мячей", то выводится место в турнирной таблице иначе голы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СравнитьКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СравнитьРасширеннаяПодсказка" id="30"/>
 					<Events>
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
@@ -368,6 +385,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>График видимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Сравнить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

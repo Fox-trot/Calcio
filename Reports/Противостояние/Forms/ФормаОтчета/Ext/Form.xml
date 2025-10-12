@@ -40,6 +40,7 @@
 				</Button>
 				<InputField name="Чемпионат" id="5">
 					<DataPath>Отчет.Чемпионат</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -309,9 +310,6 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПоказыватьТолькоЗабитыеМячи</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="Кеш" id="4">
 			<Type>

@@ -76,6 +76,12 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="Аббревиатура" id="31">
+					<DataPath>Список.Аббревиатура</DataPath>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="АббревиатураКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="АббревиатураРасширеннаяПодсказка" id="33"/>
+				</LabelField>
 				<LabelField name="Код" id="19">
 					<DataPath>Список.Код</DataPath>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
@@ -119,7 +125,8 @@
 	СправочникКоманды.Код КАК Код,
 	СправочникКоманды.Наименование КАК Наименование,
 	СправочникКоманды.Город КАК Город,
-	МАКСИМУМ(ЕСТЬNULL(Города.Владелец, Лига.Страна)) КАК Страна
+	МАКСИМУМ(ЕСТЬNULL(Города.Владелец, Лига.Страна)) КАК Страна,
+	СправочникКоманды.Аббревиатура КАК Аббревиатура
 ИЗ
 	Справочник.Команды КАК СправочникКоманды
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Города КАК Города
@@ -191,6 +198,14 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Изображение</dcssch:dataPath>
 					<dcssch:field>Изображение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Цвет</dcssch:dataPath>
+					<dcssch:field>Цвет</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Аббревиатура</dcssch:dataPath>
+					<dcssch:field>Аббревиатура</dcssch:field>
 				</Field>
 				<MainTable>Catalog.Команды</MainTable>
 				<ListSettings>

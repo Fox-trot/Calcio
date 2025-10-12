@@ -67,11 +67,16 @@
 											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 										</InputField>
+										<InputField name="Аббревиатура" id="202">
+											<DataPath>Объект.Аббревиатура</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="АббревиатураКонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="АббревиатураРасширеннаяПодсказка" id="204"/>
+										</InputField>
 										<InputField name="Цвет" id="174">
 											<DataPath>Цвет</DataPath>
 											<SkipOnInput>true</SkipOnInput>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>16</MaxWidth>
 											<Wrap>false</Wrap>
 											<ClearButton>true</ClearButton>
 											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -84,21 +89,27 @@
 												<Event name="Clearing">ЦветОчистка</Event>
 											</Events>
 										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНаименование" id="205">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНаименованиеРасширеннаяПодсказка" id="206"/>
+									<ChildItems>
+										<InputField name="Наименование" id="4">
+											<DataPath>Объект.Description</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+										</InputField>
 										<Button name="КомментарийДополнить" id="172">
 											<Type>UsualButton</Type>
 											<SkipOnInput>true</SkipOnInput>
-											<AutoMaxWidth>false</AutoMaxWidth>
 											<CommandName>Form.Command.КомментарийДополнить</CommandName>
 											<ExtendedTooltip name="КомментарийДополнитьРасширеннаяПодсказка" id="173"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<InputField name="Наименование" id="4">
-									<DataPath>Объект.Description</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-								</InputField>
 								<InputField name="Владелец" id="7">
 									<DataPath>Объект.Owner</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -228,23 +239,17 @@
 									<DataPath>ИЗО</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
-									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hyperlink>true</Hyperlink>
 									<EnableStartDrag>true</EnableStartDrag>
 									<Border width="1">
 										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 									</Border>
 									<ContextMenu name="ИЗОКонтекстноеМеню" id="185"/>
 									<ExtendedTooltip name="ИЗОРасширеннаяПодсказка" id="186"/>
+									<Events>
+										<Event name="Click">ИЗОНажатие</Event>
+									</Events>
 								</PictureField>
-								<LabelField name="ТекущийИгрок" id="187">
-									<DataPath>ТекущийИгрок</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<TitleLocation>None</TitleLocation>
-									<HorizontalAlign>Center</HorizontalAlign>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="ТекущийИгрокКонтекстноеМеню" id="188"/>
-									<ExtendedTooltip name="ТекущийИгрокРасширеннаяПодсказка" id="189"/>
-								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ТекущийСостав" id="16">

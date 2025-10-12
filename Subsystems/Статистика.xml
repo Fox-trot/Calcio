@@ -38,6 +38,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВозрастныеГруппы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Легионеры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Чемпионы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Прогноз</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
