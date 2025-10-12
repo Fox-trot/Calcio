@@ -33,6 +33,7 @@
 				</Button>
 				<InputField name="Чемпионат" id="1">
 					<DataPath>Отчет.Чемпионат</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
