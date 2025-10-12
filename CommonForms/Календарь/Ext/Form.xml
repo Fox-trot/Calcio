@@ -77,6 +77,7 @@
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
 					<Hyperlink>true</Hyperlink>
+					<EnableStartDrag>true</EnableStartDrag>
 					<Border width="1">
 						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 					</Border>
