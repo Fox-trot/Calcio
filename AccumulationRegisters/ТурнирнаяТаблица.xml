@@ -36,7 +36,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<UseStandardCommands>true</UseStandardCommands>
+			<UseStandardCommands>false</UseStandardCommands>
 			<DefaultListForm>AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryListForm/>
 			<RegisterType>Turnovers</RegisterType>
