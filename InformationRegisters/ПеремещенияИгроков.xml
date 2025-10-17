@@ -264,7 +264,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
+					<DataHistory>DontUse</DataHistory>
 				</Properties>
 			</Resource>
 			<Resource uuid="1aad3e64-6fe1-40ee-9154-ebe382f6a884">
@@ -361,7 +361,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
+					<DataHistory>DontUse</DataHistory>
 				</Properties>
 			</Attribute>
 			<Dimension uuid="2de4bc2c-8ffa-44bf-962c-478cea40dfcf">
@@ -404,7 +404,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
-					<TypeReductionMode>TransformValues</TypeReductionMode>
+					<TypeReductionMode>DeleteData</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Form>ФормаЗаписи</Form>
