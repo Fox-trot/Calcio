@@ -14,7 +14,7 @@
 				<v8:TypeSet>cfg:CatalogObject</v8:TypeSet>
 			</Source>
 			<Event>BeforeDelete</Event>
-			<Handler>CommonModule.СерверныйФункции.СправочникПередУдалением</Handler>
+			<Handler>CommonModule.ПодпискиНаСобытие.СправочникПередУдалением</Handler>
 		</Properties>
 	</EventSubscription>
 </MetaDataObject>

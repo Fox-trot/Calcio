@@ -134,7 +134,6 @@
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<TitleDataPath>Объект.Команды.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="45"/>
 					<ChildItems>
 						<Table name="Команды" id="16">

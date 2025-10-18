@@ -95,7 +95,7 @@
 						</v8:item>
 					</Title>
 					<Hyperlink>true</Hyperlink>
-					<HorizontalAlign>Right</HorizontalAlign>
+					<HorizontalAlign>Center</HorizontalAlign>
 					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="456"/>
 					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="457"/>
 					<Events>
@@ -332,7 +332,6 @@
 												</v8:item>
 											</ToolTip>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<PictureSize>Proportionally</PictureSize>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<Border width="1">
@@ -1645,11 +1644,7 @@
 			<SavedData>true</SavedData>
 			<UseAlways>
 				<Field>Объект.DeletionMark</Field>
-				<Field>Объект.Posted</Field>
 				<Field>Объект.RegisterRecords</Field>
-				<Field>Объект.КоличествоЗрителей</Field>
-				<Field>Объект.Стадион</Field>
-				<Field>Объект.Счет</Field>
 			</UseAlways>
 		</Attribute>
 		<Attribute name="График" id="2">
@@ -2885,7 +2880,7 @@
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
-				<Command>AccumulationRegister.ТурнирнаяТаблица.StandardCommand.OpenByRecorder</Command>
+				<Command>1:94617236-0587-403c-88ce-66a45546d10d</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 			</Item>

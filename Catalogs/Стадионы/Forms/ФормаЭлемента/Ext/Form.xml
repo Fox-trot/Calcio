@@ -66,31 +66,39 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="23"/>
 							<ChildItems>
-								<Button name="ВыбратьИзображение" id="24">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ВыбратьИзображение</CommandName>
-									<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="25"/>
-								</Button>
-								<Button name="УдалитьИзображение" id="26">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.УдалитьИзображение</CommandName>
-									<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="27"/>
-								</Button>
+								<PictureField name="Изображение" id="28">
+									<DataPath>Изображение</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<ContextMenu name="ИзображениеКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="30"/>
+									<Events>
+										<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
+									</Events>
+								</PictureField>
+								<UsualGroup name="ГруппаКомандИзображение" id="33">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандИзображениеРасширеннаяПодсказка" id="34"/>
+									<ChildItems>
+										<Button name="ВыбратьИзображение" id="24">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыбратьИзображение</CommandName>
+											<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="25"/>
+										</Button>
+										<Button name="УдалитьИзображение" id="26">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УдалитьИзображение</CommandName>
+											<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="27"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<PictureField name="Изображение" id="28">
-							<DataPath>Изображение</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<Border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-							</Border>
-							<ContextMenu name="ИзображениеКонтекстноеМеню" id="29"/>
-							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="30"/>
-							<Events>
-								<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
-							</Events>
-						</PictureField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаПравая" id="20">

@@ -29,6 +29,12 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
+				<Button name="КомандаСформировать" id="30">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСформировать</CommandName>
+					<ExtendedTooltip name="КомандаСформироватьРасширеннаяПодсказка" id="31"/>
+				</Button>
 				<InputField name="Лига" id="1">
 					<DataPath>Отчет.Лига</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -413,4 +419,21 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="КомандаСформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСформировать</Action>
+		</Command>
+	</Commands>
 </Form>

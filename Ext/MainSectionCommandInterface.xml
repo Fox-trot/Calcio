@@ -67,7 +67,7 @@
 		<Command name="Catalog.Лига.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="AccumulationRegister.ТурнирнаяТаблица.StandardCommand.OpenList">
+		<Command name="0:94617236-0587-403c-88ce-66a45546d10d">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Стадионы.StandardCommand.OpenList">

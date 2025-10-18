@@ -205,7 +205,7 @@
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
-				<Command>AccumulationRegister.ТурнирнаяТаблица.StandardCommand.OpenByRecorder</Command>
+				<Command>1:94617236-0587-403c-88ce-66a45546d10d</Command>
 				<Type>Auto</Type>
 				<DefaultVisible>false</DefaultVisible>
 			</Item>

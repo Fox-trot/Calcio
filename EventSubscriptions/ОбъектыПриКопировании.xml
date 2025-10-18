@@ -25,7 +25,7 @@
 				<v8:Type>cfg:CatalogObject.Чемпионаты</v8:Type>
 			</Source>
 			<Event>OnCopy</Event>
-			<Handler>CommonModule.СерверныйФункции.ОбъектПриКопировании</Handler>
+			<Handler>CommonModule.ПодпискиНаСобытие.ОбъектПриКопировании</Handler>
 		</Properties>
 	</EventSubscription>
 </MetaDataObject>
