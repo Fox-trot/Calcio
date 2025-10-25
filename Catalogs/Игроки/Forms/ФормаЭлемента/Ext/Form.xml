@@ -56,6 +56,12 @@
 							<DataPath>ТекущаяКоманда</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<SkipOnInput>true</SkipOnInput>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текущая команда</v8:content>
+								</v8:item>
+							</ToolTip>
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ТекущаяКомандаКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="ТекущаяКомандаРасширеннаяПодсказка" id="43"/>
