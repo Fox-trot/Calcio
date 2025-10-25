@@ -134,6 +134,12 @@
 		<Command name="Report.Прогноз.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
+		<Command name="CommonForm.Настройки.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.Квиз.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
 		<Group>NavigationPanelImportant</Group>
@@ -141,5 +147,6 @@
 		<Group>NavigationPanelSeeAlso</Group>
 		<Group>ActionsPanelCreate</Group>
 		<Group>ActionsPanelReports</Group>
+		<Group>ActionsPanelTools</Group>
 	</GroupsOrder>
 </CommandInterface>
