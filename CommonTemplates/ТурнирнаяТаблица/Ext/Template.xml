@@ -1570,6 +1570,11 @@
 			<c>
 				<c>
 					<f>36</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>36</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1577,11 +1582,6 @@
 						</v8:item>
 					</tl>
 					<detailParameter>Регистратор</detailParameter>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>63</f>
 				</c>
 			</c>
 			<c>
