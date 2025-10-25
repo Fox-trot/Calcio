@@ -449,7 +449,7 @@
 						</v8:DateQualifiers>
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
-					<dcssch:useRestriction>false</dcssch:useRestriction>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<KeyType>FieldValue</KeyType>
 				<KeyField>ИгрокИлиМатч</KeyField>
