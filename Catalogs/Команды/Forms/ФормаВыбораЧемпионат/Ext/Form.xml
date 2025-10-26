@@ -94,7 +94,7 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>~Список.ИндексКартинки</Field>
-				<Field>Список.Картинка</Field>
+				<Field>~Список.Картинка</Field>
 				<Field>Список.Наименование</Field>
 				<Field>Список.Ссылка</Field>
 			</UseAlways>
@@ -104,8 +104,7 @@
 				<QueryText>ВЫБРАТЬ
 	Команды.Ссылка КАК Ссылка,
 	Команды.Код КАК Код,
-	Команды.Наименование КАК Наименование,
-	" " КАК Картинка
+	Команды.Наименование КАК Наименование
 ИЗ
 	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Команды КАК Команды
@@ -157,15 +156,8 @@
 					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Картинка</dcssch:dataPath>
-					<dcssch:field>Картинка</dcssch:field>
-					<dcssch:valueType>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</dcssch:valueType>
+					<dcssch:dataPath>Аббревиатура</dcssch:dataPath>
+					<dcssch:field>Аббревиатура</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Чемпионат</dcssch:name>
