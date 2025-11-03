@@ -18,6 +18,7 @@
 	<Events>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -1329,7 +1330,6 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="BeforeAddRow">СоставыКомандПередНачаломДобавления</Event>
-								<Event name="BeforeEditEnd">СоставыКомандПередОкончаниемРедактирования</Event>
 								<Event name="OnActivateRow">СоставыКомандПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
@@ -1354,16 +1354,85 @@
 									<ExtendedTooltip name="СоставыКомандИгрокРасширеннаяПодсказка" id="62"/>
 									<Events>
 										<Event name="OnChange">СоставыКомандИгрокПриИзменении</Event>
-										<Event name="StartChoice">СоставыКомандИгрокНачалоВыбора</Event>
 									</Events>
 								</InputField>
-								<LabelField name="СоставыКомандИгрокАмплуа" id="118" DisplayImportance="Low">
-									<DataPath>Объект.СоставыКоманд.Игрок.Амплуа</DataPath>
+								<InputField name="СоставыКомандАмплуа" id="473">
+									<DataPath>Объект.СоставыКоманд.Амплуа</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="СоставыКомандИгрокАмплуаКонтекстноеМеню" id="119"/>
-									<ExtendedTooltip name="СоставыКомандИгрокАмплуаРасширеннаяПодсказка" id="120"/>
-								</LabelField>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СоставыКомандАмплуаКонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="СоставыКомандАмплуаРасширеннаяПодсказка" id="475"/>
+								</InputField>
+								<ColumnGroup name="СоставыКомандЦиклы" id="476">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Циклы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="СоставыКомандЦиклыРасширеннаяПодсказка" id="477"/>
+									<ChildItems>
+										<InputField name="СоставыКомандФаза1" id="464">
+											<DataPath>Объект.СоставыКоманд.Фаза1</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Физический</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<MarkNegatives>true</MarkNegatives>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="СоставыКомандФаза1КонтекстноеМеню" id="465"/>
+											<ExtendedTooltip name="СоставыКомандФаза1РасширеннаяПодсказка" id="466"/>
+										</InputField>
+										<InputField name="СоставыКомандФаза2" id="467">
+											<DataPath>Объект.СоставыКоманд.Фаза2</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Эмоциональный</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<MarkNegatives>true</MarkNegatives>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="СоставыКомандФаза2КонтекстноеМеню" id="468"/>
+											<ExtendedTooltip name="СоставыКомандФаза2РасширеннаяПодсказка" id="469"/>
+										</InputField>
+										<InputField name="СоставыКомандФаза3" id="470">
+											<DataPath>Объект.СоставыКоманд.Фаза3</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Интеллектуальный</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<MarkNegatives>true</MarkNegatives>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="СоставыКомандФаза3КонтекстноеМеню" id="471"/>
+											<ExtendedTooltip name="СоставыКомандФаза3РасширеннаяПодсказка" id="472"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="СоставыКомандКоманда" id="63">
 									<DataPath>Объект.СоставыКоманд.Команда</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1494,6 +1563,9 @@
 							<TitleLocation>None</TitleLocation>
 							<ContextMenu name="График2КонтекстноеМеню" id="404"/>
 							<ExtendedTooltip name="График2РасширеннаяПодсказка" id="405"/>
+							<Events>
+								<Event name="DetailProcessing">График2ОбработкаРасшифровки</Event>
+							</Events>
 						</ChartField>
 					</ChildItems>
 				</Page>
@@ -1655,6 +1727,69 @@
 				<Field>Объект.DeletionMark</Field>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.СоставыКоманд">
+					<Column name="Фаза1" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>1</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="Фаза2" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Э</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>1</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="Фаза3" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>И</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>1</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="Амплуа" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Амплуа</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Амплуа</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="График" id="2">
 			<Type>
