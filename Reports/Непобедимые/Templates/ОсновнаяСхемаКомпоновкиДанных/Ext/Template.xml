@@ -28,26 +28,10 @@
 					<v8:content>Количество матчей</v8:content>
 				</v8:item>
 			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>4</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоОчков</dataPath>
 			<field>КоличествоОчков</field>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>4</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоДней</dataPath>
@@ -58,14 +42,6 @@
 					<v8:content>Количество дней</v8:content>
 				</v8:item>
 			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Забито</dataPath>
@@ -76,14 +52,6 @@
 					<v8:content>Забито</v8:content>
 				</v8:item>
 			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Пропущено</dataPath>
@@ -94,14 +62,6 @@
 					<v8:content>Пропущено</v8:content>
 				</v8:item>
 			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>6</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Период</dataPath>
@@ -530,6 +490,7 @@
 					</dcsset:presentation>
 				</dcsset:item>
 				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
 					<dcsset:selection/>
 					<dcsset:filter/>
 					<dcsset:appearance>

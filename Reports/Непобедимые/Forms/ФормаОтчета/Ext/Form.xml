@@ -47,6 +47,12 @@
 				</InputField>
 				<CheckBoxField name="ТолькоТекущийЧемпионат" id="9">
 					<DataPath>ТолькоТекущийЧемпионат</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команды только текущего чемпионата</v8:content>
+						</v8:item>
+					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТолькоТекущийЧемпионатКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ТолькоТекущийЧемпионатРасширеннаяПодсказка" id="11"/>
