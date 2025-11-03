@@ -97,6 +97,7 @@
 						<InputField name="КоличествоОчков" id="41">
 							<DataPath>Объект.КоличествоОчков</DataPath>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChooseType>false</ChooseType>
 							<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="42"/>
 							<ExtendedTooltip name="КоличествоОчковРасширеннаяПодсказка" id="43"/>
 						</InputField>

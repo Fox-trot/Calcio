@@ -379,7 +379,7 @@
 					<Format/>
 					<EditFormat/>
 					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
+					<MarkNegatives>true</MarkNegatives>
 					<Mask/>
 					<MultiLine>false</MultiLine>
 					<ExtendedEdit>false</ExtendedEdit>
