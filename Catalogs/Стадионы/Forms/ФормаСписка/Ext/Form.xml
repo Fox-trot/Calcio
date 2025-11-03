@@ -89,6 +89,11 @@
 					<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<LabelField name="Комментарий" id="28">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
