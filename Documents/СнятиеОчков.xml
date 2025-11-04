@@ -135,7 +135,7 @@
 					<xr:Format>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>dd.MM.yyyy HH:mm</v8:content>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
 						</v8:item>
 					</xr:Format>
 					<xr:ChoiceForm/>
@@ -144,7 +144,7 @@
 					<xr:EditFormat>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>dd.MM.yyyy HH:mm</v8:content>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
 						</v8:item>
 					</xr:EditFormat>
 					<xr:PasswordMode>false</xr:PasswordMode>
@@ -190,6 +190,7 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Команды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Туры</xr:Item>
 			</BasedOn>
 			<InputByString/>
 			<CreateOnInput>Use</CreateOnInput>
