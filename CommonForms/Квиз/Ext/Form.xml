@@ -5,8 +5,13 @@
 	<AutoFillCheck>false</AutoFillCheck>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
+	<CollapseItemsByImportanceVariant>DontUse</CollapseItemsByImportanceVariant>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
 	</Events>
 	<ChildItems>
@@ -31,14 +36,78 @@
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
+					<Group>HorizontalIfPossible</Group>
+					<VerticalSpacing>Double</VerticalSpacing>
 					<HorizontalAlign>Center</HorizontalAlign>
 					<VerticalAlign>Center</VerticalAlign>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаНачалоРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
+						<InputField name="Уровень" id="94">
+							<DataPath>Уровень</DataPath>
+							<Width>16</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChooseType>false</ChooseType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Легкий</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Стандартный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сложный</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
+							<ContextMenu name="УровеньКонтекстноеМеню" id="95">
+								<ChildItems>
+									<Button name="КомандаОчиститьКеш" id="97">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаОчиститьКеш</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="КомандаОчиститьКешРасширеннаяПодсказка" id="98"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<ExtendedTooltip name="УровеньРасширеннаяПодсказка" id="96"/>
+						</InputField>
 						<Button name="КомандаСтарт" id="5">
 							<Type>UsualButton</Type>
 							<DefaultButton>true</DefaultButton>
+							<DefaultItem>true</DefaultItem>
 							<CommandName>Form.Command.КомандаСтарт</CommandName>
 							<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
 							<ExtendedTooltip name="КомандаСтартРасширеннаяПодсказка" id="6"/>
@@ -73,6 +142,7 @@
 						</ProgressBarField>
 						<UsualGroup name="ГруппаВопросыОтветы" id="78">
 							<EnableContentChange>true</EnableContentChange>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
@@ -80,6 +150,9 @@
 							<ChildItems>
 								<UsualGroup name="ГруппаОтветы" id="16">
 									<EnableContentChange>true</EnableContentChange>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
@@ -88,8 +161,14 @@
 										<UsualGroup name="ГруппаВопросы1" id="18">
 											<ReadOnly>true</ReadOnly>
 											<EnableContentChange>true</EnableContentChange>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
 											<Group>AlwaysHorizontal</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
+											<United>false</United>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаВопросы1РасширеннаяПодсказка" id="19"/>
 											<ChildItems>
@@ -143,8 +222,14 @@
 										<UsualGroup name="ГруппаВопросы2" id="25">
 											<ReadOnly>true</ReadOnly>
 											<EnableContentChange>true</EnableContentChange>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
 											<Group>AlwaysHorizontal</Group>
+											<ChildrenAlign>None</ChildrenAlign>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
+											<United>false</United>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаВопросы2РасширеннаяПодсказка" id="26"/>
 											<ChildItems>
@@ -200,7 +285,8 @@
 								<UsualGroup name="ГруппаВопросы" id="20" DisplayImportance="High">
 									<ReadOnly>true</ReadOnly>
 									<EnableContentChange>true</EnableContentChange>
-									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<HorizontalStretch>false</HorizontalStretch>
 									<GroupVerticalAlign>Center</GroupVerticalAlign>
 									<Group>Vertical</Group>
 									<HorizontalAlign>Center</HorizontalAlign>
@@ -210,15 +296,18 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВопросыРасширеннаяПодсказка" id="21"/>
 									<ChildItems>
-										<LabelField name="ВопросТекст" id="42">
+										<LabelField name="ВопросТекст" id="42" DisplayImportance="High">
 											<DataPath>ВопросТекст</DataPath>
 											<DefaultItem>true</DefaultItem>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
 											<HorizontalAlign>Center</HorizontalAlign>
 											<VerticalAlign>Center</VerticalAlign>
-											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Width>24</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
 											<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
 											<ContextMenu name="ВопросТекстКонтекстноеМеню" id="43"/>
 											<ExtendedTooltip name="ВопросТекстРасширеннаяПодсказка" id="44"/>
@@ -254,6 +343,7 @@
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
+					<VerticalSpacing>Double</VerticalSpacing>
 					<HorizontalAlign>Center</HorizontalAlign>
 					<VerticalAlign>Center</VerticalAlign>
 					<ShowTitle>false</ShowTitle>
@@ -301,12 +391,6 @@
 		</Pages>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Объект" id="1">
-			<Type>
-				<v8:Type>cfg:DataProcessorObject.Квиз</v8:Type>
-			</Type>
-			<MainAttribute>true</MainAttribute>
-		</Attribute>
 		<Attribute name="Таймер" id="2">
 			<Title>
 				<v8:item>
@@ -319,7 +403,7 @@
 				<v8:NumberQualifiers>
 					<v8:Digits>10</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
@@ -552,6 +636,69 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Исключения" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>Исключения</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="Уровень" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>Уровень</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Затрачено" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Затрачено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МояКоманда" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Моя команда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -584,6 +731,21 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаСтарт</Action>
+		</Command>
+		<Command name="КомандаОчиститьКеш" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить кеш</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить кеш</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОчиститьКеш</Action>
 		</Command>
 	</Commands>
 </Form>
