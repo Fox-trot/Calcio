@@ -395,7 +395,7 @@
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
 				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
 				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
-				<d4p1:splineStrain>70</d4p1:splineStrain>
+				<d4p1:splineStrain>90</d4p1:splineStrain>
 				<d4p1:translucencePercent>0</d4p1:translucencePercent>
 				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
 				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
