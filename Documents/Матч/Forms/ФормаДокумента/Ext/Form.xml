@@ -1690,9 +1690,6 @@
 									</ChoiceList>
 									<ContextMenu name="МатчиФильтрКонтекстноеМеню" id="207"/>
 									<ExtendedTooltip name="МатчиФильтрРасширеннаяПодсказка" id="208"/>
-									<Events>
-										<Event name="OnChange">МатчиФильтрПриИзменении</Event>
-									</Events>
 								</InputField>
 								<SpreadSheetDocumentField name="ПредыдущиеМатчи" id="198">
 									<DataPath>ПредыдущиеМатчи</DataPath>
