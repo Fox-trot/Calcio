@@ -93,12 +93,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дата</v8:content>
-				</v8:item>
-			</title>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
 			</valueType>
@@ -293,11 +287,6 @@
 		<expression>Количество(Различные Период)</expression>
 		<group>ОбщийИтог</group>
 	</totalField>
-	<totalField>
-		<dataPath>Регистратор</dataPath>
-		<expression>Количество(Регистратор)</expression>
-		<group>ОбщийИтог</group>
-	</totalField>
 	<parameter>
 		<name>Команда</name>
 		<title xsi:type="v8:LocalStringType">
@@ -403,7 +392,7 @@
 		<template>Макет2</template>
 	</fieldTemplate>
 	<fieldTemplate>
-		<field>Регистратор</field>
+		<field>Период</field>
 		<template>Макет4</template>
 	</fieldTemplate>
 	<settingsVariant>
@@ -495,7 +484,7 @@
 					<dcsset:field>Команда</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:field>Период</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоДней</dcsset:field>
