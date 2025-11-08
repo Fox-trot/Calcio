@@ -329,8 +329,8 @@
 								<Event name="OnActivateRow">ТекущийСоставПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
-								<CheckBoxField name="СписокИгрокПометкаУдаления" id="41">
-									<DataPath>ТекущийСостав.ИгрокПометкаУдаления</DataPath>
+								<CheckBoxField name="СписокПометкаУдаления" id="41">
+									<DataPath>ТекущийСостав.ПометкаУдаления</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
 									<ToolTip>
@@ -341,8 +341,8 @@
 									</ToolTip>
 									<FixingInTable>Left</FixingInTable>
 									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СписокИгрокПометкаУдаленияКонтекстноеМеню" id="42"/>
-									<ExtendedTooltip name="СписокИгрокПометкаУдаленияРасширеннаяПодсказка" id="43"/>
+									<ContextMenu name="СписокПометкаУдаленияКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="СписокПометкаУдаленияРасширеннаяПодсказка" id="43"/>
 								</CheckBoxField>
 								<LabelField name="СписокНомер" id="35">
 									<DataPath>ТекущийСостав.Номер</DataPath>
@@ -367,6 +367,12 @@
 									<ReadOnly>true</ReadOnly>
 									<ContextMenu name="СписокСтранаКонтекстноеМеню" id="133"/>
 									<ExtendedTooltip name="СписокСтранаРасширеннаяПодсказка" id="134"/>
+								</LabelField>
+								<LabelField name="СписокВозраст" id="207">
+									<DataPath>ТекущийСостав.Возраст</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СписокВозрастКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="СписокВозрастРасширеннаяПодсказка" id="209"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -813,35 +819,37 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>ТекущийСостав.Амплуа</Field>
+				<Field>~ТекущийСостав.ИгрокПометкаУдаления</Field>
+				<Field>~ТекущийСостав.Период</Field>
+				<Field>~ТекущийСостав.Ссылка</Field>
 				<Field>ТекущийСостав.Игрок</Field>
-				<Field>ТекущийСостав.ИгрокПометкаУдаления</Field>
-				<Field>ТекущийСостав.Команда</Field>
-				<Field>ТекущийСостав.Номер</Field>
-				<Field>ТекущийСостав.Страна</Field>
+				<Field>ТекущийСостав.ПометкаУдаления</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
-	Перемещения.Игрок КАК Игрок,
-	ЕСТЬNULL(Роли.Ссылка, Игроки.Амплуа) КАК Амплуа,
+	Игроки.Ссылка КАК Игрок,
 	Игроки.Страна КАК Страна,
+	ЕСТЬNULL(Роли.Ссылка, Игроки.Амплуа) КАК Амплуа,
 	Перемещения.Номер КАК Номер,
 	Перемещения.Команда КАК Команда,
-	Перемещения.Игрок.ПометкаУдаления КАК ИгрокПометкаУдаления
+	ВЫБОР
+		КОГДА ГОД(Игроки.ДатаРождения) &lt;= 1900
+			ТОГДА 0
+		КОГДА ДЕНЬГОДА(&amp;Период) &gt;= ДЕНЬГОДА(Игроки.ДатаРождения)
+			ТОГДА ГОД(&amp;Период) - ГОД(Игроки.ДатаРождения)
+		ИНАЧЕ ГОД(&amp;Период) - ГОД(Игроки.ДатаРождения) - 1
+	КОНЕЦ КАК Возраст,
+	Игроки.ПометкаУдаления КАК ПометкаУдаления
 ИЗ
-	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
-		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Амплуа КАК Роли
-		ПО Перемещения.Амплуа = Роли.Ссылка
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-		ПО Перемещения.Игрок = Игроки.Ссылка
+	Справочник.Игроки КАК Игроки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних(&amp;Период, ) КАК Перемещения
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Амплуа КАК Роли
+			ПО Перемещения.Амплуа = Роли.Ссылка
+		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
 	Перемещения.Команда = &amp;Ссылка</QueryText>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Период</dcssch:dataPath>
-					<dcssch:field>Период</dcssch:field>
-				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Игрок</dcssch:dataPath>
 					<dcssch:field>Игрок</dcssch:field>
@@ -864,16 +872,68 @@
 					<dcssch:field>Команда</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ИгрокПометкаУдаления</dcssch:dataPath>
-					<dcssch:field>ИгрокПометкаУдаления</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Страна</dcssch:dataPath>
 					<dcssch:field>Страна</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гражданство</v8:content>
+						</v8:item>
+					</dcssch:title>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Комментарий</dcssch:dataPath>
 					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРождения</dcssch:dataPath>
+					<dcssch:field>ДатаРождения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Возраст</dcssch:dataPath>
+					<dcssch:field>Возраст</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возраст</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Изображение</dcssch:dataPath>
+					<dcssch:field>Изображение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>
@@ -906,12 +966,20 @@
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
-				<MainTable>InformationRegister.ПеремещенияИгроков.SliceLast</MainTable>
+				<MainTable>Catalog.Игроки</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 					</dcsset:filter>
 					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Амплуа</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Номер</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
@@ -1909,4 +1977,17 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ИмпортИгроков</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>
