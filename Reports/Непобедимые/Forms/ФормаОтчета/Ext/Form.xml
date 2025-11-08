@@ -68,7 +68,6 @@
 			<TitleLocation>None</TitleLocation>
 			<Width>100</Width>
 			<Protection>true</Protection>
-			<Edit>true</Edit>
 			<ShowGroups>false</ShowGroups>
 			<EnableStartDrag>false</EnableStartDrag>
 			<EnableDrag>false</EnableDrag>

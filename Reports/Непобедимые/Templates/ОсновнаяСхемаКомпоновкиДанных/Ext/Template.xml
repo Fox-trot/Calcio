@@ -14,6 +14,7 @@
 			</attributeUseRestriction>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:required>true</dcscom:required>
 			</role>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
@@ -78,21 +79,6 @@
 					<v8:DateFractions>Date</v8:DateFractions>
 				</v8:DateQualifiers>
 			</valueType>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДЛФ=D</v8:content>
-						</v8:item>
-					</dcscor:value>
-				</dcscor:item>
-			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЭтоТоп</dataPath>
@@ -103,6 +89,19 @@
 					<v8:content>Это топ</v8:content>
 				</v8:item>
 			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
+			</valueType>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -157,79 +156,117 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
-	Даты.Команда КАК Команда,
-	МИНИМУМ(РАЗНОСТЬДАТ(ВЫБОР
+	ВТ.Команда КАК Команда,
+	МАКСИМУМ(ВТ.КоличествоДней) КАК КоличествоДней,
+	МАКСИМУМ(ВТ.Период) КАК Период,
+	СУММА(ВТ.КоличествоМатчей) КАК КоличествоМатчей,
+	СУММА(ВТ.КоличествоОчков) КАК КоличествоОчков,
+	СУММА(ВТ.Забито) КАК Забито,
+	СУММА(ВТ.Пропущено) КАК Пропущено,
+	МАКСИМУМ(ВТ.ЭтоТоп) КАК ЭтоТоп,
+	ТурнирнаяТаблица.Регистратор КАК Регистратор
+ИЗ
+	(ВЫБРАТЬ
+		Даты.Команда КАК Команда,
+		МИНИМУМ(РАЗНОСТЬДАТ(ВЫБОР
+					КОГДА Даты.Период = ЕСТЬNULL(Проигрыши.Период, Даты.Период)
+						ТОГДА Даты.Период2
+					ИНАЧЕ Проигрыши.Период
+				КОНЕЦ, Сегодня.Период, ДЕНЬ)) КАК КоличествоДней,
+		МАКСИМУМ(ВЫБОР
 				КОГДА Даты.Период = ЕСТЬNULL(Проигрыши.Период, Даты.Период)
 					ТОГДА Даты.Период2
 				ИНАЧЕ Проигрыши.Период
-			КОНЕЦ, Сегодня.Период, ДЕНЬ)) КАК КоличествоДней,
-	МАКСИМУМ(ВЫБОР
-			КОГДА Даты.Период = ЕСТЬNULL(Проигрыши.Период, Даты.Период)
-				ТОГДА Даты.Период2
-			ИНАЧЕ Проигрыши.Период
-		КОНЕЦ) КАК Период,
-	СУММА(ВЫБОР
+			КОНЕЦ) КАК Период,
+		ВЫБОР
 			КОГДА Проигрыши.Период ЕСТЬ NULL
 				ТОГДА Даты.КоличествоМатчей
 			ИНАЧЕ 1
-		КОНЕЦ) КАК КоличествоМатчей,
-	СУММА(ВЫБОР
+		КОНЕЦ КАК КоличествоМатчей,
+		ВЫБОР
 			КОГДА Проигрыши.Период ЕСТЬ NULL
 				ТОГДА Даты.КоличествоОчков
 			ИНАЧЕ МатчКоманды.КоличествоОчков
-		КОНЕЦ) КАК КоличествоОчков,
-	СУММА(ВЫБОР
+		КОНЕЦ КАК КоличествоОчков,
+		ВЫБОР
 			КОГДА Проигрыши.Период ЕСТЬ NULL
 				ТОГДА Даты.Забито
 			ИНАЧЕ МатчКоманды.КоличествоГолов
-		КОНЕЦ) КАК Забито,
-	СУММА(ВЫБОР
+		КОНЕЦ КАК Забито,
+		ВЫБОР
 			КОГДА Проигрыши.Период ЕСТЬ NULL
 				ТОГДА Даты.Пропущено
 			ИНАЧЕ ТурнирнаяТаблица.КоличествоГолов
-		КОНЕЦ) КАК Пропущено,
-	Даты.Команда В
-		(ВЫБРАТЬ
-			ЛигаКоманды.Команда КАК Команда
-		ИЗ
-			Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига.Команды КАК ЛигаКоманды
+		КОНЕЦ КАК Пропущено,
+		Даты.Команда В
+			(ВЫБРАТЬ
+				ЛигаКоманды.Команда КАК Команда
+			ИЗ
+				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+						ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига.Команды КАК ЛигаКоманды
+						ПО
+							Чемпионаты.Владелец = ЛигаКоманды.Ссылка
 					ПО
-						Чемпионаты.Владелец = ЛигаКоманды.Ссылка
-				ПО
-					ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
-		ГДЕ
-			ЧемпионатыКоманды.Команда = &amp;Команда
-			И (ЛигаКоманды.Ссылка.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ) КАК ЭтоТоп
-ИЗ
-	Даты КАК Даты
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
-			МАКСИМУМ(Даты.Период) КАК Период
-		ИЗ
-			Даты КАК Даты) КАК Сегодня
-		ПО (ИСТИНА)
-		ЛЕВОЕ СОЕДИНЕНИЕ Даты КАК Проигрыши
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
-				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК МатчКоманды
-				ПО ТурнирнаяТаблица.Регистратор = МатчКоманды.Регистратор
-					И (МатчКоманды.Команда = &amp;Команда)
-			ПО Проигрыши.Команда = ТурнирнаяТаблица.Команда
-		ПО Даты.Команда = Проигрыши.Команда
-			И (Проигрыши.ЭтоПроигрыш = ИСТИНА)
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-		ПО Даты.Команда = ЧемпионатыКоманды.Команда
-ГДЕ
-	Даты.ЭтоПроигрыш = ЛОЖЬ
-	И ВЫБОР
+						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+			ГДЕ
+				ЧемпионатыКоманды.Команда = &amp;Команда
+				И (ЛигаКоманды.Ссылка.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ) КАК ЭтоТоп
+	ИЗ
+		Даты КАК Даты
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				МАКСИМУМ(Даты.Период) КАК Период
+			ИЗ
+				Даты КАК Даты) КАК Сегодня
+			ПО (ИСТИНА)
+			ЛЕВОЕ СОЕДИНЕНИЕ Даты КАК Проигрыши
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК МатчКоманды
+					ПО ТурнирнаяТаблица.Регистратор = МатчКоманды.Регистратор
+						И (МатчКоманды.Команда = &amp;Команда)
+				ПО Проигрыши.Команда = ТурнирнаяТаблица.Команда
+			ПО Даты.Команда = Проигрыши.Команда
+				И (Проигрыши.ЭтоПроигрыш = ИСТИНА)
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+			ПО Даты.Команда = ЧемпионатыКоманды.Команда
+	ГДЕ
+		Даты.ЭтоПроигрыш = ЛОЖЬ
+		И ВЫБОР
+				КОГДА Проигрыши.Период ЕСТЬ NULL
+					ТОГДА ИСТИНА
+				ИНАЧЕ Даты.Лига = ТурнирнаяТаблица.Тур.Владелец.Владелец
+						И Даты.Период &gt; Проигрыши.Период
+			КОНЕЦ
+	
+	СГРУППИРОВАТЬ ПО
+		Даты.Команда,
+		ВЫБОР
 			КОГДА Проигрыши.Период ЕСТЬ NULL
-				ТОГДА ИСТИНА
-			ИНАЧЕ Даты.Лига = ТурнирнаяТаблица.Тур.Владелец.Владелец
-					И Даты.Период &gt; Проигрыши.Период
-		КОНЕЦ
+				ТОГДА Даты.Забито
+			ИНАЧЕ МатчКоманды.КоличествоГолов
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.КоличествоМатчей
+			ИНАЧЕ 1
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.КоличествоОчков
+			ИНАЧЕ МатчКоманды.КоличествоОчков
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА Проигрыши.Период ЕСТЬ NULL
+				ТОГДА Даты.Пропущено
+			ИНАЧЕ ТурнирнаяТаблица.КоличествоГолов
+		КОНЕЦ) КАК ВТ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+		ПО ВТ.Период = ТурнирнаяТаблица.Период
+			И ВТ.Команда = ТурнирнаяТаблица.Команда
 
 СГРУППИРОВАТЬ ПО
-	Даты.Команда</query>
+	ВТ.Команда,
+	ТурнирнаяТаблица.Регистратор</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Забито</dataPath>
@@ -253,7 +290,13 @@
 	</totalField>
 	<totalField>
 		<dataPath>Период</dataPath>
-		<expression>Количество(Команда)</expression>
+		<expression>Количество(Различные Период)</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Регистратор</dataPath>
+		<expression>Количество(Регистратор)</expression>
+		<group>ОбщийИтог</group>
 	</totalField>
 	<parameter>
 		<name>Команда</name>
@@ -316,12 +359,52 @@
 		</template>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Команда</dcsat:name>
-			<dcsat:expression>Представление(Команда)</dcsat:expression>
+			<dcsat:expression>Команда</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Период</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">Регистратор</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Регистратор</dcsat:name>
+			<dcsat:expression>Регистратор</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Период</dcsat:name>
+			<dcsat:expression>Период</dcsat:expression>
 		</parameter>
 	</template>
 	<fieldTemplate>
 		<field>Команда</field>
 		<template>Макет2</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>Регистратор</field>
+		<template>Макет4</template>
 	</fieldTemplate>
 	<settingsVariant>
 		<dcsset:name>Диаграмма</dcsset:name>
@@ -412,7 +495,7 @@
 					<dcsset:field>Команда</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Период</dcsset:field>
+					<dcsset:field>Регистратор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоДней</dcsset:field>
@@ -490,7 +573,6 @@
 					</dcsset:presentation>
 				</dcsset:item>
 				<dcsset:item>
-					<dcsset:use>false</dcsset:use>
 					<dcsset:selection/>
 					<dcsset:filter/>
 					<dcsset:appearance>
