@@ -124,10 +124,10 @@
 		<Command name="Report.Посещаемость.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Хронология.StandardCommand.Open">
+		<Command name="Report.ТурнирнаяТаблица.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.ТурнирнаяТаблица.StandardCommand.Open">
+		<Command name="Report.Хронология.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Противостояние.StandardCommand.Open">
