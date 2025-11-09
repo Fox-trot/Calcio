@@ -212,6 +212,7 @@
 				</dcscor:value>
 			</dcscor:item>
 			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
 				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
 				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 			</dcscor:item>

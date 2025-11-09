@@ -433,6 +433,7 @@
 					<v8:content>Команда сформировать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F5</Shortcut>
 			<Action>КомандаСформировать</Action>
 		</Command>
 	</Commands>
