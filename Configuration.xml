@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>2.6.1</Version>
+			<Version>2.7</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -278,7 +278,8 @@
 			<EventSubscription>ОбъектыПередЗаписью</EventSubscription>
 			<EventSubscription>ОбъектыПриКопировании</EventSubscription>
 			<EventSubscription>СправочникПередУдалением</EventSubscription>
-			<EventSubscription>ПодпискиНаСобытие</EventSubscription>
+			<EventSubscription>ПодпискиНаСобытиеОбработкаПроведения</EventSubscription>
+			<EventSubscription>ПодпискиНаСобытиеОбработкаУдаленияПроведения</EventSubscription>
 			<DefinedType>КоличествоГолов</DefinedType>
 			<DefinedType>КоличествоЗабито</DefinedType>
 			<DefinedType>КоличествоЗрителей</DefinedType>
@@ -327,8 +328,10 @@
 			<Report>Непобедимые</Report>
 			<Report>Дерби</Report>
 			<Report>Прогноз</Report>
+			<Report>ЧемпионскаяГонка</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
+			<InformationRegister>ИтогиПромежуточные</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>

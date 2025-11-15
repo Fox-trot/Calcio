@@ -92,24 +92,42 @@
 				</LabelField>
 				<LabelField name="Место" id="25">
 					<DataPath>Список.Место</DataPath>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<ContextMenu name="МестоКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="МестоРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="КоличествоОчков" id="28">
 					<DataPath>Список.КоличествоОчков</DataPath>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КоличествоОчковРасширеннаяПодсказка" id="30"/>
 				</LabelField>
-				<LabelField name="КоличествоЗабито" id="31">
-					<DataPath>Список.КоличествоЗабито</DataPath>
-					<ContextMenu name="КоличествоЗабитоКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="КоличествоЗабитоРасширеннаяПодсказка" id="33"/>
-				</LabelField>
-				<LabelField name="КоличествоПропущено" id="34">
-					<DataPath>Список.КоличествоПропущено</DataPath>
-					<ContextMenu name="КоличествоПропущеноКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="КоличествоПропущеноРасширеннаяПодсказка" id="36"/>
-				</LabelField>
+				<ColumnGroup name="ГруппаГолы" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Голы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ГруппаГолыРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<LabelField name="КоличествоЗабито" id="31">
+							<DataPath>Список.КоличествоЗабито</DataPath>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<ContextMenu name="КоличествоЗабитоКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="КоличествоЗабитоРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="КоличествоПропущено" id="34">
+							<DataPath>Список.КоличествоПропущено</DataPath>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<ContextMenu name="КоличествоПропущеноКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="КоличествоПропущеноРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -119,6 +137,11 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Period</Field>
+				<Field>Список.Команда</Field>
+				<Field>Список.Чемпионат</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>

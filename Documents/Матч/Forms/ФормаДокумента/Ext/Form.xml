@@ -476,6 +476,7 @@
 										<PictureField name="ИзображениеХозяева" id="233">
 											<DataPath>ИзображениеХозяева</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleLocation>None</TitleLocation>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Hyperlink>true</Hyperlink>
@@ -1102,6 +1103,7 @@
 										<PictureField name="ИзображениеГости" id="236">
 											<DataPath>ИзображениеГости</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleLocation>None</TitleLocation>
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Hyperlink>true</Hyperlink>
