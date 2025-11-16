@@ -36,80 +36,133 @@
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
-					<Group>HorizontalIfPossible</Group>
-					<VerticalSpacing>Double</VerticalSpacing>
 					<HorizontalAlign>Center</HorizontalAlign>
 					<VerticalAlign>Center</VerticalAlign>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="СтраницаНачалоРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
-						<InputField name="Уровень" id="94">
-							<DataPath>Уровень</DataPath>
-							<Width>16</Width>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ListChoiceMode>true</ListChoiceMode>
-							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-							<ChooseType>false</ChooseType>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Легкий</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">0</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Стандартный</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">1</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Сложный</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:decimal">2</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
-							<ContextMenu name="УровеньКонтекстноеМеню" id="95">
-								<ChildItems>
-									<Button name="КомандаОчиститьКеш" id="97">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.КомандаОчиститьКеш</CommandName>
-										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-										<ExtendedTooltip name="КомандаОчиститьКешРасширеннаяПодсказка" id="98"/>
-									</Button>
-								</ChildItems>
-							</ContextMenu>
-							<ExtendedTooltip name="УровеньРасширеннаяПодсказка" id="96"/>
-						</InputField>
+						<UsualGroup name="ГруппаПараметры" id="102">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="103"/>
+							<ChildItems>
+								<RadioButtonField name="Уровень" id="94">
+									<DataPath>Уровень</DataPath>
+									<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Легкий</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Стандартный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сложный</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<ContextMenu name="УровеньКонтекстноеМеню" id="95">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="УровеньРасширеннаяПодсказка" id="96"/>
+								</RadioButtonField>
+								<RadioButtonField name="КоличествоВопросов" id="72">
+									<DataPath>КоличествоВопросов</DataPath>
+									<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>10</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">10</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>20</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">20</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>30</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">30</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<ContextMenu name="КоличествоВопросовКонтекстноеМеню" id="73">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="КоличествоВопросовРасширеннаяПодсказка" id="74"/>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
 						<Button name="КомандаСтарт" id="5">
 							<Type>UsualButton</Type>
 							<DefaultButton>true</DefaultButton>
 							<DefaultItem>true</DefaultItem>
 							<CommandName>Form.Command.КомандаСтарт</CommandName>
-							<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ExtendedTooltip name="КомандаСтартРасширеннаяПодсказка" id="6"/>
 						</Button>
 					</ChildItems>
@@ -127,7 +180,9 @@
 					<ChildItems>
 						<ProgressBarField name="ОсталосьВопросов" id="75">
 							<DataPath>ОсталосьВопросов</DataPath>
+							<Enabled>false</Enabled>
 							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
 							<TitleLocation>None</TitleLocation>
 							<ToolTip>
 								<v8:item>
@@ -174,10 +229,12 @@
 											<ChildItems>
 												<PictureField name="Ответ0" id="66">
 													<DataPath>Ответ0</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>1</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ0КонтекстноеМеню" id="67">
 														<Autofill>false</Autofill>
@@ -189,10 +246,12 @@
 												</PictureField>
 												<PictureField name="Ответ1" id="45">
 													<DataPath>Ответ1</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>2</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ1КонтекстноеМеню" id="46">
 														<Autofill>false</Autofill>
@@ -204,10 +263,12 @@
 												</PictureField>
 												<PictureField name="Ответ2" id="48">
 													<DataPath>Ответ2</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>3</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ2КонтекстноеМеню" id="49">
 														<Autofill>false</Autofill>
@@ -235,10 +296,12 @@
 											<ChildItems>
 												<PictureField name="Ответ3" id="51">
 													<DataPath>Ответ3</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>4</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ3КонтекстноеМеню" id="52">
 														<Autofill>false</Autofill>
@@ -250,10 +313,12 @@
 												</PictureField>
 												<PictureField name="Ответ4" id="54">
 													<DataPath>Ответ4</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>5</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ4КонтекстноеМеню" id="55">
 														<Autofill>false</Autofill>
@@ -265,10 +330,12 @@
 												</PictureField>
 												<PictureField name="Ответ5" id="57">
 													<DataPath>Ответ5</DataPath>
+													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<Shortcut>6</Shortcut>
 													<Hyperlink>true</Hyperlink>
 													<ContextMenu name="Ответ5КонтекстноеМеню" id="58">
 														<Autofill>false</Autofill>
@@ -318,7 +385,9 @@
 						</UsualGroup>
 						<ProgressBarField name="Таймер" id="80">
 							<DataPath>Таймер</DataPath>
+							<Enabled>false</Enabled>
 							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
 							<TitleLocation>None</TitleLocation>
 							<ToolTip>
 								<v8:item>
@@ -353,6 +422,7 @@
 							<DataPath>ПравильныхОтветов</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<SkipOnInput>true</SkipOnInput>
+							<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Width>14</Width>
 							<HorizontalStretch>false</HorizontalStretch>
@@ -362,26 +432,31 @@
 									<v8:content>ЧН=Ноль</v8:content>
 								</v8:item>
 							</Format>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ContextMenu name="ПравильныхОтветовКонтекстноеМеню" id="70"/>
 							<ExtendedTooltip name="ПравильныхОтветовРасширеннаяПодсказка" id="71"/>
 						</LabelField>
-						<LabelField name="КоличествоВопросов" id="72">
+						<LabelField name="КоличествоВопросов1" id="99">
 							<DataPath>КоличествоВопросов</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<SkipOnInput>true</SkipOnInput>
+							<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Width>14</Width>
 							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="КоличествоВопросовКонтекстноеМеню" id="73"/>
-							<ExtendedTooltip name="КоличествоВопросовРасширеннаяПодсказка" id="74"/>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<ContextMenu name="КоличествоВопросов1КонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="КоличествоВопросов1РасширеннаяПодсказка" id="101"/>
 						</LabelField>
 						<LabelField name="ЗатраченоВремени" id="91">
 							<DataPath>ЗатраченоВремени</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<SkipOnInput>true</SkipOnInput>
+							<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<Width>14</Width>
 							<HorizontalStretch>false</HorizontalStretch>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ContextMenu name="ЗатраченоВремениКонтекстноеМеню" id="92"/>
 							<ExtendedTooltip name="ЗатраченоВремениРасширеннаяПодсказка" id="93"/>
 						</LabelField>
@@ -562,6 +637,9 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+			<Save>
+				<Field>КоличествоВопросов</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="ОсталосьВопросов" id="16">
 			<Title>
@@ -665,7 +743,7 @@
 				<v8:NumberQualifiers>
 					<v8:Digits>1</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
 			<Save>

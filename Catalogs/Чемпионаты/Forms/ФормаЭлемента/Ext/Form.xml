@@ -22,6 +22,12 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаИтогиПромежуточныеОчиститьРасширеннаяПодсказка" id="66"/>
 			</Button>
+			<Button name="ФормаИтогиПереписать" id="67" DisplayImportance="High">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИтогиПереписать</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаИтогиПереписатьРасширеннаяПодсказка" id="68"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -361,7 +367,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИтогиПромежуточныеОбновить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИтогиПромежуточныеПереписать" id="4">
@@ -378,7 +383,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИтогиПромежуточныеПереписать</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИтогиПромежуточныеОчистить" id="5">
@@ -399,7 +403,22 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИтогиПромежуточныеОчистить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИтогиПереписать" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги переписать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итоги переписать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИтогиПереписать</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

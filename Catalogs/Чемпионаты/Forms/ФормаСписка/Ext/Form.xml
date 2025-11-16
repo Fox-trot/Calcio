@@ -86,21 +86,13 @@
 				</LabelField>
 				<LabelField name="ДатаНачала" id="25">
 					<DataPath>Список.ДатаНачала</DataPath>
-					<Visible>false</Visible>
 					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="ДатаОкончания" id="28">
 					<DataPath>Список.ДатаОкончания</DataPath>
-					<Visible>false</Visible>
 					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="30"/>
-				</LabelField>
-				<LabelField name="Комментарий" id="31">
-					<DataPath>Список.Комментарий</DataPath>
-					<Visible>false</Visible>
-					<ContextMenu name="КомментарийКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 				<LabelField name="ВладелецСтрана" id="34">
 					<DataPath>Список.Owner.Страна</DataPath>

@@ -192,7 +192,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИтогиПромежуточныеОбновить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИтогиПромежуточныеОчистить" id="3">
@@ -213,7 +212,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИтогиПромежуточныеОчистить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИтогиПромежуточныеПереписать" id="4">
@@ -230,7 +228,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИтогиПромежуточныеПереписать</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
