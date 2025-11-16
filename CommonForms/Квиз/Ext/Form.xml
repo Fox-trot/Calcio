@@ -36,6 +36,7 @@
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>true</VerticalStretch>
+					<VerticalSpacing>Double</VerticalSpacing>
 					<HorizontalAlign>Center</HorizontalAlign>
 					<VerticalAlign>Center</VerticalAlign>
 					<ShowTitle>false</ShowTitle>
