@@ -230,7 +230,6 @@
 											<ChildItems>
 												<PictureField name="Ответ0" id="66">
 													<DataPath>Ответ0</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
@@ -247,7 +246,6 @@
 												</PictureField>
 												<PictureField name="Ответ1" id="45">
 													<DataPath>Ответ1</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
@@ -264,7 +262,6 @@
 												</PictureField>
 												<PictureField name="Ответ2" id="48">
 													<DataPath>Ответ2</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
@@ -297,7 +294,6 @@
 											<ChildItems>
 												<PictureField name="Ответ3" id="51">
 													<DataPath>Ответ3</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
@@ -314,7 +310,6 @@
 												</PictureField>
 												<PictureField name="Ответ4" id="54">
 													<DataPath>Ответ4</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
@@ -331,7 +326,6 @@
 												</PictureField>
 												<PictureField name="Ответ5" id="57">
 													<DataPath>Ответ5</DataPath>
-													<Enabled>false</Enabled>
 													<ReadOnly>true</ReadOnly>
 													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>

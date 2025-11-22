@@ -297,8 +297,8 @@
 			<Constant>ТурнирнаяТаблицаКакНаBBC</Constant>
 			<Constant>ПоказыватьРазницуМячей</Constant>
 			<Constant>ВыводитьТурВместоЧемпионата</Constant>
-			<Constant>АвтоудалениеНапоминаний</Constant>
 			<Constant>ВключитьНапоминания</Constant>
+			<Constant>АвтоудалениеНапоминаний</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<CommonForm>КаталогаФайловУстановить</CommonForm>
@@ -320,15 +320,15 @@
 			<Report>Гражданство</Report>
 			<Report>Легионеры</Report>
 			<Report>Посещаемость</Report>
-			<Report>Хронология</Report>
 			<Report>ТурнирнаяТаблица</Report>
-			<Report>Противостояние</Report>
+			<Report>Хронология</Report>
 			<Report>Саммит</Report>
-			<Report>Чемпионы</Report>
-			<Report>Непобедимые</Report>
 			<Report>Дерби</Report>
-			<Report>Прогноз</Report>
+			<Report>Противостояние</Report>
+			<Report>Непобедимые</Report>
+			<Report>Чемпионы</Report>
 			<Report>ЧемпионскаяГонка</Report>
+			<Report>Прогноз</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
 			<InformationRegister>ИтогиПромежуточные</InformationRegister>

@@ -84,6 +84,11 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
+				<LabelField name="Владелец" id="31">
+					<DataPath>Список.Owner</DataPath>
+					<ContextMenu name="ВладелецКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="33"/>
+				</LabelField>
 				<LabelField name="КоличествоЗрителей" id="25">
 					<DataPath>Список.КоличествоЗрителей</DataPath>
 					<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="26"/>
@@ -103,6 +108,9 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Owner</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>

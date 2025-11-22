@@ -220,7 +220,7 @@
 				<d4p1:dtFormat/>
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Palette32</d4p1:paletteKind>
-				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:animation>Use</d4p1:animation>
 				<d4p1:rebuildTime>4162167</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>false</d4p1:autoTransposition>
