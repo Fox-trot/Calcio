@@ -135,8 +135,10 @@
 					</d4p1:text>
 					<d4p1:strIsChanged>false</d4p1:strIsChanged>
 					<d4p1:isExpand>false</d4p1:isExpand>
-					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:isIndicator>true</d4p1:isIndicator>
 					<d4p1:colorPriority>true</d4p1:colorPriority>
+					<d4p1:visualType>Line</d4p1:visualType>
+					<d4p1:addType>Stacked</d4p1:addType>
 					<d4p1:valuesEditMode>DontUse</d4p1:valuesEditMode>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
@@ -221,7 +223,7 @@
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Palette32</d4p1:paletteKind>
 				<d4p1:animation>Use</d4p1:animation>
-				<d4p1:rebuildTime>4162167</d4p1:rebuildTime>
+				<d4p1:rebuildTime>9716663</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>false</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
