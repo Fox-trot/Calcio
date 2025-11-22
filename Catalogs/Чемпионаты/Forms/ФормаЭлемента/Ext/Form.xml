@@ -4,24 +4,6 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаИтогиПромежуточныеОбновить" id="61">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ИтогиПромежуточныеОбновить</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаИтогиПромежуточныеОбновитьРасширеннаяПодсказка" id="62"/>
-			</Button>
-			<Button name="ФормаИтогиПромежуточныеПереписать" id="63">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ИтогиПромежуточныеПереписать</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаИтогиПромежуточныеПереписатьРасширеннаяПодсказка" id="64"/>
-			</Button>
-			<Button name="ФормаИтогиПромежуточныеОчистить" id="65">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ИтогиПромежуточныеОчистить</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаИтогиПромежуточныеОчиститьРасширеннаяПодсказка" id="66"/>
-			</Button>
 			<Button name="ФормаИтогиПереписать" id="67" DisplayImportance="High">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ИтогиПереписать</CommandName>
@@ -352,58 +334,6 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
-		</Command>
-		<Command name="ИтогиПромежуточныеОбновить" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные обновить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные обновить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ИтогиПромежуточныеОбновить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ИтогиПромежуточныеПереписать" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные переписать</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные переписать</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ИтогиПромежуточныеПереписать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ИтогиПромежуточныеОчистить" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные очистить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итоги промежуточные очистить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ИтогиПромежуточныеОчистить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИтогиПереписать" id="6">
 			<Title>

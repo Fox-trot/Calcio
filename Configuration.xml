@@ -331,7 +331,6 @@
 			<Report>Прогноз</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
-			<InformationRegister>ИтогиПромежуточные</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
