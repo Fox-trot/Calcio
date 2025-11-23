@@ -1340,6 +1340,11 @@
 										<CommandName>Form.Command.СоставыЗаполнить</CommandName>
 										<ExtendedTooltip name="СоставыЗаполнитьРасширеннаяПодсказка" id="72"/>
 									</Button>
+									<Button name="СоставыИмпорт" id="492">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СоставыИмпорт</CommandName>
+										<ExtendedTooltip name="СоставыИмпортРасширеннаяПодсказка" id="493"/>
+									</Button>
 									<Button name="СоставыСортировать" id="422">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.СоставыСортировать</CommandName>
@@ -3111,6 +3116,24 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
+		</Command>
+		<Command name="СоставыИмпорт" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Составы импорт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоставыИмпорт</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>
