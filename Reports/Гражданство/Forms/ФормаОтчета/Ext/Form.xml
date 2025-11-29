@@ -64,5 +64,16 @@
 		<Attribute name="ДанныеРасшифровки" id="3">
 			<Type/>
 		</Attribute>
+		<Attribute name="Чемпионат" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чемпионат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 </Form>

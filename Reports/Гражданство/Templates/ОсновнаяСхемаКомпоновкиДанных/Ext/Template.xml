@@ -49,34 +49,19 @@
 			<field>Команда</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ ПЕРВЫЕ 1
-	Чемпионаты.Ссылка КАК Ссылка
-ПОМЕСТИТЬ Чемпионаты
-ИЗ
-	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-		ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
-ГДЕ
-	Чемпионаты.Владелец = &amp;Лига
-
-УПОРЯДОЧИТЬ ПО
-	Чемпионаты.ДатаОкончания УБЫВ
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ ПЕРВЫЕ 10
+		<query>ВЫБРАТЬ ПЕРВЫЕ 10
 	Страны.Ссылка КАК Страна
 ПОМЕСТИТЬ ВТ
 ИЗ
 	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Чемпионаты КАК Чемпионаты
-			ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 		ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
 			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
 			ПО Игроки.Страна = Страны.Ссылка
 		ПО Перемещения.Игрок = Игроки.Ссылка
+ГДЕ
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
 
 СГРУППИРОВАТЬ ПО
 	Страны.Ссылка
@@ -96,11 +81,10 @@
 		ПО Игроки.Страна = ВТ.Страна
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних(, {(Команда)}) КАК Перемещения
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
-				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Чемпионаты КАК Чемпионаты
-				ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ПО Игроки.Ссылка = Перемещения.Игрок
-</query>
+ГДЕ
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных2</name>
@@ -125,8 +109,10 @@
 	ЛигаКоманды.Команда КАК КомандаТоп
 ИЗ
 	Справочник.Лига.Команды КАК ЛигаКоманды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+		ПО ЛигаКоманды.Ссылка = Чемпионаты.Владелец
 ГДЕ
-	ЛигаКоманды.Ссылка = &amp;Лига</query>
+	Чемпионаты.Ссылка = &amp;Чемпионат</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
@@ -171,15 +157,15 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>Лига</name>
+		<name>Чемпионат</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Лига</v8:content>
+				<v8:content>Чемпионат</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Лига</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Чемпионаты</v8:Type>
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
@@ -188,24 +174,10 @@
 				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
 				<dcscor:value xsi:type="dcscor:ChoiceParameters">
 					<dcscor:item>
-						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-					<dcscor:item>
-						<dcscor:choiceParameter>Отбор.ПометкаУдаления</dcscor:choiceParameter>
+						<dcscor:choiceParameter>ПометкаУдаления</dcscor:choiceParameter>
 						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 					</dcscor:item>
 				</dcscor:value>
-			</dcscor:item>
-			<dcscor:item>
-				<dcscor:use>false</dcscor:use>
-				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
-				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-			</dcscor:item>
-			<dcscor:item>
-				<dcscor:use>false</dcscor:use>
-				<dcscor:parameter>ВыборГруппИЭлементов</dcscor:parameter>
-				<dcscor:value xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d5p1:FoldersAndItemsUse">Items</dcscor:value>
 			</dcscor:item>
 		</inputParameters>
 		<denyIncompleteValues>true</denyIncompleteValues>
@@ -238,9 +210,9 @@
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Лига</dcscor:parameter>
+					<dcscor:parameter>Чемпионат</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>ead67a9c-4537-4327-aa35-2d5d9bdace7e</dcsset:userSettingID>
+					<dcsset:userSettingID>8046d413-72b1-4912-8177-283b16226b74</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

@@ -49,6 +49,7 @@
 					<Group>FormNavigationPanelSeeAlso</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+						<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
