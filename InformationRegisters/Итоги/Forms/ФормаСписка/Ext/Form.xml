@@ -77,6 +77,8 @@
 				<LabelField name="Период" id="16">
 					<DataPath>Список.Period</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
 				</LabelField>
@@ -92,12 +94,14 @@
 				</LabelField>
 				<LabelField name="Место" id="25">
 					<DataPath>Список.Место</DataPath>
+					<HorizontalAlign>Center</HorizontalAlign>
 					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<ContextMenu name="МестоКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="МестоРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="КоличествоОчков" id="28">
 					<DataPath>Список.КоличествоОчков</DataPath>
+					<HorizontalAlign>Center</HorizontalAlign>
 					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<ContextMenu name="КоличествоОчковКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КоличествоОчковРасширеннаяПодсказка" id="30"/>
@@ -109,6 +113,7 @@
 							<v8:content>Голы</v8:content>
 						</v8:item>
 					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>Horizontal</Group>
 					<ShowInHeader>true</ShowInHeader>
 					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -116,15 +121,28 @@
 					<ChildItems>
 						<LabelField name="КоличествоЗабито" id="31">
 							<DataPath>Список.КоличествоЗабито</DataPath>
+							<HorizontalAlign>Center</HorizontalAlign>
 							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КоличествоЗабитоКонтекстноеМеню" id="32"/>
 							<ExtendedTooltip name="КоличествоЗабитоРасширеннаяПодсказка" id="33"/>
 						</LabelField>
 						<LabelField name="КоличествоПропущено" id="34">
 							<DataPath>Список.КоличествоПропущено</DataPath>
+							<HorizontalAlign>Center</HorizontalAlign>
 							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КоличествоПропущеноКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="КоличествоПропущеноРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+						<LabelField name="Разница" id="39">
+							<DataPath>Список.Разница</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="РазницаКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="РазницаРасширеннаяПодсказка" id="41"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
@@ -145,6 +163,24 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<CalculatedField>
+					<dcssch:dataPath>Разница</dcssch:dataPath>
+					<dcssch:expression>КоличествоЗабито-КоличествоПропущено</dcssch:expression>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</CalculatedField>
 				<MainTable>InformationRegister.Итоги</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -153,7 +189,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>Чемпионат</dcsset:field>
+							<dcsset:field>Период</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -164,9 +200,36 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Место</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Чемпионат.Владелец</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
@@ -185,12 +248,16 @@
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
-				<dcsset:selection/>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Список</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">МояКоманда</dcsset:left>
+						<dcsset:left xsi:type="dcscor:Field">Список.Место</dcsset:left>
 						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Команды.ПустаяСсылка</dcsset:right>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
