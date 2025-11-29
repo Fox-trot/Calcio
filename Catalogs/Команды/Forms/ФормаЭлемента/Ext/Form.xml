@@ -122,7 +122,7 @@
 									<ChoiceParameterLinks>
 										<xr:Link>
 											<xr:Name>Отбор.Владелец</xr:Name>
-											<xr:DataPath xsi:type="xs:string">Страна</xr:DataPath>
+											<xr:DataPath xsi:type="xs:string">Страны</xr:DataPath>
 											<xr:ValueChange>Clear</xr:ValueChange>
 										</xr:Link>
 									</ChoiceParameterLinks>
@@ -1315,11 +1315,11 @@
 				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="Страна" id="7">
+		<Attribute name="Страны" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страна</v8:content>
+					<v8:content>Страны</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
