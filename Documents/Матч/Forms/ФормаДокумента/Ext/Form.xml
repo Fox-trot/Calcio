@@ -378,6 +378,9 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
 							<ChildItems>
+								<CommandBar name="Группа1" id="494">
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="495"/>
+								</CommandBar>
 								<InputField name="Комментарий" id="155">
 									<DataPath>Объект.Комментарий</DataPath>
 									<TitleLocation>None</TitleLocation>

@@ -62,6 +62,7 @@
 					<DataPath>Результат</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<VerticalScrollBar>false</VerticalScrollBar>
+					<HorizontalScrollBar>false</HorizontalScrollBar>
 					<ShowGroups>false</ShowGroups>
 					<EnableStartDrag>false</EnableStartDrag>
 					<EnableDrag>false</EnableDrag>
