@@ -75,6 +75,7 @@
 				<SpreadSheetDocumentField name="Результат" id="6">
 					<DataPath>Результат</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<HorizontalScrollBar>false</HorizontalScrollBar>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="8"/>
 				</SpreadSheetDocumentField>
