@@ -413,11 +413,31 @@
 					</Picture>
 					<ExtendedTooltip name="ГруппаАнонсРасширеннаяПодсказка" id="149"/>
 					<ChildItems>
-						<Button name="АнонсОбновить" id="321">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.АнонсОбновить</CommandName>
-							<ExtendedTooltip name="АнонсОбновитьРасширеннаяПодсказка" id="322"/>
-						</Button>
+						<UsualGroup name="Группа2Анонс" id="499">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2АнонсРасширеннаяПодсказка" id="500"/>
+							<ChildItems>
+								<Button name="АнонсОбновить" id="321">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.АнонсОбновить</CommandName>
+									<ExtendedTooltip name="АнонсОбновитьРасширеннаяПодсказка" id="322"/>
+								</Button>
+								<CheckBoxField name="АнонсВсеИгры" id="496">
+									<DataPath>АнонсВсеИгры</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все игры иначе дома/выезд</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АнонсВсеИгрыКонтекстноеМеню" id="497"/>
+									<ExtendedTooltip name="АнонсВсеИгрыРасширеннаяПодсказка" id="498"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаАнонсСтатистика" id="209">
 							<Title>
 								<v8:item>
@@ -2882,6 +2902,20 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="АнонсВсеИгры" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все игры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>АнонсВсеИгры</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
