@@ -280,6 +280,7 @@
 			<EventSubscription>СправочникПередУдалением</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаПроведения</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаУдаленияПроведения</EventSubscription>
+			<ScheduledJob>ИмпортИгр</ScheduledJob>
 			<DefinedType>КоличествоГолов</DefinedType>
 			<DefinedType>КоличествоЗабито</DefinedType>
 			<DefinedType>КоличествоЗрителей</DefinedType>
