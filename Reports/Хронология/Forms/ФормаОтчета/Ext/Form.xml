@@ -225,9 +225,6 @@
 				<v8:Type>cfg:ReportObject.Хронология</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Отчет.SettingsComposer</Field>
-			</UseAlways>
 			<Save>
 				<Field>Отчет.Команда</Field>
 				<Field>Отчет.Чемпионат</Field>
