@@ -79,9 +79,6 @@
 				<v8:Type>cfg:ReportObject.ВозрастныеГруппы</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Отчет.SettingsComposer</Field>
-			</UseAlways>
 			<Save>
 				<Field>1/0:6a1b9b47-357a-459c-9c9b-c0b4be376377</Field>
 				<Field>1/0:a46baa4f-6311-4827-88a7-77f952e510e0</Field>
