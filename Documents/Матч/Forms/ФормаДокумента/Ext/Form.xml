@@ -1349,7 +1349,6 @@
 						</UsualGroup>
 						<Table name="СоставыКоманд" id="44">
 							<Representation>List</Representation>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
@@ -3164,7 +3163,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Составы импорт</v8:content>
+					<v8:content>Импорт составов</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СоставыИмпорт</Action>
