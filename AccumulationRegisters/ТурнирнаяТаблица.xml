@@ -383,7 +383,6 @@
 					<Comment/>
 					<Group>FormNavigationPanelImportant</Group>
 					<CommandParameterType>
-						<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 						<v8:Type>cfg:CatalogRef.Туры</v8:Type>
 					</CommandParameterType>

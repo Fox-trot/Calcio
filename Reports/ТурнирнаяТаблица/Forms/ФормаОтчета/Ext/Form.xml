@@ -14,7 +14,6 @@
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
-	<ReportResult>Результат</ReportResult>
 	<ReportFormType>Main</ReportFormType>
 	<AutoShowState>DontShow</AutoShowState>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
