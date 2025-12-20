@@ -97,9 +97,6 @@
 				<v8:Type>cfg:ReportObject.Дерби</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Отчет.SettingsComposer</Field>
-			</UseAlways>
 			<Save>
 				<Field>Отчет.Город</Field>
 			</Save>
