@@ -58,9 +58,8 @@
 				<PeriodField name="Период" id="1">
 					<DataPath>Период</DataPath>
 					<TitleLocation>None</TitleLocation>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
 					<VerticalStretch>false</VerticalStretch>
 					<Font ref="style:NormalTextFont" kind="StyleItem" scale="133"/>
 					<Border width="1">
@@ -81,7 +80,9 @@
 					<Border width="1">
 						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 					</Border>
-					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35"/>
+					<ContextMenu name="ИзображениеКонтекстноеМеню" id="35">
+						<Autofill>false</Autofill>
+					</ContextMenu>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="36"/>
 					<Events>
 						<Event name="Click">ИзображениеНажатие</Event>
@@ -251,7 +252,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Матч.Дата КАК Дата,
 	Матч.Ссылка КАК ИгрокИлиМатч,
