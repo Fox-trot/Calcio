@@ -25,6 +25,16 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</title>
+			<orderExpression>
+				<dcscom:expression>ЭтоПрочие</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<orderExpression>
+				<dcscom:expression>Страна</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>true</dcscom:autoOrder>
+			</orderExpression>
 			<valueType>
 				<v8:Type>xs:string</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Страны</v8:Type>
@@ -35,18 +45,46 @@
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоИгроков</dataPath>
-			<field>КоличествоИгроков</field>
+			<dataPath>Команда</dataPath>
+			<field>Команда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоПрочие</dataPath>
+			<field>ЭтоПрочие</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Количество игроков</v8:content>
+					<v8:content>Это прочие</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Команда</dataPath>
-			<field>Команда</field>
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<orderExpression>
+				<dcscom:expression>КоличествоСортировка</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСортировка</dataPath>
+			<field>КоличествоСортировка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество сортировка</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ ПЕРВЫЕ 10
@@ -57,7 +95,7 @@
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
 		ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
-			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
 			ПО Игроки.Страна = Страны.Ссылка
 		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
@@ -73,8 +111,14 @@
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
 	ЕСТЬNULL(ВТ.Страна, "Прочие") КАК Страна,
-	1 КАК КоличествоИгроков,
-	Перемещения.Команда КАК Команда
+	СУММА(1) КАК Количество,
+	Перемещения.Команда КАК Команда,
+	ВТ.Страна ЕСТЬ NULL КАК ЭтоПрочие,
+	СУММА(ВЫБОР
+			КОГДА ВТ.Страна ЕСТЬ NULL
+				ТОГДА 0
+			ИНАЧЕ 1
+		КОНЕЦ) КАК КоличествоСортировка
 ИЗ
 	Справочник.Игроки КАК Игроки
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
@@ -84,7 +128,12 @@
 			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
-	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат</query>
+	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
+
+СГРУППИРОВАТЬ ПО
+	Перемещения.Команда,
+	ЕСТЬNULL(ВТ.Страна, "Прочие"),
+	ВТ.Страна ЕСТЬ NULL</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных2</name>
@@ -134,9 +183,8 @@
 		</valueType>
 	</calculatedField>
 	<totalField>
-		<dataPath>КоличествоИгроков</dataPath>
-		<expression>Сумма(КоличествоИгроков)</expression>
-		<group>Страна</group>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -189,7 +237,7 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоИгроков</dcsset:field>
+					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -217,7 +265,12 @@
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>КоличествоИгроков</dcsset:field>
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Страна</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Количество</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
