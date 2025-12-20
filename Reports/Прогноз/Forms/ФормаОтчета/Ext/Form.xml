@@ -70,12 +70,18 @@
 					<EnableDrag>false</EnableDrag>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="DetailProcessing">РезультатОбработкаРасшифровки</Event>
+					</Events>
 				</SpreadSheetDocumentField>
 				<ChartField name="График" id="16">
 					<DataPath>График</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="ГрафикКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
+					</Events>
 				</ChartField>
 			</ChildItems>
 		</UsualGroup>
@@ -292,6 +298,17 @@
 				<d4p1:legendPlacement>None</d4p1:legendPlacement>
 				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
 			</Settings>
+		</Attribute>
+		<Attribute name="Игроки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игроки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
