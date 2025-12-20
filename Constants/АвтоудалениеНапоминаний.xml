@@ -37,7 +37,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Автоудаление напоминаний при старте программы, иначе уведомления при каждом старте</v8:content>
+					<v8:content>Автоудаление оповещений после показа при старте программы, иначе оповещение при каждом старте</v8:content>
 				</v8:item>
 			</ToolTip>
 			<MarkNegatives>false</MarkNegatives>

@@ -30,6 +30,19 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Города</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПеремещенияИгроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортИгр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ИмпортИгр</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбъектыПередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбъектыПриКопировании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.СправочникПередУдалением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПодпискиНаСобытиеОбработкаПроведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПодпискиНаСобытиеОбработкаУдаленияПроведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПодпискиНаСобытие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.КоличествоГолов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.КоличествоЗабито</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.КоличествоЗрителей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортМатча</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортЧемпионата</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПервоначальноеЗаполнение</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

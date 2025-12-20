@@ -127,10 +127,10 @@
 		<Command name="Report.ТурнирнаяТаблица.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Хронология.StandardCommand.Open">
+		<Command name="Report.РезультатыМатчей.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Саммит.StandardCommand.Open">
+		<Command name="Report.Хронология.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Дерби.StandardCommand.Open">
@@ -139,13 +139,16 @@
 		<Command name="Report.Противостояние.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Непобедимые.StandardCommand.Open">
+		<Command name="Report.Саммит.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Чемпионы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.ЧемпионскаяГонка.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.Непобедимые.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Прогноз.StandardCommand.Open">

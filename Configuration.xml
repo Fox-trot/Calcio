@@ -287,10 +287,10 @@
 			<CommonCommand>ИмпортИгроков</CommonCommand>
 			<CommonCommand>ИмпортИгр</CommonCommand>
 			<CommonCommand>ИмпортМатча</CommonCommand>
+			<CommonCommand>ИмпортЧемпионата</CommonCommand>
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<CommonCommand>ОткрытьВИнтернете</CommonCommand>
-			<CommonCommand>ИмпортЧемпионата</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<Constant>Цвета</Constant>
 			<Constant>СтарыйВидАнонсов</Constant>
@@ -322,6 +322,7 @@
 			<Report>Легионеры</Report>
 			<Report>Посещаемость</Report>
 			<Report>ТурнирнаяТаблица</Report>
+			<Report>РезультатыМатчей</Report>
 			<Report>Хронология</Report>
 			<Report>Саммит</Report>
 			<Report>Дерби</Report>

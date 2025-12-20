@@ -10,7 +10,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<MethodName>CommonModule.СерверныйФункции.ИмпортИгр</MethodName>
+			<MethodName>CommonModule.ПодпискиНаСобытие.ИмпортИгр</MethodName>
 			<Description>Импорт игр</Description>
 			<Key>ИмпортИгр</Key>
 			<Use>true</Use>

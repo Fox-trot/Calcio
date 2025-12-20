@@ -172,10 +172,15 @@
 			<RecordPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перемещение игрока</v8:content>
+					<v8:content>Трансфер</v8:content>
 				</v8:item>
 			</RecordPresentation>
-			<ExtendedRecordPresentation/>
+			<ExtendedRecordPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трансфер игрока</v8:content>
+				</v8:item>
+			</ExtendedRecordPresentation>
 			<ListPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -183,7 +188,12 @@
 				</v8:item>
 			</ListPresentation>
 			<ExtendedListPresentation/>
-			<Explanation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трансферы игроков</v8:content>
+				</v8:item>
+			</Explanation>
 			<DataHistory>DontUse</DataHistory>
 			<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
 			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
@@ -415,7 +425,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Перемещения игрока</v8:content>
+							<v8:content>Трансферы игрока</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
