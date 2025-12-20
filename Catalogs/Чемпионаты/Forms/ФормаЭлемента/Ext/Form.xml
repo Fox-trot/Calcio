@@ -10,6 +10,12 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаИтогиПереписатьРасширеннаяПодсказка" id="68"/>
 			</Button>
+			<Button name="ФормаРазрешитьРедактирование" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РазрешитьРедактирование</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаРазрешитьРедактированиеРасширеннаяПодсказка" id="70"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -112,7 +118,9 @@
 							<Border width="1">
 								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 							</Border>
-							<ContextMenu name="ИзображениеКонтекстноеМеню" id="52"/>
+							<ContextMenu name="ИзображениеКонтекстноеМеню" id="52">
+								<Autofill>false</Autofill>
+							</ContextMenu>
 							<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="53"/>
 						</PictureField>
 						<LabelField name="Чемпион" id="58">
@@ -304,6 +312,17 @@
 				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="РедактированиеДоступно" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаИмпортКоманд" id="1">
@@ -362,8 +381,36 @@
 			<Action>ИтогиПереписать</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
+		<Command name="РазрешитьРедактирование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить редактирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить редактирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазрешитьРедактирование</Action>
+		</Command>
 	</Commands>
 	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Report.РезультатыМатчей.Command.Результаты</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>Report.ТурнирнаяТаблица.Command.ТурнирнаяТаблица</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+			</Item>
+		</NavigationPanel>
 		<CommandBar>
 			<Item>
 				<Command>0:4994a503-08ac-4e15-8bb3-37f730e4566e</Command>
