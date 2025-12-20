@@ -52,6 +52,7 @@
 				</InputField>
 				<InputField name="Команда" id="8">
 					<DataPath>Отчет.Команда</DataPath>
+					<ClearButton>true</ClearButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
@@ -96,9 +97,6 @@
 				<v8:Type>cfg:ReportObject.ЧемпионскаяГонка</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>Отчет.SettingsComposer</Field>
-			</UseAlways>
 			<Save>
 				<Field>1/0:cdde2ab1-1f71-47d0-8510-c17f04acfad8</Field>
 				<Field>Отчет.Команда</Field>
