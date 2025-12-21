@@ -168,12 +168,12 @@
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение.Template" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d.0" configVersion="3488833a429f0d46b95ff5ad72bee5ad00000000"/>
 		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="313c03d4938e7a4794ef85dbe9c9fe6500000000"/>
 		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="4125fe8631cbfd41b023dceabd9648aa00000000"/>
-		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="4b5eb03bea040c4ab658eb09ecc2180500000000"/>
+		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="4f4b521e9c94c044a78755dcaa08413b00000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="bd68db5416c3864583584db7b36a4b2a00000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="294741a0489dfb469b6e0f9463dd598400000000"/>
 		<Metadata name="Configuration.Calcio.HomePageWorkArea" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.8" configVersion="64ddb00e1dd73440b9ac75e7a52073f000000000"/>
 		<Metadata name="Configuration.Calcio.Logo" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.1" configVersion="4f5422eb1ead8e459ae6f80fc45bfc2e00000000"/>
-		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="84e98aa79ee5454cad504e1ff3a0bc8600000000"/>
+		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="b73e6bcc412ac14a9e56817eb7b00ca200000000"/>
 		<Metadata name="Configuration.Calcio.MainSectionPicture" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.c" configVersion="1bb2a472c13c794d988126c6b2f14b9600000000"/>
 		<Metadata name="Configuration.Calcio.ManagedApplicationModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.6" configVersion="41247d6a596342499e7f47d49bce3c1f00000000"/>
 		<Metadata name="Configuration.Calcio.Splash" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.2" configVersion="173bb92710fbae43862fc81bd8b1107900000000"/>
@@ -312,8 +312,8 @@
 		<Metadata name="Report.Непобедимые" id="9e31e176-9154-439d-b80c-1ad67e5acc29" configVersion="239f2e4bfcaa4449ab73bbeca662aa5600000000"/>
 		<Metadata name="Report.Непобедимые.Form.ФормаОтчета" id="5022d78f-c6b9-44cf-85cc-ddfc18d90128" configVersion="1678c8a219d7a341bd0c9f9f2aef760b00000000"/>
 		<Metadata name="Report.Непобедимые.Form.ФормаОтчета.Form" id="5022d78f-c6b9-44cf-85cc-ddfc18d90128.0" configVersion="1970a20ee376334d883095ea90c49c6200000000"/>
-		<Metadata name="Report.Непобедимые.Template.ОсновнаяСхемаКомпоновкиДанных" id="3dcfc079-3681-40a9-a826-7e26ac1eeb39" configVersion="e80630b3f0252e42988358c5a022fea100000000"/>
-		<Metadata name="Report.Непобедимые.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="3dcfc079-3681-40a9-a826-7e26ac1eeb39.0" configVersion="2daafb58c2c68242832daa8e08fe875200000000"/>
+		<Metadata name="Report.Непобедимые.Template.ОсновнаяСхемаКомпоновкиДанных" id="3dcfc079-3681-40a9-a826-7e26ac1eeb39" configVersion="9a8f9398ba619e40953b5da28f41fca000000000"/>
+		<Metadata name="Report.Непобедимые.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="3dcfc079-3681-40a9-a826-7e26ac1eeb39.0" configVersion="d93d0db0cf6ec14487ceb19dc7fd389400000000"/>
 		<Metadata name="Report.Посещаемость" id="73c9c607-add1-404d-82b0-f445a111e3d9" configVersion="ed53e650b0491f4f85ec85396cbedab400000000">
 			<Metadata name="Report.Посещаемость.TabularSection.Данные.Attribute.Матч" id="216460cc-3464-4fbc-89a0-afb7151aa44f"/>
 			<Metadata name="Report.Посещаемость.TabularSection.Данные.Attribute.Стадион" id="5296a3ba-668b-4d7c-a693-8c2d33f71596"/>
