@@ -5,7 +5,7 @@
 		<ChildItems>
 			<Button name="ФормаРазрешитьРедактирование" id="75">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.РазрешитьРедактирование</CommandName>
+				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаРазрешитьРедактированиеРасширеннаяПодсказка" id="76"/>
 			</Button>
@@ -444,17 +444,17 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 		</Command>
-		<Command name="РазрешитьРедактирование" id="4">
+		<Command name="ВключитьВозможностьРедактирования" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Разрешить редактирование</v8:content>
+					<v8:content>Включить возможность редактирования</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Разрешить редактирование</v8:content>
+					<v8:content>Включить возможность редактирования</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>РазрешитьРедактирование</Action>
