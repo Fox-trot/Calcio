@@ -1497,7 +1497,7 @@
 			</c>
 			<c>
 				<c>
-					<f>58</f>
+					<f>70</f>
 					<parameter>Выезд</parameter>
 				</c>
 			</c>
@@ -1579,7 +1579,7 @@
 			</c>
 			<c>
 				<c>
-					<f>70</f>
+					<f>71</f>
 				</c>
 			</c>
 			<c>
@@ -1642,12 +1642,12 @@
 		<row>
 			<c>
 				<c>
-					<f>71</f>
+					<f>72</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>71</f>
+					<f>72</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1673,31 +1673,31 @@
 			</c>
 			<c>
 				<c>
-					<f>72</f>
+					<f>73</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>73</f>
+					<f>74</f>
 					<parameter>Дома</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>74</f>
+					<f>75</f>
 					<parameter>Выезд</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>75</f>
+					<f>76</f>
 					<parameter>КоличествоЗабито</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>72</f>
+					<f>73</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
@@ -1729,7 +1729,7 @@
 			<formatIndex>19</formatIndex>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -1741,7 +1741,7 @@
 			</c>
 			<c>
 				<c>
-					<f>77</f>
+					<f>78</f>
 					<parameter>КоличествоГолов</parameter>
 					<detailParameter>Первая</detailParameter>
 				</c>
@@ -1749,7 +1749,7 @@
 			<c>
 				<i>4</i>
 				<c>
-					<f>78</f>
+					<f>79</f>
 					<parameter>Наименование</parameter>
 					<detailParameter>Ссылка</detailParameter>
 				</c>
@@ -1807,7 +1807,7 @@
 			<formatIndex>19</formatIndex>
 			<c>
 				<c>
-					<f>79</f>
+					<f>80</f>
 					<parameter>Команда2</parameter>
 					<detailParameter>Команда2</detailParameter>
 				</c>
@@ -1819,7 +1819,7 @@
 			</c>
 			<c>
 				<c>
-					<f>80</f>
+					<f>81</f>
 					<parameter>КоличествоГолов2</parameter>
 					<detailParameter>Вторая</detailParameter>
 				</c>
@@ -1880,7 +1880,7 @@
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>81</formatIndex>
+		<formatIndex>82</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>1</beginRow>
 		<beginRowOffset>72</beginRowOffset>
@@ -1896,7 +1896,7 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>82</defaultFormatIndex>
+	<defaultFormatIndex>83</defaultFormatIndex>
 	<height>23</height>
 	<vgRows>23</vgRows>
 	<merge>
@@ -3016,6 +3016,25 @@
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ЧН=0</v8:content>
+			</v8:item>
+		</format>
+	</format>
+	<format>
+		<border>0</border>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ЧН=0</v8:content>
+			</v8:item>
+		</format>
 	</format>
 	<format>
 		<border>0</border>
