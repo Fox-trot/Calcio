@@ -32,7 +32,7 @@
 				<Button name="КомандаСформировать" id="30">
 					<Type>UsualButton</Type>
 					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.Command.КомандаСформировать</CommandName>
+					<CommandName>Form.Command.Сформировать</CommandName>
 					<ExtendedTooltip name="КомандаСформироватьРасширеннаяПодсказка" id="31"/>
 				</Button>
 				<InputField name="Лига" id="1">
@@ -433,7 +433,7 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="КомандаСформировать" id="1">
+		<Command name="Сформировать" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -443,7 +443,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команда сформировать</v8:content>
+					<v8:content>Сформировать</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F5</Shortcut>
