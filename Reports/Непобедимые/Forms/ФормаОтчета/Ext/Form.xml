@@ -28,6 +28,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnLoadVariantAtServer">ПриЗагрузкеВариантаНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -44,7 +45,7 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
-		<UsualGroup name="ГруппаНастройки" id="12">
+		<UsualGroup name="ГруппаПараметры" id="12">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -59,7 +60,7 @@
 			</ToolTip>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="13"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="13"/>
 			<ChildItems>
 				<InputField name="Команда" id="6">
 					<DataPath>Команда</DataPath>
