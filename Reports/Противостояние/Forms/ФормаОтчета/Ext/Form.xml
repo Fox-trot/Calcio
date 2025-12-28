@@ -139,6 +139,7 @@
 							<ChildItems>
 								<InputField name="Противник" id="35">
 									<DataPath>Противник</DataPath>
+									<ClearButton>true</ClearButton>
 									<ListChoiceMode>true</ListChoiceMode>
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ChooseType>false</ChooseType>
