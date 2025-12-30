@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Календарь</v8:content>
+		</v8:item>
+	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
 	<Group>AlwaysHorizontal</Group>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -243,6 +248,7 @@
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
+			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>Список.Владелец</Field>
 				<Field>Список.Дата</Field>
@@ -252,12 +258,12 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Матч.Дата КАК Дата,
 	Матч.Ссылка КАК ИгрокИлиМатч,
 	ЛОЖЬ КАК ЭтоИгрок,
-	МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) + 0.1 КАК Порядок,
+	ГОД(Матч.Дата) * 1000 + ДЕНЬГОДА(Матч.Дата) + 0.1 КАК Порядок,
 	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1) КАК КоличествоОчков,
 	ЕСТЬNULL(Туры.Ссылка, Матч.Стадион) КАК Владелец
 ИЗ
@@ -278,10 +284,14 @@
 ОБЪЕДИНИТЬ ВСЕ
 
 ВЫБРАТЬ РАЗЛИЧНЫЕ
-	НАЧАЛОПЕРИОДА(Игроки.ДатаРождения, ДЕНЬ),
+	Игроки.ДатаРождения,
 	ПеремещенияИгроков.Игрок,
 	ИСТИНА,
-	МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения),
+	ВЫБОР
+		КОГДА ДЕНЬГОДА(Игроки.ДатаРождения) &gt; ДЕНЬГОДА(&amp;ДатаК)
+			ТОГДА ГОД(&amp;ДатаН)
+		ИНАЧЕ ГОД(&amp;ДатаК)
+	КОНЕЦ * 1000 + ДЕНЬГОДА(Игроки.ДатаРождения),
 	-2,
 	СрезПоследних.Команда
 ИЗ
@@ -292,10 +302,20 @@
 		ПО ПеремещенияИгроков.Игрок = СрезПоследних.Игрок
 ГДЕ
 	ПеремещенияИгроков.Команда = &amp;Команда
-	И МЕСЯЦ(Игроки.ДатаРождения) * 100 + ДЕНЬ(Игроки.ДатаРождения) МЕЖДУ МЕСЯЦ(&amp;ДатаН) * 100 + ДЕНЬ(&amp;ДатаН) И МЕСЯЦ(&amp;ДатаК) * 100 + ДЕНЬ(&amp;ДатаК)</QueryText>
+	И ВЫБОР
+			КОГДА ГОД(&amp;ДатаН) = ГОД(&amp;ДатаК)
+				ТОГДА ДЕНЬГОДА(Игроки.ДатаРождения) МЕЖДУ ДЕНЬГОДА(&amp;ДатаН) И ДЕНЬГОДА(&amp;ДатаК)
+			ИНАЧЕ ДЕНЬГОДА(Игроки.ДатаРождения) &gt;= ДЕНЬГОДА(&amp;ДатаН)
+					ИЛИ ДЕНЬГОДА(Игроки.ДатаРождения) &lt;= ДЕНЬГОДА(&amp;ДатаК)
+		КОНЕЦ</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Дата</dcssch:dataPath>
 					<dcssch:field>Дата</dcssch:field>
+					<dcssch:orderExpression>
+						<expression xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Порядок</expression>
+						<orderType xmlns="http://v8.1c.ru/8.1/data-composition-system/common">Asc</orderType>
+						<autoOrder xmlns="http://v8.1c.ru/8.1/data-composition-system/common">false</autoOrder>
+					</dcssch:orderExpression>
 					<dcssch:valueType>
 						<v8:Type>xs:dateTime</v8:Type>
 						<v8:DateQualifiers>
@@ -327,6 +347,12 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>КоличествоОчков</dcssch:dataPath>
 					<dcssch:field>КоличествоОчков</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество очков</v8:content>
+						</v8:item>
+					</dcssch:title>
 					<dcssch:valueType>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
@@ -358,17 +384,11 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Порядок</dcssch:dataPath>
 					<dcssch:field>Порядок</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Порядок</v8:content>
-						</v8:item>
-					</dcssch:title>
 					<dcssch:valueType>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
-							<v8:Digits>4</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:Digits>8</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</dcssch:valueType>
@@ -454,7 +474,6 @@
 				</Parameter>
 				<KeyType>FieldValue</KeyType>
 				<KeyField>ИгрокИлиМатч</KeyField>
-				<AutoSaveUserSettings>false</AutoSaveUserSettings>
 				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
@@ -465,11 +484,8 @@
 							<dcsset:field>Порядок</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>ИгрокИлиМатч</dcsset:field>
-							<dcsset:orderType>Asc</dcsset:orderType>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>6c198935-2708-4192-aab6-0ef727fd22b1</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
 						<dcsset:item>
@@ -568,9 +584,6 @@
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Type>
 			<FillCheck>ShowError</FillCheck>
-			<Save>
-				<Field>МояКоманда</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ТолькоДниРождения" id="8">
 			<Title>
