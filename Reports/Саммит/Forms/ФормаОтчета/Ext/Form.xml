@@ -50,6 +50,15 @@
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
+				<CheckBoxField name="ПоказыватьРазницуМячей" id="52">
+					<DataPath>ПоказыватьРазницуМячей</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказыватьРазницуМячейКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПоказыватьРазницуМячейРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="OnChange">ПоказыватьРазницуМячейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаОтчет" id="11">
@@ -1527,6 +1536,17 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьРазницуМячей" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать разницу мячей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
