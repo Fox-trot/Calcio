@@ -15,7 +15,7 @@
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
 	<ReportFormType>Main</ReportFormType>
-	<AutoShowState>DontShow</AutoShowState>
+	<AutoShowState>Auto</AutoShowState>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
