@@ -11,6 +11,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -30,6 +31,7 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
 			<MultipleChoice>true</MultipleChoice>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
@@ -84,6 +86,9 @@
 				<LabelField name="Период" id="16">
 					<DataPath>Список.Period</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>4</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
 				</LabelField>
@@ -94,6 +99,9 @@
 				</LabelField>
 				<LabelField name="НомерСтроки" id="22">
 					<DataPath>Список.LineNumber</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>4</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="24"/>
 				</LabelField>
@@ -138,8 +146,11 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>~Список.Owner~Список.Владелец</Field>
+				<Field>~Список.Owner~Список.Владелец</Field>
+				<Field>Список.LineNumber</Field>
 				<Field>Список.Period</Field>
 				<Field>Список.Recorder</Field>
+				<Field>Список.Команда</Field>
 				<Field>Список.Тур</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
