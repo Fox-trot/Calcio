@@ -25,6 +25,10 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
 			<orderExpression>
 				<dcscom:expression>ЭтоПрочие</dcscom:expression>
 				<dcscom:orderType>Asc</dcscom:orderType>
@@ -100,6 +104,8 @@
 		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
 	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
+{ГДЕ
+	Перемещения.Команда.*}
 
 СГРУППИРОВАТЬ ПО
 	Страны.Ссылка
@@ -123,12 +129,14 @@
 	Справочник.Игроки КАК Игроки
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ КАК ВТ
 		ПО Игроки.Страна = ВТ.Страна
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних(, {(Команда)}) КАК Перемещения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
 			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
 	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
+{ГДЕ
+	Перемещения.Команда.*}
 
 СГРУППИРОВАТЬ ПО
 	Перемещения.Команда,
@@ -187,24 +195,6 @@
 		<expression>Сумма(Количество)</expression>
 	</totalField>
 	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Дата</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<availableAsField>false</availableAsField>
-	</parameter>
-	<parameter>
 		<name>Чемпионат</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -222,7 +212,7 @@
 				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
 				<dcscor:value xsi:type="dcscor:ChoiceParameters">
 					<dcscor:item>
-						<dcscor:choiceParameter>ПометкаУдаления</dcscor:choiceParameter>
+						<dcscor:choiceParameter>Отбор.ПометкаУдаления</dcscor:choiceParameter>
 						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 					</dcscor:item>
 				</dcscor:value>
@@ -230,6 +220,24 @@
 		</inputParameters>
 		<denyIncompleteValues>true</denyIncompleteValues>
 		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Диаграмма</dcsset:name>
