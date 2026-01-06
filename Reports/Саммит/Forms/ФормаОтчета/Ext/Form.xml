@@ -159,18 +159,27 @@
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно1КонтекстноеМеню" id="26"/>
 											<ExtendedTooltip name="ГрафикРаздельно1РасширеннаяПодсказка" id="27"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 										<ChartField name="ГрафикРаздельно2" id="32">
 											<DataPath>ГрафикРаздельно2</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно2КонтекстноеМеню" id="33"/>
 											<ExtendedTooltip name="ГрафикРаздельно2РасширеннаяПодсказка" id="34"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 										<ChartField name="ГрафикРаздельно3" id="35">
 											<DataPath>ГрафикРаздельно3</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно3КонтекстноеМеню" id="36"/>
 											<ExtendedTooltip name="ГрафикРаздельно3РасширеннаяПодсказка" id="37"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 									</ChildItems>
 								</UsualGroup>
@@ -187,18 +196,27 @@
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно4КонтекстноеМеню" id="39"/>
 											<ExtendedTooltip name="ГрафикРаздельно4РасширеннаяПодсказка" id="40"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 										<ChartField name="ГрафикРаздельно5" id="41">
 											<DataPath>ГрафикРаздельно5</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно5КонтекстноеМеню" id="42"/>
 											<ExtendedTooltip name="ГрафикРаздельно5РасширеннаяПодсказка" id="43"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 										<ChartField name="ГрафикРаздельно6" id="44">
 											<DataPath>ГрафикРаздельно6</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ГрафикРаздельно6КонтекстноеМеню" id="45"/>
 											<ExtendedTooltip name="ГрафикРаздельно6РасширеннаяПодсказка" id="46"/>
+											<Events>
+												<Event name="DetailProcessing">ГрафикРаздельноОбработкаРасшифровки</Event>
+											</Events>
 										</ChartField>
 									</ChildItems>
 								</UsualGroup>
