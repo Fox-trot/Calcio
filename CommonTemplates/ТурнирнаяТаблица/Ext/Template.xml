@@ -1877,10 +1877,72 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>23</index>
+		<row>
+			<c>
+				<c>
+					<f>82</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>83</f>
+					<parameter>Период</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>24</index>
+		<row>
+			<c>
+				<i>5</i>
+				<c>
+					<f>64</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>И</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>38</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мячи</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>38</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очки</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
-		<formatIndex>82</formatIndex>
+		<formatIndex>84</formatIndex>
 		<detailParameter>Лига</detailParameter>
 		<beginRow>1</beginRow>
 		<beginRowOffset>72</beginRowOffset>
@@ -1896,9 +1958,9 @@
 		<pictureIndex>1</pictureIndex>
 	</drawing>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>83</defaultFormatIndex>
-	<height>23</height>
-	<vgRows>23</vgRows>
+	<defaultFormatIndex>85</defaultFormatIndex>
+	<height>25</height>
+	<vgRows>25</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
@@ -2055,6 +2117,17 @@
 		<c>0</c>
 		<w>1</w>
 	</merge>
+	<merge>
+		<r>23</r>
+		<c>0</c>
+		<h>1</h>
+		<w>4</w>
+	</merge>
+	<merge>
+		<r>23</r>
+		<c>5</c>
+		<w>2</w>
+	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
 		<area>
@@ -2183,6 +2256,16 @@
 			<endRow>1</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>История</name>
+		<area>
+			<type>Columns</type>
+			<beginRow>-1</beginRow>
+			<endRow>-1</endRow>
+			<beginColumn>5</beginColumn>
+			<endColumn>7</endColumn>
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
@@ -2395,6 +2478,16 @@
 			<type>Rows</type>
 			<beginRow>14</beginRow>
 			<endRow>14</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ШапкаИ</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>23</beginRow>
+			<endRow>24</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -3144,6 +3237,26 @@
 				<v8:content>ЧН=0</v8:content>
 			</v8:item>
 		</format>
+	</format>
+	<format>
+		<font>0</font>
+		<leftBorder>0</leftBorder>
+		<topBorder>0</topBorder>
+		<height>54</height>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<font>0</font>
+		<border>0</border>
+		<height>54</height>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<drawingBorder>1</drawingBorder>
