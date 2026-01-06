@@ -422,7 +422,7 @@
 				<d4p1:chartType>Pie</d4p1:chartType>
 				<d4p1:circleLabelType>ValuePercent</d4p1:circleLabelType>
 				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
-				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
+				<d4p1:labelsLocation>Center</d4p1:labelsLocation>
 				<d4p1:lbFormat/>
 				<d4p1:lbpFormat/>
 				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
