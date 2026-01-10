@@ -168,7 +168,7 @@
 			</StandardAttributes>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>DontUse</FullTextSearch>
-			<EnableTotalsSplitting>false</EnableTotalsSplitting>
+			<EnableTotalsSplitting>true</EnableTotalsSplitting>
 			<ListPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
