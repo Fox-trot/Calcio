@@ -62,9 +62,22 @@
 				</UsualGroup>
 				<PeriodField name="Период" id="1">
 					<DataPath>Период</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
 					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</ToolTip>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxHeight>false</AutoMaxHeight>
 					<VerticalStretch>false</VerticalStretch>
 					<Font ref="style:NormalTextFont" kind="StyleItem" scale="133"/>
 					<Border width="1">
