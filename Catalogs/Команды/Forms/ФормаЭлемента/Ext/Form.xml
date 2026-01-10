@@ -1850,6 +1850,7 @@
 			</Picture>
 			<Action>Исключить</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
 		<Command name="СезонОбновить" id="2">

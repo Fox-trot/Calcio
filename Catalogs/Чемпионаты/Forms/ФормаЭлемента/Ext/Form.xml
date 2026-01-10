@@ -182,6 +182,11 @@
 										<CommandName>Form.Command.Упорядочить</CommandName>
 										<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
 									</Button>
+									<Button name="КомандыОчистить" id="71">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаОчистить</CommandName>
+										<ExtendedTooltip name="КомандыОчиститьРасширеннаяПодсказка" id="72"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
@@ -395,6 +400,28 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазрешитьРедактирование</Action>
+		</Command>
+		<Command name="КомандаОчистить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОчистить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>
