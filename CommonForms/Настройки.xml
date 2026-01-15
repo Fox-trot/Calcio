@@ -18,7 +18,12 @@
 			</UsePurposes>
 			<UseStandardCommands>true</UseStandardCommands>
 			<ExtendedPresentation/>
-			<Explanation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры работы программы</v8:content>
+				</v8:item>
+			</Explanation>
 		</Properties>
 	</CommonForm>
 </MetaDataObject>
