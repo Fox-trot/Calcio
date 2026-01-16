@@ -16,6 +16,7 @@
 				<xr:Object>Document.Матч.Attribute.Стадион</xr:Object>
 				<xr:Object>Document.Матч.Attribute.КоличествоЗрителей</xr:Object>
 				<xr:Object>Report.Посещаемость</xr:Object>
+				<xr:Object>Catalog.Стадионы</xr:Object>
 			</Content>
 		</Properties>
 	</FunctionalOption>
