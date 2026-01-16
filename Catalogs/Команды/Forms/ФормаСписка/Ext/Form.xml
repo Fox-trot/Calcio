@@ -113,7 +113,9 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>Список.Владелец</Field>
+				<Field>Список.Город</Field>
 				<Field>Список.Ссылка</Field>
+				<Field>Список.Страна</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
