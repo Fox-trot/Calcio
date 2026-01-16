@@ -424,7 +424,12 @@
 				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
 				<d4p1:labelsLocation>Center</d4p1:labelsLocation>
 				<d4p1:lbFormat/>
-				<d4p1:lbpFormat/>
+				<d4p1:lbpFormat>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=0</v8:content>
+					</v8:item>
+				</d4p1:lbpFormat>
 				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
 				<d4p1:labelsFont kind="AutoFont"/>
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>

@@ -93,61 +93,6 @@
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаЦвета" id="4">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Цвета биоритмов</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<VerticalSpacing>Half</VerticalSpacing>
-							<Behavior>Collapsible</Behavior>
-							<ControlRepresentation>Picture</ControlRepresentation>
-							<Representation>None</Representation>
-							<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="5"/>
-							<ChildItems>
-								<InputField name="Физический" id="6">
-									<DataPath>Физический</DataPath>
-									<AutoMaxHeight>false</AutoMaxHeight>
-									<Wrap>false</Wrap>
-									<ClearButton>true</ClearButton>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ChooseType>false</ChooseType>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="ФизическийКонтекстноеМеню" id="7"/>
-									<ExtendedTooltip name="ФизическийРасширеннаяПодсказка" id="8"/>
-									<Events>
-										<Event name="OnChange">ФизическийПриИзменении</Event>
-										<Event name="Clearing">ФизическийОчистка</Event>
-									</Events>
-								</InputField>
-								<InputField name="Эмоциональный" id="9">
-									<DataPath>Эмоциональный</DataPath>
-									<AutoMaxHeight>false</AutoMaxHeight>
-									<ClearButton>true</ClearButton>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="ЭмоциональныйКонтекстноеМеню" id="10"/>
-									<ExtendedTooltip name="ЭмоциональныйРасширеннаяПодсказка" id="11"/>
-									<Events>
-										<Event name="OnChange">ЭмоциональныйПриИзменении</Event>
-										<Event name="Clearing">ЭмоциональныйОчистка</Event>
-									</Events>
-								</InputField>
-								<InputField name="Интеллектуальный" id="12">
-									<DataPath>Интеллектуальный</DataPath>
-									<AutoMaxHeight>false</AutoMaxHeight>
-									<ClearButton>true</ClearButton>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="ИнтеллектуальныйКонтекстноеМеню" id="13"/>
-									<ExtendedTooltip name="ИнтеллектуальныйРасширеннаяПодсказка" id="14"/>
-									<Events>
-										<Event name="OnChange">ИнтеллектуальныйПриИзменении</Event>
-										<Event name="Clearing">ИнтеллектуальныйОчистка</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 						<CheckBoxField name="СтарыйВидАнонсов" id="15">
 							<DataPath>НаборКонстант.СтарыйВидАнонсов</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -217,6 +162,67 @@
 									<ContextMenu name="РеквизитW2КонтекстноеМеню" id="36"/>
 									<ExtendedTooltip name="РеквизитW2РасширеннаяПодсказка" id="37"/>
 								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ИспользоватьСтадионы" id="80">
+							<DataPath>НаборКонстант.ИспользоватьСтадионы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтадионыКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ИспользоватьСтадионыРасширеннаяПодсказка" id="82"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаЦвета" id="4">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цвета биоритмов</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Collapsible</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="5"/>
+							<ChildItems>
+								<InputField name="Физический" id="6">
+									<DataPath>Физический</DataPath>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<Wrap>false</Wrap>
+									<ClearButton>true</ClearButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ФизическийКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ФизическийРасширеннаяПодсказка" id="8"/>
+									<Events>
+										<Event name="OnChange">ФизическийПриИзменении</Event>
+										<Event name="Clearing">ФизическийОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="Эмоциональный" id="9">
+									<DataPath>Эмоциональный</DataPath>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ClearButton>true</ClearButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЭмоциональныйКонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="ЭмоциональныйРасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="OnChange">ЭмоциональныйПриИзменении</Event>
+										<Event name="Clearing">ЭмоциональныйОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="Интеллектуальный" id="12">
+									<DataPath>Интеллектуальный</DataPath>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ClearButton>true</ClearButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ИнтеллектуальныйКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ИнтеллектуальныйРасширеннаяПодсказка" id="14"/>
+									<Events>
+										<Event name="OnChange">ИнтеллектуальныйПриИзменении</Event>
+										<Event name="Clearing">ИнтеллектуальныйОчистка</Event>
+									</Events>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаНапоминания" id="61">
@@ -324,6 +330,7 @@
 				<Field>НаборКонстант.АвтоудалениеНапоминаний</Field>
 				<Field>НаборКонстант.ВключитьНапоминания</Field>
 				<Field>НаборКонстант.ВыводитьТурВместоЧемпионата</Field>
+				<Field>НаборКонстант.ИспользоватьСтадионы</Field>
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
 				<Field>НаборКонстант.ПоказыватьРазницуМячей</Field>

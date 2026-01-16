@@ -281,6 +281,7 @@
 			<EventSubscription>ПодпискиНаСобытиеОбработкаПроведения</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаУдаленияПроведения</EventSubscription>
 			<ScheduledJob>ИмпортИгр</ScheduledJob>
+			<FunctionalOption>ИспользоватьСтадионы</FunctionalOption>
 			<DefinedType>КоличествоГолов</DefinedType>
 			<DefinedType>КоличествоЗабито</DefinedType>
 			<DefinedType>КоличествоЗрителей</DefinedType>
@@ -300,6 +301,7 @@
 			<Constant>ВыводитьТурВместоЧемпионата</Constant>
 			<Constant>ВключитьНапоминания</Constant>
 			<Constant>АвтоудалениеНапоминаний</Constant>
+			<Constant>ИспользоватьСтадионы</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<CommonForm>КаталогаФайловУстановить</CommonForm>

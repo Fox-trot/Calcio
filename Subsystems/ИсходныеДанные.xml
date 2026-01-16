@@ -43,6 +43,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортМатча</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортЧемпионата</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПервоначальноеЗаполнение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСтадионы</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
