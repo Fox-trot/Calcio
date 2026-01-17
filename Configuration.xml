@@ -333,6 +333,7 @@
 			<Report>Чемпионы</Report>
 			<Report>ЧемпионскаяГонка</Report>
 			<Report>Прогноз</Report>
+			<Report>Эффективность</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>

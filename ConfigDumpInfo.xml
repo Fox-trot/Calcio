@@ -170,12 +170,12 @@
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение.Template" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d.0" configVersion="3488833a429f0d46b95ff5ad72bee5ad00000000"/>
 		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="ad6b6ac33f53de459e288dcbb6e680e900000000"/>
 		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="e846b9fdedc16b49bb6525772b8723e300000000"/>
-		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="8d78fe4e5da091489e0787caf78d950c00000000"/>
+		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="37c4378bb87e224d9fe8af1e060bc0e500000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="bd68db5416c3864583584db7b36a4b2a00000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="294741a0489dfb469b6e0f9463dd598400000000"/>
 		<Metadata name="Configuration.Calcio.HomePageWorkArea" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.8" configVersion="64ddb00e1dd73440b9ac75e7a52073f000000000"/>
 		<Metadata name="Configuration.Calcio.Logo" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.1" configVersion="4f5422eb1ead8e459ae6f80fc45bfc2e00000000"/>
-		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="b73e6bcc412ac14a9e56817eb7b00ca200000000"/>
+		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="9f28a3c67696b741bd8683e8bea197a300000000"/>
 		<Metadata name="Configuration.Calcio.MainSectionPicture" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.c" configVersion="1bb2a472c13c794d988126c6b2f14b9600000000"/>
 		<Metadata name="Configuration.Calcio.ManagedApplicationModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.6" configVersion="41247d6a596342499e7f47d49bce3c1f00000000"/>
 		<Metadata name="Configuration.Calcio.Splash" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.2" configVersion="173bb92710fbae43862fc81bd8b1107900000000"/>
@@ -456,6 +456,25 @@
 		<Metadata name="Report.Чемпионы.Form.ФормаОтчета" id="aa2becec-a377-425b-8ba9-8a06bd9ddd72" configVersion="dca460258c98e9408d6ca8a9b0874a2200000000"/>
 		<Metadata name="Report.Чемпионы.Form.ФормаОтчета.Form" id="aa2becec-a377-425b-8ba9-8a06bd9ddd72.0" configVersion="624343f6659d0a4db079ff094bad8a9400000000"/>
 		<Metadata name="Report.Чемпионы.ObjectModule" id="195245fd-1183-4faf-b2f7-a53f07379942.0" configVersion="57fa7b5370b9164384b5029a59db782400000000"/>
+		<Metadata name="Report.Эффективность" id="b586b32c-ab47-40da-a9a1-973be923aa09" configVersion="0dc84eefa84bac42bfb532265de6397900000000">
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Проигрыш1" id="06dd23ca-f719-47e6-b43d-6462ff73fca1"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные" id="1ead2c29-4a7c-48a1-ab97-a4121130d477"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Проигрыш" id="716104d0-4eae-4dc1-bd11-14969ef5cb1b"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Период1" id="735c72af-7aef-4c2e-853e-346c86bc94f7"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Ничья1" id="76835da8-5204-4fb0-a9b1-6af29480d427"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Период" id="877542a6-b2f6-4824-bfca-74efb31ea71b"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Ничья" id="966ac012-c610-4b87-b079-3987b140f1f7"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Выигрыш" id="9dd81dad-cda6-496a-b808-3be1dc14c82e"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.КоличествоЗабито" id="adcbdf75-d047-4363-93af-a9c6b106670f"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.КоличествоОчков" id="ae404a4f-3755-4614-bf83-c686a97ae20f"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Команда" id="bb3a198e-ecb2-425c-9b18-caacbbd52b55"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.Выигрыш1" id="d9356405-94f2-4400-9353-646c708847d4"/>
+			<Metadata name="Report.Эффективность.Attribute.Лига" id="ef62ce46-dc6c-4689-9083-d75f97b589cf"/>
+			<Metadata name="Report.Эффективность.TabularSection.Данные.Attribute.КоличествоПропущено" id="f80e98ec-c46b-4412-ba7f-e4fd2a7abffc"/>
+		</Metadata>
+		<Metadata name="Report.Эффективность.Form.ФормаОтчета" id="0c65671c-9617-4422-88f6-8eaafc859f7c" configVersion="0c50b89323748e4683ad80d0525bfe2200000000"/>
+		<Metadata name="Report.Эффективность.Form.ФормаОтчета.Form" id="0c65671c-9617-4422-88f6-8eaafc859f7c.0" configVersion="43e3ce76a803aa489f3956a535dcd27f00000000"/>
+		<Metadata name="Report.Эффективность.ObjectModule" id="b586b32c-ab47-40da-a9a1-973be923aa09.0" configVersion="9c5115b566e884459500901943819c9600000000"/>
 		<Metadata name="ScheduledJob.ИмпортИгр" id="03d7dcce-7f49-4253-b473-0bb5a3413791" configVersion="01c828a1d2233442904cfda29e24676500000000"/>
 		<Metadata name="ScheduledJob.ИмпортИгр.Schedule" id="03d7dcce-7f49-4253-b473-0bb5a3413791.0" configVersion="55b641d95157144caa7f0a2dbe8e2ec500000000"/>
 		<Metadata name="SessionParameter.КаталогаФайлов" id="4290e5f6-615e-42d9-a65c-bde66ba37d97" configVersion="f93ca0e28d126c46a3ae58d74904368c00000000"/>
@@ -463,7 +482,7 @@
 		<Metadata name="Subsystem.Биоритмы.Help" id="b560f594-ff2e-4fbd-865f-83a65910aada.0" configVersion="709acde5a6d2664bba0e44362685a25e00000000"/>
 		<Metadata name="Subsystem.ИсходныеДанные" id="a863f426-8d03-4454-a033-0b56c0665be5" configVersion="d2e6fc1065c50e42a8c6097c782e0a6c00000000"/>
 		<Metadata name="Subsystem.ИсходныеДанные.CommandInterface" id="a863f426-8d03-4454-a033-0b56c0665be5.1" configVersion="231e15a3e644244684363b21bc859dfc00000000"/>
-		<Metadata name="Subsystem.Статистика" id="84e07c81-c9d9-4fe4-952f-2cd16fd49bd4" configVersion="23a976abb821f54c8a6d0db979e9547e00000000"/>
+		<Metadata name="Subsystem.Статистика" id="84e07c81-c9d9-4fe4-952f-2cd16fd49bd4" configVersion="012ef61d2344f04b8783965e79d5c39e00000000"/>
 		<Metadata name="Subsystem.Статистика.CommandInterface" id="84e07c81-c9d9-4fe4-952f-2cd16fd49bd4.1" configVersion="d3247699a1533640a93efbf59713f54600000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

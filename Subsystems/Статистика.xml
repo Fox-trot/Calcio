@@ -50,6 +50,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПоказыватьРазницуМячей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВыводитьТурВместоЧемпионата</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Дерби</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Эффективность</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
