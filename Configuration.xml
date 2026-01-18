@@ -329,11 +329,11 @@
 			<Report>Саммит</Report>
 			<Report>Дерби</Report>
 			<Report>Противостояние</Report>
-			<Report>Непобедимые</Report>
 			<Report>Чемпионы</Report>
 			<Report>ЧемпионскаяГонка</Report>
-			<Report>Прогноз</Report>
+			<Report>Непобедимые</Report>
 			<Report>Эффективность</Report>
+			<Report>Прогноз</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>

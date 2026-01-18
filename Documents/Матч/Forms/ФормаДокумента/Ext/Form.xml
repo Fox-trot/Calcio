@@ -1509,13 +1509,6 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<CheckBoxField name="СоставыКомандИгрокПометкаУдаления" id="501">
-									<DataPath>Объект.СоставыКоманд.Игрок.DeletionMark</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СоставыКомандИгрокПометкаУдаленияКонтекстноеМеню" id="502"/>
-									<ExtendedTooltip name="СоставыКомандИгрокПометкаУдаленияРасширеннаяПодсказка" id="503"/>
-								</CheckBoxField>
 								<InputField name="СоставыКомандКоманда" id="63">
 									<DataPath>Объект.СоставыКоманд.Команда</DataPath>
 									<ReadOnly>true</ReadOnly>
