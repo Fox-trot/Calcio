@@ -1014,6 +1014,7 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
+	Матч.Ссылка КАК Ссылка,
 	ТурнирнаяТаблица.Период КАК Дата,
 	ТурнирнаяТаблица.Регистратор.Счет КАК Счет,
 	ТурнирнаяТаблица.Тур КАК Тур,
@@ -1026,6 +1027,8 @@
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Туры КАК Туры
 		ПО ТурнирнаяТаблица.Тур = Туры.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+		ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
 ГДЕ
 	ТурнирнаяТаблица.Команда = &amp;Ссылка
 	И ВЫБОР
@@ -1092,28 +1095,8 @@
 					<dcssch:field>КоличествоГолов</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Период</dcssch:dataPath>
-					<dcssch:field>Период</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
 					<dcssch:field>МоментВремени</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Регистратор</dcssch:dataPath>
-					<dcssch:field>Регистратор</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Активность</dcssch:dataPath>
-					<dcssch:field>Активность</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>Команда</dcssch:dataPath>
-					<dcssch:field>Команда</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>НомерСтроки</dcssch:dataPath>
-					<dcssch:field>НомерСтроки</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Чемпионат</dcssch:dataPath>
@@ -1124,6 +1107,48 @@
 							<v8:content>Чемпионат</v8:content>
 						</v8:item>
 					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата1</dcssch:dataPath>
+					<dcssch:field>Дата1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Проведен</dcssch:dataPath>
+					<dcssch:field>Проведен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Изображение</dcssch:dataPath>
+					<dcssch:field>Изображение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Стадион</dcssch:dataPath>
+					<dcssch:field>Стадион</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоставыКоманд</dcssch:dataPath>
+					<dcssch:field>СоставыКоманд</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Команды</dcssch:dataPath>
+					<dcssch:field>Команды</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
 				</Field>
 				<Parameter>
 					<dcssch:name>Ссылка</dcssch:name>
@@ -1175,7 +1200,7 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 					<dcssch:availableAsField>false</dcssch:availableAsField>
 				</Parameter>
-				<MainTable>AccumulationRegister.ТурнирнаяТаблица</MainTable>
+				<MainTable>Document.Матч</MainTable>
 				<AutoSaveUserSettings>false</AutoSaveUserSettings>
 				<ListSettings>
 					<dcsset:filter>
