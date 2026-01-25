@@ -32,13 +32,14 @@
 		<Metadata name="Catalog.Города.Form.ФормаЭлемента" id="d5ed981e-5f4a-4111-b7f2-ab58bbec1bfd" configVersion="3470562ba4e8a2489fba13a2d095885200000000"/>
 		<Metadata name="Catalog.Города.Form.ФормаЭлемента.Form" id="d5ed981e-5f4a-4111-b7f2-ab58bbec1bfd.0" configVersion="02b1054e2addc94f8521d7e1fc7d161d00000000"/>
 		<Metadata name="Catalog.Города.ObjectModule" id="f8e298f9-db08-468b-a78c-0b1bf074d444.0" configVersion="25b44200759eb44891a8005f78e198ef00000000"/>
-		<Metadata name="Catalog.Игроки" id="cc330dff-6680-425b-8500-0239c5796700" configVersion="fe0dd218cae4404bb9e170520581e6a500000000">
+		<Metadata name="Catalog.Игроки" id="cc330dff-6680-425b-8500-0239c5796700" configVersion="e2f6e0ba1cccba429f54814b62c7d3e500000000">
 			<Metadata name="Catalog.Игроки.Attribute.Страна" id="162e5f44-82c4-49a6-a057-577f1548d795"/>
 			<Metadata name="Catalog.Игроки.Attribute.Комментарий" id="2e1a337b-d41c-42ab-9878-faf4e8d54d1b"/>
 			<Metadata name="Catalog.Игроки.Attribute.ДатаРождения" id="4198bae9-e9fa-49b9-80e0-cbe72b350f6d"/>
 			<Metadata name="Catalog.Игроки.Attribute.Амплуа" id="8a9296e6-b08b-4de6-886f-d3ba4229437d"/>
 			<Metadata name="Catalog.Игроки.Attribute.Изображение" id="f73f88ce-31d8-4dea-9eba-625a1c715647"/>
 		</Metadata>
+		<Metadata name="Catalog.Игроки.AdditionalIndexes" id="cc330dff-6680-425b-8500-0239c5796700.1d" configVersion="5fe64f111255464a962e026a4292630c00000000"/>
 		<Metadata name="Catalog.Игроки.Form.ФормаВыбора" id="4f8f46df-3abc-41d4-9412-8764579a14b1" configVersion="c573d7716e8046429a85f771de77057800000000"/>
 		<Metadata name="Catalog.Игроки.Form.ФормаВыбора.Form" id="4f8f46df-3abc-41d4-9412-8764579a14b1.0" configVersion="02a5965521905242a2e707fbd5dfca4b00000000"/>
 		<Metadata name="Catalog.Игроки.Form.ФормаСписка" id="0fb7a069-26f6-4732-b2f6-6b21356ce6f4" configVersion="a8408f453710f147bee71d1c252f553d00000000"/>
@@ -337,16 +338,16 @@
 		<Metadata name="Report.Посещаемость.Command.КомандаПосещаемость.CommandModule" id="dab1f58f-cc8a-40c4-968d-62ba5aadf721.2" configVersion="6d6ebe4b19fbc64a9d670f1bf3685d6400000000"/>
 		<Metadata name="Report.Посещаемость.Form.ФормаОтчета" id="b5043f29-8dd7-4193-b0b3-ccc376391d34" configVersion="77aed7a71f2e074494519d30972d10ee00000000"/>
 		<Metadata name="Report.Посещаемость.Form.ФормаОтчета.Form" id="b5043f29-8dd7-4193-b0b3-ccc376391d34.0" configVersion="54e2b61c2504df4288c888685ab38bc900000000"/>
-		<Metadata name="Report.Прогноз" id="4ca9bd09-e55a-43ed-a3ec-0fabc3a29271" configVersion="b4e5fe4b1aaba74a8bb997d989c29ae800000000">
+		<Metadata name="Report.Прогноз" id="4ca9bd09-e55a-43ed-a3ec-0fabc3a29271" configVersion="0767ef98f018734c9643524b663e128600000000">
 			<Metadata name="Report.Прогноз.Attribute.Чемпионат" id="0053a246-9311-4af7-88c7-fd31fe0900fb"/>
 			<Metadata name="Report.Прогноз.TabularSection.Данные" id="0c19a8fb-3e29-46b9-bc74-9fe0c023ed4e"/>
 			<Metadata name="Report.Прогноз.TabularSection.Данные.Attribute.Команда" id="10b7b12c-0cae-4799-b54f-6bdfab23c6ae"/>
 			<Metadata name="Report.Прогноз.TabularSection.Данные.Attribute.Тур" id="8fb994f2-857c-4cef-9d0f-23054bc06b3f"/>
 			<Metadata name="Report.Прогноз.TabularSection.Данные.Attribute.КоличествоОчков" id="cd150f7c-a6c7-4a3a-81d3-05625d3f3560"/>
 		</Metadata>
-		<Metadata name="Report.Прогноз.Form.ФормаОтчета" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8" configVersion="96415efe24a9a24cbb4157c76046567700000000"/>
-		<Metadata name="Report.Прогноз.Form.ФормаОтчета.Form" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8.0" configVersion="eaef49c81441b24e987bf39a81f9017100000000"/>
-		<Metadata name="Report.Прогноз.ObjectModule" id="4ca9bd09-e55a-43ed-a3ec-0fabc3a29271.0" configVersion="358bffed26d0fb4bb700e810f6afd47800000000"/>
+		<Metadata name="Report.Прогноз.Form.ФормаОтчета" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8" configVersion="c3ccaef0d52b2e4bbd38e6eaffb0d30100000000"/>
+		<Metadata name="Report.Прогноз.Form.ФормаОтчета.Form" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8.0" configVersion="5456bf39d70a8c419cb7bd8eff0eedbd00000000"/>
+		<Metadata name="Report.Прогноз.ObjectModule" id="4ca9bd09-e55a-43ed-a3ec-0fabc3a29271.0" configVersion="bc5dc2bd2e495947a51ca247fe93566600000000"/>
 		<Metadata name="Report.Противостояние" id="e1493bc0-467f-4032-892e-0604f8f49e1a" configVersion="a5e60b0018bae74d93f717992188ff6100000000">
 			<Metadata name="Report.Противостояние.TabularSection.Данные.Attribute.Выигрыш" id="2f61319f-4db9-4b89-81c0-c34cac77f1a3"/>
 			<Metadata name="Report.Противостояние.TabularSection.Данные.Attribute.КоличествоЗабито" id="569d0312-a49c-40b1-b807-6413a37dac44"/>
