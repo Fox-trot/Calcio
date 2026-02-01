@@ -159,8 +159,8 @@
 		<Metadata name="CommonModule.ОбщегоНазначения.Module" id="c0feb1f6-aeb0-4a8b-a2fd-56a29c968411.0" configVersion="ca343cb304432a47a5557f2687fd0ce400000000"/>
 		<Metadata name="CommonModule.Общий" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9" configVersion="030ff640f5241a49ad0dde66a553c0ca00000000"/>
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="d60fa848d3e1494ebf3b9dfb13772a7000000000"/>
-		<Metadata name="CommonModule.ПодпискиНаСобытие" id="59fcfeec-d8b9-4e89-820d-c37957185f5e" configVersion="6124824ea059c44a95d3041b7406fc2d00000000"/>
-		<Metadata name="CommonModule.ПодпискиНаСобытие.Module" id="59fcfeec-d8b9-4e89-820d-c37957185f5e.0" configVersion="9e24498d528e15448775eee55042a5aa00000000"/>
+		<Metadata name="CommonModule.ПодпискиНаСобытие" id="59fcfeec-d8b9-4e89-820d-c37957185f5e" configVersion="08dcbb6eb2cbc04d8ee06b5bd4df054a00000000"/>
+		<Metadata name="CommonModule.ПодпискиНаСобытие.Module" id="59fcfeec-d8b9-4e89-820d-c37957185f5e.0" configVersion="a957e9b76e615140b6876fb9156e4ba700000000"/>
 		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="2417cea689adbd499df5521e69a7b32600000000"/>
 		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="b01fe55a117de242b65b3705b17dc8a600000000"/>
 		<Metadata name="CommonPicture.Goal" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2" configVersion="41302a8f99d03b41a1a00987e0f71b4900000000"/>
@@ -169,16 +169,16 @@
 		<Metadata name="CommonTemplate.Матчи.Template" id="f88841db-8ac3-4714-b3a7-0b5f54d14108.0" configVersion="500ef08fa3dec14b816423740737333600000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d" configVersion="15edd7c447cb14468e928591e6bdb40100000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение.Template" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d.0" configVersion="3488833a429f0d46b95ff5ad72bee5ad00000000"/>
-		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="ad6b6ac33f53de459e288dcbb6e680e900000000"/>
-		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="e846b9fdedc16b49bb6525772b8723e300000000"/>
-		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="0362b1565e05864899123e2f36832ba600000000"/>
+		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="d457a814255d1a438840d9c2909df76600000000"/>
+		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="7969efb436a01341aa40739547a158ac00000000"/>
+		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="45b730a9b6d99c45ab6e5366c97bdb4800000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="bd68db5416c3864583584db7b36a4b2a00000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="294741a0489dfb469b6e0f9463dd598400000000"/>
 		<Metadata name="Configuration.Calcio.HomePageWorkArea" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.8" configVersion="64ddb00e1dd73440b9ac75e7a52073f000000000"/>
 		<Metadata name="Configuration.Calcio.Logo" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.1" configVersion="4f5422eb1ead8e459ae6f80fc45bfc2e00000000"/>
 		<Metadata name="Configuration.Calcio.MainSectionCommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.9" configVersion="9f28a3c67696b741bd8683e8bea197a300000000"/>
 		<Metadata name="Configuration.Calcio.MainSectionPicture" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.c" configVersion="1bb2a472c13c794d988126c6b2f14b9600000000"/>
-		<Metadata name="Configuration.Calcio.ManagedApplicationModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.6" configVersion="41247d6a596342499e7f47d49bce3c1f00000000"/>
+		<Metadata name="Configuration.Calcio.ManagedApplicationModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.6" configVersion="38062379b06f4b47ad80df882352b5af00000000"/>
 		<Metadata name="Configuration.Calcio.Splash" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.2" configVersion="173bb92710fbae43862fc81bd8b1107900000000"/>
 		<Metadata name="Constant.АвтоудалениеНапоминаний" id="64b956e3-8e0d-4c16-85f8-3c23429fb769" configVersion="ad651497483799428a959acaac200e8500000000"/>
 		<Metadata name="Constant.ВключитьНапоминания" id="208d1daf-60df-457d-a4cb-3970f7a3cbc6" configVersion="da839ac90ddf3240995174e9e02ffdda00000000"/>
