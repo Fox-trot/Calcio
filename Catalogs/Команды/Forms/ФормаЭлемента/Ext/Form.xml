@@ -780,8 +780,10 @@
 													<v8:content>Значение</v8:content>
 												</v8:item>
 											</ToolTip>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoCellHeight>true</AutoCellHeight>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 											<ContextMenu name="СезонЗначениеКонтекстноеМеню" id="104"/>
 											<ExtendedTooltip name="СезонЗначениеРасширеннаяПодсказка" id="105"/>
 										</LabelField>
