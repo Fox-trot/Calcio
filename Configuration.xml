@@ -292,6 +292,7 @@
 			<CommonCommand>Биоритмы</CommonCommand>
 			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<CommonCommand>ОткрытьВИнтернете</CommonCommand>
+			<CommonCommand>Синхронизация</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<Constant>Цвета</Constant>
 			<Constant>СтарыйВидАнонсов</Constant>

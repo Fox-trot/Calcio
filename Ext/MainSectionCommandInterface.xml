@@ -157,6 +157,9 @@
 		<Command name="Report.Прогноз.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
+		<Command name="CommonCommand.Синхронизация">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+		</Command>
 		<Command name="CommonForm.Настройки.StandardCommand.Open">
 			<CommandGroup>ActionsPanelTools</CommandGroup>
 		</Command>
