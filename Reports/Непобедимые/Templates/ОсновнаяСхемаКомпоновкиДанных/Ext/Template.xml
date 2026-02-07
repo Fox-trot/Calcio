@@ -143,6 +143,24 @@
 				</v8:NumberQualifiers>
 			</valueType>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПобед</dataPath>
+			<field>КоличествоПобед</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество побед</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ТурнирнаяТаблица.Команда КАК Команда,
@@ -171,6 +189,11 @@
 	МАКСИМУМ(ТурнирнаяТаблица.Период) КАК Период,
 	МИНИМУМ(ТурнирнаяТаблица.Период) КАК Период2,
 	СУММА(1) КАК КоличествоМатчей,
+	СУММА(ВЫБОР
+			КОГДА Противники.КоличествоОчков &gt; 1
+				ТОГДА 1
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КоличествоПобед,
 	СУММА(Противники.КоличествоОчков) КАК КоличествоОчков,
 	СУММА(Противники.КоличествоГолов) КАК Забито,
 	СУММА(ТурнирнаяТаблица.КоличествоГолов) КАК Пропущено,
@@ -239,6 +262,7 @@
 		КОНЕЦ, Сегодня.Период, ДЕНЬ) КАК КоличествоДней,
 	Даты.КоличествоМатчей КАК КоличествоМатчей,
 	Даты.КоличествоОчков КАК КоличествоОчков,
+	Даты.КоличествоПобед КАК КоличествоПобед,
 	Даты.Забито КАК Забито,
 	Даты.Пропущено КАК Пропущено,
 	Даты.Команда В
@@ -311,6 +335,10 @@
 	<totalField>
 		<dataPath>КоличествоДней</dataPath>
 		<expression>Минимум(КоличествоДней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПобед</dataPath>
+		<expression>Сумма(КоличествоПобед)</expression>
 	</totalField>
 	<parameter>
 		<name>Команда</name>
@@ -533,6 +561,28 @@
 			<dcsat:expression>Пропущено</dcsat:expression>
 		</parameter>
 	</template>
+	<template>
+		<name>Макет9</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КоличествоПобед</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КоличествоПобед</dcsat:name>
+			<dcsat:expression>КоличествоПобед</dcsat:expression>
+		</parameter>
+	</template>
 	<fieldTemplate>
 		<field>Команда</field>
 		<template>Макет2</template>
@@ -561,6 +611,10 @@
 		<field>Пропущено</field>
 		<template>Макет8</template>
 	</fieldTemplate>
+	<fieldTemplate>
+		<field>КоличествоПобед</field>
+		<template>Макет9</template>
+	</fieldTemplate>
 	<settingsVariant>
 		<dcsset:name>Список</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -582,6 +636,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоМатчей</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПобед</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
 					<dcsset:lwsTitle>
