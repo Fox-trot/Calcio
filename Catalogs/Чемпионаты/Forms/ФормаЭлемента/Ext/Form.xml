@@ -222,11 +222,10 @@
 											</Button>
 										</ChildItems>
 									</Popup>
-									<Button name="КомандыОбщаяКомандаИмпортИгроков" id="73">
+									<Button name="КомандыИмпортИгроков" id="79">
 										<Type>CommandBarButton</Type>
-										<CommandName>CommonCommand.ИмпортИгроков</CommandName>
-										<DataPath>Items.Команды.CurrentData.Команда</DataPath>
-										<ExtendedTooltip name="КомандыОбщаяКомандаИмпортИгроковРасширеннаяПодсказка" id="74"/>
+										<CommandName>Form.Command.ИмпортИгроков</CommandName>
+										<ExtendedTooltip name="КомандыИмпортИгроковРасширеннаяПодсказка" id="80"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -463,6 +462,22 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
+		</Command>
+		<Command name="ИмпортИгроков" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт игроков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Импорт игроков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИмпортИгроков</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>
 	<CommandInterface>
