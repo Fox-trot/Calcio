@@ -22,12 +22,12 @@
 				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Shortcut>F8</Shortcut>
+			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType>
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</CommandParameterType>
-			<ParameterUseMode>Single</ParameterUseMode>
+			<ParameterUseMode>Multiple</ParameterUseMode>
 			<ModifiesData>true</ModifiesData>
 			<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 		</Properties>

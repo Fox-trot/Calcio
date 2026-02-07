@@ -4,12 +4,29 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаИтогиПереписать" id="67" DisplayImportance="High">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ИтогиПереписать</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаИтогиПереписатьРасширеннаяПодсказка" id="68"/>
-			</Button>
+			<Popup name="ФормаГруппаДополнительно" id="77">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дополнительно</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа дополнительных команд</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="78"/>
+				<ChildItems>
+					<Button name="ФормаИтогиПереписать" id="67" DisplayImportance="High">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИтогиПереписать</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ФормаИтогиПереписатьРасширеннаяПодсказка" id="68"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="ФормаРазрешитьРедактирование" id="69">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
@@ -172,20 +189,44 @@
 							<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
 							<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
 								<ChildItems>
-									<Button name="КомандаИмпортКоманд" id="49">
+									<Popup name="КомандыГруппаДополнительно" id="75">
+										<EnableContentChange>true</EnableContentChange>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дополнительно</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа дополнительных команд</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="КомандыГруппаДополнительноРасширеннаяПодсказка" id="76"/>
+										<ChildItems>
+											<Button name="КомандаИмпортКоманд" id="49">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
+												<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
+											</Button>
+											<Button name="КомандыУпорядочить" id="56">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Упорядочить</CommandName>
+												<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
+											</Button>
+											<Button name="КомандыОчистить" id="71">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаОчистить</CommandName>
+												<ExtendedTooltip name="КомандыОчиститьРасширеннаяПодсказка" id="72"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="КомандыОбщаяКомандаИмпортИгроков" id="73">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
-										<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
-									</Button>
-									<Button name="КомандыУпорядочить" id="56">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Упорядочить</CommandName>
-										<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
-									</Button>
-									<Button name="КомандыОчистить" id="71">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.КомандаОчистить</CommandName>
-										<ExtendedTooltip name="КомандыОчиститьРасширеннаяПодсказка" id="72"/>
+										<CommandName>CommonCommand.ИмпортИгроков</CommandName>
+										<DataPath>Items.Команды.CurrentData.Команда</DataPath>
+										<ExtendedTooltip name="КомандыОбщаяКомандаИмпортИгроковРасширеннаяПодсказка" id="74"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>

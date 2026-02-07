@@ -147,12 +147,29 @@
 						<CommandName>Form.Command.КомандаОбновить</CommandName>
 						<ExtendedTooltip name="СписокКомандаОбновитьРасширеннаяПодсказка" id="95"/>
 					</Button>
-					<Button name="КомандаИмпорт" id="96">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаИмпорт</CommandName>
-						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="КомандаИмпортРасширеннаяПодсказка" id="97"/>
-					</Button>
+					<Popup name="СписокГруппаДополнительно" id="98">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительно</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа дополнительных команд</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="СписокГруппаДополнительноРасширеннаяПодсказка" id="99"/>
+						<ChildItems>
+							<Button name="КомандаИмпорт" id="96">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаИмпорт</CommandName>
+								<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="КомандаИмпортРасширеннаяПодсказка" id="97"/>
+							</Button>
+						</ChildItems>
+					</Popup>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="59"/>
