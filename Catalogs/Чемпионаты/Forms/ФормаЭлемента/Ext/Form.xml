@@ -225,6 +225,7 @@
 									<Button name="КомандыИмпортИгроков" id="79">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ИмпортИгроков</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="КомандыИмпортИгроковРасширеннаяПодсказка" id="80"/>
 									</Button>
 								</ChildItems>
@@ -255,6 +256,7 @@
 								<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="Selection">КомандыВыбор</Event>
 								<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
 								<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
 							</Events>
@@ -476,6 +478,10 @@
 					<v8:content>Импорт игроков</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ИмпортИгроков</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
