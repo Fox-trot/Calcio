@@ -90,6 +90,10 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Амплуа</dataPath>
+			<field>Амплуа</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ ПЕРВЫЕ 10
 	Страны.Ссылка КАК Страна
@@ -105,7 +109,8 @@
 ГДЕ
 	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
 {ГДЕ
-	Перемещения.Команда.*}
+	Перемещения.Команда.*,
+	Перемещения.Амплуа.*}
 
 СГРУППИРОВАТЬ ПО
 	Страны.Ссылка
@@ -136,7 +141,8 @@
 ГДЕ
 	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
 {ГДЕ
-	Перемещения.Команда.*}
+	Перемещения.Команда.*,
+	Перемещения.Амплуа.*}
 
 СГРУППИРОВАТЬ ПО
 	Перемещения.Команда,
@@ -262,6 +268,16 @@
 					</dcsset:presentation>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>4d37e0f1-a802-4bf1-971d-5e05e88e2f6f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Команда</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Амплуа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>

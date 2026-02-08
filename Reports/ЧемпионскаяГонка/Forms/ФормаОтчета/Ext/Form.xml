@@ -53,6 +53,7 @@
 				<InputField name="Команда" id="8">
 					<DataPath>Отчет.Команда</DataPath>
 					<ClearButton>true</ClearButton>
+					<CreateButton>false</CreateButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
