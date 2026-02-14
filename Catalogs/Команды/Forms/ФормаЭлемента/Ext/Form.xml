@@ -101,6 +101,9 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 											<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+											<Events>
+												<Event name="OnChange">НаименованиеПриИзменении</Event>
+											</Events>
 										</InputField>
 										<Button name="КомментарийДополнить" id="172">
 											<Type>UsualButton</Type>
