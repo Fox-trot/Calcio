@@ -154,6 +154,7 @@
 					<d4p1:isExpand>false</d4p1:isExpand>
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
+					<d4p1:addType>Stacked</d4p1:addType>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
@@ -228,7 +229,7 @@
 				<d4p1:isLight>true</d4p1:isLight>
 				<d4p1:isGradient>false</d4p1:isGradient>
 				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:hideBaseVal>true</d4p1:hideBaseVal>
 				<d4p1:dataTable>false</d4p1:dataTable>
 				<d4p1:dtVerLines>true</d4p1:dtVerLines>
 				<d4p1:dtHorLines>true</d4p1:dtHorLines>
@@ -280,7 +281,7 @@
 				</d4p1:elementsTitle>
 				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
 				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:border>
 				<d4p1:dataSourceDescription/>
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
@@ -321,6 +322,18 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="Список" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
 	</Attributes>
 	<Commands>
