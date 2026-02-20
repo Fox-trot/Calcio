@@ -332,6 +332,9 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 </Form>
