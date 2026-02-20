@@ -410,11 +410,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="НетКлюча" id="7">
+		<Attribute name="ЕстьКлюч" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Нет ключа</v8:content>
+					<v8:content>Есть ключ</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
