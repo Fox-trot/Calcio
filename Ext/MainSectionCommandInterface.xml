@@ -11,6 +11,11 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Catalog.Города.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Document.Матч.StandardCommand.Create">
 			<Visibility>
 				<xr:Common>true</xr:Common>
@@ -79,6 +84,9 @@
 		<Command name="CommonCommand.КомандаКалендарь">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="Catalog.Города.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="Document.Матч.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
@@ -107,6 +115,9 @@
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 		<Command name="CommonForm.Квиз.StandardCommand.Open">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+		</Command>
+		<Command name="Catalog.Города.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 		</Command>
 		<Command name="Report.Биоритмы.StandardCommand.Open">
@@ -142,10 +153,10 @@
 		<Command name="Report.Противостояние.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Чемпионы.StandardCommand.Open">
+		<Command name="Report.ЧемпионскаяГонка.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.ЧемпионскаяГонка.StandardCommand.Open">
+		<Command name="Report.Чемпионы.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.Непобедимые.StandardCommand.Open">

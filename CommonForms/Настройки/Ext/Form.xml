@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<SaveWindowSettings>false</SaveWindowSettings>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПервоначальноеЗаполнение" id="78">
@@ -8,6 +10,11 @@
 				<CommandName>Form.Command.ПервоначальноеЗаполнение</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПервоначальноеЗаполнениеРасширеннаяПодсказка" id="79"/>
+			</Button>
+			<Button name="ФормаКомандаОбновить" id="98">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОбновить</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОбновитьРасширеннаяПодсказка" id="99"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -98,6 +105,9 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="СтарыйВидАнонсовКонтекстноеМеню" id="16"/>
 							<ExtendedTooltip name="СтарыйВидАнонсовРасширеннаяПодсказка" id="17"/>
+							<Events>
+								<Event name="OnChange">СтарыйВидАнонсовПриИзменении</Event>
+							</Events>
 						</CheckBoxField>
 						<UsualGroup name="ГруппаКоличествоМатчейВАнонсе" id="21">
 							<Title>
@@ -260,10 +270,11 @@
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаСтатистика" id="63">
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Статистика БД</v8:content>
+							<v8:content>Статистика</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -276,49 +287,53 @@
 						<xr:Ref>StdPicture.Information</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>AlwaysHorizontal</Group>
 					<ExtendedTooltip name="СтраницаСтатистикаРасширеннаяПодсказка" id="64"/>
 					<ChildItems>
-						<CommandBar name="ГруппаСтатистика" id="76">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа статистика</v8:content>
-								</v8:item>
-							</Title>
-							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="ГруппаСтатистикаРасширеннаяПодсказка" id="77"/>
+						<PictureDecoration name="Декорация1" id="86">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="88"/>
+						</PictureDecoration>
+						<UsualGroup name="Группа1" id="100">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="101"/>
 							<ChildItems>
-								<Button name="КомандаОбновить" id="74">
-									<Type>CommandBarButton</Type>
-									<CommandName>Form.Command.КомандаОбновить</CommandName>
-									<ExtendedTooltip name="КомандаОбновитьРасширеннаяПодсказка" id="75"/>
-								</Button>
+								<LabelDecoration name="Декорация3" id="102">
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="104"/>
+								</LabelDecoration>
+								<LabelField name="КоличествоКоманд" id="65">
+									<DataPath>КоличествоКоманд</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+								<LabelField name="КоличествоИгроков" id="68">
+									<DataPath>КоличествоИгроков</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
+								</LabelField>
+								<LabelField name="КоличествоМатчей" id="71">
+									<DataPath>КоличествоМатчей</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="КоличествоМатчейКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="КоличествоМатчейРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="КоличествоТрансферов" id="83">
+									<DataPath>КоличествоТрансферов</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="КоличествоТрансферовКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="КоличествоТрансферовРасширеннаяПодсказка" id="85"/>
+								</LabelField>
 							</ChildItems>
-						</CommandBar>
-						<LabelField name="КоличествоКоманд" id="65">
-							<DataPath>КоличествоКоманд</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="66"/>
-							<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="67"/>
-						</LabelField>
-						<LabelField name="КоличествоИгроков" id="68">
-							<DataPath>КоличествоИгроков</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
-							<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
-						</LabelField>
-						<LabelField name="КоличествоМатчей" id="71">
-							<DataPath>КоличествоМатчей</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ContextMenu name="КоличествоМатчейКонтекстноеМеню" id="72"/>
-							<ExtendedTooltip name="КоличествоМатчейРасширеннаяПодсказка" id="73"/>
-						</LabelField>
-						<LabelField name="КоличествоТрансферов" id="83">
-							<DataPath>КоличествоТрансферов</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ContextMenu name="КоличествоТрансферовКонтекстноеМеню" id="84"/>
-							<ExtendedTooltip name="КоличествоТрансферовРасширеннаяПодсказка" id="85"/>
-						</LabelField>
+						</UsualGroup>
+						<PictureDecoration name="Декорация2" id="91">
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="93"/>
+						</PictureDecoration>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -485,6 +500,39 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ТурнирнаяТаблицаКакНаBBC" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Турнирная таблица как на BBC</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСтадионы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать стадионы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыводитьТурВместоЧемпионата" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить тур вместо чемпионата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПервоначальноеЗаполнение" id="1">
@@ -512,13 +560,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить</v8:content>
+					<v8:content>Обновить статистику</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновить</v8:content>
+					<v8:content>Обновить статистику</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

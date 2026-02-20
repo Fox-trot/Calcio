@@ -146,7 +146,6 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>~Список.Owner~Список.Владелец</Field>
-				<Field>~Список.Owner~Список.Владелец</Field>
 				<Field>Список.LineNumber</Field>
 				<Field>Список.Period</Field>
 				<Field>Список.Recorder</Field>

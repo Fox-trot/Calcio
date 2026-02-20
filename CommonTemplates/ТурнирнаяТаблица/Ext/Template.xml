@@ -3249,6 +3249,12 @@
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ЧН=0</v8:content>
+			</v8:item>
+		</format>
 	</format>
 	<format>
 		<font>0</font>
