@@ -32,6 +32,7 @@
 			<Width>100</Width>
 			<VerticalScrollBar>false</VerticalScrollBar>
 			<HorizontalScrollBar>false</HorizontalScrollBar>
+			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
 			<Events>

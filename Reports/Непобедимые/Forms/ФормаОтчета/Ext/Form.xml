@@ -96,6 +96,7 @@
 			<Protection>true</Protection>
 			<ShowGroups>false</ShowGroups>
 			<EnableDrag>false</EnableDrag>
+			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
 		</SpreadSheetDocumentField>

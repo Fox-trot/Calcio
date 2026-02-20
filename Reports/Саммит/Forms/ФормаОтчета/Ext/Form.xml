@@ -75,6 +75,7 @@
 					<ShowGroups>false</ShowGroups>
 					<EnableStartDrag>false</EnableStartDrag>
 					<EnableDrag>false</EnableDrag>
+					<BorderColor>style:FormBackColor</BorderColor>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
 				</SpreadSheetDocumentField>
@@ -247,6 +248,7 @@
 									<ShowHeaders>true</ShowHeaders>
 									<VerticalScrollBar>false</VerticalScrollBar>
 									<EnableDrag>false</EnableDrag>
+									<BorderColor>style:FormBackColor</BorderColor>
 									<ContextMenu name="ХронологияКонтекстноеМеню" id="50"/>
 									<ExtendedTooltip name="ХронологияРасширеннаяПодсказка" id="51"/>
 								</SpreadSheetDocumentField>

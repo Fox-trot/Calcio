@@ -180,6 +180,7 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.Команды</DataPath>
+							<ViewStatusLocation>None</ViewStatusLocation>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="КомандыКонтекстноеМеню" id="52"/>
 							<AutoCommandBar name="КомандыКоманднаяПанель" id="53">

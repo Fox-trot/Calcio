@@ -87,6 +87,7 @@
 					<ShowGroups>false</ShowGroups>
 					<EnableStartDrag>false</EnableStartDrag>
 					<EnableDrag>false</EnableDrag>
+					<BorderColor>style:FormBackColor</BorderColor>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="15"/>
 					<Events>

@@ -1302,6 +1302,7 @@
 							<VerticalScrollBar>false</VerticalScrollBar>
 							<HorizontalScrollBar>false</HorizontalScrollBar>
 							<Protection>true</Protection>
+							<BorderColor>style:FormBackColor</BorderColor>
 							<ContextMenu name="Предыдущие5КонтекстноеМеню" id="202"/>
 							<ExtendedTooltip name="Предыдущие5РасширеннаяПодсказка" id="203"/>
 						</SpreadSheetDocumentField>
