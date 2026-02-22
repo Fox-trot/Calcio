@@ -128,6 +128,9 @@
 			<TitleLocation>None</TitleLocation>
 			<ContextMenu name="ГрафикКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
+			</Events>
 		</ChartField>
 	</ChildItems>
 	<Attributes>
