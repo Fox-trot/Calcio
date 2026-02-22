@@ -161,8 +161,8 @@
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="c86a2f9c0aac524090da9ce1cb01b54e00000000"/>
 		<Metadata name="CommonModule.ПодпискиНаСобытие" id="59fcfeec-d8b9-4e89-820d-c37957185f5e" configVersion="92a7530f41831d40bc3691d5eee0be2400000000"/>
 		<Metadata name="CommonModule.ПодпискиНаСобытие.Module" id="59fcfeec-d8b9-4e89-820d-c37957185f5e.0" configVersion="80c139bfc194e14ebf8beb575813ab3c00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="5e2ff778792aba458eaf8548bc80b61600000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="bf2466595d8ab74ca5dd3283e10d2dfc00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="fc9ab1f68726444fb5ce05a5937ffe7b00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="e07ebe9d7e7ebe4eb25c92c4dcc7466500000000"/>
 		<Metadata name="CommonPicture.Goal" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2" configVersion="e3d81ddeec733140a9c904671908f11500000000"/>
 		<Metadata name="CommonPicture.Goal.Picture" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2.0" configVersion="14e894586c31eb4f9ef372a91d5c473300000000"/>
 		<Metadata name="CommonTemplate.Матчи" id="f88841db-8ac3-4714-b3a7-0b5f54d14108" configVersion="66acd10af320004884657be4c3f6c2c900000000"/>
@@ -212,8 +212,8 @@
 		<Metadata name="Document.Матч.Command.Матчи.CommandModule" id="bbf4639c-3e4a-4275-89fb-6602f5e3b4d9.2" configVersion="b0964e01b3d7d4409cb0d2a7abd6132e00000000"/>
 		<Metadata name="Document.Матч.Form.ФормаВыбора" id="5e83fc94-6bdf-4035-98fa-e27c5975326c" configVersion="2965bad4c8b2714f82a6050a01a0958f00000000"/>
 		<Metadata name="Document.Матч.Form.ФормаВыбора.Form" id="5e83fc94-6bdf-4035-98fa-e27c5975326c.0" configVersion="895202c5e8835246bd09b417d2ae07ff00000000"/>
-		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="2ad2fd84f817cd4680be6f8aeedbf0f100000000"/>
-		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="0d22f2ae2c4dce429f4aba0e2eedde2b00000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента" id="2f75c734-18e0-44f8-b519-de8e74d72640" configVersion="6987bc6919bc064ab9a3bec73b9f83a300000000"/>
+		<Metadata name="Document.Матч.Form.ФормаДокумента.Form" id="2f75c734-18e0-44f8-b519-de8e74d72640.0" configVersion="e181a69af80e694fa4e5a71020ff179800000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка" id="ec0c34f6-3dd4-4666-8e39-b281b216548a" configVersion="da2b258a2c333541a84e1898f2cf0a5400000000"/>
 		<Metadata name="Document.Матч.Form.ФормаСписка.Form" id="ec0c34f6-3dd4-4666-8e39-b281b216548a.0" configVersion="2a4d63b7b3811c4f953001290e51ee5f00000000"/>
 		<Metadata name="Document.Матч.ManagerModule" id="968fdade-8bba-49c0-9187-90aea4d5194a.2" configVersion="b131450d08bd214e93462c54a46017eb00000000"/>
@@ -286,8 +286,8 @@
 			<Metadata name="Report.ВМоменте.TabularSection.Данные.Attribute.Команда" id="a9db00c9-a15f-4e1b-90fd-3c7b826d4488"/>
 			<Metadata name="Report.ВМоменте.TabularSection.Данные.Attribute.КоличествоЗабито" id="b5e311d3-49a2-4d44-902a-a6ca71b30055"/>
 		</Metadata>
-		<Metadata name="Report.ВМоменте.Form.ФормаОтчета" id="3172caf1-911f-4267-8a08-42cb6a87ceef" configVersion="778746a240387b47b974fffce38c4abe00000000"/>
-		<Metadata name="Report.ВМоменте.Form.ФормаОтчета.Form" id="3172caf1-911f-4267-8a08-42cb6a87ceef.0" configVersion="b757430d916bcd42840ca4b8f7fd203800000000"/>
+		<Metadata name="Report.ВМоменте.Form.ФормаОтчета" id="3172caf1-911f-4267-8a08-42cb6a87ceef" configVersion="02fc61e7a07a3c4a8b983a01ed08695700000000"/>
+		<Metadata name="Report.ВМоменте.Form.ФормаОтчета.Form" id="3172caf1-911f-4267-8a08-42cb6a87ceef.0" configVersion="9003c698308f144baa0a88e06e317c1e00000000"/>
 		<Metadata name="Report.ВозрастныеГруппы" id="95610c7a-4ff9-4aaf-83fc-0f5ec5773652" configVersion="5233bf385e326b4b9af92754dc91148300000000">
 			<Metadata name="Report.ВозрастныеГруппы.Command.ВозрастныеГруппы" id="0bca8601-502f-4d2e-ab6d-784f7fbc7d19"/>
 			<Metadata name="Report.ВозрастныеГруппы.TabularSection.Данные.Attribute.Количество" id="34a2a5be-f6af-4623-bda5-1da7dea84c05"/>
