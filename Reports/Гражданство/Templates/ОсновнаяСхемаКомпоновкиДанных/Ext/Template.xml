@@ -95,7 +95,31 @@
 			<field>Амплуа</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ ПЕРВЫЕ 10
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Чемпионаты.Ссылка КАК Ссылка
+ПОМЕСТИТЬ Чемпионаты
+ИЗ
+	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+		ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+ГДЕ
+	Чемпионаты.Владелец = &amp;Лига
+	И Чемпионаты.ПометкаУдаления = ЛОЖЬ
+	И Чемпионаты.ДатаОкончания В
+			(ВЫБРАТЬ
+				МАКСИМУМ(Чемпионаты.ДатаОкончания)
+			ИЗ
+				Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
+					ПО
+						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
+			ГДЕ
+				Чемпионаты.Владелец = &amp;Лига
+				И Чемпионаты.ПометкаУдаления = ЛОЖЬ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ ПЕРВЫЕ 10
 	Страны.Ссылка КАК Страна
 ПОМЕСТИТЬ ВТ
 ИЗ
@@ -107,7 +131,11 @@
 			ПО Игроки.Страна = Страны.Ссылка
 		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
-	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
+	ЧемпионатыКоманды.Ссылка В
+			(ВЫБРАТЬ
+				Чемпионаты.Ссылка
+			ИЗ
+				Чемпионаты)
 {ГДЕ
 	Перемещения.Команда.*,
 	Перемещения.Амплуа.*}
@@ -139,7 +167,11 @@
 			ПО Перемещения.Команда = ЧемпионатыКоманды.Команда
 		ПО Игроки.Ссылка = Перемещения.Игрок
 ГДЕ
-	ЧемпионатыКоманды.Ссылка = &amp;Чемпионат
+	ЧемпионатыКоманды.Ссылка В
+			(ВЫБРАТЬ
+				Чемпионаты.Ссылка
+			ИЗ
+				Чемпионаты)
 {ГДЕ
 	Перемещения.Команда.*,
 	Перемещения.Амплуа.*}
@@ -172,16 +204,15 @@
 	ЛигаКоманды.Команда КАК КомандаТоп
 ИЗ
 	Справочник.Лига.Команды КАК ЛигаКоманды
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-		ПО ЛигаКоманды.Ссылка = Чемпионаты.Владелец
 ГДЕ
-	Чемпионаты.Ссылка = &amp;Чемпионат</query>
+	ЛигаКоманды.Ссылка = &amp;Лига</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
 		<destinationDataSet>НаборДанных2</destinationDataSet>
 		<sourceExpression>Команда</sourceExpression>
 		<destinationExpression>КомандаТоп</destinationExpression>
+		<required>false</required>
 	</dataSetLink>
 	<calculatedField>
 		<dataPath>Топ</dataPath>
@@ -201,33 +232,6 @@
 		<expression>Сумма(Количество)</expression>
 	</totalField>
 	<parameter>
-		<name>Чемпионат</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Чемпионат</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Чемпионаты</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-		<inputParameters>
-			<dcscor:item>
-				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
-				<dcscor:value xsi:type="dcscor:ChoiceParameters">
-					<dcscor:item>
-						<dcscor:choiceParameter>Отбор.ПометкаУдаления</dcscor:choiceParameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-				</dcscor:value>
-			</dcscor:item>
-		</inputParameters>
-		<denyIncompleteValues>true</denyIncompleteValues>
-		<use>Always</use>
-	</parameter>
-	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -245,9 +249,41 @@
 		<useRestriction>true</useRestriction>
 		<availableAsField>false</availableAsField>
 	</parameter>
+	<parameter>
+		<name>Лига</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лига</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Лига</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
+				<dcscor:value xsi:type="dcscor:ChoiceParameters">
+					<dcscor:item>
+						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Диаграмма</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Диаграмма</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -282,9 +318,9 @@
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Чемпионат</dcscor:parameter>
+					<dcscor:parameter>Лига</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>8046d413-72b1-4912-8177-283b16226b74</dcsset:userSettingID>
+					<dcsset:userSettingID>fab33e82-dc66-48d8-935f-3e2b0a013d00</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
@@ -394,6 +430,84 @@
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Таблица</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Таблица</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Страна</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Топ</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Топы только</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Команда</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Амплуа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Лига</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>375f3485-0c92-4306-9f4a-f1f6870de388</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Страна</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Количество</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
