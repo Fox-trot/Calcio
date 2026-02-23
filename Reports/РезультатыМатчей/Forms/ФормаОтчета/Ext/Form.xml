@@ -73,6 +73,9 @@
 			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="DetailProcessing">РезультатОбработкаРасшифровки</Event>
+			</Events>
 		</SpreadSheetDocumentField>
 	</ChildItems>
 	<Attributes>
