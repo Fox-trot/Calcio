@@ -136,6 +136,7 @@
 			<DataPath>Результат</DataPath>
 			<Visible>false</Visible>
 			<TitleLocation>None</TitleLocation>
+			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="19"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="20"/>
 		</SpreadSheetDocumentField>

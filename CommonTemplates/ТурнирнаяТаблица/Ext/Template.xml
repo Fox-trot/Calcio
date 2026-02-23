@@ -2825,7 +2825,6 @@
 	</format>
 	<format>
 		<font>1</font>
-		<border>0</border>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>

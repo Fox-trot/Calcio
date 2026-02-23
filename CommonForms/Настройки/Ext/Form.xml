@@ -11,11 +11,6 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПервоначальноеЗаполнениеРасширеннаяПодсказка" id="79"/>
 			</Button>
-			<Button name="ФормаКомандаОбновить" id="98">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КомандаОбновить</CommandName>
-				<ExtendedTooltip name="ФормаКомандаОбновитьРасширеннаяПодсказка" id="99"/>
-			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -44,12 +39,6 @@
 							<v8:content>Настройки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница настройки</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>StdPicture.Setting</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -277,63 +266,77 @@
 							<v8:content>Статистика</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страница статистика</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>StdPicture.Information</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<Group>AlwaysHorizontal</Group>
 					<ExtendedTooltip name="СтраницаСтатистикаРасширеннаяПодсказка" id="64"/>
 					<ChildItems>
-						<PictureDecoration name="Декорация1" id="86">
-							<ContextMenu name="Декорация1КонтекстноеМеню" id="87"/>
-							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="88"/>
-						</PictureDecoration>
-						<UsualGroup name="Группа1" id="100">
-							<Group>Vertical</Group>
+						<CommandBar name="КоманжнаяПанельСтатистика" id="107">
+							<HorizontalLocation>Right</HorizontalLocation>
+							<ExtendedTooltip name="КоманжнаяПанельСтатистикаРасширеннаяПодсказка" id="108"/>
+							<ChildItems>
+								<Button name="КомандаОбновить" id="98">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.КомандаОбновить</CommandName>
+									<ExtendedTooltip name="КомандаОбновитьРасширеннаяПодсказка" id="99"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<UsualGroup name="ГруппаСтатистика" id="105">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа статистика</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="101"/>
+							<ExtendedTooltip name="ГруппаСтатистикаРасширеннаяПодсказка" id="106"/>
 							<ChildItems>
-								<LabelDecoration name="Декорация3" id="102">
-									<ContextMenu name="Декорация3КонтекстноеМеню" id="103"/>
-									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="104"/>
-								</LabelDecoration>
-								<LabelField name="КоличествоКоманд" id="65">
-									<DataPath>КоличествоКоманд</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="66"/>
-									<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="67"/>
-								</LabelField>
-								<LabelField name="КоличествоИгроков" id="68">
-									<DataPath>КоличествоИгроков</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
-									<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
-								</LabelField>
-								<LabelField name="КоличествоМатчей" id="71">
-									<DataPath>КоличествоМатчей</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоМатчейКонтекстноеМеню" id="72"/>
-									<ExtendedTooltip name="КоличествоМатчейРасширеннаяПодсказка" id="73"/>
-								</LabelField>
-								<LabelField name="КоличествоТрансферов" id="83">
-									<DataPath>КоличествоТрансферов</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоТрансферовКонтекстноеМеню" id="84"/>
-									<ExtendedTooltip name="КоличествоТрансферовРасширеннаяПодсказка" id="85"/>
-								</LabelField>
+								<PictureDecoration name="Декорация1" id="86">
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="88"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа1" id="100">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<LabelField name="КоличествоКоманд" id="65">
+											<DataPath>КоличествоКоманд</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="67"/>
+										</LabelField>
+										<LabelField name="КоличествоИгроков" id="68">
+											<DataPath>КоличествоИгроков</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
+										</LabelField>
+										<LabelField name="КоличествоМатчей" id="71">
+											<DataPath>КоличествоМатчей</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="КоличествоМатчейКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="КоличествоМатчейРасширеннаяПодсказка" id="73"/>
+										</LabelField>
+										<LabelField name="КоличествоТрансферов" id="83">
+											<DataPath>КоличествоТрансферов</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="КоличествоТрансферовКонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="КоличествоТрансферовРасширеннаяПодсказка" id="85"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<PictureDecoration name="Декорация2" id="91">
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="93"/>
+								</PictureDecoration>
 							</ChildItems>
 						</UsualGroup>
-						<PictureDecoration name="Декорация2" id="91">
-							<ContextMenu name="Декорация2КонтекстноеМеню" id="92"/>
-							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="93"/>
-						</PictureDecoration>
 					</ChildItems>
 				</Page>
 			</ChildItems>
