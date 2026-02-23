@@ -2737,7 +2737,7 @@
 		<border>0</border>
 		<width>64</width>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<textColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:DisabledText</textColor>
 		<fillType>Parameter</fillType>
 	</format>
@@ -2816,7 +2816,7 @@
 		<border>0</border>
 		<width>64</width>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
