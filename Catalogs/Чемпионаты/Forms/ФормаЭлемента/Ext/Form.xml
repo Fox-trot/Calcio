@@ -431,20 +431,33 @@
 														</LabelField>
 													</ChildItems>
 												</UsualGroup>
-												<LabelField name="ЗрителейВсего" id="132">
-													<DataPath>ЗрителейВсего</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<ContextMenu name="ЗрителейВсегоКонтекстноеМеню" id="133"/>
-													<ExtendedTooltip name="ЗрителейВсегоРасширеннаяПодсказка" id="134"/>
-												</LabelField>
-												<LabelField name="ЗрителейВСреднемЗаИгру" id="135">
-													<DataPath>ЗрителейВСреднемЗаИгру</DataPath>
-													<TitleTextColor>win:DisabledText</TitleTextColor>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<TextColor>win:DisabledText</TextColor>
-													<ContextMenu name="ЗрителейВСреднемЗаИгруКонтекстноеМеню" id="136"/>
-													<ExtendedTooltip name="ЗрителейВСреднемЗаИгруРасширеннаяПодсказка" id="137"/>
-												</LabelField>
+												<UsualGroup name="ГруппаЗрители" id="174">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа зрители</v8:content>
+														</v8:item>
+													</Title>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаЗрителиРасширеннаяПодсказка" id="175"/>
+													<ChildItems>
+														<LabelField name="ЗрителейВсего" id="132">
+															<DataPath>ЗрителейВсего</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="ЗрителейВсегоКонтекстноеМеню" id="133"/>
+															<ExtendedTooltip name="ЗрителейВсегоРасширеннаяПодсказка" id="134"/>
+														</LabelField>
+														<LabelField name="ЗрителейВСреднемЗаИгру" id="135">
+															<DataPath>ЗрителейВСреднемЗаИгру</DataPath>
+															<TitleTextColor>win:DisabledText</TitleTextColor>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<TextColor>win:DisabledText</TextColor>
+															<ContextMenu name="ЗрителейВСреднемЗаИгруКонтекстноеМеню" id="136"/>
+															<ExtendedTooltip name="ЗрителейВСреднемЗаИгруРасширеннаяПодсказка" id="137"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
 												<LabelField name="СамыйКрупныйСчет" id="165">
 													<DataPath>СамыйКрупныйСчет</DataPath>
 													<Hiperlink>true</Hiperlink>
