@@ -70,7 +70,6 @@
 		<SpreadSheetDocumentField name="Результат" id="4">
 			<DataPath>Результат</DataPath>
 			<TitleLocation>None</TitleLocation>
-			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
 			<Events>

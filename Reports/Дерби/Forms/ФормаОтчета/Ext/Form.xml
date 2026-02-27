@@ -76,7 +76,6 @@
 					<DataPath>Результат</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HorizontalScrollBar>false</HorizontalScrollBar>
-					<BorderColor>style:FormBackColor</BorderColor>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="8"/>
 				</SpreadSheetDocumentField>

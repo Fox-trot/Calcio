@@ -85,7 +85,6 @@
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
 					<HorizontalScrollBar>false</HorizontalScrollBar>
-					<BorderColor>style:FormBackColor</BorderColor>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="10"/>
 					<Events>
