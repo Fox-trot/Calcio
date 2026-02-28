@@ -66,7 +66,6 @@
 					<ContextMenu name="КомандаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="10"/>
 					<Events>
-						<Event name="OnChange">КомандаПриИзменении</Event>
 						<Event name="Clearing">КомандаОчистка</Event>
 					</Events>
 				</InputField>
@@ -77,9 +76,6 @@
 					<ChooseType>false</ChooseType>
 					<ContextMenu name="ПоказательКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="ПоказательРасширеннаяПодсказка" id="22"/>
-					<Events>
-						<Event name="OnChange">ПоказательПриИзменении</Event>
-					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -294,18 +290,6 @@
 					</d4p1:titleArea>
 					<d4p1:scaleMarkLocation>None</d4p1:scaleMarkLocation>
 				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-					<d4p1:scaleStep>3</d4p1:scaleStep>
-				</d4p1:valuesScale>
 				<d4p1:seriesScale>
 					<d4p1:titleArea>
 						<d4p1:font kind="AutoFont"/>
