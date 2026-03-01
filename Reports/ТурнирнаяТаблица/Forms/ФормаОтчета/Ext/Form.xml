@@ -3,6 +3,7 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Customizable>false</Customizable>
 	<CommandSet>
+		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>Generate</ExcludedCommand>
@@ -12,6 +13,7 @@
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
+		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
 	<ReportFormType>Main</ReportFormType>
 	<AutoShowState>Auto</AutoShowState>

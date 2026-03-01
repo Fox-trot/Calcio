@@ -14,9 +14,7 @@
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
-		<ExcludedCommand>RestoreValues</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
-		<ExcludedCommand>SaveValues</ExcludedCommand>
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
 	<ReportResult>Результат</ReportResult>
