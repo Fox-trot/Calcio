@@ -5,6 +5,7 @@
 	<CommandSet>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
 	</CommandSet>

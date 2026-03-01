@@ -12,6 +12,7 @@
 	<CommandSet>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>RestoreValues</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
@@ -96,7 +97,6 @@
 			<Protection>true</Protection>
 			<ShowGroups>false</ShowGroups>
 			<EnableDrag>false</EnableDrag>
-			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
 		</SpreadSheetDocumentField>
