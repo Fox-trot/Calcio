@@ -181,18 +181,19 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа команды</v8:content>
+											<v8:content>Команды</v8:content>
 										</v8:item>
 									</Title>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Vertical</Group>
 									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
+									<TitleDataPath>Объект.Команды.RowsCount</TitleDataPath>
 									<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="139"/>
 									<ChildItems>
 										<Table name="Команды" id="16">
 											<Representation>List</Representation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>20</MaxWidth>
+											<Header>false</Header>
 											<VerticalLines>false</VerticalLines>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -284,13 +285,16 @@
 											<ChildItems>
 												<LabelField name="КомандыНомерСтроки" id="29">
 													<DataPath>Объект.Команды.LineNumber</DataPath>
+													<Visible>false</Visible>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
 													<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
 												</LabelField>
 												<InputField name="КомандыКоманда" id="32">
 													<DataPath>Объект.Команды.Команда</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<CreateButton>true</CreateButton>
 													<ChooseType>false</ChooseType>
 													<ChoiceParameterLinks>
@@ -321,6 +325,7 @@
 									<ChildItems>
 										<PictureDecoration name="Декорация2" id="147">
 											<Width>4</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="Декорация2КонтекстноеМеню" id="148"/>
 											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="149"/>
 										</PictureDecoration>
@@ -331,13 +336,11 @@
 											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="146"/>
 											<ChildItems>
 												<LabelDecoration name="Декорация1" id="140">
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="Декорация1КонтекстноеМеню" id="141"/>
 													<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="142"/>
 												</LabelDecoration>
 												<LabelField name="СыграноМатчей" id="103">
 													<DataPath>СыграноМатчей</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="СыграноМатчейКонтекстноеМеню" id="104"/>
 													<ExtendedTooltip name="СыграноМатчейРасширеннаяПодсказка" id="105"/>
 												</LabelField>
@@ -348,25 +351,23 @@
 															<v8:content>Группа олимпийская система</v8:content>
 														</v8:item>
 													</Title>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаОлимпийскаяСистемаРасширеннаяПодсказка" id="160"/>
 													<ChildItems>
 														<LabelField name="ПобедХозяев" id="106">
 															<DataPath>ПобедХозяев</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ПобедХозяевКонтекстноеМеню" id="107"/>
 															<ExtendedTooltip name="ПобедХозяевРасширеннаяПодсказка" id="108"/>
 														</LabelField>
 														<LabelField name="Ничьих" id="109">
 															<DataPath>Ничьих</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="НичьихКонтекстноеМеню" id="110"/>
 															<ExtendedTooltip name="НичьихРасширеннаяПодсказка" id="111"/>
 														</LabelField>
 														<LabelField name="ПобедГостей" id="112">
 															<DataPath>ПобедГостей</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ПобедГостейКонтекстноеМеню" id="113"/>
 															<ExtendedTooltip name="ПобедГостейРасширеннаяПодсказка" id="114"/>
 														</LabelField>
@@ -384,6 +385,7 @@
 															<v8:content>Группа забито голов</v8:content>
 														</v8:item>
 													</Title>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаЗабитоГоловРасширеннаяПодсказка" id="162"/>
@@ -402,7 +404,6 @@
 												</UsualGroup>
 												<LabelField name="ГоловВСреднемЗаИгру" id="123">
 													<DataPath>ГоловВСреднемЗаИгру</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ГоловВСреднемЗаИгруКонтекстноеМеню" id="124"/>
 													<ExtendedTooltip name="ГоловВСреднемЗаИгруРасширеннаяПодсказка" id="125"/>
 												</LabelField>
@@ -413,19 +414,18 @@
 															<v8:content>Группа голов в среднем за игру</v8:content>
 														</v8:item>
 													</Title>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаГоловВСреднемЗаИгруРасширеннаяПодсказка" id="164"/>
 													<ChildItems>
 														<LabelField name="ГоловВСреднемЗаИгруХозяева" id="126">
 															<DataPath>ГоловВСреднемЗаИгруХозяева</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ГоловВСреднемЗаИгруХозяеваКонтекстноеМеню" id="127"/>
 															<ExtendedTooltip name="ГоловВСреднемЗаИгруХозяеваРасширеннаяПодсказка" id="128"/>
 														</LabelField>
 														<LabelField name="ГоловВСреднемЗаИгруГости" id="129">
 															<DataPath>ГоловВСреднемЗаИгруГости</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ГоловВСреднемЗаИгруГостиКонтекстноеМеню" id="130"/>
 															<ExtendedTooltip name="ГоловВСреднемЗаИгруГостиРасширеннаяПодсказка" id="131"/>
 														</LabelField>
@@ -438,53 +438,66 @@
 															<v8:content>Группа зрители</v8:content>
 														</v8:item>
 													</Title>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаЗрителиРасширеннаяПодсказка" id="175"/>
 													<ChildItems>
 														<LabelField name="ЗрителейВсего" id="132">
 															<DataPath>ЗрителейВсего</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ЗрителейВсегоКонтекстноеМеню" id="133"/>
 															<ExtendedTooltip name="ЗрителейВсегоРасширеннаяПодсказка" id="134"/>
 														</LabelField>
 														<LabelField name="ЗрителейВСреднемЗаИгру" id="135">
 															<DataPath>ЗрителейВСреднемЗаИгру</DataPath>
 															<TitleTextColor>win:DisabledText</TitleTextColor>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<TextColor>win:DisabledText</TextColor>
 															<ContextMenu name="ЗрителейВСреднемЗаИгруКонтекстноеМеню" id="136"/>
 															<ExtendedTooltip name="ЗрителейВСреднемЗаИгруРасширеннаяПодсказка" id="137"/>
 														</LabelField>
 													</ChildItems>
 												</UsualGroup>
-												<LabelField name="СамыйКрупныйСчет" id="165">
-													<DataPath>СамыйКрупныйСчет</DataPath>
-													<Hiperlink>true</Hiperlink>
-													<ContextMenu name="СамыйКрупныйСчетКонтекстноеМеню" id="166"/>
-													<ExtendedTooltip name="СамыйКрупныйСчетРасширеннаяПодсказка" id="167"/>
-													<Events>
-														<Event name="Click">СсылкаНажатие</Event>
-													</Events>
-												</LabelField>
-												<LabelField name="СамаяКрупнаяПобедаДомашняя" id="171">
-													<DataPath>СамаяКрупнаяПобедаДомашняя</DataPath>
-													<Hiperlink>true</Hiperlink>
-													<ContextMenu name="СамаяКрупнаяПобедаДомашняяКонтекстноеМеню" id="172"/>
-													<ExtendedTooltip name="СамаяКрупнаяПобедаДомашняяРасширеннаяПодсказка" id="173"/>
-													<Events>
-														<Event name="Click">СсылкаНажатие</Event>
-													</Events>
-												</LabelField>
-												<LabelField name="СамаяКрупнаяПобедаГостевая" id="168">
-													<DataPath>СамаяКрупнаяПобедаГостевая</DataPath>
-													<Hiperlink>true</Hiperlink>
-													<ContextMenu name="СамаяКрупнаяПобедаГостеваяКонтекстноеМеню" id="169"/>
-													<ExtendedTooltip name="СамаяКрупнаяПобедаГостеваяРасширеннаяПодсказка" id="170"/>
-													<Events>
-														<Event name="Click">СсылкаНажатие</Event>
-													</Events>
-												</LabelField>
+												<UsualGroup name="ГруппаКрупныйСчет" id="176">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа крупный счет</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКрупныйСчетРасширеннаяПодсказка" id="177"/>
+													<ChildItems>
+														<LabelField name="СамыйКрупныйСчет" id="165">
+															<DataPath>СамыйКрупныйСчет</DataPath>
+															<Hiperlink>true</Hiperlink>
+															<ContextMenu name="СамыйКрупныйСчетКонтекстноеМеню" id="166"/>
+															<ExtendedTooltip name="СамыйКрупныйСчетРасширеннаяПодсказка" id="167"/>
+															<Events>
+																<Event name="Click">СсылкаНажатие</Event>
+															</Events>
+														</LabelField>
+														<LabelField name="СамаяКрупнаяПобедаДомашняя" id="171">
+															<DataPath>СамаяКрупнаяПобедаДомашняя</DataPath>
+															<Hiperlink>true</Hiperlink>
+															<ContextMenu name="СамаяКрупнаяПобедаДомашняяКонтекстноеМеню" id="172"/>
+															<ExtendedTooltip name="СамаяКрупнаяПобедаДомашняяРасширеннаяПодсказка" id="173"/>
+															<Events>
+																<Event name="Click">СсылкаНажатие</Event>
+															</Events>
+														</LabelField>
+														<LabelField name="СамаяКрупнаяПобедаГостевая" id="168">
+															<DataPath>СамаяКрупнаяПобедаГостевая</DataPath>
+															<Hiperlink>true</Hiperlink>
+															<ContextMenu name="СамаяКрупнаяПобедаГостеваяКонтекстноеМеню" id="169"/>
+															<ExtendedTooltip name="СамаяКрупнаяПобедаГостеваяРасширеннаяПодсказка" id="170"/>
+															<Events>
+																<Event name="Click">СсылкаНажатие</Event>
+															</Events>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
