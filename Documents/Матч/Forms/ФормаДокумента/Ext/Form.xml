@@ -296,6 +296,7 @@
 											<Events>
 												<Event name="OnChange">СтадионПриИзменении</Event>
 												<Event name="StartChoice">СтадионНачалоВыбора</Event>
+												<Event name="Creating">СтадионСоздание</Event>
 											</Events>
 										</InputField>
 										<InputField name="КоличествоЗрителей" id="80">
