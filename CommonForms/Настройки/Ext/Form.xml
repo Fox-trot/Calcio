@@ -94,9 +94,6 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="СтарыйВидАнонсовКонтекстноеМеню" id="16"/>
 							<ExtendedTooltip name="СтарыйВидАнонсовРасширеннаяПодсказка" id="17"/>
-							<Events>
-								<Event name="OnChange">СтарыйВидАнонсовПриИзменении</Event>
-							</Events>
 						</CheckBoxField>
 						<UsualGroup name="ГруппаКоличествоМатчейВАнонсе" id="21">
 							<Title>
