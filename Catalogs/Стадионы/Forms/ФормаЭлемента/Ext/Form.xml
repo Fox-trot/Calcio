@@ -60,6 +60,14 @@
 						<InputField name="Город" id="7">
 							<DataPath>Объект.Город</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<ChooseType>false</ChooseType>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Страна</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ContextMenu name="ГородКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="9"/>
 						</InputField>
@@ -169,6 +177,17 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Страна" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
