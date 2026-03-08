@@ -87,6 +87,13 @@
 									<ContextMenu name="ВыводитьТурВместоЧемпионатаКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="ВыводитьТурВместоЧемпионатаРасширеннаяПодсказка" id="45"/>
 								</CheckBoxField>
+								<CheckBoxField name="ПоказыватьПредстоящиеМатчи" id="109">
+									<DataPath>НаборКонстант.ПоказыватьПредстоящиеМатчи</DataPath>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоказыватьПредстоящиеМатчиКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ПоказыватьПредстоящиеМатчиРасширеннаяПодсказка" id="111"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<CheckBoxField name="СтарыйВидАнонсов" id="15">
@@ -353,6 +360,7 @@
 				<Field>НаборКонстант.ИспользоватьСтадионы</Field>
 				<Field>НаборКонстант.КоличествоМатчейВАнонсе</Field>
 				<Field>НаборКонстант.МояКоманда</Field>
+				<Field>НаборКонстант.ПоказыватьПредстоящиеМатчи</Field>
 				<Field>НаборКонстант.ПоказыватьРазницуМячей</Field>
 				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
 				<Field>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</Field>
