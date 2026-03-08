@@ -36,6 +36,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -929,6 +930,22 @@
 			<Action>ИмпортИгроков</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
+		<Command name="ТурыСоздать" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Туры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Туры создать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТурыСоздать</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
 	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
@@ -971,6 +988,31 @@
 				<Type>Auto</Type>
 				<CommandGroup>FormCommandBarImportant</CommandGroup>
 				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>Form.Command.ТурыСоздать</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<Index>6</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Catalog.Туры.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<Index>5</Index>
+			</Item>
+			<Item>
+				<Command>Catalog.Игроки.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>Catalog.Команды.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<Index>4</Index>
 			</Item>
 		</CommandBar>
 	</CommandInterface>
