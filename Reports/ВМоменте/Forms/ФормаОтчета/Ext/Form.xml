@@ -422,6 +422,14 @@
 				<Field>Показатель</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="Кеш" id="5">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Save>
+				<Field>Кеш</Field>
+			</Save>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Сформировать" id="1">

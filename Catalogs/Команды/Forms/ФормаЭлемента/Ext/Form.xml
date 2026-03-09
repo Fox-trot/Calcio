@@ -739,6 +739,22 @@
 										<Event name="Click">ДекорацияНажатие</Event>
 									</Events>
 								</PictureField>
+								<PictureField name="Декорация4" id="235">
+									<DataPath>Декорация4</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>8</MaxHeight>
+									<Hyperlink>true</Hyperlink>
+									<EnableStartDrag>true</EnableStartDrag>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="236"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="237"/>
+									<Events>
+										<Event name="Click">ДекорацияНажатие</Event>
+									</Events>
+								</PictureField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -2018,6 +2034,15 @@
 			</Type>
 		</Attribute>
 		<Attribute name="Декорация3" id="25">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Декорация4" id="26">
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
