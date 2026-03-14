@@ -17,6 +17,7 @@
 				<xr:Object>Document.Матч.Attribute.КоличествоЗрителей</xr:Object>
 				<xr:Object>Report.Посещаемость</xr:Object>
 				<xr:Object>Catalog.Стадионы</xr:Object>
+				<xr:Object>FilterCriterion.Посещаемость</xr:Object>
 			</Content>
 		</Properties>
 	</FunctionalOption>
