@@ -18,7 +18,23 @@
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСформировать1" id="54">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сформировать</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСформировать1РасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ПросмотрИсходныхДанных" id="19">
+				<Type>CommandBarButton</Type>
+				<HorizontalStretch>true</HorizontalStretch>
+				<VerticalStretch>true</VerticalStretch>
+				<Check>true</Check>
+				<CommandName>Form.Command.ПросмотрИсходныхДанных</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПросмотрИсходныхДанныхРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -96,6 +112,103 @@
 						<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
 					</Events>
 				</ChartField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФазы" id="21">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фазы</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФазыРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<Table name="Фазы" id="23">
+					<ChangeRowSet>false</ChangeRowSet>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Отчет.Фазы</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ФазыКонтекстноеМеню" id="24"/>
+					<AutoCommandBar name="ФазыКоманднаяПанель" id="25"/>
+					<ExtendedTooltip name="ФазыРасширеннаяПодсказка" id="26"/>
+					<SearchStringAddition name="ФазыСтрокаПоиска" id="27">
+						<AdditionSource>
+							<Item>Фазы</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФазыСтрокаПоискаКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ФазыСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ФазыСостояниеПросмотра" id="30">
+						<AdditionSource>
+							<Item>Фазы</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ФазыСостояниеПросмотраКонтекстноеМеню" id="31"/>
+						<ExtendedTooltip name="ФазыСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ФазыУправлениеПоиском" id="33">
+						<AdditionSource>
+							<Item>Фазы</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ФазыУправлениеПоискомКонтекстноеМеню" id="34"/>
+						<ExtendedTooltip name="ФазыУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ФазыНомерСтроки" id="36">
+							<DataPath>Отчет.Фазы.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФазыНомерСтрокиКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ФазыНомерСтрокиРасширеннаяПодсказка" id="38"/>
+						</LabelField>
+						<InputField name="ФазыТур" id="39">
+							<DataPath>Отчет.Фазы.Тур</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыТурКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ФазыТурРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<InputField name="ФазыКоманда" id="42">
+							<DataPath>Отчет.Фазы.Команда</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыКомандаКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ФазыКомандаРасширеннаяПодсказка" id="44"/>
+						</InputField>
+						<InputField name="ФазыПротивник" id="45">
+							<DataPath>Отчет.Фазы.Противник</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыПротивникКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ФазыПротивникРасширеннаяПодсказка" id="47"/>
+						</InputField>
+						<InputField name="ФазыФаза" id="48">
+							<DataPath>Отчет.Фазы.Фаза</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыФазаКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ФазыФазаРасширеннаяПодсказка" id="50"/>
+						</InputField>
+						<InputField name="ФазыФазаП" id="51">
+							<DataPath>Отчет.Фазы.ФазаП</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыФазаПКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ФазыФазаПРасширеннаяПодсказка" id="53"/>
+						</InputField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -381,6 +494,25 @@
 			</Picture>
 			<Action>Сформировать</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПросмотрИсходныхДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр исходных данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр исходных данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SpreadsheetReadOnly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПросмотрИсходныхДанных</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
-	<AutoTitle>false</AutoTitle>
-	<AutoFillCheck>false</AutoFillCheck>
-	<CommandBarLocation>None</CommandBarLocation>
-	<ShowTitle>false</ShowTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -15,19 +11,23 @@
 			</Title>
 			<VerticalStretch>false</VerticalStretch>
 			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
 		<Table name="Список" id="3">
 			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<ChangeRowSet>false</ChangeRowSet>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
-			<RowPictureDataPath>~Список.DefaultPicture</RowPictureDataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -45,14 +45,7 @@
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-				<ChildItems>
-					<Button name="СписокОбщаяКомандаОткрытьВИнтернете" id="25">
-						<Type>CommandBarButton</Type>
-						<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
-						<DataPath>Items.Список.CurrentData.Ref</DataPath>
-						<ExtendedTooltip name="СписокОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="26"/>
-					</Button>
-				</ChildItems>
+				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
@@ -79,41 +72,29 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="BeforeDeleteRow">СписокПередУдалением</Event>
+			</Events>
 			<ChildItems>
-				<LabelField name="Ссылка" id="16">
-					<DataPath>Список.Ref</DataPath>
-					<Visible>false</Visible>
+				<LabelField name="Период" id="16">
+					<DataPath>Список.Period</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Матч</v8:content>
-						</v8:item>
-					</Title>
-					<AutoCellHeight>true</AutoCellHeight>
-					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="СсылкаДата" id="22">
-					<DataPath>Список.Ref.Date</DataPath>
+				<LabelField name="Вопрос" id="19">
+					<DataPath>Список.Вопрос</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<AutoCellHeight>true</AutoCellHeight>
-					<Format>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ДЛФ=D</v8:content>
-						</v8:item>
-					</Format>
-					<ContextMenu name="СсылкаДатаКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="СсылкаДатаРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="ВопросКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ВопросРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<LabelField name="СсылкаСчет" id="19">
-					<DataPath>Список.Ref.Счет</DataPath>
+				<LabelField name="Время" id="25">
+					<DataPath>Список.Время</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<AutoCellHeight>true</AutoCellHeight>
-					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="21"/>
+					<ContextMenu name="ВремяКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВремяРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -124,40 +105,14 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-			<UseAlways>
-				<Field>~Список.Date~Список.Дата</Field>
-				<Field>~Список.Posted~Список.Проведен</Field>
-				<Field>~Список.Комментарий~Список.Комментарий</Field>
-				<Field>~Список.Счет~Список.Счет</Field>
-				<Field>Список.Ref</Field>
-			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
-				<Parameter>
-					<dcssch:name>Значение</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Игрок</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
-					</dcssch:valueType>
-					<dcssch:value xsi:nil="true"/>
-					<dcssch:useRestriction>false</dcssch:useRestriction>
-					<dcssch:use>Always</dcssch:use>
-				</Parameter>
-				<MainTable>FilterCriterion.МатчиСУчастием</MainTable>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.КвизРезультаты</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Ссылка.Проведен</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

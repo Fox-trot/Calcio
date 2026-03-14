@@ -81,11 +81,11 @@
 		<Command name="Catalog.Стадионы.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="CommonCommand.КомандаКалендарь">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="Catalog.Города.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.КомандаКалендарь">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Document.Матч.StandardCommand.Create">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
