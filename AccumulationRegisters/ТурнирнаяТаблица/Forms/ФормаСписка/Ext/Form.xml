@@ -7,6 +7,12 @@
 				<CommandName>Form.Command.ОтменаПроведения</CommandName>
 				<ExtendedTooltip name="СписокОтменаПроведенияРасширеннаяПодсказка" id="44"/>
 			</Button>
+			<Button name="ФормаОбщаяКомандаОткрытьВИнтернете" id="45">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+				<DataPath>Items.Список.CurrentData.Recorder</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="46"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

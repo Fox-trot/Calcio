@@ -315,17 +315,17 @@
 											<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="66"/>
 											<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="67"/>
 										</LabelField>
-										<LabelField name="КоличествоИгроков" id="68">
-											<DataPath>КоличествоИгроков</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
-											<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
-										</LabelField>
 										<LabelField name="КоличествоМатчей" id="71">
 											<DataPath>КоличествоМатчей</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<ContextMenu name="КоличествоМатчейКонтекстноеМеню" id="72"/>
 											<ExtendedTooltip name="КоличествоМатчейРасширеннаяПодсказка" id="73"/>
+										</LabelField>
+										<LabelField name="КоличествоИгроков" id="68">
+											<DataPath>КоличествоИгроков</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="КоличествоИгроковКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="КоличествоИгроковРасширеннаяПодсказка" id="70"/>
 										</LabelField>
 										<LabelField name="КоличествоТрансферов" id="83">
 											<DataPath>КоличествоТрансферов</DataPath>

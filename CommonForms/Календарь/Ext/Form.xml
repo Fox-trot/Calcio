@@ -147,6 +147,12 @@
 						<CommandName>Form.Command.КомандаОбновить</CommandName>
 						<ExtendedTooltip name="СписокКомандаОбновитьРасширеннаяПодсказка" id="95"/>
 					</Button>
+					<Button name="СписокОбщаяКомандаОткрытьВИнтернете" id="100">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+						<DataPath>Items.Список.CurrentData.ИгрокИлиМатч</DataPath>
+						<ExtendedTooltip name="СписокОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="101"/>
+					</Button>
 					<Popup name="СписокГруппаДополнительно" id="98">
 						<Title>
 							<v8:item>

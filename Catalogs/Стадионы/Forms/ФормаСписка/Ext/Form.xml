@@ -74,7 +74,6 @@
 			<ChildItems>
 				<LabelField name="Код" id="19">
 					<DataPath>Список.Code</DataPath>
-					<Visible>false</Visible>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>

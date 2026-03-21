@@ -102,6 +102,12 @@
 					<ContextMenu name="ВладелецКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="ВладелецСтрана" id="25">
+					<DataPath>Список.Owner.Страна</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="ВладелецСтранаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВладелецСтранаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -112,6 +118,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>~Список.Страна~Список.Страна</Field>
 				<Field>Список.Owner</Field>
 				<Field>Список.Ref</Field>
 				<Field>Список.ДатаОкончания</Field>

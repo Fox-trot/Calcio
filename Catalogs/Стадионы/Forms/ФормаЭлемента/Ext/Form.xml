@@ -42,6 +42,12 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="19"/>
 					<ChildItems>
+						<InputField name="Код" id="37">
+							<DataPath>Объект.Code</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КодКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="39"/>
+						</InputField>
 						<InputField name="Наименование" id="1">
 							<DataPath>Объект.Description</DataPath>
 							<EditMode>EnterOnInput</EditMode>
