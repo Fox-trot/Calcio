@@ -11,12 +11,18 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoFillCheck>false</AutoFillCheck>
 	<Customizable>false</Customizable>
-	<CommandBarLocation>None</CommandBarLocation>
 	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<ShowCloseButton>false</ShowCloseButton>
 	<CollapseItemsByImportanceVariant>DontUse</CollapseItemsByImportanceVariant>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КомандаОтчет" id="112">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаОтчет</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="КомандаОтчетРасширеннаяПодсказка" id="113"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -62,6 +68,7 @@
 							</ToolTip>
 							<HorizontalAlign>Center</HorizontalAlign>
 							<TextColor>style:SpecialTextColor</TextColor>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
 							<ContextMenu name="КвизРезультатЛучшийКонтекстноеМеню" id="108"/>
 							<ExtendedTooltip name="КвизРезультатЛучшийРасширеннаяПодсказка" id="109"/>
 						</LabelField>
@@ -959,6 +966,21 @@
 				</v8:item>
 			</Title>
 			<Action>КомандаСтарт</Action>
+		</Command>
+		<Command name="КомандаОтчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квиз-результаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет Квиз-результаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтчет</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -6,12 +6,17 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ОтчетДербиКомандаДерби" id="440">
+			<Button name="ОтчетДерби" id="440">
 				<Type>CommandBarButton</Type>
 				<CommandName>Report.Дерби.Command.КомандаДерби</CommandName>
 				<DataPath>Город</DataPath>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ОтчетДербиКомандаДербиРасширеннаяПодсказка" id="441"/>
+				<ExtendedTooltip name="ОтчетДербиРасширеннаяПодсказка" id="441"/>
+			</Button>
+			<Button name="ДербиСоздать" id="501">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДербиСоздать</CommandName>
+				<ExtendedTooltip name="ДербиСоздатьРасширеннаяПодсказка" id="502"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -86,6 +91,10 @@
 						<Event name="StartChoice">ТурНачалоВыбора</Event>
 					</Events>
 				</InputField>
+				<LabelDecoration name="Декорация1" id="503">
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="504"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="505"/>
+				</LabelDecoration>
 				<LabelDecoration name="ЭтоДерби" id="455">
 					<HorizontalStretch>true</HorizontalStretch>
 					<TextColor>style:SpecialTextColor</TextColor>
@@ -96,7 +105,6 @@
 						</v8:item>
 					</Title>
 					<Hyperlink>true</Hyperlink>
-					<HorizontalAlign>Center</HorizontalAlign>
 					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="456"/>
 					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="457"/>
 					<Events>
@@ -3148,6 +3156,25 @@
 			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
+		</Command>
+		<Command name="ДербиСоздать" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерби создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерби создать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДербиСоздать</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

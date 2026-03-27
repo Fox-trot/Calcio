@@ -276,9 +276,9 @@
 					</Picture>
 					<ExtendedTooltip name="СтраницаСтатистикаРасширеннаяПодсказка" id="64"/>
 					<ChildItems>
-						<CommandBar name="КоманжнаяПанельСтатистика" id="107">
+						<CommandBar name="КоманднаяПанельСтатистика" id="107">
 							<HorizontalLocation>Right</HorizontalLocation>
-							<ExtendedTooltip name="КоманжнаяПанельСтатистикаРасширеннаяПодсказка" id="108"/>
+							<ExtendedTooltip name="КоманднаяПанельСтатистикаРасширеннаяПодсказка" id="108"/>
 							<ChildItems>
 								<Button name="КомандаОбновить" id="98">
 									<Type>CommandBarButton</Type>

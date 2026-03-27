@@ -53,6 +53,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Эффективность</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВМоменте</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.Посещаемость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КвизРезультаты</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

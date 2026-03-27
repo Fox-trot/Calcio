@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>https://infostart.ru/profile/131897/</Vendor>
-			<Version>2.15</Version>
+			<Version>2.16</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -339,9 +339,12 @@
 			<Report>Непобедимые</Report>
 			<Report>Эффективность</Report>
 			<Report>Прогноз</Report>
+			<Report>КвизРезультаты</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
 			<InformationRegister>КвизРезультаты</InformationRegister>
+			<InformationRegister>Квиз</InformationRegister>
+			<InformationRegister>Дерби</InformationRegister>
 			<AccumulationRegister>ТурнирнаяТаблица</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
