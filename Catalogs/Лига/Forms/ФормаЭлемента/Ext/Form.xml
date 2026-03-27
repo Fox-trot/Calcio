@@ -51,6 +51,9 @@
 									<ChooseType>false</ChooseType>
 									<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">НаименованиеПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="Владелец" id="4">
 									<DataPath>Объект.Owner</DataPath>
