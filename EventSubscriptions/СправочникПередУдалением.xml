@@ -11,7 +11,16 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:TypeSet>cfg:CatalogObject</v8:TypeSet>
+				<v8:Type>cfg:CatalogObject.Команды</v8:Type>
+				<v8:Type>cfg:CatalogObject.Стадионы</v8:Type>
+				<v8:Type>cfg:CatalogObject.Туры</v8:Type>
+				<v8:Type>cfg:CatalogObject.Лига</v8:Type>
+				<v8:Type>cfg:CatalogObject.Города</v8:Type>
+				<v8:Type>cfg:CatalogObject.ВидыСпорта</v8:Type>
+				<v8:Type>cfg:CatalogObject.Страны</v8:Type>
+				<v8:Type>cfg:CatalogObject.Игроки</v8:Type>
+				<v8:Type>cfg:CatalogObject.Амплуа</v8:Type>
+				<v8:Type>cfg:CatalogObject.Чемпионаты</v8:Type>
 			</Source>
 			<Event>BeforeDelete</Event>
 			<Handler>CommonModule.ПодпискиНаСобытие.СправочникПередУдалением</Handler>
