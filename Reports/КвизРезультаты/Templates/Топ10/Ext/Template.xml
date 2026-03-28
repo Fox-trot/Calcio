@@ -11,13 +11,24 @@
 			<field>Уровень</field>
 			<presentationExpression>ВЫБОР КОГДА Уровень = 0 ТОГДА "Легкий" КОГДА Уровень = 1 ТОГДА "Стандартный" ИНАЧЕ "Сложный" КОНЕЦ</presentationExpression>
 			<valueType>
+				<v8:Type>xs:string</v8:Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
 					<v8:Digits>0</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КоличествоВопросов</dataPath>
@@ -72,9 +83,6 @@
 					<v8:content>Дата</v8:content>
 				</v8:item>
 			</title>
-			<role>
-				<dcscom:required>true</dcscom:required>
-			</role>
 			<valueType>
 				<v8:Type>xs:dateTime</v8:Type>
 				<v8:DateQualifiers>
@@ -104,7 +112,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Время</dataPath>
 			<field>Время</field>
-			<presentationExpression>ВЫБОР КОГДА Время &lt; 60 ТОГДА Время ИНАЧЕ ВремяСтрокой(Время) КОНЕЦ</presentationExpression>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
@@ -125,10 +132,26 @@
 					<v8:content>Количество вопросов</v8:content>
 				</v8:item>
 			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Уровень</dataPath>
 			<field>Уровень</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Сессия</dataPath>
@@ -166,10 +189,10 @@
 		И КвизРезультаты.Время &gt; 0
 	
 	СГРУППИРОВАТЬ ПО
-		Квиз.Период,
 		Квиз.Уровень,
 		Квиз.КоличествоВопросов,
-		Квиз.Сессия
+		Квиз.Сессия,
+		Квиз.Период
 	
 	ИМЕЮЩИЕ
 		КОЛИЧЕСТВО(КвизРезультаты.Период) = Квиз.КоличествоВопросов
@@ -194,11 +217,6 @@
 		<parameter>КоличествоВопросов</parameter>
 		<parameterListAllowed>false</parameterListAllowed>
 	</dataSetLink>
-	<totalField>
-		<dataPath>Время</dataPath>
-		<expression>Минимум(Время)</expression>
-		<group>КоличествоВопросов</group>
-	</totalField>
 	<totalField>
 		<dataPath>Время</dataPath>
 		<expression>Количество(Период)</expression>
@@ -392,6 +410,13 @@
 					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
 				</dcsset:item>
 			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
