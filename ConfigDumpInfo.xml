@@ -260,14 +260,14 @@
 		<Metadata name="FilterCriterion.Посещаемость.Form.ФормаСписка" id="85a3d85f-986c-487a-9d64-433c8aab0d79" configVersion="1df94dad59263c4abf8daf5806e2fff100000000"/>
 		<Metadata name="FilterCriterion.Посещаемость.Form.ФормаСписка.Form" id="85a3d85f-986c-487a-9d64-433c8aab0d79.0" configVersion="a0f8c5f9afa9424a9a91b35173ec21b100000000"/>
 		<Metadata name="FunctionalOption.ИспользоватьСтадионы" id="3c81d804-8e1c-47c4-9781-211474831a9d" configVersion="d0f7c71f415ddc44b252393c3dacc88900000000"/>
-		<Metadata name="InformationRegister.Дерби" id="586b676c-136a-4723-a825-0b677a7e2460" configVersion="d2d1897ff7a978498e05ff093aa69bf000000000">
+		<Metadata name="InformationRegister.Дерби" id="586b676c-136a-4723-a825-0b677a7e2460" configVersion="53e8c0b066cd4c4a9080d7dd61dbe33f00000000">
 			<Metadata name="InformationRegister.Дерби.Dimension.Команда" id="0a0dfcfe-4728-4717-91bd-1a14c67987fa"/>
 			<Metadata name="InformationRegister.Дерби.Dimension.Противник" id="6458db2c-7fa3-4f8b-a70f-f350d0177b7e"/>
 		</Metadata>
-		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи" id="399ed694-844b-4dcc-8174-dafe99165227" configVersion="d0b6a55dadc0f8449f4dc1c047c0cbd400000000"/>
-		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи.Form" id="399ed694-844b-4dcc-8174-dafe99165227.0" configVersion="f987b6473be06540bebc9f07a3c0cc1500000000"/>
+		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи" id="399ed694-844b-4dcc-8174-dafe99165227" configVersion="47395ee6b12f0048b05f05f7bd84ddf100000000"/>
+		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи.Form" id="399ed694-844b-4dcc-8174-dafe99165227.0" configVersion="bb53ea1f61ddee4d91aed496d746dc4f00000000"/>
 		<Metadata name="InformationRegister.Дерби.ManagerModule" id="586b676c-136a-4723-a825-0b677a7e2460.2" configVersion="d9cb80ddffc77b4bb1dd4642bac6af3d00000000"/>
-		<Metadata name="InformationRegister.Дерби.RecordSetModule" id="586b676c-136a-4723-a825-0b677a7e2460.1" configVersion="ab3afb3c4f0e564d9107999aa501ef7b00000000"/>
+		<Metadata name="InformationRegister.Дерби.RecordSetModule" id="586b676c-136a-4723-a825-0b677a7e2460.1" configVersion="42c10b47cbe72042b3e38d35e2bf431500000000"/>
 		<Metadata name="InformationRegister.Итоги" id="46dbc7ba-9bba-4cbe-a967-11ba02983528" configVersion="bfcbc2cbae858943aa7ebee3bffd93d100000000">
 			<Metadata name="InformationRegister.Итоги.Dimension.Чемпионат" id="0cee11e9-3095-41ea-9029-fe3d6f67ca1d"/>
 			<Metadata name="InformationRegister.Итоги.Resource.Место" id="143bb960-a6e3-4d46-b686-442cc492905c"/>
