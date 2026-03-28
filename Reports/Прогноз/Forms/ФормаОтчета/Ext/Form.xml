@@ -19,11 +19,11 @@
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаСформировать1" id="54">
+			<Button name="ФормаСформировать" id="7">
 				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Сформировать</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаСформировать1РасширеннаяПодсказка" id="55"/>
+				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="8"/>
 			</Button>
 			<Button name="ПросмотрИсходныхДанных" id="19">
 				<Type>CommandBarButton</Type>
@@ -52,12 +52,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="10"/>
 			<ChildItems>
-				<Button name="ФормаСформировать" id="7">
-					<Type>UsualButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.Command.Сформировать</CommandName>
-					<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="8"/>
-				</Button>
 				<InputField name="Чемпионат" id="1">
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<EditMode>EnterOnInput</EditMode>

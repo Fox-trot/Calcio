@@ -980,6 +980,10 @@
 					<v8:content>Открыть отчет Квиз-результаты</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>КомандаОтчет</Action>
 		</Command>
 	</Commands>
