@@ -2247,6 +2247,92 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>25</index>
+		<row>
+			<formatIndex>42</formatIndex>
+			<c>
+				<c>
+					<f>43</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>43</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>44</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мячи</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>7</i>
+				<c>
+					<f>45</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>26</index>
+		<row>
+			<formatIndex>20</formatIndex>
+			<c>
+				<c>
+					<f>31</f>
+					<parameter>Место</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>32</f>
+					<parameter>Команда</parameter>
+					<detailParameter>Команда</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>23</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>23</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>23</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>47</f>
+					<parameter>Разница</parameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<drawing>
 		<drawingType>Picture</drawingType>
 		<id>2</id>
@@ -2267,8 +2353,8 @@
 	</drawing>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>95</defaultFormatIndex>
-	<height>25</height>
-	<vgRows>25</vgRows>
+	<height>27</height>
+	<vgRows>27</vgRows>
 	<merge>
 		<r>0</r>
 		<c>1</c>
@@ -2446,6 +2532,21 @@
 		<c>5</c>
 		<w>2</w>
 	</merge>
+	<merge>
+		<r>25</r>
+		<c>1</c>
+		<w>3</w>
+	</merge>
+	<merge>
+		<r>25</r>
+		<c>8</c>
+		<w>4</w>
+	</merge>
+	<merge>
+		<r>26</r>
+		<c>1</c>
+		<w>3</w>
+	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
 		<area>
@@ -2532,6 +2633,16 @@
 			<type>Rows</type>
 			<beginRow>16</beginRow>
 			<endRow>16</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Детали4</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>26</beginRow>
+			<endRow>26</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -2826,6 +2937,16 @@
 			<type>Rows</type>
 			<beginRow>14</beginRow>
 			<endRow>14</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Шапка4</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>25</beginRow>
+			<endRow>25</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
