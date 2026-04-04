@@ -656,6 +656,10 @@
 							<v8:content>Достижения</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<ExtendedTooltip name="СтраницаЧемпионыРасширеннаяПодсказка" id="211"/>
 					<ChildItems>
 						<CommandBar name="КоманднаяПанельЧемпионы" id="215">
@@ -1384,6 +1388,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="Чемпионат" id="6">
 			<Title>
