@@ -524,6 +524,7 @@
 						<InputField name="Комментарий" id="46">
 							<DataPath>Объект.Комментарий</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
 						</InputField>
