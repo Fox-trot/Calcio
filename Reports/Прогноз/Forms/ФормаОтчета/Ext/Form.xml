@@ -122,7 +122,9 @@
 			<ExtendedTooltip name="ГруппаФазыРасширеннаяПодсказка" id="22"/>
 			<ChildItems>
 				<Table name="Фазы" id="23">
+					<ReadOnly>true</ReadOnly>
 					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -163,7 +165,7 @@
 							<ExtendedTooltip name="ФазыНомерСтрокиРасширеннаяПодсказка" id="38"/>
 						</LabelField>
 						<InputField name="ФазыТур" id="39">
-							<DataPath>Отчет.Фазы.Тур</DataPath>
+							<DataPath>Отчет.Фазы.ТурКод</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<EditMode>EnterOnInput</EditMode>
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>

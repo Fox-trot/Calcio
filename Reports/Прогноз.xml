@@ -123,7 +123,7 @@
 				<ChildObjects>
 					<Attribute uuid="8fb994f2-857c-4cef-9d0f-23054bc06b3f">
 						<Properties>
-							<Name>Тур</Name>
+							<Name>ТурКод</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -273,7 +273,7 @@
 				<ChildObjects>
 					<Attribute uuid="0d894605-dbba-4e67-8547-ed3dc476a7a8">
 						<Properties>
-							<Name>Тур</Name>
+							<Name>ТурКод</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
