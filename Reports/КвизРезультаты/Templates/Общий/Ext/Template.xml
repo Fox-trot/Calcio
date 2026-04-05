@@ -180,19 +180,13 @@
 	</dataSet>
 	<totalField>
 		<dataPath>Время</dataPath>
-		<expression>Минимум(Время)</expression>
-		<group>КоличествоВопросов</group>
+		<expression>Количество(Время)</expression>
+		<group>ОбщийИтог</group>
 	</totalField>
 	<totalField>
 		<dataPath>ПравильныхОтветов</dataPath>
 		<expression>СтрШаблон("%1 (%2)", Сумма(ПравильныхОтветов), Формат(Сумма(ПравильныхОтветов)*100/Сумма(КоличествоВопросов), "ЧДЦ=1") + "%")</expression>
 		<group>КоличествоВопросов</group>
-	</totalField>
-	<totalField>
-		<dataPath>Время</dataPath>
-		<expression>Количество(Период)</expression>
-		<group>Уровень</group>
-		<group>ОбщийИтог</group>
 	</totalField>
 	<parameter>
 		<name>Уровень</name>

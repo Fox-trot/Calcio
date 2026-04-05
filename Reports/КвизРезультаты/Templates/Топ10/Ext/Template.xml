@@ -232,8 +232,7 @@
 	</dataSetLink>
 	<totalField>
 		<dataPath>Время</dataPath>
-		<expression>Количество(Период)</expression>
-		<group>Уровень</group>
+		<expression>Количество(Время)</expression>
 		<group>ОбщийИтог</group>
 	</totalField>
 	<parameter>
