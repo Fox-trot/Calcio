@@ -66,6 +66,9 @@
 					</ChoiceParameterLinks>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТипГрафика" id="12">
 					<DataPath>ТипГрафика</DataPath>
@@ -82,6 +85,9 @@
 					<HeightControlVariant>UseContentHeight</HeightControlVariant>
 					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
