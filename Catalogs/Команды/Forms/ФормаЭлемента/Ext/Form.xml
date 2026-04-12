@@ -644,6 +644,7 @@
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаЧемпионы" id="210">
+					<EnableContentChange>true</EnableContentChange>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -660,6 +661,7 @@
 						<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<TitleDataPath>Чемпионы.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="СтраницаЧемпионыРасширеннаяПодсказка" id="211"/>
 					<ChildItems>
 						<CommandBar name="КоманднаяПанельЧемпионы" id="215">
@@ -675,6 +677,7 @@
 						</CommandBar>
 						<UsualGroup name="ГруппаЧемпионы" id="219">
 							<ReadOnly>true</ReadOnly>
+							<EnableContentChange>true</EnableContentChange>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаЧемпионыРасширеннаяПодсказка" id="220"/>
