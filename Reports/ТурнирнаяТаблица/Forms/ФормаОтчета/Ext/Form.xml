@@ -69,6 +69,7 @@
 				<InputField name="ТипМатчей" id="22">
 					<DataPath>Отчет.ТипМатчей</DataPath>
 					<Visible>false</Visible>
+					<TitleLocation>None</TitleLocation>
 					<ClearButton>true</ClearButton>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>

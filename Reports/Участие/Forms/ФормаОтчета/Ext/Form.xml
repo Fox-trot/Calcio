@@ -71,6 +71,18 @@
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
 					</Events>
 				</InputField>
+				<InputField name="ТипМатча" id="17">
+					<DataPath>Отчет.ТипМатча</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ТипМатчаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТипМатчаРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+					</Events>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<ChartField name="График" id="9">
@@ -78,6 +90,9 @@
 			<TitleLocation>None</TitleLocation>
 			<ContextMenu name="ГрафикКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="11"/>
+			<Events>
+				<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
+			</Events>
 		</ChartField>
 	</ChildItems>
 	<Attributes>
@@ -121,23 +136,9 @@
 						</v8:item>
 					</d4p1:text>
 					<d4p1:strIsChanged>false</d4p1:strIsChanged>
-					<d4p1:isExpand>true</d4p1:isExpand>
+					<d4p1:isExpand>false</d4p1:isExpand>
 					<d4p1:isIndicator>false</d4p1:isIndicator>
 					<d4p1:colorPriority>false</d4p1:colorPriority>
-					<d4p1:trendline>
-						<d4p1:approximationDegree>1</d4p1:approximationDegree>
-						<d4p1:stockChartUsedPointValue>Open</d4p1:stockChartUsedPointValue>
-						<d4p1:equationArea>
-							<d4p1:font kind="AutoFont"/>
-							<d4p1:textColor>auto</d4p1:textColor>
-							<d4p1:backColor>auto</d4p1:backColor>
-							<d4p1:border width="1">
-								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-							</d4p1:border>
-							<d4p1:borderColor>auto</d4p1:borderColor>
-						</d4p1:equationArea>
-						<d4p1:details xsi:nil="true"/>
-					</d4p1:trendline>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
