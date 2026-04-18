@@ -115,6 +115,11 @@
 					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="СсылкаЧемпионат" id="27">
+					<DataPath>Список.Ref.Тур.Owner</DataPath>
+					<ContextMenu name="СсылкаЧемпионатКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СсылкаЧемпионатРасширеннаяПодсказка" id="29"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -126,9 +131,11 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>~Список.Date~Список.Дата</Field>
+				<Field>~Список.Owner~Список.Владелец</Field>
 				<Field>~Список.Posted~Список.Проведен</Field>
 				<Field>~Список.Комментарий~Список.Комментарий</Field>
 				<Field>~Список.Счет~Список.Счет</Field>
+				<Field>~Список.Тур~Список.Тур</Field>
 				<Field>Список.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
