@@ -340,6 +340,7 @@
 			<Report>Эффективность</Report>
 			<Report>Прогноз</Report>
 			<Report>КвизРезультаты</Report>
+			<Report>Участие</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
 			<InformationRegister>КвизРезультаты</InformationRegister>

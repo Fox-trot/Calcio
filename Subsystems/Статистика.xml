@@ -54,6 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВМоменте</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.Посещаемость</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.КвизРезультаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e61b88ce-7d06-46d6-b809-4ce910ab4573</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
