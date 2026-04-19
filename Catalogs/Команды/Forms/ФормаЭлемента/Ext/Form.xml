@@ -817,6 +817,9 @@
 										<ContextMenu name="СезонУправлениеПоискомКонтекстноеМеню" id="98"/>
 										<ExtendedTooltip name="СезонУправлениеПоискомРасширеннаяПодсказка" id="99"/>
 									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">СезонВыбор</Event>
+									</Events>
 									<ChildItems>
 										<LabelField name="СезонКлюч" id="100">
 											<DataPath>Сезон.Ключ</DataPath>
@@ -1369,6 +1372,7 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:DocumentRef.Матч</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>8</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
