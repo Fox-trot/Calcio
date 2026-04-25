@@ -63,6 +63,9 @@
 					</ChoiceParameterLinks>
 					<ContextMenu name="ГородКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ГородПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТипГрафика" id="16">
 					<DataPath>ТипГрафика</DataPath>
