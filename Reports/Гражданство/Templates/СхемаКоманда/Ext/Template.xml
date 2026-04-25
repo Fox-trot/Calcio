@@ -19,6 +19,9 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Количество</dataPath>
@@ -36,7 +39,7 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	Перемещения.Игрок.Страна КАК Страна,
+	ЕСТЬNULL(Перемещения.Игрок.Страна.Ссылка, "Прочие") КАК Страна,
 	1 КАК Количество
 ИЗ
 	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
@@ -49,6 +52,21 @@
 		<dataPath>Количество</dataPath>
 		<expression>Сумма(Количество)</expression>
 	</totalField>
+	<parameter>
+		<name>Команда</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Команда</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
 	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
@@ -68,19 +86,19 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>Команда</name>
+		<name>Лига</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Команда</v8:content>
+				<v8:content>Лига</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Лига</v8:Type>
 		</valueType>
 		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-		<use>Always</use>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Диаграмма</dcsset:name>
@@ -101,6 +119,11 @@
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Лига</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -118,11 +141,23 @@
 					<dcscor:value xsi:type="v8ui:ChartType">Pie3D</dcscor:value>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:ChartLabelType">SeriesPercent</dcscor:value>
+						<dcscor:value xsi:type="v8ui:ChartLabelType">SeriesValuePercent</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.АвтоРаздвижениеСерий</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:AutoSeriesSeparation">Maximum</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">Right</dcscor:value>
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>

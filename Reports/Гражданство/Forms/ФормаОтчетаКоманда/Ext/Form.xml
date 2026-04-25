@@ -19,13 +19,6 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Команда" id="1">
-			<DataPath>Отчет.Команда</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ContextMenu name="КомандаКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="3"/>
-		</InputField>
 		<SpreadSheetDocumentField name="Результат" id="6">
 			<DataPath>Результат</DataPath>
 			<DefaultItem>true</DefaultItem>
