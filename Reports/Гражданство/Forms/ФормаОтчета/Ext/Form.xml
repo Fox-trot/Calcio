@@ -51,6 +51,9 @@
 				<v8:Type>cfg:ReportObject.Гражданство</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.Лига</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Результат" id="2">
 			<Title>
@@ -65,34 +68,6 @@
 		</Attribute>
 		<Attribute name="ДанныеРасшифровки" id="3">
 			<Type/>
-		</Attribute>
-		<Attribute name="Чемпионат" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Чемпионат</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
-			</Type>
-			<Save>
-				<Field>Чемпионат</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="Лига" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Лига</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
-			</Type>
-			<Save>
-				<Field>Лига</Field>
-			</Save>
 		</Attribute>
 	</Attributes>
 </Form>
