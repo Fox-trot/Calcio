@@ -119,7 +119,6 @@
 													<v8:content>Текущий номер</v8:content>
 												</v8:item>
 											</ToolTip>
-											<HorizontalAlign>Left</HorizontalAlign>
 											<Format>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -129,6 +128,11 @@
 											<ContextMenu name="ТекущийНомерКонтекстноеМеню" id="47"/>
 											<ExtendedTooltip name="ТекущийНомерРасширеннаяПодсказка" id="48"/>
 										</LabelField>
+										<PictureDecoration name="Декорация1" id="63">
+											<Height>1</Height>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="65"/>
+										</PictureDecoration>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаИзображение" id="25">
