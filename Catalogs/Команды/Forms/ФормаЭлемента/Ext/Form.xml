@@ -867,10 +867,10 @@
 							<ChildItems>
 								<Table name="Сезон" id="87">
 									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
 									<ReadOnly>true</ReadOnly>
 									<ChangeRowSet>false</ChangeRowSet>
 									<ChangeRowOrder>false</ChangeRowOrder>
-									<Header>false</Header>
 									<VerticalLines>false</VerticalLines>
 									<SearchOnInput>DontUse</SearchOnInput>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -1471,7 +1471,7 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:Type>cfg:DocumentRef.Матч</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>8</v8:Length>
+							<v8:Length>20</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
