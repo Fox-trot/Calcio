@@ -478,13 +478,13 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="47a4c46d-c2bf-488b-b19a-0d9ef43b9ed0">
+					<Attribute uuid="c9ce51d9-3f99-419e-9e42-18a67247ef7c">
 						<Properties>
-							<Name>Ссылка</Name>
+							<Name>Матч</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Ссылка</v8:content>
+									<v8:content>Матч</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
