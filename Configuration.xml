@@ -306,6 +306,7 @@
 			<Constant>АвтоудалениеНапоминаний</Constant>
 			<Constant>ИспользоватьСтадионы</Constant>
 			<Constant>ПоказыватьПредстоящиеМатчи</Constant>
+			<Constant>ВыводитьЛоготипыКоманд</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<CommonForm>КаталогаФайловУстановить</CommonForm>
