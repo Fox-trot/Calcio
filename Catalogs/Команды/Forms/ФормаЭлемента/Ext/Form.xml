@@ -746,26 +746,59 @@
 									<ContextMenu name="ИтогиКоличествоОчковКонтекстноеМеню" id="255"/>
 									<ExtendedTooltip name="ИтогиКоличествоОчковРасширеннаяПодсказка" id="256"/>
 								</InputField>
-								<InputField name="ИтогиКоличествоЗабито" id="257">
-									<DataPath>Итоги.КоличествоЗабито</DataPath>
+								<ColumnGroup name="ГруппаГолы" id="263">
 									<ReadOnly>true</ReadOnly>
-									<HorizontalAlign>Center</HorizontalAlign>
-									<EditMode>EnterOnInput</EditMode>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Голы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа голы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="ИтогиКоличествоЗабитоКонтекстноеМеню" id="258"/>
-									<ExtendedTooltip name="ИтогиКоличествоЗабитоРасширеннаяПодсказка" id="259"/>
-								</InputField>
-								<InputField name="ИтогиКоличествоПропущено" id="260">
-									<DataPath>Итоги.КоличествоПропущено</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<HorizontalAlign>Center</HorizontalAlign>
-									<EditMode>EnterOnInput</EditMode>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="ИтогиКоличествоПропущеноКонтекстноеМеню" id="261"/>
-									<ExtendedTooltip name="ИтогиКоличествоПропущеноРасширеннаяПодсказка" id="262"/>
-								</InputField>
+									<ExtendedTooltip name="ГруппаГолыРасширеннаяПодсказка" id="264"/>
+									<ChildItems>
+										<InputField name="ИтогиКоличествоЗабито" id="257">
+											<DataPath>Итоги.КоличествоЗабито</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Забито</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ИтогиКоличествоЗабитоКонтекстноеМеню" id="258"/>
+											<ExtendedTooltip name="ИтогиКоличествоЗабитоРасширеннаяПодсказка" id="259"/>
+										</InputField>
+										<InputField name="ИтогиКоличествоПропущено" id="260">
+											<DataPath>Итоги.КоличествоПропущено</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пропущено</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="ИтогиКоличествоПропущеноКонтекстноеМеню" id="261"/>
+											<ExtendedTooltip name="ИтогиКоличествоПропущеноРасширеннаяПодсказка" id="262"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 						<UsualGroup name="ГруппаЧемпионы" id="219">
