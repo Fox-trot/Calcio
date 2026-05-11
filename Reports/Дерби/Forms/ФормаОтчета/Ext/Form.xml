@@ -98,6 +98,9 @@
 					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="ГрафикКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="Selection">ГрафикВыбор</Event>
+					</Events>
 				</ChartField>
 			</ChildItems>
 		</UsualGroup>
