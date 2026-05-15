@@ -669,7 +669,7 @@
 			</c>
 			<c>
 				<c>
-					<f>43</f>
+					<f>44</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -679,7 +679,21 @@
 				</c>
 			</c>
 			<c>
-				<i>5</i>
+				<c>
+					<f>45</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>45</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>45</f>
+				</c>
+			</c>
+			<c>
 				<c>
 					<f>43</f>
 					<tl>
@@ -692,7 +706,7 @@
 			</c>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -703,7 +717,7 @@
 			</c>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -732,12 +746,12 @@
 			<c>
 				<i>16</i>
 				<c>
-					<f>46</f>
+					<f>47</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>46</f>
+					<f>47</f>
 				</c>
 			</c>
 		</row>
@@ -782,19 +796,14 @@
 			</c>
 			<c>
 				<c>
-					<f>47</f>
+					<f>48</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>48</f>
-					<parameter>КоличествоОчков</parameter>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>49</f>
+					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
 			<c>
@@ -805,12 +814,17 @@
 			<c>
 				<c>
 					<f>51</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>52</f>
 					<tl/>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>51</f>
+					<f>52</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -822,7 +836,7 @@
 			</c>
 			<c>
 				<c>
-					<f>50</f>
+					<f>51</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -834,7 +848,7 @@
 			</c>
 			<c>
 				<c>
-					<f>49</f>
+					<f>50</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -847,12 +861,12 @@
 			<c>
 				<i>16</i>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 		</row>
@@ -862,13 +876,13 @@
 		<row>
 			<c>
 				<c>
-					<f>53</f>
+					<f>54</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>54</f>
+					<f>55</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -876,17 +890,17 @@
 			<c>
 				<i>11</i>
 				<c>
-					<f>55</f>
-				</c>
-			</c>
-			<c>
-				<c>
 					<f>56</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>57</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>58</f>
 				</c>
 			</c>
 			<c>
@@ -907,13 +921,13 @@
 		<row>
 			<c>
 				<c>
-					<f>58</f>
+					<f>59</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>54</f>
+					<f>55</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -952,13 +966,13 @@
 		<row>
 			<c>
 				<c>
-					<f>59</f>
+					<f>60</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>60</f>
+					<f>61</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -997,13 +1011,13 @@
 		<row>
 			<c>
 				<c>
-					<f>61</f>
+					<f>62</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>60</f>
+					<f>61</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -1048,13 +1062,13 @@
 		<row>
 			<c>
 				<c>
-					<f>59</f>
+					<f>60</f>
 					<parameter>Дата</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>60</f>
+					<f>61</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Матч</detailParameter>
 				</c>
@@ -1093,7 +1107,7 @@
 		<row>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1104,7 +1118,7 @@
 			</c>
 			<c>
 				<c>
-					<f>62</f>
+					<f>63</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1116,7 +1130,7 @@
 			<c>
 				<i>7</i>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1128,7 +1142,7 @@
 			<c>
 				<i>9</i>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1150,7 +1164,7 @@
 			</c>
 			<c>
 				<c>
-					<f>63</f>
+					<f>64</f>
 					<parameter>Год</parameter>
 				</c>
 			</c>
@@ -1172,14 +1186,14 @@
 		<row>
 			<c>
 				<c>
-					<f>64</f>
+					<f>65</f>
 					<parameter>Год</parameter>
 					<detailParameter>Чемпионат</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>65</f>
+					<f>66</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -1211,30 +1225,23 @@
 			</c>
 			<c>
 				<c>
-					<f>47</f>
+					<f>48</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>66</f>
+					<f>67</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>48</f>
+					<f>49</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
 			<c>
 				<i>11</i>
-				<c>
-					<f>67</f>
-					<parameter>Аббревиатура</parameter>
-					<detailParameter>Регистратор</detailParameter>
-				</c>
-			</c>
-			<c>
 				<c>
 					<f>68</f>
 					<parameter>Аббревиатура</parameter>
@@ -1244,6 +1251,13 @@
 			<c>
 				<c>
 					<f>69</f>
+					<parameter>Аббревиатура</parameter>
+					<detailParameter>Регистратор</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>70</f>
 					<parameter>Аббревиатура</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
@@ -1266,14 +1280,14 @@
 		<row>
 			<c>
 				<c>
-					<f>70</f>
+					<f>71</f>
 					<parameter>Год</parameter>
 					<detailParameter>Чемпионат</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>71</f>
+					<f>72</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -1305,18 +1319,18 @@
 			</c>
 			<c>
 				<c>
-					<f>72</f>
+					<f>73</f>
 					<parameter>Разница</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>66</f>
+					<f>67</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>73</f>
+					<f>74</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
@@ -1354,7 +1368,7 @@
 		<row>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1365,7 +1379,7 @@
 			</c>
 			<c>
 				<c>
-					<f>74</f>
+					<f>44</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1391,7 +1405,7 @@
 			</c>
 			<c>
 				<c>
-					<f>74</f>
+					<f>44</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1511,13 +1525,13 @@
 			</c>
 			<c>
 				<c>
-					<f>48</f>
+					<f>49</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>50</f>
+					<f>51</f>
 				</c>
 			</c>
 			<c>
@@ -1527,13 +1541,13 @@
 			</c>
 			<c>
 				<c>
-					<f>47</f>
+					<f>48</f>
 					<parameter>КоличествоЗабито</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>48</f>
+					<f>49</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
@@ -1544,7 +1558,7 @@
 			</c>
 			<c>
 				<c>
-					<f>51</f>
+					<f>52</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1556,7 +1570,7 @@
 			</c>
 			<c>
 				<c>
-					<f>50</f>
+					<f>51</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1568,7 +1582,7 @@
 			</c>
 			<c>
 				<c>
-					<f>49</f>
+					<f>50</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1769,12 +1783,12 @@
 			<c>
 				<i>16</i>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 		</row>
@@ -1858,12 +1872,12 @@
 			<c>
 				<i>16</i>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>52</f>
+					<f>53</f>
 				</c>
 			</c>
 		</row>
@@ -1908,7 +1922,7 @@
 			<c>
 				<i>5</i>
 				<c>
-					<f>74</f>
+					<f>44</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1919,7 +1933,7 @@
 			</c>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1930,7 +1944,7 @@
 			</c>
 			<c>
 				<c>
-					<f>44</f>
+					<f>46</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2875,7 +2889,7 @@
 		<verticalAlignment>Top</verticalAlignment>
 	</format>
 	<format>
-		<height>54</height>
+		<height>-54</height>
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
@@ -2884,6 +2898,20 @@
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<font>0</font>
+		<border>0</border>
+		<height>54</height>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<height>54</height>
+		<width>48</width>
+		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
 		<font>0</font>
@@ -2893,11 +2921,6 @@
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
-	</format>
-	<format>
-		<height>54</height>
-		<width>48</width>
-		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
 		<height>54</height>
@@ -3170,15 +3193,6 @@
 				<v8:content>ЧН=0</v8:content>
 			</v8:item>
 		</format>
-	</format>
-	<format>
-		<font>0</font>
-		<border>0</border>
-		<height>54</height>
-		<width>48</width>
-		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Center</verticalAlignment>
-		<backColor>style:ReportHeaderBackColor</backColor>
 	</format>
 	<format>
 		<font>0</font>
