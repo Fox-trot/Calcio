@@ -80,7 +80,16 @@
 					<ContextMenu name="ПоказыватьТолькоЗабитыеМячиКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ПоказыватьТолькоЗабитыеМячиРасширеннаяПодсказка" id="25"/>
 					<Events>
-						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="Топ6" id="38">
+					<DataPath>Топ6</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Топ6КонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="Топ6РасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
 			</ChildItems>
@@ -604,6 +613,20 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="Топ6" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Топ 6</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Топ6</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
