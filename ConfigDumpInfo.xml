@@ -184,8 +184,8 @@
 		<Metadata name="CommonTemplate.Матчи.Template" id="f88841db-8ac3-4714-b3a7-0b5f54d14108.0" configVersion="c633dc7fe197b14a9624ccbf2c96d01b00000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d" configVersion="b8c305afbbd6684aa5d3096c946954e200000000"/>
 		<Metadata name="CommonTemplate.ПервоначальноеЗаполнение.Template" id="55e30fc4-d3af-45da-a1ea-9d9213f6f88d.0" configVersion="4e838b564b81684b8fb71a086f976b5800000000"/>
-		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="5ba48f4700f76046a783d805bf83424800000000"/>
-		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="ef40d4a824dfd143a806e8f8808ddabe00000000"/>
+		<Metadata name="CommonTemplate.ТурнирнаяТаблица" id="79231c0b-52bd-4d7f-a607-3a6379fba88a" configVersion="99af3a4eab58b94a9cd2bdc18be3c28e00000000"/>
+		<Metadata name="CommonTemplate.ТурнирнаяТаблица.Template" id="79231c0b-52bd-4d7f-a607-3a6379fba88a.0" configVersion="95a89a187d6ce54d867ce75ac86aa7c700000000"/>
 		<Metadata name="Configuration.Calcio" id="7fec6f60-76cf-4903-b59b-cac63c2b3f9d" configVersion="6c98149272cdea4993ccff4b71ab8bf700000000"/>
 		<Metadata name="Configuration.Calcio.CommandInterface" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.a" configVersion="de454a594bf7ab418259519bb0e970d300000000"/>
 		<Metadata name="Configuration.Calcio.ExternalConnectionModule" id="556b00c5-a60e-4c34-89f7-cead57bb32dd.5" configVersion="5c082244671ac8428ffa032c1f2749ef00000000"/>
@@ -456,14 +456,14 @@
 		<Metadata name="Report.Противостояние.Form.ФормаОтчета.Form" id="804a22fe-a5d9-4e17-88a8-bdfa18d681b5.0" configVersion="e737015d8ef54b4cbeecbe24af882e3100000000"/>
 		<Metadata name="Report.Противостояние.ManagerModule" id="e1493bc0-467f-4032-892e-0604f8f49e1a.2" configVersion="f273af0ad612644f8c93365a6e59e8ff00000000"/>
 		<Metadata name="Report.Противостояние.ObjectModule" id="e1493bc0-467f-4032-892e-0604f8f49e1a.0" configVersion="51e13ea37376de4fb624b1864826a37900000000"/>
-		<Metadata name="Report.РезультатыМатчей" id="8250ce7b-9f43-4ad0-90ce-0e78118668b9" configVersion="4d8fae787b567949aa723cb0b83c21b100000000">
+		<Metadata name="Report.РезультатыМатчей" id="8250ce7b-9f43-4ad0-90ce-0e78118668b9" configVersion="44295d59ba00fd4db1af3d6839d7650100000000">
 			<Metadata name="Report.РезультатыМатчей.Attribute.Чемпионат" id="366514dc-4027-41bb-9cd6-1f3f757236d0"/>
 			<Metadata name="Report.РезультатыМатчей.Command.Результаты" id="5925942c-c38c-4b4d-ba79-1a34373b4304"/>
 		</Metadata>
 		<Metadata name="Report.РезультатыМатчей.Command.Результаты.CommandModule" id="5925942c-c38c-4b4d-ba79-1a34373b4304.2" configVersion="0dc87f248fab3e409871f595c12cf89a00000000"/>
 		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d" configVersion="791ef2c88d9ad4499d2b389b76d2925c00000000"/>
 		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета.Form" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d.0" configVersion="0041e04be8d3554485f291c10f01136b00000000"/>
-		<Metadata name="Report.РезультатыМатчей.ObjectModule" id="8250ce7b-9f43-4ad0-90ce-0e78118668b9.0" configVersion="25162f749895704eb6135027da199e1a00000000"/>
+		<Metadata name="Report.РезультатыМатчей.ObjectModule" id="8250ce7b-9f43-4ad0-90ce-0e78118668b9.0" configVersion="d6f1fa0becc696479239cae9ee1a752800000000"/>
 		<Metadata name="Report.Саммит" id="6f098582-6cb3-46c1-86bc-4d5afb370768" configVersion="f31404e2c5ca0341bbb77603683b736a00000000">
 			<Metadata name="Report.Саммит.TabularSection.Данные.Attribute.Ничья" id="002cef21-5d6b-43d0-b6a1-05f38e651e34"/>
 			<Metadata name="Report.Саммит.TabularSection.Данные.Attribute.Проигрыш" id="25ce0bff-7708-4d67-bf58-dd76a0ca0e18"/>
@@ -498,8 +498,8 @@
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.Количество" id="ff34ba4f-724a-4c68-87c1-72d3a712eb29"/>
 		</Metadata>
 		<Metadata name="Report.ТурнирнаяТаблица.Command.ТурнирнаяТаблица.CommandModule" id="b8c4d6fa-9dbe-42d3-9008-f99e075f11c8.2" configVersion="fdb0f2bb74ff7f4b988204e9a3fdcf1600000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18" configVersion="e0a3b645bc9b9b468102b6702c80ae7200000000"/>
-		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета.Form" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18.0" configVersion="04498eca9ba8114693c6f1cb691583a600000000"/>
+		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18" configVersion="c8c12bd9fa3c7241afcdf1b3b31a832200000000"/>
+		<Metadata name="Report.ТурнирнаяТаблица.Form.ФормаОтчета.Form" id="d41db181-46ef-42a9-a6df-7d6fa6b8eb18.0" configVersion="e72a8328ca0b6a40a694b0547707899e00000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица.ManagerModule" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0.2" configVersion="b77eca289235aa468c8ea3da0a2dc19600000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица.ObjectModule" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0.0" configVersion="d1e9ed0549a0104b801899c71a47659000000000"/>
 		<Metadata name="Report.Участие" id="a1a2cd10-314b-4a99-8e3f-ac4a272376ff" configVersion="da6967d164843f4da6ed93080c7f645c00000000">
