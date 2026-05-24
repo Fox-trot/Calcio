@@ -187,6 +187,9 @@
 		<Command name="Report.Эффективность.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
+		<Command name="Report.СтатистикаЛиг.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
 		<Command name="Report.Прогноз.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
