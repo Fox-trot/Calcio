@@ -37,7 +37,6 @@
 			<Protection>true</Protection>
 			<EnableStartDrag>false</EnableStartDrag>
 			<EnableDrag>false</EnableDrag>
-			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
 			<Events>
