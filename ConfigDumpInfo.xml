@@ -487,8 +487,8 @@
 			<Metadata name="Report.СтатистикаЛиг.Command.КомандаСтатистика" id="5a39a9ac-7f76-48cf-a879-d5d020c40819"/>
 		</Metadata>
 		<Metadata name="Report.СтатистикаЛиг.Command.КомандаСтатистика.CommandModule" id="5a39a9ac-7f76-48cf-a879-d5d020c40819.2" configVersion="8e19f43307c8c64eb5e9dc8055fb88df00000000"/>
-		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885" configVersion="c2d77f49d0229a4a8018c85ea90cf0e300000000"/>
-		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета.Form" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885.0" configVersion="05a2299bee9ba74e8382123e7ab5032900000000"/>
+		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885" configVersion="15d96d113bd82549808cedddf265cd0b00000000"/>
+		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета.Form" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885.0" configVersion="2c5a83da44269f48944da4e1d32d492a00000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="d54beefa0198e246ad841d653ed18d5900000000">
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.КоличествоПропущено" id="05ac8a79-136f-484d-8463-a906dfe956a1"/>
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.Ничья" id="0718f782-3210-4b50-851c-b9dbcd05dd66"/>
@@ -532,8 +532,8 @@
 			<Metadata name="Report.Хронология.Command.КомандаХронология" id="f1d2d318-378b-45c7-9066-2a368d73e996"/>
 		</Metadata>
 		<Metadata name="Report.Хронология.Command.КомандаХронология.CommandModule" id="f1d2d318-378b-45c7-9066-2a368d73e996.2" configVersion="a2afa01734d61444b209285289911d0500000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="0e6a5b4db1949e45b04632c63bd787d700000000"/>
-		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="a7203c518a7e90498dcf56dcbd031ae800000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b" configVersion="0226ae81e5597b4cac51b3bf648a7ca700000000"/>
+		<Metadata name="Report.Хронология.Form.ФормаОтчета.Form" id="a0162b9f-cfa6-4acd-9559-e8f6d09de99b.0" configVersion="03210a327598c44bbb1d048c4f526c6b00000000"/>
 		<Metadata name="Report.ЧемпионскаяГонка" id="b265996d-063e-4306-963f-598b1fbe9f63" configVersion="186caad2c811ac468c5e0d951245bf6700000000">
 			<Metadata name="Report.ЧемпионскаяГонка.TabularSection.Данные.Attribute.Период" id="285dcb23-9a32-4d31-9cd0-392195924775"/>
 			<Metadata name="Report.ЧемпионскаяГонка.TabularSection.Данные.Attribute.Команда" id="62bd1a81-b21a-4c74-bd98-1a28ec585b61"/>
