@@ -340,8 +340,8 @@
 			<Report>ЧемпионскаяГонка</Report>
 			<Report>Непобедимые</Report>
 			<Report>Эффективность</Report>
-			<Report>Прогноз</Report>
 			<Report>СтатистикаЛиг</Report>
+			<Report>Прогноз</Report>
 			<Report>КвизРезультаты</Report>
 			<InformationRegister>ПеремещенияИгроков</InformationRegister>
 			<InformationRegister>Итоги</InformationRegister>
