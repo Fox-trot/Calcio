@@ -482,7 +482,7 @@
 		<Metadata name="Report.Саммит.ObjectModule" id="6f098582-6cb3-46c1-86bc-4d5afb370768.0" configVersion="fa0f438374fad048be68a2b5c6ef00c200000000"/>
 		<Metadata name="Report.Саммит.Template.Хронология" id="92597bf6-a550-4c07-b0a4-59e485cca786" configVersion="0b864f1194911644b8310bb53dac0c9700000000"/>
 		<Metadata name="Report.Саммит.Template.Хронология.Template" id="92597bf6-a550-4c07-b0a4-59e485cca786.0" configVersion="ff4f66021f65524abc7da5f2e59d274e00000000"/>
-		<Metadata name="Report.СтатистикаЛиг" id="531611be-4ec6-4c9a-84e5-f27955e97b24" configVersion="363ba6228cd0904da187e7a8460653fc00000000">
+		<Metadata name="Report.СтатистикаЛиг" id="531611be-4ec6-4c9a-84e5-f27955e97b24" configVersion="98e6e9d8c6758b42a025704296bc2a9b00000000">
 			<Metadata name="Report.СтатистикаЛиг.Attribute.Лига" id="018f130f-2017-4e9a-b062-d971e5de9461"/>
 			<Metadata name="Report.СтатистикаЛиг.Command.КомандаСтатистика" id="5a39a9ac-7f76-48cf-a879-d5d020c40819"/>
 			<Metadata name="Report.СтатистикаЛиг.TabularSection.Данные" id="afd3ec75-ae09-4141-8671-bcbbb6220302"/>
@@ -490,8 +490,8 @@
 			<Metadata name="Report.СтатистикаЛиг.TabularSection.Данные.Attribute.Серия" id="e23ccca5-e716-4952-8a62-2b64f67b94c8"/>
 		</Metadata>
 		<Metadata name="Report.СтатистикаЛиг.Command.КомандаСтатистика.CommandModule" id="5a39a9ac-7f76-48cf-a879-d5d020c40819.2" configVersion="8e19f43307c8c64eb5e9dc8055fb88df00000000"/>
-		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885" configVersion="d368fab69d2bd344acd326c0299b7aa100000000"/>
-		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета.Form" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885.0" configVersion="2294343df8cc7d47b74f0483c9ca759500000000"/>
+		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885" configVersion="ccc2b847f24f194e8c3c7b3b147aacf600000000"/>
+		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета.Form" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885.0" configVersion="77721d099a849c408a2cb58c8790f61600000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="d54beefa0198e246ad841d653ed18d5900000000">
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.КоличествоПропущено" id="05ac8a79-136f-484d-8463-a906dfe956a1"/>
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.Ничья" id="0718f782-3210-4b50-851c-b9dbcd05dd66"/>
