@@ -1732,10 +1732,29 @@
 					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>93</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Регистратор</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>94</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>95</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Регистратор</detailParameter>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>93</defaultFormatIndex>
+	<defaultFormatIndex>96</defaultFormatIndex>
 	<height>26</height>
 	<vgRows>26</vgRows>
 	<merge>
@@ -3102,6 +3121,7 @@
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 		<textOrientation>900</textOrientation>
+		<bySelectedColumns>false</bySelectedColumns>
 		<leftMargin>0</leftMargin>
 		<topMargin>0</topMargin>
 	</format>
@@ -3158,7 +3178,24 @@
 		<width>64</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
-		<textColor>style:SpecialTextColor</textColor>
+		<backColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/web">d3p1:Tomato</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<height>48</height>
+		<width>64</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/web">d3p1:YellowGreen</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<height>48</height>
+		<width>64</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
@@ -3172,10 +3209,14 @@
 	</format>
 	<format>
 		<border>0</border>
+	</format>
+	<format>
+		<border>0</border>
 		<height>48</height>
 		<width>64</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
+		<textColor>style:SpecialTextColor</textColor>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
