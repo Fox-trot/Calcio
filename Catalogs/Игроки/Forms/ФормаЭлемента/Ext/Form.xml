@@ -47,6 +47,13 @@
 								<InputField name="Амплуа" id="7">
 									<DataPath>Объект.Амплуа</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">ВидСпорта</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
 									<ContextMenu name="АмплуаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="АмплуаРасширеннаяПодсказка" id="9"/>
 								</InputField>
@@ -324,6 +331,17 @@
 			<Settings xsi:type="v8:TypeDescription">
 				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 			</Settings>
+		</Attribute>
+		<Attribute name="ВидСпорта" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид спорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыСпорта</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
