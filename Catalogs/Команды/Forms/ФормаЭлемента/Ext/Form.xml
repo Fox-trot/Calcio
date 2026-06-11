@@ -555,6 +555,12 @@
 										<DataPath>Items.Матчи.CurrentData.Ссылка</DataPath>
 										<ExtendedTooltip name="МатчиОбщаяКомандаИмпортМатчаРасширеннаяПодсказка" id="234"/>
 									</Button>
+									<Button name="ОбщаяКомандаОткрытьВИнтернете" id="268">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+										<DataPath>Items.Матчи.CurrentData.Матч</DataPath>
+										<ExtendedTooltip name="ОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="269"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="МатчиРасширеннаяПодсказка" id="54"/>
