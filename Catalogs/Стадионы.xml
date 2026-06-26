@@ -320,7 +320,7 @@
 			<DefaultObjectForm>Catalog.Стадионы.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
 			<DefaultListForm>Catalog.Стадионы.Form.ФормаСписка</DefaultListForm>
-			<DefaultChoiceForm/>
+			<DefaultChoiceForm>Catalog.Стадионы.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -545,6 +545,7 @@
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбораЧемпионат</Form>
+			<Form>ФормаВыбора</Form>
 			<Command uuid="df0ec435-b089-4382-9e0b-4e871469ca65">
 				<Properties>
 					<Name>КомандаСтадионыЧемпионата</Name>

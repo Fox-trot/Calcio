@@ -45,6 +45,7 @@
 				<InputField name="Дата" id="8">
 					<DataPath>Объект.Date</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<SpinButton>true</SpinButton>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
 					<Events>
