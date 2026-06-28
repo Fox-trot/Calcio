@@ -77,7 +77,6 @@
 					</ToolTip>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ChooseType>false</ChooseType>
-					<TextEdit>false</TextEdit>
 					<ChoiceList>
 						<xr:Item>
 							<xr:Presentation/>
