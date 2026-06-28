@@ -2284,7 +2284,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Уволить</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
