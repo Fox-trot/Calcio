@@ -245,8 +245,8 @@
 			<Metadata name="Document.СнятиеОчков.Attribute.Команда" id="dbd51fad-0f6d-4b4d-90b6-cf29dcd5970f"/>
 		</Metadata>
 		<Metadata name="Document.СнятиеОчков.AdditionalIndexes" id="b9fce1f6-1d0e-42f1-8930-42518b5860a7.3" configVersion="170a14c653829e49b8d091ef147e619a00000000"/>
-		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3" configVersion="8b4901f500547e42835b64edea1b904600000000"/>
-		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента.Form" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3.0" configVersion="5ce1c92371b9a54c984de37e9078533500000000"/>
+		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3" configVersion="37bf99c662b0c545999a99cb0c3e737500000000"/>
+		<Metadata name="Document.СнятиеОчков.Form.ФормаДокумента.Form" id="86d2a2e0-9f7e-41a5-9ebf-3f08a36268b3.0" configVersion="c4c128e0cd71454f9d748e0938af117100000000"/>
 		<Metadata name="Document.СнятиеОчков.Form.ФормаСписка" id="5c0319d9-8897-4a9a-8ee5-7599f54cd807" configVersion="384a3480dd1ac540a65528e4cb10606b00000000"/>
 		<Metadata name="Document.СнятиеОчков.Form.ФормаСписка.Form" id="5c0319d9-8897-4a9a-8ee5-7599f54cd807.0" configVersion="cbc37de22f02d140a604a6710670200b00000000"/>
 		<Metadata name="Document.СнятиеОчков.ManagerModule" id="b9fce1f6-1d0e-42f1-8930-42518b5860a7.2" configVersion="a1070cb2469cfb48bd5aa5be404c711500000000"/>
@@ -341,8 +341,8 @@
 			<Metadata name="Report.ВМоменте.TabularSection.Данные.Attribute.Команда" id="a9db00c9-a15f-4e1b-90fd-3c7b826d4488"/>
 			<Metadata name="Report.ВМоменте.TabularSection.Данные.Attribute.КоличествоЗабито" id="b5e311d3-49a2-4d44-902a-a6ca71b30055"/>
 		</Metadata>
-		<Metadata name="Report.ВМоменте.Form.ФормаОтчета" id="3172caf1-911f-4267-8a08-42cb6a87ceef" configVersion="3408a8a1b3016d4089cd8ff3d71f325500000000"/>
-		<Metadata name="Report.ВМоменте.Form.ФормаОтчета.Form" id="3172caf1-911f-4267-8a08-42cb6a87ceef.0" configVersion="75b9dbd893e962448d5241ebfbe72b8100000000"/>
+		<Metadata name="Report.ВМоменте.Form.ФормаОтчета" id="3172caf1-911f-4267-8a08-42cb6a87ceef" configVersion="6a287c6301f9b445838f56b970c4e00f00000000"/>
+		<Metadata name="Report.ВМоменте.Form.ФормаОтчета.Form" id="3172caf1-911f-4267-8a08-42cb6a87ceef.0" configVersion="82a241a0bcd7494f93260ec60841e06c00000000"/>
 		<Metadata name="Report.ВозрастныеГруппы" id="95610c7a-4ff9-4aaf-83fc-0f5ec5773652" configVersion="64b52f8cbc1dc140b3d4cd9765f7f10300000000">
 			<Metadata name="Report.ВозрастныеГруппы.Command.ВозрастныеГруппы" id="0bca8601-502f-4d2e-ab6d-784f7fbc7d19"/>
 			<Metadata name="Report.ВозрастныеГруппы.TabularSection.Данные.Attribute.Количество" id="34a2a5be-f6af-4623-bda5-1da7dea84c05"/>
@@ -463,8 +463,8 @@
 			<Metadata name="Report.РезультатыМатчей.Command.Результаты" id="5925942c-c38c-4b4d-ba79-1a34373b4304"/>
 		</Metadata>
 		<Metadata name="Report.РезультатыМатчей.Command.Результаты.CommandModule" id="5925942c-c38c-4b4d-ba79-1a34373b4304.2" configVersion="0dc87f248fab3e409871f595c12cf89a00000000"/>
-		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d" configVersion="791ef2c88d9ad4499d2b389b76d2925c00000000"/>
-		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета.Form" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d.0" configVersion="0041e04be8d3554485f291c10f01136b00000000"/>
+		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d" configVersion="6ba767e6ff9a0f47be5f4ce9aef4a38900000000"/>
+		<Metadata name="Report.РезультатыМатчей.Form.ФормаОтчета.Form" id="4fe624a9-9bc4-4940-818b-9f40bfb7cb0d.0" configVersion="4309a9b74cd351449c723eef413517bb00000000"/>
 		<Metadata name="Report.РезультатыМатчей.ObjectModule" id="8250ce7b-9f43-4ad0-90ce-0e78118668b9.0" configVersion="e0d2b41eafaeea47a1a4149ba74fcddb00000000"/>
 		<Metadata name="Report.Саммит" id="6f098582-6cb3-46c1-86bc-4d5afb370768" configVersion="f31404e2c5ca0341bbb77603683b736a00000000">
 			<Metadata name="Report.Саммит.TabularSection.Данные.Attribute.Ничья" id="002cef21-5d6b-43d0-b6a1-05f38e651e34"/>
