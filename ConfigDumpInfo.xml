@@ -178,8 +178,8 @@
 		<Metadata name="CommonModule.Общий.Module" id="c69d3923-6b9a-4e6c-b20d-1935c0b55da9.0" configVersion="faf8d65a22e1b840b16ee5dd7b98b3cc00000000"/>
 		<Metadata name="CommonModule.ПодпискиНаСобытие" id="59fcfeec-d8b9-4e89-820d-c37957185f5e" configVersion="aa5138f7e3ff9c4fa81305cb086f40ba00000000"/>
 		<Metadata name="CommonModule.ПодпискиНаСобытие.Module" id="59fcfeec-d8b9-4e89-820d-c37957185f5e.0" configVersion="6e75d6d600570a45a61cebfafdf33e9c00000000"/>
-		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="57d215942011c343b4b08424d8b3e77600000000"/>
-		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="4e78e49a761d4449a1df42fb14b2d58a00000000"/>
+		<Metadata name="CommonModule.СерверныйФункции" id="9428260f-435f-484e-8648-7f1cc0289931" configVersion="5f6dcb81d0c2864db1e1aa6a84717de800000000"/>
+		<Metadata name="CommonModule.СерверныйФункции.Module" id="9428260f-435f-484e-8648-7f1cc0289931.0" configVersion="f222f61f5821b84ca39fd96a2870c6b300000000"/>
 		<Metadata name="CommonPicture.Goal" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2" configVersion="f2e6ef658acc4b4fbb5240e5843880a000000000"/>
 		<Metadata name="CommonPicture.Goal.Picture" id="5e366ef0-2627-4202-9f96-67a0bb74d9e2.0" configVersion="4bc6ea8c77194f438fa9c87eeda3c1b500000000"/>
 		<Metadata name="CommonTemplate.Матчи" id="f88841db-8ac3-4714-b3a7-0b5f54d14108" configVersion="4ed40f2f9181ba49bd56010a2aee3f7c00000000"/>
@@ -551,8 +551,8 @@
 			<Metadata name="Report.ЧемпионскаяГонка.TabularSection.Данные.Attribute.КоличествоЗабито" id="edbb824e-634b-45cf-8f2d-f431597d458d"/>
 			<Metadata name="Report.ЧемпионскаяГонка.TabularSection.Данные.Attribute.Тур" id="f71209a8-45e0-4b1a-b538-91cc8f70b57e"/>
 		</Metadata>
-		<Metadata name="Report.ЧемпионскаяГонка.Form.ФормаОтчета" id="57d74208-7080-4509-923e-e98af53fb849" configVersion="b79ab6f59788824d9869fa9c1f12624e00000000"/>
-		<Metadata name="Report.ЧемпионскаяГонка.Form.ФормаОтчета.Form" id="57d74208-7080-4509-923e-e98af53fb849.0" configVersion="ef3fbc9c03282d4daa711152055ccee800000000"/>
+		<Metadata name="Report.ЧемпионскаяГонка.Form.ФормаОтчета" id="57d74208-7080-4509-923e-e98af53fb849" configVersion="923932fd52f0df4f8c368f4215f6c92200000000"/>
+		<Metadata name="Report.ЧемпионскаяГонка.Form.ФормаОтчета.Form" id="57d74208-7080-4509-923e-e98af53fb849.0" configVersion="f6d09a46cf04b341a630b4c89548db7c00000000"/>
 		<Metadata name="Report.ЧемпионскаяГонка.ObjectModule" id="b265996d-063e-4306-963f-598b1fbe9f63.0" configVersion="452b86859ff93849a3f9072ef4885eae00000000"/>
 		<Metadata name="Report.Чемпионы" id="195245fd-1183-4faf-b2f7-a53f07379942" configVersion="51c99b0ac328094e8269de6668af17f500000000">
 			<Metadata name="Report.Чемпионы.Command.КомандаЧемпионы" id="0c25bdf0-aa9d-46e9-b02b-ef9f366d47ca"/>
