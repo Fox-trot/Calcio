@@ -1248,12 +1248,14 @@
 			</c>
 			<c>
 				<c>
-					<f>40</f>
+					<f>67</f>
+					<parameter>Дома</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>67</f>
+					<f>68</f>
+					<parameter>Выезд</parameter>
 				</c>
 			</c>
 			<c>
@@ -1270,7 +1272,7 @@
 			</c>
 			<c>
 				<c>
-					<f>68</f>
+					<f>69</f>
 				</c>
 			</c>
 			<c>
@@ -1316,12 +1318,12 @@
 		<row>
 			<c>
 				<c>
-					<f>69</f>
+					<f>70</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>69</f>
+					<f>70</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1347,31 +1349,31 @@
 			</c>
 			<c>
 				<c>
-					<f>70</f>
+					<f>71</f>
 					<parameter>КоличествоИгр</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>71</f>
+					<f>72</f>
 					<parameter>Дома</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>72</f>
+					<f>73</f>
 					<parameter>Выезд</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>73</f>
+					<f>74</f>
 					<parameter>КоличествоЗабито</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>70</f>
+					<f>71</f>
 					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
@@ -1400,22 +1402,22 @@
 	<rowsItem>
 		<index>20</index>
 		<row>
-			<formatIndex>74</formatIndex>
+			<formatIndex>75</formatIndex>
 			<c>
 				<c>
-					<f>75</f>
+					<f>76</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>77</f>
+					<f>78</f>
 					<parameter>КоличествоГолов</parameter>
 					<detailParameter>Первая</detailParameter>
 				</c>
@@ -1423,7 +1425,7 @@
 			<c>
 				<i>4</i>
 				<c>
-					<f>78</f>
+					<f>79</f>
 					<parameter>Наименование</parameter>
 					<detailParameter>Ссылка</detailParameter>
 				</c>
@@ -1445,19 +1447,19 @@
 			</c>
 			<c>
 				<c>
-					<f>75</f>
+					<f>76</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Первая</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
@@ -1483,19 +1485,19 @@
 			<formatIndex>29</formatIndex>
 			<c>
 				<c>
-					<f>79</f>
+					<f>80</f>
 					<parameter>Команда2</parameter>
 					<detailParameter>Команда2</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>80</f>
+					<f>81</f>
 					<parameter>КоличествоГолов2</parameter>
 					<detailParameter>Вторая</detailParameter>
 				</c>
@@ -1523,19 +1525,19 @@
 			</c>
 			<c>
 				<c>
-					<f>79</f>
+					<f>80</f>
 					<parameter>Команда2</parameter>
 					<detailParameter>Вторая</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>76</f>
+					<f>77</f>
 				</c>
 			</c>
 			<c>
@@ -1560,7 +1562,7 @@
 		<row>
 			<c>
 				<c>
-					<f>81</f>
+					<f>82</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1572,7 +1574,7 @@
 			<c>
 				<i>5</i>
 				<c>
-					<f>82</f>
+					<f>83</f>
 					<parameter>Период</parameter>
 				</c>
 			</c>
@@ -1622,7 +1624,7 @@
 		<row>
 			<c>
 				<c>
-					<f>83</f>
+					<f>84</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1633,7 +1635,7 @@
 			</c>
 			<c>
 				<c>
-					<f>84</f>
+					<f>85</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1644,22 +1646,22 @@
 			</c>
 			<c>
 				<c>
-					<f>85</f>
+					<f>86</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>86</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>86</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>85</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>85</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>84</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1670,7 +1672,7 @@
 			</c>
 			<c>
 				<c>
-					<f>86</f>
+					<f>87</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
@@ -1683,43 +1685,36 @@
 			<formatIndex>65</formatIndex>
 			<c>
 				<c>
-					<f>87</f>
+					<f>88</f>
 					<parameter>Место</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>88</f>
+					<f>89</f>
 					<parameter>Команда</parameter>
 					<detailParameter>Команда</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>89</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>89</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>89</f>
+					<f>90</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>90</f>
-					<parameter>КоличествоОчков</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>90</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>91</f>
-					<parameter>Счет</parameter>
-					<detailParameter>Регистратор</detailParameter>
+					<parameter>КоличествоОчков</parameter>
 				</c>
 			</c>
 			<c>
@@ -1737,7 +1732,6 @@
 				</c>
 			</c>
 			<c>
-				<i>10</i>
 				<c>
 					<f>94</f>
 					<parameter>Счет</parameter>
@@ -1745,6 +1739,7 @@
 				</c>
 			</c>
 			<c>
+				<i>10</i>
 				<c>
 					<f>95</f>
 					<parameter>Счет</parameter>
@@ -1754,11 +1749,18 @@
 			<c>
 				<c>
 					<f>96</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Регистратор</detailParameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>97</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>98</f>
 					<parameter>Счет</parameter>
 					<detailParameter>Регистратор</detailParameter>
 				</c>
@@ -1766,7 +1768,7 @@
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>98</defaultFormatIndex>
+	<defaultFormatIndex>99</defaultFormatIndex>
 	<height>26</height>
 	<vgRows>26</vgRows>
 	<merge>
@@ -2957,9 +2959,17 @@
 	</format>
 	<format>
 		<border>0</border>
+		<width>72</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
 		<width>49</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
+		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<width>72</width>
