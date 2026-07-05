@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Игроки</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Изображение</dataPath>
+			<field>Изображение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изображение</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>v8:ValueStorage</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Порядок</dataPath>
+			<field>Порядок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Изображение1</dataPath>
+			<field>Изображение1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изображение</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>v8:ValueStorage</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка1</dataPath>
+			<field>Ссылка1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Игроки</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПеремещенияИгроков.Игрок КАК Ссылка,
+	МИНИМУМ(ВЫБОР
+			КОГДА ПеремещенияИгроков.Команда = СрезПоследних.Команда
+				ТОГДА 1
+			ИНАЧЕ 2
+		КОНЕЦ) КАК Порядок,
+	МАКСИМУМ(ВЫБОР
+			КОГДА ПеремещенияИгроков.Команда = СрезПоследних.Команда
+				ТОГДА СрезПоследних.Период
+			ИНАЧЕ ПеремещенияИгроков.Игрок.ДатаРождения
+		КОНЕЦ) КАК Дата
+ПОМЕСТИТЬ Ссылки
+ИЗ
+	РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроков
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ПеремещенияИгроковСрезПоследних.Игрок КАК Игрок,
+			ПеремещенияИгроковСрезПоследних.Команда КАК Команда,
+			МАКСИМУМ(ЕСТЬNULL(МатчСоставыКоманд.Ссылка.Дата, НАЧАЛОПЕРИОДА(ПеремещенияИгроковСрезПоследних.Период, ГОД))) КАК Период
+		ИЗ
+			РегистрСведений.ПеремещенияИгроков КАК ПеремещенияИгроковСрезПоследних
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.Матч.СоставыКоманд КАК МатчСоставыКоманд
+				ПО ПеремещенияИгроковСрезПоследних.Игрок = МатчСоставыКоманд.Игрок
+					И ПеремещенияИгроковСрезПоследних.Команда = МатчСоставыКоманд.Команда
+					И ПеремещенияИгроковСрезПоследних.Период &lt;= МатчСоставыКоманд.Ссылка.Дата
+		
+		СГРУППИРОВАТЬ ПО
+			ПеремещенияИгроковСрезПоследних.Игрок,
+			ПеремещенияИгроковСрезПоследних.Команда) КАК СрезПоследних
+		ПО ПеремещенияИгроков.Игрок = СрезПоследних.Игрок
+ГДЕ
+	ПеремещенияИгроков.Команда = &amp;Команда
+	И РАЗМЕРХРАНИМЫХДАННЫХ(ПеремещенияИгроков.Игрок.Изображение) &gt;= 64
+
+СГРУППИРОВАТЬ ПО
+	ПеремещенияИгроков.Игрок
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТурнирнаяТаблица.Регистратор,
+	7,
+	МАКСИМУМ(ТурнирнаяТаблица.Период)
+ИЗ
+	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+		ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
+ГДЕ
+	ТурнирнаяТаблица.Команда = &amp;Команда
+	И РАЗМЕРХРАНИМЫХДАННЫХ(Матч.Изображение) &gt;= 64
+
+СГРУППИРОВАТЬ ПО
+	ТурнирнаяТаблица.Регистратор
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Команды.Ссылка,
+	9,
+	NULL
+ИЗ
+	Справочник.Команды КАК Команды
+ГДЕ
+	Команды.Ссылка = &amp;Команда
+	И РАЗМЕРХРАНИМЫХДАННЫХ(Команды.Изображение) &gt;= 64
+
+СГРУППИРОВАТЬ ПО
+	Команды.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Ссылки.Ссылка КАК Ссылка,
+	Ссылки.Порядок КАК Порядок,
+	Ссылки.Дата КАК Дата,
+	АВТОНОМЕРЗАПИСИ() КАК Номер
+ПОМЕСТИТЬ Данные
+ИЗ
+	Ссылки КАК Ссылки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Данные.Ссылка КАК Ссылка,
+	ВЫБОР
+		КОГДА Данные.Порядок = 7
+			ТОГДА Матч.Изображение
+		ИНАЧЕ Данные.Ссылка.Изображение
+	КОНЕЦ КАК Изображение,
+	Данные.Порядок КАК Порядок,
+	Данные.Дата КАК Дата,
+	ВложенныйЗапрос.Ссылка КАК Ссылка1,
+	ВложенныйЗапрос.Изображение КАК Изображение1
+ИЗ
+	Данные КАК Данные
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+		ПО Данные.Ссылка = Матч.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Данные.Порядок КАК Порядок,
+			Данные.Дата КАК Дата,
+			Данные.Ссылка КАК Ссылка,
+			ВЫБОР
+				КОГДА Данные.Порядок = 7
+					ТОГДА Матч.Изображение
+				ИНАЧЕ Данные.Ссылка.Изображение
+			КОНЕЦ КАК Изображение,
+			Данные.Номер КАК Номер
+		ИЗ
+			Данные КАК Данные
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+				ПО Данные.Ссылка = Матч.Ссылка
+		ГДЕ
+			Данные.Номер / 2 &lt;&gt; ЦЕЛ(Данные.Номер / 2)) КАК ВложенныйЗапрос
+		ПО (Данные.Номер = ВложенныйЗапрос.Номер + 1)
+ГДЕ
+	ВЫБОР
+			КОГДА Данные.Порядок = 9
+				ТОГДА ИСТИНА
+			ИНАЧЕ Данные.Номер / 2 = ЦЕЛ(Данные.Номер / 2)
+		КОНЕЦ</query>
+	</dataSet>
+	<parameter>
+		<name>Команда</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Команда</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Изображение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Изображение1</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Команда</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>4a529169-1c1d-4f29-835f-6a7c5e89e1fb</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Порядок</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ссылка1</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
