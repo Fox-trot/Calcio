@@ -5,6 +5,7 @@
 			<Button name="СписокОтменаПроведения" id="43">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ОтменаПроведения</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="СписокОтменаПроведенияРасширеннаяПодсказка" id="44"/>
 			</Button>
 			<Button name="ФормаОбщаяКомандаОткрытьВИнтернете" id="45">
@@ -39,7 +40,6 @@
 			<DefaultItem>true</DefaultItem>
 			<ChangeRowSet>false</ChangeRowSet>
 			<MultipleChoice>true</MultipleChoice>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>

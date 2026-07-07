@@ -117,6 +117,7 @@
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>Список.Owner</Field>
+				<Field>Список.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>

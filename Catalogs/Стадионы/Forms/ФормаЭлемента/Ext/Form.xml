@@ -63,20 +63,33 @@
 								<Event name="OnChange">ВладелецПриИзменении</Event>
 							</Events>
 						</InputField>
-						<InputField name="Город" id="7">
-							<DataPath>Объект.Город</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ChooseType>false</ChooseType>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>Отбор.Владелец</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Страна</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="ГородКонтекстноеМеню" id="8"/>
-							<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="9"/>
-						</InputField>
+						<UsualGroup name="ГруппаГород" id="42">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГородРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<InputField name="Город" id="7">
+									<DataPath>Объект.Город</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChooseType>false</ChooseType>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Страна</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ГородКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="9"/>
+								</InputField>
+								<Button name="КомандаВладелец" id="40">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаВладелец</CommandName>
+									<ExtendedTooltip name="КомандаВладелецРасширеннаяПодсказка" id="41"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="КоличествоЗрителей" id="10">
 							<DataPath>Объект.КоличествоЗрителей</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -256,6 +269,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазрешитьРедактирование</Action>
+		</Command>
+		<Command name="КомандаВладелец" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владелец</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда владелец</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВладелец</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>
 	<CommandInterface>
