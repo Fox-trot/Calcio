@@ -11,8 +11,8 @@
 		</Metadata>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.AdditionalIndexes" id="94617236-0587-403c-88ce-66a45546d10d.4" configVersion="0670e7520096d342afeb215c13414de900000000"/>
 		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Command.Результаты.CommandModule" id="4b99963f-ba52-4bba-885c-c663d7cf92f0.2" configVersion="e91d87913f5eb741a6ab8ee35dcfa54d00000000"/>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b" configVersion="ddf4a43e514df048bccaa38070c283db00000000"/>
-		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка.Form" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b.0" configVersion="79731ddcc5b61a4b9a48bf740bd43c2800000000"/>
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b" configVersion="999b18f0c103c34d9d146a58c7c68b0400000000"/>
+		<Metadata name="AccumulationRegister.ТурнирнаяТаблица.Form.ФормаСписка.Form" id="a8dcfa10-9f4b-4acb-9f46-f21be93fb38b.0" configVersion="212d00bf89aa124a990adfcd5c836f4500000000"/>
 		<Metadata name="Catalog.Амплуа" id="e693f8f8-ae53-49a4-b110-260a44c87e29" configVersion="f6c3db9c837fca419a08d2ea1a2dc09c00000000">
 			<Metadata name="Catalog.Амплуа.Attribute.Комментарий" id="6a58cef7-4d65-4f57-adb3-e352a13fbca6"/>
 		</Metadata>
@@ -62,12 +62,12 @@
 		<Metadata name="Catalog.Команды.Form.ФормаВыбора.Form" id="06f0dadf-e310-4c91-b915-9eb3934afdca.0" configVersion="a370fec2fcba2b4796701fc56cf9420b00000000"/>
 		<Metadata name="Catalog.Команды.Form.ФормаВыбораЧемпионат" id="0ce9706d-0df3-4f55-bb91-c89aea59a798" configVersion="936fc70a48efc0488e6c5bd70d95855d00000000"/>
 		<Metadata name="Catalog.Команды.Form.ФормаВыбораЧемпионат.Form" id="0ce9706d-0df3-4f55-bb91-c89aea59a798.0" configVersion="b55a53958720ba4e9881870474ece42600000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаСписка" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf" configVersion="ebde389f1c3d5740a845bf9107c0e79a00000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаСписка.Form" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf.0" configVersion="b888882f9e03fe4ba653748a4edf16ea00000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="371b5e9a877d8947a22c749ad66ed92a00000000"/>
-		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="d20652550bfc7d4a9cf9a2f951a3604100000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаСписка" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf" configVersion="135b7682fdeb74489593b426e234809900000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаСписка.Form" id="a8779ce4-f6b3-48e1-9553-f7a668c39ecf.0" configVersion="7bb3f9d6a5d8bf47872e32acd3acfcac00000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента" id="47f98577-f359-43eb-a060-a5afd96d3a5d" configVersion="628146efb241b747b754690647b5006e00000000"/>
+		<Metadata name="Catalog.Команды.Form.ФормаЭлемента.Form" id="47f98577-f359-43eb-a060-a5afd96d3a5d.0" configVersion="48f921ffeb13e74b96d669eb231aa7df00000000"/>
 		<Metadata name="Catalog.Команды.ObjectModule" id="07425bdf-e35c-4b55-b985-d5c4b46c0f95.0" configVersion="307adb76137a1e449a4ec3a6d315874c00000000"/>
-		<Metadata name="Catalog.Лига" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2" configVersion="b479f2f9416fc84e987712fdc27442c700000000">
+		<Metadata name="Catalog.Лига" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2" configVersion="342cb45db99e364ca8b3c8c936a4375d00000000">
 			<Metadata name="Catalog.Лига.Attribute.КоличествоКоманд" id="09430497-8688-4b1a-bc5c-9a28e5373f03"/>
 			<Metadata name="Catalog.Лига.Attribute.Комментарий" id="3bf07ca8-aac0-4b23-9428-2dab40f87914"/>
 			<Metadata name="Catalog.Лига.TabularSection.Команды" id="609658e2-0ddb-4712-b5d0-ddca666ccbed"/>
@@ -81,6 +81,8 @@
 		<Metadata name="Catalog.Лига.AdditionalIndexes" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2.1d" configVersion="3eed2c5bead38d4fa3d451e22801b8d000000000"/>
 		<Metadata name="Catalog.Лига.Form.ФормаВыбора" id="7222757c-6c32-43fc-bc94-24c06539b535" configVersion="49f26d01e0266145a566f0343ef935fe00000000"/>
 		<Metadata name="Catalog.Лига.Form.ФормаВыбора.Form" id="7222757c-6c32-43fc-bc94-24c06539b535.0" configVersion="f6718db2e63bd144b31098769be8160b00000000"/>
+		<Metadata name="Catalog.Лига.Form.ФормаСписка" id="b2580509-fc2c-4320-97e7-8db930ff6594" configVersion="f88da012a57da44d8220bc66c31be35e00000000"/>
+		<Metadata name="Catalog.Лига.Form.ФормаСписка.Form" id="b2580509-fc2c-4320-97e7-8db930ff6594.0" configVersion="e65a1b1a86181b4bafa95b1eec23e5b600000000"/>
 		<Metadata name="Catalog.Лига.Form.ФормаЭлемента" id="e89cf676-4180-4c7d-9a04-a11843f582e4" configVersion="76b93974e472234ca8bad540cc9575ba00000000"/>
 		<Metadata name="Catalog.Лига.Form.ФормаЭлемента.Form" id="e89cf676-4180-4c7d-9a04-a11843f582e4.0" configVersion="7ee6eda86604c64b878aa11ffec786cb00000000"/>
 		<Metadata name="Catalog.Лига.ManagerModule" id="400944a9-50e8-4d6a-b8f8-5c7f9edfbdd2.3" configVersion="b54249518339914386370de0c9033ec400000000"/>
@@ -122,8 +124,8 @@
 		<Metadata name="Catalog.Туры.Command.КомандаСледующий.CommandModule" id="09abea2a-048f-460c-8def-331d60dd6c11.2" configVersion="f6495bf025f1c94d8d0811110601724500000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаВыбора" id="8b658c03-cd25-4800-bfb4-f8fcace44f87" configVersion="76db84e656b06443bf963aa135257f8900000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаВыбора.Form" id="8b658c03-cd25-4800-bfb4-f8fcace44f87.0" configVersion="d9bb20bdd9bf3946869d654554ac41f200000000"/>
-		<Metadata name="Catalog.Туры.Form.ФормаСписка" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7" configVersion="014033a38da71247853ebae1c9ddb77c00000000"/>
-		<Metadata name="Catalog.Туры.Form.ФормаСписка.Form" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7.0" configVersion="8f7053bbe8761d46b02628f97ce39f5000000000"/>
+		<Metadata name="Catalog.Туры.Form.ФормаСписка" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7" configVersion="baf464b6ab94d248bbb4b77bf5d3131b00000000"/>
+		<Metadata name="Catalog.Туры.Form.ФормаСписка.Form" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7.0" configVersion="8801ca6c6997734ba2eb74ebad46e84100000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента" id="20176894-388b-4c48-8bcc-b23abd1dfe18" configVersion="2e4e7d79a646c74d960d9b69f274d90000000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента.Form" id="20176894-388b-4c48-8bcc-b23abd1dfe18.0" configVersion="283d007ad8f58d419ab993720d1bec4600000000"/>
 		<Metadata name="Catalog.Туры.ManagerModule" id="8bedfced-d5fd-404b-a71f-110de6d1ec29.3" configVersion="c5b112ba395b3e409aec82c12377aa1100000000"/>
@@ -269,8 +271,8 @@
 		</Metadata>
 		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи" id="399ed694-844b-4dcc-8174-dafe99165227" configVersion="06c30e3986dab544a2ec68e0ea38d35f00000000"/>
 		<Metadata name="InformationRegister.Дерби.Form.ФормаЗаписи.Form" id="399ed694-844b-4dcc-8174-dafe99165227.0" configVersion="79e6a1f03f30204e80ce6bfcd0caed8e00000000"/>
-		<Metadata name="InformationRegister.Дерби.Form.ФормаСписка" id="4823a1cf-f152-489d-94da-023dabd1379f" configVersion="7b8d64cba0cde340895a48a4ab5b010e00000000"/>
-		<Metadata name="InformationRegister.Дерби.Form.ФормаСписка.Form" id="4823a1cf-f152-489d-94da-023dabd1379f.0" configVersion="ef9fcb0db05afb438e2d7fc13acae48b00000000"/>
+		<Metadata name="InformationRegister.Дерби.Form.ФормаСписка" id="4823a1cf-f152-489d-94da-023dabd1379f" configVersion="56d2e54c95e3dc4581e3b11c2a8b092e00000000"/>
+		<Metadata name="InformationRegister.Дерби.Form.ФормаСписка.Form" id="4823a1cf-f152-489d-94da-023dabd1379f.0" configVersion="80855490c9a96249bf2716b719cc020c00000000"/>
 		<Metadata name="InformationRegister.Дерби.ManagerModule" id="586b676c-136a-4723-a825-0b677a7e2460.2" configVersion="d9cb80ddffc77b4bb1dd4642bac6af3d00000000"/>
 		<Metadata name="InformationRegister.Дерби.RecordSetModule" id="586b676c-136a-4723-a825-0b677a7e2460.1" configVersion="ef1627e2c68f264baf1734d6056c504a00000000"/>
 		<Metadata name="InformationRegister.Итоги" id="46dbc7ba-9bba-4cbe-a967-11ba02983528" configVersion="faa6c6f0afbd654a839c6f722283533d00000000">
@@ -284,8 +286,8 @@
 		</Metadata>
 		<Metadata name="InformationRegister.Итоги.AdditionalIndexes" id="46dbc7ba-9bba-4cbe-a967-11ba02983528.3" configVersion="0e29628c8566124e8bc0f47ee6a9ddc300000000"/>
 		<Metadata name="InformationRegister.Итоги.Command.Итоги.CommandModule" id="806c9191-acc3-4cdb-a589-dd4986b14f7f.2" configVersion="c15047cf13346c409f9b9035bae522be00000000"/>
-		<Metadata name="InformationRegister.Итоги.Form.ФормаСписка" id="6fe589c4-656d-4f90-a30e-f0ee7b7e763a" configVersion="748ae91f77263941b1188d0bf9f19f0b00000000"/>
-		<Metadata name="InformationRegister.Итоги.Form.ФормаСписка.Form" id="6fe589c4-656d-4f90-a30e-f0ee7b7e763a.0" configVersion="183c2f0687988b47b30b90e64c067bd800000000"/>
+		<Metadata name="InformationRegister.Итоги.Form.ФормаСписка" id="6fe589c4-656d-4f90-a30e-f0ee7b7e763a" configVersion="d3497b41404cb94ab2ffce266824ed8000000000"/>
+		<Metadata name="InformationRegister.Итоги.Form.ФормаСписка.Form" id="6fe589c4-656d-4f90-a30e-f0ee7b7e763a.0" configVersion="75b6bae133505e40b01e8738c793838100000000"/>
 		<Metadata name="InformationRegister.Итоги.ManagerModule" id="46dbc7ba-9bba-4cbe-a967-11ba02983528.2" configVersion="0cc41c819c73ed47b0dbdcd4ad8d778500000000"/>
 		<Metadata name="InformationRegister.Итоги.RecordSetModule" id="46dbc7ba-9bba-4cbe-a967-11ba02983528.1" configVersion="90334f849e3aca4c8e1f4f0ad337c3f400000000"/>
 		<Metadata name="InformationRegister.Квиз" id="1509cc91-9a9e-46a6-a9e6-d5e39085953a" configVersion="12bb5c40798c3f419084ae144f3b2b7c00000000">
@@ -294,8 +296,8 @@
 			<Metadata name="InformationRegister.Квиз.Resource.КоличествоВопросов" id="c0c14986-61db-48c5-bf14-6dcbb8d03cad"/>
 		</Metadata>
 		<Metadata name="InformationRegister.Квиз.AdditionalIndexes" id="1509cc91-9a9e-46a6-a9e6-d5e39085953a.3" configVersion="8014ccc0173a2248b7f159a862d488fd00000000"/>
-		<Metadata name="InformationRegister.Квиз.Form.ФормаСписка" id="e59175e7-9347-464f-8855-64f43060ef6e" configVersion="51ba3fa72b918c4cbdf3b48afcfcd3d400000000"/>
-		<Metadata name="InformationRegister.Квиз.Form.ФормаСписка.Form" id="e59175e7-9347-464f-8855-64f43060ef6e.0" configVersion="dbf53fe9ce04e84c96d64f813a29ec6700000000"/>
+		<Metadata name="InformationRegister.Квиз.Form.ФормаСписка" id="e59175e7-9347-464f-8855-64f43060ef6e" configVersion="f33ca440fc8d2a42b56d2f478c37fbc000000000"/>
+		<Metadata name="InformationRegister.Квиз.Form.ФормаСписка.Form" id="e59175e7-9347-464f-8855-64f43060ef6e.0" configVersion="2d96a0b4aa32d94485fd820269d72b6d00000000"/>
 		<Metadata name="InformationRegister.Квиз.RecordSetModule" id="1509cc91-9a9e-46a6-a9e6-d5e39085953a.1" configVersion="9d6ef9bb45a3614d8888dc83815bb4c400000000"/>
 		<Metadata name="InformationRegister.КвизРезультаты" id="752d3ae1-19f9-47a0-aa76-9ac06ceb27dd" configVersion="8005461415c79540be8b401aeb67aa1f00000000">
 			<Metadata name="InformationRegister.КвизРезультаты.Resource.Время" id="37075067-2316-4106-b142-99840d493021"/>
@@ -303,8 +305,8 @@
 			<Metadata name="InformationRegister.КвизРезультаты.Dimension.Сессия" id="e281db76-922c-4032-b426-d29fac75a921"/>
 		</Metadata>
 		<Metadata name="InformationRegister.КвизРезультаты.AdditionalIndexes" id="752d3ae1-19f9-47a0-aa76-9ac06ceb27dd.3" configVersion="ddb1cc6bfb2c344ab0d01a859e6f224800000000"/>
-		<Metadata name="InformationRegister.КвизРезультаты.Form.ФормаСписка" id="aa290d65-0c6e-4905-bedd-1b5f59476def" configVersion="851ce90dd583f0479744924b389ea7e800000000"/>
-		<Metadata name="InformationRegister.КвизРезультаты.Form.ФормаСписка.Form" id="aa290d65-0c6e-4905-bedd-1b5f59476def.0" configVersion="e08c4ba2924c644dabf5efa863eff34d00000000"/>
+		<Metadata name="InformationRegister.КвизРезультаты.Form.ФормаСписка" id="aa290d65-0c6e-4905-bedd-1b5f59476def" configVersion="1dbde8b2505d304386e1d03375a96d9500000000"/>
+		<Metadata name="InformationRegister.КвизРезультаты.Form.ФормаСписка.Form" id="aa290d65-0c6e-4905-bedd-1b5f59476def.0" configVersion="203d2a11d44de44ea33ef2e2e85091b900000000"/>
 		<Metadata name="InformationRegister.КвизРезультаты.Help" id="752d3ae1-19f9-47a0-aa76-9ac06ceb27dd.0" configVersion="e9329b5282b8574ba7630b6d619e61b100000000"/>
 		<Metadata name="InformationRegister.КвизРезультаты.ManagerModule" id="752d3ae1-19f9-47a0-aa76-9ac06ceb27dd.2" configVersion="f1cf441af9ffd445adc59a737d20a54b00000000"/>
 		<Metadata name="InformationRegister.КвизРезультаты.RecordSetModule" id="752d3ae1-19f9-47a0-aa76-9ac06ceb27dd.1" configVersion="aa79e5a5ba327349906a259b3c8d0eb000000000"/>

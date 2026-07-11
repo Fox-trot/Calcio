@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаКомандаДербиОтчет" id="22">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КомандаДербиОтчет</CommandName>
-				<ExtendedTooltip name="ФормаКомандаДербиОтчетРасширеннаяПодсказка" id="23"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -27,6 +19,7 @@
 		</UsualGroup>
 		<Table name="Список" id="3">
 			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
@@ -78,18 +71,38 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Команда" id="16">
-					<DataPath>Список.Команда</DataPath>
+				<LabelField name="Наименование" id="16">
+					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="КомандаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="18"/>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="Противник" id="19">
-					<DataPath>Список.Противник</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ПротивникКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ПротивникРасширеннаяПодсказка" id="21"/>
+				<LabelField name="Код" id="19">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="КоличествоКоманд" id="22">
+					<DataPath>Список.КоличествоКоманд</DataPath>
+					<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="Страна" id="25">
+					<DataPath>Список.Страна</DataPath>
+					<ContextMenu name="СтранаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="28">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<CheckBoxField name="ОлимпийскаяСистема" id="31">
+					<DataPath>Список.ОлимпийскаяСистема</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -102,7 +115,7 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>InformationRegister.Дерби</MainTable>
+				<MainTable>Catalog.Лига</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -117,30 +130,9 @@
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="КомандаДербиОтчет" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отчет Дерби</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть отчет Дерби</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Report</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>КомандаДербиОтчет</Action>
-			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
-		</Command>
-	</Commands>
 </Form>
