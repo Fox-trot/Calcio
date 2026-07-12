@@ -139,8 +139,8 @@
 			<Metadata name="Catalog.Чемпионаты.TabularSection.Команды" id="ccf0adf4-c60f-42ae-a50a-dc44ca4f54cd"/>
 			<Metadata name="Catalog.Чемпионаты.Attribute.Комментарий" id="fa05ad9f-cf71-4659-8923-2d6932902e10"/>
 		</Metadata>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаВыбора" id="e1e5774a-bcc9-41f0-af2f-a2e9447ea279" configVersion="3d6e0255d401994a9d62c04e8014517100000000"/>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаВыбора.Form" id="e1e5774a-bcc9-41f0-af2f-a2e9447ea279.0" configVersion="07aec7be6ea3854db29e72ad0cf8e01800000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаВыбора" id="e1e5774a-bcc9-41f0-af2f-a2e9447ea279" configVersion="e4db2985479b354ebb3bb643b155b27800000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаВыбора.Form" id="e1e5774a-bcc9-41f0-af2f-a2e9447ea279.0" configVersion="fa67a81cff39644fb022296fd54ffec800000000"/>
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаСписка" id="ec160c4a-6090-4698-908a-3d178fcced85" configVersion="c44e78c3f4550c4381c9584d97fd3a6900000000"/>
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаСписка.Form" id="ec160c4a-6090-4698-908a-3d178fcced85.0" configVersion="7c3c3877fbdcaf43999e464110c23b4e00000000"/>
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента" id="241ea06c-f800-4a92-b36a-81261b8d8768" configVersion="1cf54756d001f248a82daa04a19fdeb600000000"/>
@@ -450,8 +450,8 @@
 			<Metadata name="Report.Прогноз.TabularSection.Фазы.Attribute.ФазаП" id="d7c7d9eb-621d-4a3c-ba1c-440e5ae48512"/>
 		</Metadata>
 		<Metadata name="Report.Прогноз.Command.КомандаПрогноз.CommandModule" id="68075ab0-1a97-40e0-81b4-fcf8ce40bffd.2" configVersion="b02da89efb860a4cbcb3ff8d247696ef00000000"/>
-		<Metadata name="Report.Прогноз.Form.ФормаОтчета" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8" configVersion="859a3f51be513145ad755538cb9b075b00000000"/>
-		<Metadata name="Report.Прогноз.Form.ФормаОтчета.Form" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8.0" configVersion="f7234c3baebe4845bacd2581f62ccc2800000000"/>
+		<Metadata name="Report.Прогноз.Form.ФормаОтчета" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8" configVersion="3cf7f6963d63eb408c1a9397155d13cc00000000"/>
+		<Metadata name="Report.Прогноз.Form.ФормаОтчета.Form" id="68ddefa8-3466-4529-a0b3-3c573bfed4d8.0" configVersion="c3376a30a8aadc4c88a24962a394a74c00000000"/>
 		<Metadata name="Report.Прогноз.ObjectModule" id="4ca9bd09-e55a-43ed-a3ec-0fabc3a29271.0" configVersion="6f658dde0fc2894996d787b17fdb401400000000"/>
 		<Metadata name="Report.Противостояние" id="e1493bc0-467f-4032-892e-0604f8f49e1a" configVersion="3f7cfb23601f524ca7bed1a4d750d69400000000">
 			<Metadata name="Report.Противостояние.TabularSection.Данные.Attribute.Выигрыш" id="2f61319f-4db9-4b89-81c0-c34cac77f1a3"/>
