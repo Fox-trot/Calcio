@@ -1543,6 +1543,9 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
 			</Type>
+			<Save>
+				<Field>Чемпионат</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Страны" id="7">
 			<Title>
