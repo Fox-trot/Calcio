@@ -108,7 +108,10 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.DeletionMark</Field>
 				<Field>Список.Owner</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.Город</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
