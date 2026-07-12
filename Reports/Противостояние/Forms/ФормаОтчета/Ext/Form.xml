@@ -60,6 +60,7 @@
 					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="7"/>
 					<Events>
 						<Event name="OnChange">ЧемпионатПриИзменении</Event>
+						<Event name="Clearing">ЧемпионатОчистка</Event>
 					</Events>
 				</InputField>
 				<InputField name="Команда" id="10">
