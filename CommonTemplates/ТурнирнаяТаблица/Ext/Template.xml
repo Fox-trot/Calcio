@@ -2395,6 +2395,7 @@
 		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
+		<detailsUse>Row</detailsUse>
 	</format>
 	<format>
 		<height>172</height>
