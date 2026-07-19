@@ -95,9 +95,6 @@
 					</Border>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="27"/>
-					<Events>
-						<Event name="DragCheck">ИзображениеПроверкаПеретаскивания</Event>
-					</Events>
 				</PictureField>
 			</ChildItems>
 		</UsualGroup>
