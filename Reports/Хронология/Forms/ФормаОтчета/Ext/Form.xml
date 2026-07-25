@@ -47,6 +47,7 @@
 				<InputField name="Чемпионат" id="1">
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
 					<ContextMenu name="ЧемпионатКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ЧемпионатРасширеннаяПодсказка" id="3"/>
 					<Events>
@@ -56,6 +57,7 @@
 				<InputField name="Команда" id="7">
 					<DataPath>Отчет.Команда</DataPath>
 					<ClearButton>true</ClearButton>
+					<ListChoiceMode>true</ListChoiceMode>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
 						<xr:Link>

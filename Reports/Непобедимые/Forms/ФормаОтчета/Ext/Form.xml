@@ -19,7 +19,7 @@
 	</CommandSet>
 	<ReportResult>Результат</ReportResult>
 	<ReportFormType>Main</ReportFormType>
-	<AutoShowState>DontShow</AutoShowState>
+	<AutoShowState>ShowOnComposition</AutoShowState>
 	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>

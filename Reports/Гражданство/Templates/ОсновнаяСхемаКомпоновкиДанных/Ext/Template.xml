@@ -257,7 +257,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Топы только</v8:content>
+				<v8:content>Только топы</v8:content>
 			</v8:item>
 		</title>
 		<valueType>

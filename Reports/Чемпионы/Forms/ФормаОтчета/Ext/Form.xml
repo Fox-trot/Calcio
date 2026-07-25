@@ -77,47 +77,6 @@
 					<ListChoiceMode>true</ListChoiceMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Количество очков</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">0</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Забито голов</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">1</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Пропущено голов</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">2</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
 					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="26"/>
 					<Events>
@@ -233,7 +192,7 @@
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
 				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
 				<d4p1:title/>
-				<d4p1:isShowTitle>false</d4p1:isShowTitle>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
 				<d4p1:isShowLegend>true</d4p1:isShowLegend>
 				<d4p1:ttlBorder width="0">
 					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
@@ -354,7 +313,6 @@
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
-				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
 			</Settings>
 		</Attribute>
 		<Attribute name="ОтображатьТаблицуДанных" id="3">
