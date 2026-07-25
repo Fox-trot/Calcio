@@ -4,8 +4,10 @@
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
 	<CommandSet>
+		<ExcludedCommand>CancelEdit</ExcludedCommand>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
+		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>Generate</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
@@ -32,6 +34,7 @@
 					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="7"/>
@@ -54,7 +57,6 @@
 				<InputField name="Команда" id="8">
 					<DataPath>Отчет.Команда</DataPath>
 					<ClearButton>true</ClearButton>
-					<CreateButton>false</CreateButton>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
@@ -71,13 +73,13 @@
 						<Event name="Clearing">КомандаОчистка</Event>
 					</Events>
 				</InputField>
-				<InputField name="Показатель" id="20">
-					<DataPath>Показатель</DataPath>
+				<InputField name="ТипГрафика" id="26">
+					<DataPath>ТипГрафика</DataPath>
 					<ListChoiceMode>true</ListChoiceMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ChooseType>false</ChooseType>
-					<ContextMenu name="ПоказательКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ПоказательРасширеннаяПодсказка" id="22"/>
+					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="28"/>
 					<Events>
 						<Event name="OnChange">КомандаПриИзменении</Event>
 					</Events>
@@ -331,11 +333,16 @@
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Settings>
 		</Attribute>
-		<Attribute name="Показатель" id="4">
+		<Attribute name="Кеш" id="5">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипГрафика" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показатель</v8:content>
+					<v8:content>Тип графика</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -347,13 +354,8 @@
 				</v8:NumberQualifiers>
 			</Type>
 			<Save>
-				<Field>Показатель</Field>
+				<Field>ТипГрафика</Field>
 			</Save>
-		</Attribute>
-		<Attribute name="Кеш" id="5">
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
