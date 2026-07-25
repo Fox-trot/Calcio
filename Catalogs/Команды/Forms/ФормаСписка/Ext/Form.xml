@@ -313,4 +313,19 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.Игроки.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Catalog.Стадионы.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<Index>1</Index>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>
