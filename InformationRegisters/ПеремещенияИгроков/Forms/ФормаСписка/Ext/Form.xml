@@ -48,7 +48,6 @@
 					<ExtendedTooltip name="ГруппаСписокРасширеннаяПодсказка" id="75"/>
 					<ChildItems>
 						<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -62,7 +61,7 @@
 						</UsualGroup>
 						<Table name="Список" id="3">
 							<Representation>List</Representation>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<DefaultItem>true</DefaultItem>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Список</DataPath>
@@ -156,10 +155,31 @@
 							<v8:content>Последнее</v8:content>
 						</v8:item>
 					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Calendar</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<ExtendedTooltip name="ГруппаПоследнееРасширеннаяПодсказка" id="77"/>
 					<ChildItems>
+						<UsualGroup name="ПоследнееКомпоновщикНастроекПользовательскиеНастройки" id="78">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пользовательских настроек</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Последнее компоновщик настроек пользовательские настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПоследнееКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="79"/>
+						</UsualGroup>
 						<Table name="Последнее" id="38">
-							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Последнее</DataPath>
 							<RowPictureDataPath>Последнее.DefaultPicture</RowPictureDataPath>
@@ -176,6 +196,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>ПоследнееКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="ПоследнееКонтекстноеМеню" id="39"/>
 							<AutoCommandBar name="ПоследнееКоманднаяПанель" id="40">
