@@ -133,7 +133,6 @@
 				<Field>~Список.Date~Список.Дата</Field>
 				<Field>~Список.Owner~Список.Владелец</Field>
 				<Field>~Список.Posted~Список.Проведен</Field>
-				<Field>~Список.Комментарий~Список.Комментарий</Field>
 				<Field>~Список.Счет~Список.Счет</Field>
 				<Field>~Список.Тур~Список.Тур</Field>
 				<Field>Список.Ref</Field>
@@ -167,6 +166,10 @@
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 					</dcsset:filter>
 					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Ссылка.Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>

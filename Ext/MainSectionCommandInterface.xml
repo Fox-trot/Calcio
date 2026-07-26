@@ -46,6 +46,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Catalog.Стадионы.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="CommonForm.Квиз.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>true</xr:Common>

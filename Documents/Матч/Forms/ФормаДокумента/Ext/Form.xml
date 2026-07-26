@@ -281,12 +281,6 @@
 											<v8:content>Группа стадион</v8:content>
 										</v8:item>
 									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа стадион</v8:content>
-										</v8:item>
-									</ToolTip>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаСтадионРасширеннаяПодсказка" id="385"/>
@@ -295,6 +289,7 @@
 											<DataPath>Объект.Стадион</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>true</DropListButton>
+											<ClearButton>true</ClearButton>
 											<ChooseType>false</ChooseType>
 											<ChoiceParameterLinks>
 												<xr:Link>
@@ -309,6 +304,7 @@
 												<Event name="OnChange">СтадионПриИзменении</Event>
 												<Event name="StartChoice">СтадионНачалоВыбора</Event>
 												<Event name="Creating">СтадионСоздание</Event>
+												<Event name="Clearing">СтадионОчистка</Event>
 											</Events>
 										</InputField>
 										<InputField name="КоличествоЗрителей" id="80">
@@ -358,12 +354,6 @@
 											</Events>
 										</PictureField>
 										<UsualGroup name="ГруппаКомандИзображение" id="417">
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа команд изображение</v8:content>
-												</v8:item>
-											</ToolTip>
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
@@ -391,8 +381,14 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаКомандыПраваяРасширеннаяПодсказка" id="188"/>
 							<ChildItems>
-								<CommandBar name="Группа1" id="494">
-									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="495"/>
+								<CommandBar name="ГруппаКомментарий" id="494">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа комментарий</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКомментарийРасширеннаяПодсказка" id="495"/>
 								</CommandBar>
 								<InputField name="Комментарий" id="155">
 									<DataPath>Объект.Комментарий</DataPath>
@@ -3113,7 +3109,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СоставыСортировать</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">СоставыКоманд</AssociatedTableElementId>
 		</Command>
