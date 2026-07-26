@@ -414,6 +414,9 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+			<Save>
+				<Field>Сравнить</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="ЕстьКлюч" id="7">
 			<Title>
