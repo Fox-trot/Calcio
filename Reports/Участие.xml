@@ -142,6 +142,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаОтчета</Form>
+			<Form>ФормаОтчетаИгрок</Form>
 			<Command uuid="fa42db2c-584c-4ed2-b1bc-eb780ce751fd">
 				<Properties>
 					<Name>КомандаУчастие</Name>
@@ -155,6 +156,29 @@
 					<Group>FormNavigationPanelSeeAlso</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="5715df65-7194-4425-9d77-00fdfe3a4c47">
+				<Properties>
+					<Name>КомандаУчастиеИгрока</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участие игрока</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelSeeAlso</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
