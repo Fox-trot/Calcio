@@ -514,18 +514,6 @@
 										<Event name="OnChange">ДомаПриИзменении</Event>
 									</Events>
 								</InputField>
-								<InputField name="Лига" id="195">
-									<DataPath>Лига</DataPath>
-									<CreateButton>false</CreateButton>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ChooseType>false</ChooseType>
-									<ContextMenu name="ЛигаКонтекстноеМеню" id="196"/>
-									<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="197"/>
-									<Events>
-										<Event name="OnChange">ЛигаПриИзменении</Event>
-									</Events>
-								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Матчи" id="51">
@@ -652,6 +640,12 @@
 									<AutoCellHeight>true</AutoCellHeight>
 									<ContextMenu name="МатчиЧемпионатКонтекстноеМеню" id="148"/>
 									<ExtendedTooltip name="МатчиЧемпионатРасширеннаяПодсказка" id="149"/>
+								</LabelField>
+								<LabelField name="МатчиЛига" id="270">
+									<DataPath>Матчи.Лига</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="МатчиЛигаКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="МатчиЛигаРасширеннаяПодсказка" id="272"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -1214,11 +1208,7 @@
 			</Type>
 			<UseAlways>
 				<Field>Матчи.Дата</Field>
-				<Field>Матчи.КоличествоОчков</Field>
 				<Field>Матчи.Матч</Field>
-				<Field>Матчи.Счет</Field>
-				<Field>Матчи.Тур</Field>
-				<Field>Матчи.Чемпионат</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
@@ -1233,7 +1223,8 @@
 	ТурнирнаяТаблица.КоличествоОчков КАК КоличествоОчков,
 	Матч.Стадион КАК Стадион,
 	ТурнирнаяТаблица.Регистратор.КоличествоЗрителей КАК КоличествоЗрителей,
-	Туры.Владелец КАК Чемпионат
+	Туры.Владелец КАК Чемпионат,
+	Туры.Владелец.Владелец КАК Лига
 ИЗ
 	РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Туры КАК Туры
@@ -1243,16 +1234,11 @@
 ГДЕ
 	ТурнирнаяТаблица.Команда = &amp;Ссылка
 	И ВЫБОР
-			КОГДА &amp;Дома = 0
-				ТОГДА ИСТИНА
-			ИНАЧЕ ТурнирнаяТаблица.НомерСтроки = &amp;Дома
+			КОГДА &amp;Дома В (1, 2)
+				ТОГДА ТурнирнаяТаблица.НомерСтроки = &amp;Дома
+			ИНАЧЕ ИСТИНА
 		КОНЕЦ
-	И ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.Матч)
-	И ВЫБОР
-			КОГДА &amp;Лига = ЗНАЧЕНИЕ(Справочник.Лига.ПустаяСсылка)
-				ТОГДА ИСТИНА
-			ИНАЧЕ Туры.Владелец.Владелец = &amp;Лига
-		КОНЕЦ</QueryText>
+	И ТИПЗНАЧЕНИЯ(ТурнирнаяТаблица.Регистратор) = ТИП(Документ.Матч)</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Дата</dcssch:dataPath>
 					<dcssch:field>Дата</dcssch:field>
@@ -1355,6 +1341,16 @@
 					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
 					<dcssch:field>ПометкаУдаления</dcssch:field>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Лига</dcssch:dataPath>
+					<dcssch:field>Лига</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лига</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
 				<Parameter>
 					<dcssch:name>Ссылка</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -1387,21 +1383,6 @@
 						</v8:NumberQualifiers>
 					</dcssch:valueType>
 					<dcssch:value xsi:type="xs:decimal">0</dcssch:value>
-					<dcssch:useRestriction>true</dcssch:useRestriction>
-					<dcssch:availableAsField>false</dcssch:availableAsField>
-				</Parameter>
-				<Parameter>
-					<dcssch:name>Лига</dcssch:name>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Лига</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Лига</v8:Type>
-					</dcssch:valueType>
-					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 					<dcssch:availableAsField>false</dcssch:availableAsField>
 				</Parameter>
@@ -2044,17 +2025,6 @@
 				<Field>ТекущаяСтраницаИмя</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="Лига" id="19">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Лига</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="Чемпионаты" id="20">
 			<Title>
 				<v8:item>
@@ -2350,6 +2320,49 @@
 		</Command>
 	</Commands>
 	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Report.Галерея.Command.Галерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>6</Index>
+			</Item>
+			<Item>
+				<Command>Report.ВозрастныеГруппы.Command.ВозрастныеГруппы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Report.Гражданство.Command.КомандаГражданство</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>Report.Непобедимые.Command.КомандаНепобедимые</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>Report.Противостояние.Command.КомандаПротивостояние</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>3</Index>
+			</Item>
+			<Item>
+				<Command>Report.Участие.Command.КомандаУчастие</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>4</Index>
+			</Item>
+			<Item>
+				<Command>Report.Хронология.Command.КомандаХронология</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>5</Index>
+			</Item>
+		</NavigationPanel>
 		<CommandBar>
 			<Item>
 				<Command>Catalog.Стадионы.StandardCommand.CreateBasedOn</Command>

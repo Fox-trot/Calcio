@@ -96,6 +96,11 @@
 					<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<LabelField name="Город" id="34">
+					<DataPath>Список.Город</DataPath>
+					<ContextMenu name="ГородКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="36"/>
+				</LabelField>
 				<LabelField name="Комментарий" id="28">
 					<DataPath>Список.Комментарий</DataPath>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
@@ -123,6 +128,7 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

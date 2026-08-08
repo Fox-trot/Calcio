@@ -32,6 +32,7 @@
 					<ChildItems>
 						<UsualGroup name="ГруппаЛевая" id="18">
 							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="19"/>
 							<ChildItems>
 								<InputField name="Код" id="1">
@@ -105,7 +106,7 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаТекущееРасширеннаяПодсказка" id="50"/>
 									<ChildItems>
-										<LabelField name="ТекущаяКоманда" id="41">
+										<InputField name="ТекущаяКоманда" id="41">
 											<DataPath>ТекущаяКоманда</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<SkipOnInput>true</SkipOnInput>
@@ -115,10 +116,12 @@
 													<v8:content>Текущая команда</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Hiperlink>true</Hiperlink>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ChooseType>false</ChooseType>
 											<ContextMenu name="ТекущаяКомандаКонтекстноеМеню" id="42"/>
 											<ExtendedTooltip name="ТекущаяКомандаРасширеннаяПодсказка" id="43"/>
-										</LabelField>
+										</InputField>
 										<LabelField name="ТекущийНомер" id="46">
 											<DataPath>ТекущийНомер</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -193,6 +196,7 @@
 						</UsualGroup>
 						<UsualGroup name="ГруппаПравая" id="20">
 							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="21"/>
 							<ChildItems>
 								<InputField name="Комментарий" id="36">
@@ -264,6 +268,10 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.Predefined</Field>
+				<Field>Объект.PredefinedDataName</Field>
+			</UseAlways>
 		</Attribute>
 		<Attribute name="Изображение" id="2">
 			<Title>
@@ -279,6 +287,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="Возраст" id="3">
 			<Title>
@@ -367,6 +376,7 @@
 			</Picture>
 			<Action>ВыбратьИзображение</Action>
 			<Representation>Picture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УдалитьИзображение" id="2">
@@ -434,18 +444,19 @@
 				</Visible>
 			</Item>
 			<Item>
-				<Command>FilterCriterion.МатчиСУчастием.StandardCommand.OpenByValue</Command>
-				<Type>Auto</Type>
-				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
-				<DefaultVisible>false</DefaultVisible>
-			</Item>
-			<Item>
 				<Command>InformationRegister.ПеремещенияИгроков.StandardCommand.OpenByValue.Игрок</Command>
 				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
 				<DefaultVisible>false</DefaultVisible>
 				<Visible>
 					<xr:Common>false</xr:Common>
 				</Visible>
+			</Item>
+			<Item>
+				<Command>FilterCriterion.МатчиСУчастием.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>
