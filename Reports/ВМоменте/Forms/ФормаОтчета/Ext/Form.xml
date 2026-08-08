@@ -21,14 +21,6 @@
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ФормаСформировать" id="24">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.Сформировать</CommandName>
-				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="25"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -48,6 +40,12 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
+				<Button name="ФормаСформировать" id="24">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="25"/>
+				</Button>
 				<InputField name="Чемпионат" id="1">
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -368,6 +366,9 @@
 			<Save>
 				<Field>Кеш</Field>
 			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Settings>
 		</Attribute>
 		<Attribute name="Чемпионаты" id="6">
 			<Title>
