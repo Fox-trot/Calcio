@@ -21,6 +21,7 @@
 				<v8:Type>cfg:CatalogObject.ВидыСпорта</v8:Type>
 				<v8:Type>cfg:CatalogObject.Страны</v8:Type>
 				<v8:Type>cfg:CatalogObject.Игроки</v8:Type>
+				<v8:Type>cfg:DocumentObject.Новости</v8:Type>
 				<v8:Type>cfg:CatalogObject.Амплуа</v8:Type>
 				<v8:Type>cfg:CatalogObject.Чемпионаты</v8:Type>
 			</Source>

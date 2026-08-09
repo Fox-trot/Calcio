@@ -43,8 +43,11 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортМатча</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортЧемпионата</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПервоначальноеЗаполнение</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСтадионы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Дерби</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Новости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧтениеНовостей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСтадионы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.БуферНовостей</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

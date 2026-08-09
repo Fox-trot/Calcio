@@ -307,6 +307,8 @@
 			<Constant>ИспользоватьСтадионы</Constant>
 			<Constant>ПоказыватьПредстоящиеМатчи</Constant>
 			<Constant>ВыводитьЛоготипыКоманд</Constant>
+			<Constant>ЧтениеНовостей</Constant>
+			<Constant>БуферНовостей</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<CommonForm>КаталогаФайловУстановить</CommonForm>
@@ -323,6 +325,7 @@
 			<Catalog>Стадионы</Catalog>
 			<Document>Матч</Document>
 			<Document>СнятиеОчков</Document>
+			<Document>Новости</Document>
 			<Report>Биоритмы</Report>
 			<Report>ВозрастныеГруппы</Report>
 			<Report>Гражданство</Report>

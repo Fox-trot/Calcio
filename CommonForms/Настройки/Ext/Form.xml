@@ -234,6 +234,12 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<CheckBoxField name="ЧтениеНовостей" id="115">
+							<DataPath>НаборКонстант.ЧтениеНовостей</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЧтениеНовостейКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ЧтениеНовостейРасширеннаяПодсказка" id="117"/>
+						</CheckBoxField>
 						<UsualGroup name="ГруппаНапоминания" id="61">
 							<Title>
 								<v8:item>
@@ -371,6 +377,7 @@
 				<Field>НаборКонстант.ПоказыватьРазницуМячей</Field>
 				<Field>НаборКонстант.СтарыйВидАнонсов</Field>
 				<Field>НаборКонстант.ТурнирнаяТаблицаКакНаBBC</Field>
+				<Field>НаборКонстант.ЧтениеНовостей</Field>
 			</UseAlways>
 		</Attribute>
 		<Attribute name="Физический" id="2">
@@ -553,6 +560,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выводить логотипы команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧтениеНовостей" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чтение новостей</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
