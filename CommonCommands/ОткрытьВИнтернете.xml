@@ -33,7 +33,10 @@
 				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 				<v8:Type>cfg:DocumentRef.Матч</v8:Type>
 				<v8:Type>cfg:CatalogRef.Города</v8:Type>
+				<v8:Type>cfg:CatalogRef.Туры</v8:Type>
 				<v8:Type>cfg:CatalogRef.Страны</v8:Type>
+				<v8:Type>cfg:DocumentRef.Новости</v8:Type>
+				<v8:Type>cfg:DocumentRef.СнятиеОчков</v8:Type>
 			</CommandParameterType>
 			<ParameterUseMode>Single</ParameterUseMode>
 			<ModifiesData>false</ModifiesData>

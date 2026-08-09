@@ -1026,6 +1026,7 @@
 				<Field>~ТекущийСостав.ИгрокПометкаУдаления</Field>
 				<Field>~ТекущийСостав.Период</Field>
 				<Field>~ТекущийСостав.Ссылка</Field>
+				<Field>ТекущийСостав.DefaultPicture</Field>
 				<Field>ТекущийСостав.Игрок</Field>
 				<Field>ТекущийСостав.ПометкаУдаления</Field>
 			</UseAlways>
