@@ -1127,6 +1127,8 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаНовостиОбновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
 		</Command>
 		<Command name="КомандаУдалить" id="5">
 			<Title>

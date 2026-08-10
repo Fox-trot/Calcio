@@ -266,7 +266,7 @@
 														<Type>CommandBarButton</Type>
 														<HorizontalStretch>true</HorizontalStretch>
 														<VerticalStretch>true</VerticalStretch>
-														<CommandName>Form.Command.ИмпортИгроков</CommandName>
+														<CommandName>Form.Command.КомандаИмпортИгроков</CommandName>
 														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 														<ExtendedTooltip name="КомандыИмпортИгроковРасширеннаяПодсказка" id="80"/>
 													</Button>
@@ -666,7 +666,7 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 		</Command>
-		<Command name="ИмпортИгроков" id="5">
+		<Command name="КомандаИмпортИгроков" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -676,15 +676,16 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Импорт игроков</v8:content>
+					<v8:content>Команда импорт игроков</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
 				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>ИмпортИгроков</Action>
-			<ModifiesSavedData>true</ModifiesSavedData>
+			<Action>КомандаИмпортИгроков</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Команды</AssociatedTableElementId>
 		</Command>
 		<Command name="ТурыСоздать" id="7">
 			<Title>
