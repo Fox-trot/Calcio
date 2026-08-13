@@ -48,7 +48,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЧтениеНовостей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСтадионы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.БуферНовостей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">ae328d63-70c4-4244-908a-2d803e0a08b2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Календарь</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

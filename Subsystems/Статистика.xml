@@ -30,7 +30,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.СнятиеОчков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Гражданство</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Посещаемость</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Календарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.КомандаКалендарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Противостояние</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Саммит</xr:Item>
@@ -54,7 +53,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВМоменте</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.Посещаемость</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.КвизРезультаты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">189f3380-6559-4955-a0f4-a111590bb8d3</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

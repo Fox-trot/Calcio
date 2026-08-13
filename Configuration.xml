@@ -263,6 +263,7 @@
 			<Subsystem>Биоритмы</Subsystem>
 			<Subsystem>Статистика</Subsystem>
 			<Subsystem>ИсходныеДанные</Subsystem>
+			<Subsystem>Администрирование</Subsystem>
 			<CommonPicture>Goal</CommonPicture>
 			<SessionParameter>КаталогаФайлов</SessionParameter>
 			<CommonTemplate>ТурнирнаяТаблица</CommonTemplate>
