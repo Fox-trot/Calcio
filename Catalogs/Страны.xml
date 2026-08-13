@@ -412,6 +412,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
+			<Template>Макет</Template>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

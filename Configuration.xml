@@ -283,6 +283,7 @@
 			<EventSubscription>ПодпискиНаСобытиеОбработкаПроведения</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаУдаленияПроведения</EventSubscription>
 			<ScheduledJob>ИмпортИгр</ScheduledJob>
+			<ScheduledJob>ИмпортНовостей</ScheduledJob>
 			<FunctionalOption>ИспользоватьСтадионы</FunctionalOption>
 			<DefinedType>КоличествоГолов</DefinedType>
 			<DefinedType>КоличествоЗабито</DefinedType>
