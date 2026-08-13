@@ -165,7 +165,7 @@
 									<Button name="СписокОбщаяКомандаОткрытьВИнтернете" id="100">
 										<Type>CommandBarButton</Type>
 										<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
-										<DataPath>Items.Список.CurrentData.ИгрокИлиМатч</DataPath>
+										<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 										<ExtendedTooltip name="СписокОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="101"/>
 									</Button>
 									<Popup name="СписокГруппаДополнительно" id="98">
@@ -225,6 +225,7 @@
 							<ChildItems>
 								<LabelField name="СписокДата" id="69">
 									<DataPath>Список.Дата</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<ShowInFooter>false</ShowInFooter>
 									<Width>6</Width>
 									<HorizontalStretch>false</HorizontalStretch>
@@ -237,24 +238,26 @@
 									<ContextMenu name="СписокДатаКонтекстноеМеню" id="70"/>
 									<ExtendedTooltip name="СписокДатаРасширеннаяПодсказка" id="71"/>
 								</LabelField>
-								<LabelField name="СписокИгрокИлиМатч" id="72">
-									<DataPath>Список.ИгрокИлиМатч</DataPath>
-									<ContextMenu name="СписокИгрокИлиМатчКонтекстноеМеню" id="73"/>
-									<ExtendedTooltip name="СписокИгрокИлиМатчРасширеннаяПодсказка" id="74"/>
+								<LabelField name="СписокСсылка" id="72">
+									<DataPath>Список.Ссылка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="74"/>
 								</LabelField>
-								<CheckBoxField name="СписокЭтоИгрок" id="81">
-									<DataPath>Список.ЭтоИгрок</DataPath>
-									<Visible>false</Visible>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="СписокЭтоИгрокКонтекстноеМеню" id="82"/>
-									<ExtendedTooltip name="СписокЭтоИгрокРасширеннаяПодсказка" id="83"/>
-								</CheckBoxField>
 								<LabelField name="СписокВладелец" id="91">
 									<DataPath>Список.Владелец</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<ContextMenu name="СписокВладелецКонтекстноеМеню" id="92"/>
 									<ExtendedTooltip name="СписокВладелецРасширеннаяПодсказка" id="93"/>
 								</LabelField>
+								<CheckBoxField name="СписокЭтоИгрок" id="81">
+									<DataPath>Список.ЭтоИгрок</DataPath>
+									<Visible>false</Visible>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокЭтоИгрокКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="СписокЭтоИгрокРасширеннаяПодсказка" id="83"/>
+								</CheckBoxField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -273,19 +276,16 @@
 					<ExtendedTooltip name="СтраницаНовостиРасширеннаяПодсказка" id="107"/>
 					<ChildItems>
 						<Table name="Новости" id="108">
+							<ChangeRowSet>false</ChangeRowSet>
 							<HorizontalLines>false</HorizontalLines>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Новости</DataPath>
 							<RowPictureDataPath>Новости.DefaultPicture</RowPictureDataPath>
 							<CommandSet>
 								<ExcludedCommand>Change</ExcludedCommand>
-								<ExcludedCommand>Copy</ExcludedCommand>
-								<ExcludedCommand>Create</ExcludedCommand>
-								<ExcludedCommand>Delete</ExcludedCommand>
 								<ExcludedCommand>Post</ExcludedCommand>
 								<ExcludedCommand>Refresh</ExcludedCommand>
 								<ExcludedCommand>SetDateInterval</ExcludedCommand>
-								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
 								<ExcludedCommand>UndoPosting</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
@@ -372,24 +372,28 @@
 								<ExtendedTooltip name="НовостиУправлениеПоискомРасширеннаяПодсказка" id="120"/>
 							</SearchControlAddition>
 							<Events>
+								<Event name="Selection">НовостиВыбор</Event>
 								<Event name="OnActivateRow">НовостиПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
-								<LabelField name="СписокНовостиДата" id="121">
+								<LabelField name="НовостиДата" id="121">
 									<DataPath>Новости.Дата</DataPath>
-									<ContextMenu name="СписокНовостиДатаКонтекстноеМеню" id="122"/>
-									<ExtendedTooltip name="СписокНовостиДатаРасширеннаяПодсказка" id="123"/>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НовостиДатаКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="НовостиДатаРасширеннаяПодсказка" id="123"/>
 								</LabelField>
-								<LabelField name="СписокНовостиНаименование" id="124">
+								<LabelField name="НовостиНаименование" id="124">
 									<DataPath>Новости.Наименование</DataPath>
-									<ContextMenu name="СписокНовостиНаименованиеКонтекстноеМеню" id="125"/>
-									<ExtendedTooltip name="СписокНовостиНаименованиеРасширеннаяПодсказка" id="126"/>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НовостиНаименованиеКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="НовостиНаименованиеРасширеннаяПодсказка" id="126"/>
 								</LabelField>
-								<LabelField name="СписокНовостиКомментарий" id="127">
+								<LabelField name="НовостиКомментарий" id="127">
 									<DataPath>Новости.Комментарий</DataPath>
 									<Visible>false</Visible>
-									<ContextMenu name="СписокНовостиКомментарийКонтекстноеМеню" id="128"/>
-									<ExtendedTooltip name="СписокНовостиКомментарийРасширеннаяПодсказка" id="129"/>
+									<ReadOnly>true</ReadOnly>
+									<ContextMenu name="НовостиКомментарийКонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="НовостиКомментарийРасширеннаяПодсказка" id="129"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -397,6 +401,8 @@
 							<DataPath>Содержание</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<Font ref="style:TextFont" kind="StyleItem"/>
 							<ContextMenu name="СодержаниеКонтекстноеМеню" id="144"/>
 							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="145"/>
 						</FormattedDocumentField>
@@ -448,9 +454,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>~Список.ИгрокИлиМатч</Field>
 				<Field>Список.Владелец</Field>
 				<Field>Список.Дата</Field>
-				<Field>Список.ИгрокИлиМатч</Field>
 				<Field>Список.КоличествоОчков</Field>
 				<Field>Список.ЭтоИгрок</Field>
 			</UseAlways>
@@ -459,7 +465,7 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Матч.Дата КАК Дата,
-	Матч.Ссылка КАК ИгрокИлиМатч,
+	Матч.Ссылка КАК Ссылка,
 	ЛОЖЬ КАК ЭтоИгрок,
 	ГОД(Матч.Дата) * 10000 + МЕСЯЦ(Матч.Дата) * 100 + ДЕНЬ(Матч.Дата) КАК Порядок,
 	ЕСТЬNULL(ТурнирнаяТаблица.КоличествоОчков, -1) КАК КоличествоОчков,
@@ -522,20 +528,6 @@
 					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>ИгрокИлиМатч</dcssch:dataPath>
-					<dcssch:field>ИгрокИлиМатч</dcssch:field>
-					<dcssch:title xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Игрок | Матч</v8:content>
-						</v8:item>
-					</dcssch:title>
-					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
-						<v8:Type>cfg:DocumentRef.Матч</v8:Type>
-					</dcssch:valueType>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ЭтоИгрок</dcssch:dataPath>
 					<dcssch:field>ЭтоИгрок</dcssch:field>
 					<dcssch:valueType>
@@ -589,6 +581,20 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</dcssch:valueType>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игрок | Матч</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+						<v8:Type>cfg:DocumentRef.Матч</v8:Type>
 					</dcssch:valueType>
 				</Field>
 				<Parameter>
@@ -671,7 +677,7 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<KeyType>FieldValue</KeyType>
-				<KeyField>ИгрокИлиМатч</KeyField>
+				<KeyField>Ссылка</KeyField>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

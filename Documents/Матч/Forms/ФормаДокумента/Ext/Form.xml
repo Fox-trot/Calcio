@@ -1381,6 +1381,12 @@
 										<CommandName>Form.Command.СоставыОчистить</CommandName>
 										<ExtendedTooltip name="СоставыОчиститьРасширеннаяПодсказка" id="439"/>
 									</Button>
+									<Button name="СоставыКомандОбщаяКомандаОткрытьВИнтернете" id="506">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+										<DataPath>Items.СоставыКоманд.CurrentData.Игрок</DataPath>
+										<ExtendedTooltip name="СоставыКомандОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="507"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="СоставыКомандРасширеннаяПодсказка" id="47"/>
