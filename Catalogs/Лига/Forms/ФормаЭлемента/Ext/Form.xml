@@ -122,7 +122,8 @@
 									<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
 								</CheckBoxField>
 								<UsualGroup name="ГруппаИзображение" id="26">
-									<Group>AlwaysHorizontal</Group>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаИзображениеРасширеннаяПодсказка" id="27"/>
