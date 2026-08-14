@@ -110,6 +110,12 @@
 							<ContextMenu name="КомандаКонтекстноеМеню" id="29"/>
 							<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="30"/>
 						</InputField>
+						<LabelField name="Номер" id="38">
+							<DataPath>Список.Номер</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="НомерКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="40"/>
+						</LabelField>
 						<LabelField name="Страна" id="25">
 							<DataPath>Список.Страна</DataPath>
 							<ContextMenu name="СтранаКонтекстноеМеню" id="26"/>
@@ -162,9 +168,9 @@
 	СправочникИгроки.Код КАК Код,
 	СправочникИгроки.Наименование КАК Наименование,
 	ЕСТЬNULL(СправочникАмплуа.Ссылка, СправочникИгроки.Амплуа) КАК Амплуа,
+	ЕСТЬNULL(ПеремещенияИгроковСрезПоследних.Номер, 0) КАК Номер,
 	СправочникИгроки.ДатаРождения КАК ДатаРождения,
 	СправочникИгроки.Страна КАК Страна,
-	СправочникИгроки.Изображение КАК Изображение,
 	СправочникИгроки.Комментарий КАК Комментарий,
 	СправочникИгроки.Предопределенный КАК Предопределенный,
 	СправочникИгроки.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
@@ -178,22 +184,41 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Комментарий</dcssch:dataPath>
 					<dcssch:field>Комментарий</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Амплуа</dcssch:dataPath>
 					<dcssch:field>Амплуа</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Амплуа</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Ссылка</dcssch:dataPath>
 					<dcssch:field>Ссылка</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Изображение</dcssch:dataPath>
 					<dcssch:field>Изображение</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>v8:ValueStorage</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
 					<dcssch:field>ПометкаУдаления</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Код</dcssch:dataPath>
@@ -206,10 +231,19 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>ДатаРождения</dcssch:dataPath>
 					<dcssch:field>ДатаРождения</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Страна</dcssch:dataPath>
 					<dcssch:field>Страна</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Страны</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
@@ -222,10 +256,28 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Команда</dcssch:dataPath>
 					<dcssch:field>Команда</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</dcssch:valueType>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Игрок</dcssch:dataPath>
 					<dcssch:field>Игрок</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+					</dcssch:valueType>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+					<dcssch:valueType>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</dcssch:valueType>
 				</Field>
 				<Parameter>
 					<dcssch:name>Период</dcssch:name>
