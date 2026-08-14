@@ -112,6 +112,9 @@
 						<ContextMenu name="ДанныеУправлениеПоискомКонтекстноеМеню" id="17"/>
 						<ExtendedTooltip name="ДанныеУправлениеПоискомРасширеннаяПодсказка" id="18"/>
 					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДанныеВыбор</Event>
+					</Events>
 					<ChildItems>
 						<InputField name="ДанныеЧемпионат" id="67">
 							<DataPath>Отчет.Данные.Чемпионат</DataPath>

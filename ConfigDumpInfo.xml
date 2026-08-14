@@ -147,8 +147,8 @@
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаВыбора.Form" id="e1e5774a-bcc9-41f0-af2f-a2e9447ea279.0" configVersion="673d3f9dcdd5ca4c8c59179f83f5591f00000000"/>
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаСписка" id="ec160c4a-6090-4698-908a-3d178fcced85" configVersion="c44e78c3f4550c4381c9584d97fd3a6900000000"/>
 		<Metadata name="Catalog.Чемпионаты.Form.ФормаСписка.Form" id="ec160c4a-6090-4698-908a-3d178fcced85.0" configVersion="7c3c3877fbdcaf43999e464110c23b4e00000000"/>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента" id="241ea06c-f800-4a92-b36a-81261b8d8768" configVersion="de0b86d07e332b45a7b6d31f20180df400000000"/>
-		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента.Form" id="241ea06c-f800-4a92-b36a-81261b8d8768.0" configVersion="83d53acdc01e294d8fdf6e9b7cd6292f00000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента" id="241ea06c-f800-4a92-b36a-81261b8d8768" configVersion="c3214cdc58db38438659f979f8592d4000000000"/>
+		<Metadata name="Catalog.Чемпионаты.Form.ФормаЭлемента.Form" id="241ea06c-f800-4a92-b36a-81261b8d8768.0" configVersion="ed382451dfbbbb4e944358dc26db0a1d00000000"/>
 		<Metadata name="Catalog.Чемпионаты.ObjectModule" id="b29771ac-03be-488f-8be8-b6592403cf0d.0" configVersion="4dd39c123ab1014aa6c677fb93d5a3db00000000"/>
 		<Metadata name="CommonCommand.Биоритмы" id="d8740f02-c55b-4cdb-b478-3b29a442558c" configVersion="c2ad20e9a6879a4894f97949222abe6800000000"/>
 		<Metadata name="CommonCommand.Биоритмы.CommandModule" id="d8740f02-c55b-4cdb-b478-3b29a442558c.2" configVersion="defd8aadbad8114390b5662258c03fe800000000"/>
@@ -520,8 +520,9 @@
 		<Metadata name="Report.СтатистикаЛиг.Command.КомандаСтатистика.CommandModule" id="5a39a9ac-7f76-48cf-a879-d5d020c40819.2" configVersion="6156af0fd0e1fa4ab76c1f1957a1955400000000"/>
 		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885" configVersion="d2859624a2ccc644a80039a11a39d49500000000"/>
 		<Metadata name="Report.СтатистикаЛиг.Form.ФормаОтчета.Form" id="ca1b18dc-2ea4-43ad-b3ce-cd642ac08885.0" configVersion="f7ca45a21100ff4da79d5e55ca047a6700000000"/>
-		<Metadata name="Report.Трофеи" id="525c4887-4513-4292-8264-ed334c01d240" configVersion="8435378514de214ea4a00316816656d100000000">
+		<Metadata name="Report.Трофеи" id="525c4887-4513-4292-8264-ed334c01d240" configVersion="c7897440dc12fd43b06ec9f938b3716e00000000">
 			<Metadata name="Report.Трофеи.Attribute.КомандаИлиИгрок" id="1b792cd4-5a7e-4092-b0f3-896b7d6c256d"/>
+			<Metadata name="Report.Трофеи.TabularSection.Данные.Attribute.Команда" id="31deef61-ffc4-4b04-bb87-aa610bb12a2d"/>
 			<Metadata name="Report.Трофеи.TabularSection.Данные.Attribute.КоличествоОчков" id="535207dd-435f-4e9d-8b53-2533201a73e4"/>
 			<Metadata name="Report.Трофеи.TabularSection.Данные.Attribute.КоличествоЗабито" id="5a252222-8414-4bc0-b65c-6b753b7e3155"/>
 			<Metadata name="Report.Трофеи.Command.КомандаТрофеи" id="ab787c7a-60a2-4823-9eaa-eda4e79235e5"/>
@@ -530,8 +531,8 @@
 			<Metadata name="Report.Трофеи.TabularSection.Данные.Attribute.Чемпионат" id="fa637760-a839-4ce4-a0dd-27148953624e"/>
 		</Metadata>
 		<Metadata name="Report.Трофеи.Command.КомандаТрофеи.CommandModule" id="ab787c7a-60a2-4823-9eaa-eda4e79235e5.2" configVersion="71617b4b5fff3b4290143134105df94f00000000"/>
-		<Metadata name="Report.Трофеи.Form.ФормаОтчета" id="3c7251dc-2bf4-43c0-9fbc-424e7fc82ae8" configVersion="63d01f3ebf36064bae9764ab5f7ba97200000000"/>
-		<Metadata name="Report.Трофеи.Form.ФормаОтчета.Form" id="3c7251dc-2bf4-43c0-9fbc-424e7fc82ae8.0" configVersion="58ef34ed95cfe94e8a17289a497fa97300000000"/>
+		<Metadata name="Report.Трофеи.Form.ФормаОтчета" id="3c7251dc-2bf4-43c0-9fbc-424e7fc82ae8" configVersion="ca84d626a1531e4786a7e8d62a28c4e700000000"/>
+		<Metadata name="Report.Трофеи.Form.ФормаОтчета.Form" id="3c7251dc-2bf4-43c0-9fbc-424e7fc82ae8.0" configVersion="d6e019e01d91134b97452ab745e3507700000000"/>
 		<Metadata name="Report.ТурнирнаяТаблица" id="982b867d-d93c-4f5f-b9fe-87c1d09ccca0" configVersion="5d909f3ec8f66f44afc3ecb8f4d4738f00000000">
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.КоличествоПропущено" id="05ac8a79-136f-484d-8463-a906dfe956a1"/>
 			<Metadata name="Report.ТурнирнаяТаблица.TabularSection.Данные.Attribute.Ничья" id="0718f782-3210-4b50-851c-b9dbcd05dd66"/>
