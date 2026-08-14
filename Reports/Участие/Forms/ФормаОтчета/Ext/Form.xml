@@ -45,6 +45,7 @@
 				<InputField name="Команда" id="14">
 					<DataPath>Отчет.Команда</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
 						<xr:Link>
@@ -63,6 +64,7 @@
 					<DataPath>Отчет.Чемпионат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
 						<xr:Link>
