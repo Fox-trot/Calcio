@@ -121,6 +121,14 @@
 							<ContextMenu name="ДанныеЧемпионатКонтекстноеМеню" id="68"/>
 							<ExtendedTooltip name="ДанныеЧемпионатРасширеннаяПодсказка" id="69"/>
 						</InputField>
+						<InputField name="ДанныеКоманда" id="82">
+							<DataPath>Отчет.Данные.Команда</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДанныеКомандаКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ДанныеКомандаРасширеннаяПодсказка" id="84"/>
+						</InputField>
 						<InputField name="ДанныеКоличествоОчков" id="73">
 							<DataPath>Отчет.Данные.КоличествоОчков</DataPath>
 							<ReadOnly>true</ReadOnly>
