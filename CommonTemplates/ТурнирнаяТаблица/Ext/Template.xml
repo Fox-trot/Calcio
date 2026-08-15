@@ -1767,10 +1767,158 @@
 			</c>
 		</row>
 	</rowsItem>
+	<rowsItem>
+		<index>26</index>
+		<row>
+			<c>
+				<c>
+					<f>99</f>
+					<parameter>Ссылка</parameter>
+					<detailParameter>Ссылка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>27</index>
+		<indexTo>33</indexTo>
+		<row>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>34</index>
+		<row>
+			<c>
+				<c>
+					<f>100</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>[Наименование] ([Количество])</v8:content>
+						</v8:item>
+					</tl>
+					<detailParameter>Ссылка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>35</index>
+		<row>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>36</index>
+		<row>
+			<c>
+				<c>
+					<f>101</f>
+					<parameter>Команда</parameter>
+					<detailParameter>Команда</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>37</index>
+		<row>
+			<c>
+				<c>
+					<f>102</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>103</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<i>9</i>
+				<c>
+					<f>104</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чемпионат</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>38</index>
+		<row>
+			<c>
+				<c>
+					<f>105</f>
+					<parameter>Дата</parameter>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>106</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Матч</detailParameter>
+				</c>
+			</c>
+			<c>
+				<i>9</i>
+				<c>
+					<f>107</f>
+					<parameter>Чемпионат</parameter>
+					<detailParameter>Чемпионат</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>39</index>
+		<row>
+			<c>
+				<c>
+					<f>108</f>
+					<parameter>Дата</parameter>
+				</c>
+			</c>
+			<c>
+				<i>2</i>
+				<c>
+					<f>109</f>
+					<parameter>Счет</parameter>
+					<detailParameter>Матч</detailParameter>
+				</c>
+			</c>
+			<c>
+				<i>9</i>
+				<c>
+					<f>110</f>
+					<parameter>Чемпионат</parameter>
+					<detailParameter>Чемпионат</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>99</defaultFormatIndex>
-	<height>26</height>
-	<vgRows>26</vgRows>
+	<defaultFormatIndex>111</defaultFormatIndex>
+	<height>40</height>
+	<vgRows>40</vgRows>
 	<merge>
 		<r>0</r>
 		<c>0</c>
@@ -1959,6 +2107,68 @@
 		<c>1</c>
 		<w>3</w>
 	</merge>
+	<merge>
+		<r>26</r>
+		<c>0</c>
+		<h>7</h>
+		<w>2</w>
+	</merge>
+	<merge>
+		<r>34</r>
+		<c>0</c>
+		<h>1</h>
+		<w>2</w>
+	</merge>
+	<merge>
+		<r>36</r>
+		<c>0</c>
+		<w>4</w>
+	</merge>
+	<merge>
+		<r>37</r>
+		<c>0</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>37</r>
+		<c>2</c>
+		<w>6</w>
+	</merge>
+	<merge>
+		<r>37</r>
+		<c>9</c>
+		<w>5</w>
+	</merge>
+	<merge>
+		<r>38</r>
+		<c>0</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>38</r>
+		<c>2</c>
+		<w>6</w>
+	</merge>
+	<merge>
+		<r>38</r>
+		<c>9</c>
+		<w>5</w>
+	</merge>
+	<merge>
+		<r>39</r>
+		<c>0</c>
+		<w>1</w>
+	</merge>
+	<merge>
+		<r>39</r>
+		<c>2</c>
+		<w>6</w>
+	</merge>
+	<merge>
+		<r>39</r>
+		<c>9</c>
+		<w>5</w>
+	</merge>
 	<namedItem xsi:type="NamedItemCells">
 		<name>DD</name>
 		<area>
@@ -2000,6 +2210,46 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
+		<name>Анонс</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>36</beginRow>
+			<endRow>36</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Встречи</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>39</beginRow>
+			<endRow>39</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ВстречиХ</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>38</beginRow>
+			<endRow>38</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ВстречиШ</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>37</beginRow>
+			<endRow>37</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
 		<name>Год</name>
 		<area>
 			<type>Columns</type>
@@ -2007,6 +2257,16 @@
 			<endRow>-1</endRow>
 			<beginColumn>13</beginColumn>
 			<endColumn>14</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Графика</name>
+		<area>
+			<type>Rows</type>
+			<beginRow>26</beginRow>
+			<endRow>35</endRow>
+			<beginColumn>-1</beginColumn>
+			<endColumn>-1</endColumn>
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
@@ -3250,6 +3510,102 @@
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<textColor>style:SpecialTextColor</textColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<fillType>Template</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<width>72</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Text</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДЛФ=D</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<border>0</border>
+		<width>416</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<border>0</border>
+		<width>45</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportHeaderBackColor</backColor>
+	</format>
+	<format>
+		<border>0</border>
+		<width>72</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДЛФ=D</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<border>0</border>
+		<width>48</width>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<width>48</width>
+		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ReportGroup1BackColor</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<width>72</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДЛФ=D</v8:content>
+			</v8:item>
+		</format>
+		<indent>1</indent>
+	</format>
+	<format>
+		<border>0</border>
+		<width>48</width>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<border>0</border>
+		<width>48</width>
+		<verticalAlignment>Center</verticalAlignment>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>

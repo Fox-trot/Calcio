@@ -41,7 +41,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Итоги</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ЧемпионскаяГонка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.РезультатыМатчей</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.Матчи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">f88841db-8ac3-4714-b3a7-0b5f54d14108</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ТурнирнаяТаблица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.СтарыйВидАнонсов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.КоличествоМатчейВАнонсе</xr:Item>

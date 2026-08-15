@@ -267,7 +267,6 @@
 			<CommonPicture>Goal</CommonPicture>
 			<SessionParameter>КаталогаФайлов</SessionParameter>
 			<CommonTemplate>ТурнирнаяТаблица</CommonTemplate>
-			<CommonTemplate>Матчи</CommonTemplate>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
 			<FilterCriterion>Посещаемость</FilterCriterion>
