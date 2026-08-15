@@ -169,7 +169,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>Список.Period</Field>
 				<Field>Список.Команда</Field>
 				<Field>Список.Чемпионат</Field>
 			</UseAlways>

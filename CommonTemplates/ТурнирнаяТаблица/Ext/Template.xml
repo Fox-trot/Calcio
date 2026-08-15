@@ -1773,7 +1773,6 @@
 			<c>
 				<c>
 					<f>99</f>
-					<parameter>Ссылка</parameter>
 					<detailParameter>Ссылка</detailParameter>
 				</c>
 			</c>
@@ -3514,7 +3513,6 @@
 	</format>
 	<format>
 		<horizontalAlignment>Center</horizontalAlignment>
-		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<horizontalAlignment>Center</horizontalAlignment>
