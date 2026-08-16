@@ -68,11 +68,9 @@
 					<Representation>List</Representation>
 					<ChangeRowSet>false</ChangeRowSet>
 					<AutoMaxHeight>false</AutoMaxHeight>
-					<AutoMaxRowsCount>false</AutoMaxRowsCount>
 					<HorizontalScrollBar>DontUse</HorizontalScrollBar>
 					<VerticalScrollBar>UseAlways</VerticalScrollBar>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
-					<VerticalStretch>false</VerticalStretch>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>Отчет.Данные</DataPath>

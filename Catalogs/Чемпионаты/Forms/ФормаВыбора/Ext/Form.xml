@@ -118,7 +118,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.Страна~Список.Страна</Field>
+				<Field>~Список.Страна</Field>
 				<Field>Список.Owner</Field>
 				<Field>Список.Ref</Field>
 				<Field>Список.ДатаОкончания</Field>

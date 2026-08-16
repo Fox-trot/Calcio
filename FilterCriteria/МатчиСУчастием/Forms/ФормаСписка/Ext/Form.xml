@@ -132,8 +132,8 @@
 				<Field>~Список.Date~Список.Дата</Field>
 				<Field>~Список.Owner~Список.Владелец</Field>
 				<Field>~Список.Posted~Список.Проведен</Field>
-				<Field>~Список.Счет~Список.Счет</Field>
-				<Field>~Список.Тур~Список.Тур</Field>
+				<Field>~Список.Счет</Field>
+				<Field>~Список.Тур</Field>
 				<Field>Список.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">

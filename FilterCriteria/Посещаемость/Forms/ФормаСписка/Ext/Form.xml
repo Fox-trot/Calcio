@@ -113,8 +113,8 @@
 			<UseAlways>
 				<Field>~Список.Date~Список.Дата</Field>
 				<Field>~Список.Posted~Список.Проведен</Field>
-				<Field>~Список.КоличествоЗрителей~Список.КоличествоЗрителей</Field>
-				<Field>~Список.Комментарий~Список.Комментарий</Field>
+				<Field>~Список.КоличествоЗрителей</Field>
+				<Field>~Список.Комментарий</Field>
 				<Field>Список.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
