@@ -3517,6 +3517,7 @@
 	<format>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Template</fillType>
 	</format>
 	<format>

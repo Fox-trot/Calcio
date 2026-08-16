@@ -10,23 +10,23 @@
 			<dataPath>Ссылка</dataPath>
 			<field>Ссылка</field>
 			<role>
-				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>Изображение</dcscom:parentDimension>
+				<dcscom:required>true</dcscom:required>
 			</role>
 			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Стадионы</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Игроки</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Туры</v8:Type>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Изображение</dataPath>
 			<field>Изображение</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Изображение</v8:content>
-				</v8:item>
-			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
 			<valueType>
 				<v8:Type>v8:ValueStorage</v8:Type>
 			</valueType>
@@ -34,12 +34,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Порядок</dataPath>
 			<field>Порядок</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Порядок</v8:content>
-				</v8:item>
-			</title>
 			<valueType>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
@@ -52,12 +46,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Номер</dataPath>
 			<field>Номер</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Номер</v8:content>
-				</v8:item>
-			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Изображение1</dataPath>
@@ -68,6 +56,9 @@
 					<v8:content>Изображение</v8:content>
 				</v8:item>
 			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
 			<valueType>
 				<v8:Type>v8:ValueStorage</v8:Type>
 			</valueType>
@@ -82,22 +73,40 @@
 				</v8:item>
 			</title>
 			<role>
-				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:required>true</dcscom:required>
 			</role>
 			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Стадионы</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Игроки</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Команды</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.Матч</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Туры</v8:Type>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Игрок</dataPath>
 			<field>Игрок</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ ПЕРВЫЕ 9999
 	Ссылки.Ссылка КАК Ссылка,
-	Ссылки.Порядок КАК Порядок
+	Ссылки.Порядок КАК Порядок,
+	Ссылки.Дата КАК Дата,
+	АВТОНОМЕРЗАПИСИ() КАК Номер
 ПОМЕСТИТЬ Ссылки
 ИЗ
 	(ВЫБРАТЬ
@@ -147,16 +156,13 @@
 		РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
 			ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК Противник
-			ПО ТурнирнаяТаблица.Регистратор = Противник.Регистратор
-				И ТурнирнаяТаблица.КоличествоОчков &gt; Противник.КоличествоОчков
 	ГДЕ
 		ТурнирнаяТаблица.Команда = &amp;Команда
 		И РАЗМЕРХРАНИМЫХДАННЫХ(Матч.Изображение) &gt;= 64
 	
 	ОБЪЕДИНИТЬ ВСЕ
 	
-	ВЫБРАТЬ
+	ВЫБРАТЬ РАЗЛИЧНЫЕ
 		ТурнирнаяТаблица.Тур,
 		11,
 		ТурнирнаяТаблица.Период
@@ -217,7 +223,10 @@
 ВЫБРАТЬ
 	Ссылки.Ссылка КАК Ссылка,
 	Ссылки.Порядок КАК Порядок,
-	АВТОНОМЕРЗАПИСИ() КАК Номер
+	Ссылки.Номер КАК Номер,
+	Ссылки.Номер / 2 = ЦЕЛ(Ссылки.Номер / 2)
+		ИЛИ Ссылки.Порядок = 99 КАК Левый,
+	Ссылки.Дата КАК Дата
 ПОМЕСТИТЬ Данные
 ИЗ
 	Ссылки КАК Ссылки
@@ -227,9 +236,10 @@
 ВЫБРАТЬ
 	Данные.Ссылка КАК Ссылка,
 	Данные.Ссылка.Изображение КАК Изображение,
-	Данные.Порядок + ЕСТЬNULL(ВложенныйЗапрос.Порядок, 0) КАК Порядок,
 	ВложенныйЗапрос.Ссылка КАК Ссылка1,
-	ВложенныйЗапрос.Ссылка.Изображение КАК Изображение1
+	ВложенныйЗапрос.Ссылка.Изображение КАК Изображение1,
+	Данные.Порядок КАК Порядок,
+	Данные.Дата КАК Дата
 ИЗ
 	Данные КАК Данные
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
@@ -239,15 +249,10 @@
 		ИЗ
 			Данные КАК Данные
 		ГДЕ
-			Данные.Номер / 2 = ЦЕЛ(Данные.Номер / 2)
-			И Данные.Порядок &lt; 99) КАК ВложенныйЗапрос
+			Данные.Левый = ЛОЖЬ) КАК ВложенныйЗапрос
 		ПО Данные.Номер = ВложенныйЗапрос.Номер
 ГДЕ
-	ВЫБОР
-			КОГДА (Данные.Номер + 1) / 2 = ЦЕЛ((Данные.Номер + 1) / 2)
-				ТОГДА ИСТИНА
-			ИНАЧЕ Данные.Порядок = 99
-		КОНЕЦ</query>
+	Данные.Левый = ИСТИНА</query>
 	</dataSet>
 	<parameter>
 		<name>Команда</name>
@@ -316,10 +321,6 @@
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Дата</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Ссылка</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
 			<dcsset:outputParameters>
