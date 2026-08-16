@@ -6,8 +6,10 @@
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>ClearChartAppearance</ExcludedCommand>
+		<ExcludedCommand>CompactViewMode</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
 	</CommandSet>
