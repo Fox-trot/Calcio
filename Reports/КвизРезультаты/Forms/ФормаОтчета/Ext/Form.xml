@@ -5,8 +5,10 @@
 	<AutoFillCheck>false</AutoFillCheck>
 	<CommandSet>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
+		<ExcludedCommand>ClearChartAppearance</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>

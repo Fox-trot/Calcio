@@ -71,7 +71,7 @@
 									<ContextMenu name="СтранаКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="СтранаРасширеннаяПодсказка" id="15"/>
 									<Events>
-										<Event name="OnChange">СтранаПриИзменении</Event>
+										<Event name="OnChange">ЭлементПриИзменении</Event>
 									</Events>
 								</InputField>
 								<UsualGroup name="ГруппаКоличество" id="38">
@@ -96,6 +96,9 @@
 											<SpinButton>true</SpinButton>
 											<ContextMenu name="КоличествоКомандКонтекстноеМеню" id="8"/>
 											<ExtendedTooltip name="КоличествоКомандРасширеннаяПодсказка" id="9"/>
+											<Events>
+												<Event name="OnChange">ЭлементПриИзменении</Event>
+											</Events>
 										</InputField>
 										<InputField name="Квалификация" id="70">
 											<DataPath>Объект.Квалификация</DataPath>
@@ -120,6 +123,9 @@
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОлимпийскаяСистемаКонтекстноеМеню" id="43"/>
 									<ExtendedTooltip name="ОлимпийскаяСистемаРасширеннаяПодсказка" id="44"/>
+									<Events>
+										<Event name="OnChange">ЭлементПриИзменении</Event>
+									</Events>
 								</CheckBoxField>
 								<UsualGroup name="ГруппаИзображение" id="26">
 									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
@@ -193,6 +199,7 @@
 					<ExtendedTooltip name="СтраницаКомандыРасширеннаяПодсказка" id="50"/>
 					<ChildItems>
 						<Table name="Команды" id="51">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -410,7 +417,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Select</xr:Ref>
+				<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыбратьИзображение</Action>

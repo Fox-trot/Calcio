@@ -71,7 +71,6 @@
 					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="13"/>
 					<Events>
 						<Event name="OnChange">Сформировать</Event>
-						<Event name="StartChoice">ТипГрафикаНачалоВыбора</Event>
 					</Events>
 				</InputField>
 			</ChildItems>

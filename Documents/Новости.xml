@@ -234,7 +234,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Наименование</v8:content>
+							<v8:content>Заголовок</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -268,7 +268,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
+					<DataHistory>DontUse</DataHistory>
 				</Properties>
 			</Attribute>
 			<Attribute uuid="52ef9650-9529-41c9-b72a-daf4d95a6e9d">
@@ -294,7 +294,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Указывается любая дополнительная информация</v8:content>
+							<v8:content>Сообщение</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -316,7 +316,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
+					<DataHistory>DontUse</DataHistory>
 				</Properties>
 			</Attribute>
 			<Command uuid="7d9ec583-e942-4b01-8ec8-ce1324fadc25">

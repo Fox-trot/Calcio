@@ -36,20 +36,40 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="КомандаИлиИгрок" id="1">
-			<DataPath>Отчет.КомандаИлиИгрок</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ChoiceButton>true</ChoiceButton>
-			<ClearButton>true</ClearButton>
-			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-			<ChooseType>false</ChooseType>
-			<ContextMenu name="КомандаИлиИгрокКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КомандаИлиИгрокРасширеннаяПодсказка" id="3"/>
-			<Events>
-				<Event name="OnChange">КомандаИлиИгрокПриИзменении</Event>
-				<Event name="Clearing">КомандаИлиИгрокОчистка</Event>
-			</Events>
-		</InputField>
+		<UsualGroup name="ГруппаПараметры" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<InputField name="КомандаИлиИгрок" id="1">
+					<DataPath>Отчет.КомандаИлиИгрок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="КомандаИлиИгрокКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КомандаИлиИгрокРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">КомандаИлиИгрокПриИзменении</Event>
+						<Event name="Clearing">КомандаИлиИгрокОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаДанные" id="62">
 			<EnableContentChange>true</EnableContentChange>
 			<Title>

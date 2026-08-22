@@ -114,12 +114,12 @@
 					<ChildItems>
 						<Button name="ВыбратьИзображение" id="36">
 							<Type>UsualButton</Type>
-							<CommandName>Form.Command.КомандаДатыИсправить</CommandName>
+							<CommandName>Form.Command.ВыбратьИзображение</CommandName>
 							<ExtendedTooltip name="ВыбратьИзображениеРасширеннаяПодсказка" id="37"/>
 						</Button>
 						<Button name="УдалитьИзображение" id="38">
 							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ВыбратьИзображение</CommandName>
+							<CommandName>Form.Command.УдалитьИзображение</CommandName>
 							<ExtendedTooltip name="УдалитьИзображениеРасширеннаяПодсказка" id="39"/>
 						</Button>
 					</ChildItems>
@@ -224,7 +224,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Select</xr:Ref>
+				<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыбратьИзображение</Action>

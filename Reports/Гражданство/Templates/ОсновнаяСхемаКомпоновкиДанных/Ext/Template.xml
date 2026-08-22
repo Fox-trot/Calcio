@@ -29,16 +29,6 @@
 				<condition>true</condition>
 				<group>true</group>
 			</useRestriction>
-			<orderExpression>
-				<dcscom:expression>ЭтоПрочие</dcscom:expression>
-				<dcscom:orderType>Asc</dcscom:orderType>
-				<dcscom:autoOrder>false</dcscom:autoOrder>
-			</orderExpression>
-			<orderExpression>
-				<dcscom:expression>Страна</dcscom:expression>
-				<dcscom:orderType>Asc</dcscom:orderType>
-				<dcscom:autoOrder>true</dcscom:autoOrder>
-			</orderExpression>
 			<valueType>
 				<v8:Type>xs:string</v8:Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Страны</v8:Type>
@@ -337,10 +327,6 @@
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Количество</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Страна</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
 			<dcsset:outputParameters>

@@ -9,6 +9,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Ссылка</dataPath>
 			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:parentDimension>Изображение</dcscom:parentDimension>
 				<dcscom:required>true</dcscom:required>
@@ -69,7 +75,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ссылка</v8:content>
+					<v8:content>2</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -86,14 +92,13 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Игрок</dataPath>
 			<field>Игрок</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Дата</dataPath>
 			<field>Дата</field>
-			<role>
-				<dcscom:periodNumber>1</dcscom:periodNumber>
-				<dcscom:periodType>Main</dcscom:periodType>
-			</role>
 			<valueType>
 				<v8:Type>xs:dateTime</v8:Type>
 				<v8:DateQualifiers>
@@ -102,27 +107,29 @@
 			</valueType>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ ПЕРВЫЕ 9999
+		<query>ВЫБРАТЬ
 	Ссылки.Ссылка КАК Ссылка,
 	Ссылки.Порядок КАК Порядок,
-	Ссылки.Дата КАК Дата,
-	АВТОНОМЕРЗАПИСИ() КАК Номер
+	Ссылки.Дата КАК Дата
 ПОМЕСТИТЬ Ссылки
 ИЗ
 	(ВЫБРАТЬ
 		ПеремещенияИгроков.Игрок КАК Ссылка,
 		МИНИМУМ(ВЫБОР
 				КОГДА ПеремещенияИгроков.Команда = СрезПоследних.Команда
-					ТОГДА 1
+						И (ПеремещенияИгроков.Номер МЕЖДУ 1 И 42)
+					ТОГДА ПеремещенияИгроков.Номер
+				КОГДА ПеремещенияИгроков.Команда = СрезПоследних.Команда
+					ТОГДА 43
 				КОГДА ПеремещенияИгроков.Команда = МатчСоставыКоманд.Команда
-					ТОГДА 2
-				ИНАЧЕ 3
+					ТОГДА 44
+				ИНАЧЕ 45
 			КОНЕЦ) КАК Порядок,
 		МАКСИМУМ(ВЫБОР
-				КОГДА ПеремещенияИгроков.Команда = МатчСоставыКоманд.Команда
-					ТОГДА МатчСоставыКоманд.Ссылка.Дата
 				КОГДА ПеремещенияИгроков.Команда = СрезПоследних.Команда
 					ТОГДА НАЧАЛОПЕРИОДА(СрезПоследних.Период, ГОД)
+				КОГДА ПеремещенияИгроков.Команда = МатчСоставыКоманд.Команда
+					ТОГДА МатчСоставыКоманд.Ссылка.Дата
 				ИНАЧЕ ПеремещенияИгроков.Игрок.ДатаРождения
 			КОНЕЦ) КАК Дата
 	ИЗ
@@ -132,7 +139,7 @@
 				ПеремещенияИгроков.Команда КАК Команда,
 				ПеремещенияИгроков.Период КАК Период
 			ИЗ
-				РегистрСведений.ПеремещенияИгроков.СрезПоследних(, РАЗМЕРХРАНИМЫХДАННЫХ(Игрок.Изображение) &gt;= 64) КАК ПеремещенияИгроков) КАК СрезПоследних
+				РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК ПеремещенияИгроков) КАК СрезПоследних
 			ПО ПеремещенияИгроков.Игрок = СрезПоследних.Игрок
 				И ПеремещенияИгроков.Команда = СрезПоследних.Команда
 			ЛЕВОЕ СОЕДИНЕНИЕ Документ.Матч.СоставыКоманд КАК МатчСоставыКоманд
@@ -149,22 +156,8 @@
 	ОБЪЕДИНИТЬ ВСЕ
 	
 	ВЫБРАТЬ
-		ТурнирнаяТаблица.Регистратор,
-		7,
-		ТурнирнаяТаблица.Период
-	ИЗ
-		РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
-			ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
-	ГДЕ
-		ТурнирнаяТаблица.Команда = &amp;Команда
-		И РАЗМЕРХРАНИМЫХДАННЫХ(Матч.Изображение) &gt;= 64
-	
-	ОБЪЕДИНИТЬ ВСЕ
-	
-	ВЫБРАТЬ РАЗЛИЧНЫЕ
 		ТурнирнаяТаблица.Тур,
-		11,
+		77,
 		ТурнирнаяТаблица.Период
 	ИЗ
 		РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
@@ -189,8 +182,22 @@
 	ОБЪЕДИНИТЬ ВСЕ
 	
 	ВЫБРАТЬ
+		ТурнирнаяТаблица.Регистратор,
+		90 - ТурнирнаяТаблица.КоличествоОчков,
+		ТурнирнаяТаблица.Период
+	ИЗ
+		РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
+			ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
+	ГДЕ
+		ТурнирнаяТаблица.Команда = &amp;Команда
+		И РАЗМЕРХРАНИМЫХДАННЫХ(Матч.Изображение) &gt;= 64
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
 		Стадионы.Ссылка,
-		33,
+		98,
 		МАКСИМУМ(ЕСТЬNULL(Матч.Дата, ДАТАВРЕМЯ(1900, 1, 1)))
 	ИЗ
 		Справочник.Стадионы КАК Стадионы
@@ -214,22 +221,21 @@
 	ГДЕ
 		Команды.Ссылка = &amp;Команда
 		И РАЗМЕРХРАНИМЫХДАННЫХ(Команды.Изображение) &gt;= 64) КАК Ссылки
-
-УПОРЯДОЧИТЬ ПО
-	Порядок
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ ПЕРВЫЕ 9999
 	Ссылки.Ссылка КАК Ссылка,
+	АВТОНОМЕРЗАПИСИ() КАК Номер,
 	Ссылки.Порядок КАК Порядок,
-	Ссылки.Номер КАК Номер,
-	Ссылки.Номер / 2 = ЦЕЛ(Ссылки.Номер / 2)
-		ИЛИ Ссылки.Порядок = 99 КАК Левый,
 	Ссылки.Дата КАК Дата
 ПОМЕСТИТЬ Данные
 ИЗ
 	Ссылки КАК Ссылки
+
+УПОРЯДОЧИТЬ ПО
+	Порядок,
+	Дата УБЫВ
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -249,10 +255,11 @@
 		ИЗ
 			Данные КАК Данные
 		ГДЕ
-			Данные.Левый = ЛОЖЬ) КАК ВложенныйЗапрос
+			Данные.Номер / 2 = ЦЕЛ(Данные.Номер / 2)) КАК ВложенныйЗапрос
 		ПО Данные.Номер = ВложенныйЗапрос.Номер
 ГДЕ
-	Данные.Левый = ИСТИНА</query>
+	Данные.Номер / 2 &gt; ЦЕЛ(Данные.Номер / 2)</query>
+		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
 	</dataSet>
 	<parameter>
 		<name>Команда</name>
@@ -306,8 +313,16 @@
 							<dcscor:value xsi:type="dcscor:Parameter">Ссылка</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
+							<dcscor:parameter>РастягиватьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
 							<dcscor:parameter>Картинка</dcscor:parameter>
 							<dcscor:value xsi:type="dcscor:Parameter">Изображение</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложениеКартинки</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Top</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
@@ -340,20 +355,28 @@
 							<dcscor:value xsi:type="dcscor:Parameter">Ссылка1</dcscor:value>
 						</dcscor:item>
 						<dcscor:item>
+							<dcscor:parameter>РастягиватьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
 							<dcscor:parameter>Картинка</dcscor:parameter>
 							<dcscor:value xsi:type="dcscor:Parameter">Изображение1</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложениеКартинки</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Top</dcscor:value>
 						</dcscor:item>
 					</dcsat:appearance>
 				</dcsat:tableCell>
 			</dcsat:item>
 		</template>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
-			<dcsat:name>Ссылка1</dcsat:name>
-			<dcsat:expression>Ссылка1</dcsat:expression>
-		</parameter>
-		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>Изображение1</dcsat:name>
 			<dcsat:expression>Изображение1</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Ссылка1</dcsat:name>
+			<dcsat:expression>Ссылка1</dcsat:expression>
 		</parameter>
 	</template>
 	<fieldTemplate>
@@ -372,22 +395,12 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>4a529169-1c1d-4f29-835f-6a7c5e89e1fb</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Порядок</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Дата</dcsset:field>
-					<dcsset:orderType>Desc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
 					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
 				</dcscor:item>
@@ -398,6 +411,16 @@
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemTable">
 				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Порядок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>Ссылка</dcsset:field>
