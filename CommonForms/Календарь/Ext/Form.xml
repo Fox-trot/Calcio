@@ -10,6 +10,7 @@
 	<AutoTitle>false</AutoTitle>
 	<Group>AlwaysHorizontal</Group>
 	<CommandBarLocation>None</CommandBarLocation>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
