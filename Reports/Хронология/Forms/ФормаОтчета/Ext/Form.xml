@@ -50,8 +50,8 @@
 					<ChooseType>false</ChooseType>
 					<ChoiceParameterLinks>
 						<xr:Link>
-							<xr:Name>Отбор.Ссылка</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Чемпионаты</xr:DataPath>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Лиги</xr:DataPath>
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
@@ -372,18 +372,18 @@
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Settings>
 		</Attribute>
-		<Attribute name="Чемпионаты" id="4">
+		<Attribute name="Лиги" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Чемпионаты</v8:content>
+					<v8:content>Лиги</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 			<Settings xsi:type="v8:TypeDescription">
-				<v8:Type>cfg:CatalogRef.Чемпионаты</v8:Type>
+				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 			</Settings>
 		</Attribute>
 	</Attributes>

@@ -159,6 +159,9 @@
 						<ContextMenu name="ФазыУправлениеПоискомКонтекстноеМеню" id="34"/>
 						<ExtendedTooltip name="ФазыУправлениеПоискомРасширеннаяПодсказка" id="35"/>
 					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ФазыВыбор</Event>
+					</Events>
 					<ChildItems>
 						<LabelField name="ФазыНомерСтроки" id="36">
 							<DataPath>Отчет.Фазы.LineNumber</DataPath>
@@ -205,6 +208,14 @@
 							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 							<ContextMenu name="ФазыФазаПКонтекстноеМеню" id="52"/>
 							<ExtendedTooltip name="ФазыФазаПРасширеннаяПодсказка" id="53"/>
+						</InputField>
+						<InputField name="ФазыМатч" id="54">
+							<DataPath>Отчет.Фазы.Матч</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ФазыМатчКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ФазыМатчРасширеннаяПодсказка" id="56"/>
 						</InputField>
 					</ChildItems>
 				</Table>
