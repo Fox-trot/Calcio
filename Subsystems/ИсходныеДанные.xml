@@ -31,7 +31,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПеремещенияИгроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ИмпортИгр</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ИмпортИгр</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбъектыПередЗаписью</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">b60b2639-7c76-4cc5-a17c-c7a223cd81f5</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбъектыПриКопировании</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.СправочникПередУдалением</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПодпискиНаСобытиеОбработкаПроведения</xr:Item>

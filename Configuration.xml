@@ -277,11 +277,12 @@
 			<CommonModule>НаКлиенте</CommonModule>
 			<CommonModule>ПодпискиНаСобытие</CommonModule>
 			<CommonModule>НаСервереПовторно</CommonModule>
-			<EventSubscription>ОбъектыПередЗаписью</EventSubscription>
 			<EventSubscription>ОбъектыПриКопировании</EventSubscription>
 			<EventSubscription>СправочникПередУдалением</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаПроведения</EventSubscription>
 			<EventSubscription>ПодпискиНаСобытиеОбработкаУдаленияПроведения</EventSubscription>
+			<EventSubscription>СправочникиПередЗаписью</EventSubscription>
+			<EventSubscription>ДокументыПередЗаписью</EventSubscription>
 			<ScheduledJob>ИмпортИгр</ScheduledJob>
 			<ScheduledJob>ИмпортНовостей</ScheduledJob>
 			<FunctionalOption>ИспользоватьСтадионы</FunctionalOption>
@@ -296,6 +297,7 @@
 			<CommonCommand>КомандаКалендарь</CommonCommand>
 			<CommonCommand>ОткрытьВИнтернете</CommonCommand>
 			<CommonCommand>Синхронизация</CommonCommand>
+			<CommonCommand>ИмпортТрансферов</CommonCommand>
 			<Constant>МояКоманда</Constant>
 			<Constant>Цвета</Constant>
 			<Constant>СтарыйВидАнонсов</Constant>
