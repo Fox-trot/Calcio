@@ -462,7 +462,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Матч.Дата КАК Дата,
 	Матч.Ссылка КАК Ссылка,
@@ -856,7 +856,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
+				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ДокументНовости.Ссылка КАК Ссылка,
 	ДокументНовости.ПометкаУдаления КАК ПометкаУдаления,
@@ -867,7 +867,9 @@
 	ДокументНовости.Наименование ПОДОБНО &amp;МояКоманда
 		ИЛИ ДокументНовости.Комментарий ПОДОБНО &amp;МояКоманда КАК МояКоманда
 ИЗ
-	Документ.Новости КАК ДокументНовости</QueryText>
+	Документ.Новости КАК ДокументНовости
+ГДЕ
+	ДокументНовости.Дата МЕЖДУ &amp;ДатаН И &amp;ДатаК</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Комментарий</dcssch:dataPath>
 					<dcssch:field>Комментарий</dcssch:field>
@@ -959,7 +961,6 @@
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>Document.Новости</MainTable>
-				<GetInvisibleFieldPresentations>false</GetInvisibleFieldPresentations>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
