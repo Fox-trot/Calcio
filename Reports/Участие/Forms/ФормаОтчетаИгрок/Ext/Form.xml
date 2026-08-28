@@ -73,6 +73,7 @@
 					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="13"/>
 					<Events>
 						<Event name="OnChange">ЭлементПриИзменении</Event>
+						<Event name="Clearing">ЛигаОчистка</Event>
 					</Events>
 				</InputField>
 				<InputField name="Команда" id="14">

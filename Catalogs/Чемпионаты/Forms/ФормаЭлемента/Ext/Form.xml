@@ -203,132 +203,153 @@
 									<ScrollOnCompress>true</ScrollOnCompress>
 									<ExtendedTooltip name="СтраницаКомандыРасширеннаяПодсказка" id="181"/>
 									<ChildItems>
-										<Table name="Команды" id="16">
-											<Representation>List</Representation>
-											<MaxWidth>20</MaxWidth>
-											<Header>false</Header>
-											<VerticalLines>false</VerticalLines>
-											<UseAlternationRowColor>true</UseAlternationRowColor>
-											<AutoInsertNewRow>true</AutoInsertNewRow>
-											<EnableStartDrag>true</EnableStartDrag>
-											<EnableDrag>true</EnableDrag>
-											<FileDragMode>AsFile</FileDragMode>
-											<DataPath>Объект.Команды</DataPath>
-											<CommandSet>
-												<ExcludedCommand>Copy</ExcludedCommand>
-												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
-											</CommandSet>
-											<SearchStringLocation>None</SearchStringLocation>
-											<ViewStatusLocation>None</ViewStatusLocation>
-											<SearchControlLocation>CommandBar</SearchControlLocation>
-											<RowFilter xsi:nil="true"/>
-											<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
-											<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
-												<ChildItems>
-													<Popup name="КомандыГруппаДополнительно" id="75">
-														<EnableContentChange>true</EnableContentChange>
-														<Title>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Дополнительно</v8:content>
-															</v8:item>
-														</Title>
-														<ToolTip>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Группа дополнительных команд</v8:content>
-															</v8:item>
-														</ToolTip>
-														<ExtendedTooltip name="КомандыГруппаДополнительноРасширеннаяПодсказка" id="76"/>
+										<UsualGroup name="ГруппаКоманды" id="209">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа команды</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="210"/>
+											<ChildItems>
+												<Table name="Команды" id="16">
+													<Representation>List</Representation>
+													<MaxWidth>20</MaxWidth>
+													<Header>false</Header>
+													<VerticalLines>false</VerticalLines>
+													<UseAlternationRowColor>true</UseAlternationRowColor>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>Объект.Команды</DataPath>
+													<CommandSet>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+													</CommandSet>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>CommandBar</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="КомандыКонтекстноеМеню" id="17"/>
+													<AutoCommandBar name="КомандыКоманднаяПанель" id="18">
 														<ChildItems>
-															<Button name="КомандаИмпортКоманд" id="49">
+															<Popup name="КомандыГруппаДополнительно" id="75">
+																<EnableContentChange>true</EnableContentChange>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Дополнительно</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа дополнительных команд</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<ExtendedTooltip name="КомандыГруппаДополнительноРасширеннаяПодсказка" id="76"/>
+																<ChildItems>
+																	<Button name="КомандаИмпортКоманд" id="49">
+																		<Type>CommandBarButton</Type>
+																		<HorizontalStretch>true</HorizontalStretch>
+																		<VerticalStretch>true</VerticalStretch>
+																		<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
+																		<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
+																	</Button>
+																	<Button name="КомандыУпорядочить" id="56">
+																		<Type>CommandBarButton</Type>
+																		<HorizontalStretch>true</HorizontalStretch>
+																		<VerticalStretch>true</VerticalStretch>
+																		<CommandName>Form.Command.Упорядочить</CommandName>
+																		<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
+																	</Button>
+																	<Button name="КомандыОчистить" id="71">
+																		<Type>CommandBarButton</Type>
+																		<HorizontalStretch>true</HorizontalStretch>
+																		<VerticalStretch>true</VerticalStretch>
+																		<CommandName>Form.Command.КомандаОчистить</CommandName>
+																		<ExtendedTooltip name="КомандыОчиститьРасширеннаяПодсказка" id="72"/>
+																	</Button>
+																</ChildItems>
+															</Popup>
+															<Button name="КомандыИмпортИгроков" id="79">
 																<Type>CommandBarButton</Type>
 																<HorizontalStretch>true</HorizontalStretch>
 																<VerticalStretch>true</VerticalStretch>
-																<CommandName>Form.Command.КомандаИмпортКоманд</CommandName>
-																<ExtendedTooltip name="КомандаИмпортКомандРасширеннаяПодсказка" id="50"/>
-															</Button>
-															<Button name="КомандыУпорядочить" id="56">
-																<Type>CommandBarButton</Type>
-																<HorizontalStretch>true</HorizontalStretch>
-																<VerticalStretch>true</VerticalStretch>
-																<CommandName>Form.Command.Упорядочить</CommandName>
-																<ExtendedTooltip name="КомандыУпорядочитьРасширеннаяПодсказка" id="57"/>
-															</Button>
-															<Button name="КомандыОчистить" id="71">
-																<Type>CommandBarButton</Type>
-																<HorizontalStretch>true</HorizontalStretch>
-																<VerticalStretch>true</VerticalStretch>
-																<CommandName>Form.Command.КомандаОчистить</CommandName>
-																<ExtendedTooltip name="КомандыОчиститьРасширеннаяПодсказка" id="72"/>
+																<CommandName>Form.Command.КомандаИмпортИгроков</CommandName>
+																<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="КомандыИмпортИгроковРасширеннаяПодсказка" id="80"/>
 															</Button>
 														</ChildItems>
-													</Popup>
-													<Button name="КомандыИмпортИгроков" id="79">
-														<Type>CommandBarButton</Type>
-														<HorizontalStretch>true</HorizontalStretch>
-														<VerticalStretch>true</VerticalStretch>
-														<CommandName>Form.Command.КомандаИмпортИгроков</CommandName>
-														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-														<ExtendedTooltip name="КомандыИмпортИгроковРасширеннаяПодсказка" id="80"/>
-													</Button>
-												</ChildItems>
-											</AutoCommandBar>
-											<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
-											<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
-												<AdditionSource>
-													<Item>Команды</Item>
-													<Type>SearchStringRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="21"/>
-												<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
-											</SearchStringAddition>
-											<ViewStatusAddition name="КомандыСостояниеПросмотра" id="23">
-												<AdditionSource>
-													<Item>Команды</Item>
-													<Type>ViewStatusRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="24"/>
-												<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
-											</ViewStatusAddition>
-											<SearchControlAddition name="КомандыУправлениеПоиском" id="26">
-												<AdditionSource>
-													<Item>Команды</Item>
-													<Type>SearchControl</Type>
-												</AdditionSource>
-												<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
-												<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
-											</SearchControlAddition>
-											<Events>
-												<Event name="Selection">КомандыВыбор</Event>
-												<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
-												<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
-											</Events>
-											<ChildItems>
-												<LabelField name="КомандыНомерСтроки" id="29">
-													<DataPath>Объект.Команды.LineNumber</DataPath>
-													<Visible>false</Visible>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
-													<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
-												</LabelField>
-												<InputField name="КомандыКоманда" id="32">
-													<DataPath>Объект.Команды.Команда</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<CreateButton>true</CreateButton>
-													<ChooseType>false</ChooseType>
-													<ChoiceParameterLinks>
-														<xr:Link>
-															<xr:Name>Отбор.Ссылка</xr:Name>
-															<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
-															<xr:ValueChange>Clear</xr:ValueChange>
-														</xr:Link>
-													</ChoiceParameterLinks>
-													<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
-													<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
-												</InputField>
+													</AutoCommandBar>
+													<ExtendedTooltip name="КомандыРасширеннаяПодсказка" id="19"/>
+													<SearchStringAddition name="КомандыСтрокаПоиска" id="20">
+														<AdditionSource>
+															<Item>Команды</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="КомандыСтрокаПоискаКонтекстноеМеню" id="21"/>
+														<ExtendedTooltip name="КомандыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="КомандыСостояниеПросмотра" id="23">
+														<AdditionSource>
+															<Item>Команды</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="КомандыСостояниеПросмотраКонтекстноеМеню" id="24"/>
+														<ExtendedTooltip name="КомандыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="КомандыУправлениеПоиском" id="26">
+														<AdditionSource>
+															<Item>Команды</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="КомандыУправлениеПоискомКонтекстноеМеню" id="27"/>
+														<ExtendedTooltip name="КомандыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="Selection">КомандыВыбор</Event>
+														<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
+														<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
+														<Event name="OnActivateRow">КомандыПриАктивизацииСтроки</Event>
+													</Events>
+													<ChildItems>
+														<LabelField name="КомандыНомерСтроки" id="29">
+															<DataPath>Объект.Команды.LineNumber</DataPath>
+															<Visible>false</Visible>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="КомандыНомерСтрокиКонтекстноеМеню" id="30"/>
+															<ExtendedTooltip name="КомандыНомерСтрокиРасширеннаяПодсказка" id="31"/>
+														</LabelField>
+														<InputField name="КомандыКоманда" id="32">
+															<DataPath>Объект.Команды.Команда</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CreateButton>true</CreateButton>
+															<ChooseType>false</ChooseType>
+															<ChoiceParameterLinks>
+																<xr:Link>
+																	<xr:Name>Отбор.Ссылка</xr:Name>
+																	<xr:DataPath xsi:type="xs:string">КомандыЛиги</xr:DataPath>
+																	<xr:ValueChange>Clear</xr:ValueChange>
+																</xr:Link>
+															</ChoiceParameterLinks>
+															<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
+															<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+												<PictureField name="Лого" id="211">
+													<DataPath>КомандаИзображение</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ЛогоКонтекстноеМеню" id="212"/>
+													<ExtendedTooltip name="ЛогоРасширеннаяПодсказка" id="213"/>
+												</PictureField>
 											</ChildItems>
-										</Table>
+										</UsualGroup>
 									</ChildItems>
 								</Page>
 								<Page name="СтрнаицаСтатистика" id="182">
@@ -574,6 +595,40 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="КомандаИзображение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лого</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийКлуб" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий клуб</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Кеш" id="10">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>

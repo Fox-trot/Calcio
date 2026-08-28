@@ -269,6 +269,7 @@
 								<ExcludedCommand>Change</ExcludedCommand>
 								<ExcludedCommand>Copy</ExcludedCommand>
 								<ExcludedCommand>Create</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
@@ -302,6 +303,11 @@
 										<CommandName>CommonCommand.ИмпортИгроков</CommandName>
 										<DataPath>Объект.Ref</DataPath>
 										<ExtendedTooltip name="ТекущийСоставОбщаяКомандаИмпортИгроковРасширеннаяПодсказка" id="166"/>
+									</Button>
+									<Button name="ТекущийСоставОбновить" id="273">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ТекущийСоставОбновить</CommandName>
+										<ExtendedTooltip name="ТекущийСоставОбновитьРасширеннаяПодсказка" id="274"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -2047,6 +2053,27 @@
 			<Action>КомментарийДополнить</Action>
 			<Representation>Picture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ТекущийСоставОбновить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий состав обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТекущийСоставОбновитьНаКлиенте</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
 	</Commands>
 	<CommandInterface>
