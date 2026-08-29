@@ -341,12 +341,7 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</ObjectPresentation>
-			<ExtendedObjectPresentation>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Страна мира</v8:content>
-				</v8:item>
-			</ExtendedObjectPresentation>
+			<ExtendedObjectPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation>
 				<v8:item>

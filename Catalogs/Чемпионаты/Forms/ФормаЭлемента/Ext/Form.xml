@@ -316,6 +316,7 @@
 														<Event name="BeforeAddRow">КомандыПередНачаломДобавления</Event>
 														<Event name="BeforeDeleteRow">КомандыПередУдалением</Event>
 														<Event name="OnActivateRow">КомандыПриАктивизацииСтроки</Event>
+														<Event name="OnChange">КомандыПриИзменении</Event>
 													</Events>
 													<ChildItems>
 														<LabelField name="КомандыНомерСтроки" id="29">
@@ -339,6 +340,9 @@
 															</ChoiceParameterLinks>
 															<ContextMenu name="КомандыКомандаКонтекстноеМеню" id="33"/>
 															<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
+															<Events>
+																<Event name="StartChoice">КомандыКомандаНачалоВыбора</Event>
+															</Events>
 														</InputField>
 													</ChildItems>
 												</Table>
