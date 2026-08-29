@@ -9,17 +9,18 @@
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ДербиСоздать" id="501">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДербиСоздать</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ДербиСоздатьРасширеннаяПодсказка" id="502"/>
+			</Button>
 			<Button name="ОтчетДерби" id="440">
 				<Type>CommandBarButton</Type>
 				<CommandName>Report.Дерби.Command.КомандаДерби</CommandName>
 				<DataPath>Город</DataPath>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ОтчетДербиРасширеннаяПодсказка" id="441"/>
-			</Button>
-			<Button name="ДербиСоздать" id="501">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ДербиСоздать</CommandName>
-				<ExtendedTooltip name="ДербиСоздатьРасширеннаяПодсказка" id="502"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
