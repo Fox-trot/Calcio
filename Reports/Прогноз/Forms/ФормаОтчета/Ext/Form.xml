@@ -75,6 +75,12 @@
 				</InputField>
 				<CheckBoxField name="Все" id="11">
 					<DataPath>Все</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все туры</v8:content>
+						</v8:item>
+					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВсеКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ВсеРасширеннаяПодсказка" id="13"/>
