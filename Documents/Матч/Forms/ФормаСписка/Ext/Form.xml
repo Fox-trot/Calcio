@@ -106,11 +106,12 @@
 					<ContextMenu name="КоличествоЗрителейКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КоличествоЗрителейРасширеннаяПодсказка" id="33"/>
 				</InputField>
-				<LabelField name="Комментарий" id="28">
+				<InputField name="Комментарий" id="28">
 					<DataPath>Список.Комментарий</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
-				</LabelField>
+				</InputField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -123,6 +124,7 @@
 			<UseAlways>
 				<Field>Список.Date</Field>
 				<Field>Список.DeletionMark</Field>
+				<Field>Список.Ref</Field>
 				<Field>Список.Стадион</Field>
 				<Field>Список.Тур</Field>
 			</UseAlways>
