@@ -34,11 +34,80 @@
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="13594bff-d6d0-4ee0-8bac-3dee7e6f8eea">
+				<Properties>
+					<Name>Команда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Команда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>DontUse</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b76aab58-b342-4e10-992e-2413714372eb">
+				<Properties>
+					<Name>Игрок</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Игрок</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>DontUse</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<Form>ФормаОтчета</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
-			<Command uuid="ae704636-7b4c-4e81-88a2-78384a27980b">
+			<Template>СхемаИгрок</Template>
+			<Command uuid="61e66220-9855-472a-b922-60c66c7fa13a">
 				<Properties>
-					<Name>Галерея</Name>
+					<Name>КомандаГалерея</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -48,6 +117,7 @@
 					<Comment/>
 					<Group>FormNavigationPanelSeeAlso</Group>
 					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Игроки</v8:Type>
 						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>

@@ -5,9 +5,11 @@
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>ClearChartAppearance</ExcludedCommand>
+		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
 		<ExcludedCommand>NewWindow</ExcludedCommand>
+		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
@@ -39,6 +41,25 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<InputField name="Команда" id="8">
+					<DataPath>Отчет.Команда</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="КомандаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="10"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<SpreadSheetDocumentField name="Результат" id="3">
 			<DataPath>Результат</DataPath>
 			<DefaultItem>true</DefaultItem>
@@ -55,6 +76,9 @@
 				<v8:Type>cfg:ReportObject.Галерея</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.Команда</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Результат" id="2">
 			<Title>
@@ -75,20 +99,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-		</Attribute>
-		<Attribute name="Команда" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
-			</Type>
-			<Save>
-				<Field>Команда</Field>
-			</Save>
 		</Attribute>
 	</Attributes>
 </Form>
