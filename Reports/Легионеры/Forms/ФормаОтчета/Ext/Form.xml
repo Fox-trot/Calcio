@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandSet>
+		<ExcludedCommand>NewWindow</ExcludedCommand>
+		<ExcludedCommand>ReportSettings</ExcludedCommand>
+	</CommandSet>
 	<ReportResult>Результат</ReportResult>
 	<DetailsData>ДанныеРасшифровки</DetailsData>
 	<ReportFormType>Main</ReportFormType>
@@ -13,6 +18,7 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -24,6 +30,35 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Лига" id="6">
+					<DataPath>Отчет.Лига</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ЛигаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">ЛигаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="Топ" id="15">
+					<DataPath>Отчет.Топ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТопКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ТопРасширеннаяПодсказка" id="17"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<SpreadSheetDocumentField name="Результат" id="3">
 			<DataPath>Результат</DataPath>
 			<DefaultItem>true</DefaultItem>
@@ -32,7 +67,6 @@
 			<Width>100</Width>
 			<VerticalScrollBar>false</VerticalScrollBar>
 			<HorizontalScrollBar>false</HorizontalScrollBar>
-			<BorderColor>style:FormBackColor</BorderColor>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="4"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="5"/>
 			<Events>
@@ -46,6 +80,10 @@
 				<v8:Type>cfg:ReportObject.Легионеры</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.Лига</Field>
+				<Field>Отчет.Топ</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Результат" id="2">
 			<Title>
