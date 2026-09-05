@@ -283,13 +283,9 @@
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Новости</DataPath>
-							<RowPictureDataPath>Новости.DefaultPicture</RowPictureDataPath>
+							<RowPictureDataPath>~Новости.DefaultPicture</RowPictureDataPath>
 							<CommandSet>
-								<ExcludedCommand>Change</ExcludedCommand>
-								<ExcludedCommand>Post</ExcludedCommand>
 								<ExcludedCommand>Refresh</ExcludedCommand>
-								<ExcludedCommand>SetDateInterval</ExcludedCommand>
-								<ExcludedCommand>UndoPosting</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
@@ -308,21 +304,21 @@
 							<ContextMenu name="НовостиКонтекстноеМеню" id="109"/>
 							<AutoCommandBar name="НовостиКоманднаяПанель" id="110">
 								<ChildItems>
-									<Button name="НовостиКомандаНовостиОбновить" id="134">
+									<Button name="НовостиКомандаУдалить" id="141">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.КомандаНовостиОбновить</CommandName>
-										<ExtendedTooltip name="НовостиКомандаНовостиОбновитьРасширеннаяПодсказка" id="135"/>
+										<CommandName>Form.Command.НовостиКомандаУдалить</CommandName>
+										<ExtendedTooltip name="НовостиКомандаУдалитьРасширеннаяПодсказка" id="142"/>
+									</Button>
+									<Button name="НовостиКомандаОбновить" id="134">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НовостиКомандаОбновить</CommandName>
+										<ExtendedTooltip name="НовостиКомандаОбновитьРасширеннаяПодсказка" id="135"/>
 									</Button>
 									<Button name="НовостиОбщаяКомандаОткрытьВИнтернете" id="149">
 										<Type>CommandBarButton</Type>
 										<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
 										<DataPath>НовостьТекущая</DataPath>
 										<ExtendedTooltip name="НовостиОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="150"/>
-									</Button>
-									<Button name="НовостиКомандаУдалить" id="141">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.КомандаУдалить</CommandName>
-										<ExtendedTooltip name="НовостиКомандаУдалитьРасширеннаяПодсказка" id="142"/>
 									</Button>
 									<Popup name="НовостиДополнительно" id="130">
 										<Title>
@@ -462,7 +458,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	Матч.Дата КАК Дата,
 	Матч.Ссылка КАК Ссылка,
@@ -847,7 +843,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>Новости.DefaultPicture</Field>
+				<Field>~Новости.DefaultPicture</Field>
 				<Field>Новости.Дата</Field>
 				<Field>Новости.Комментарий</Field>
 				<Field>Новости.Наименование</Field>
@@ -856,7 +852,7 @@
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>true</DynamicDataRead>
+				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
 	ДокументНовости.Ссылка КАК Ссылка,
 	ДокументНовости.ПометкаУдаления КАК ПометкаУдаления,
@@ -893,10 +889,6 @@
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Наименование</dcssch:dataPath>
 					<dcssch:field>Наименование</dcssch:field>
-				</Field>
-				<Field xsi:type="dcssch:DataSetFieldField">
-					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
-					<dcssch:field>МоментВремени</dcssch:field>
 				</Field>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>МояКоманда</dcssch:dataPath>
@@ -960,7 +952,8 @@
 					<dcssch:value xsi:type="xs:string"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
-				<MainTable>Document.Новости</MainTable>
+				<KeyType>FieldValue</KeyType>
+				<KeyField>Ссылка</KeyField>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1116,7 +1109,7 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>
-		<Command name="КомандаНовостиОбновить" id="4">
+		<Command name="НовостиКомандаОбновить" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1126,7 +1119,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команда обновить</v8:content>
+					<v8:content>Новости обновить</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1137,7 +1130,7 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
 		</Command>
-		<Command name="КомандаУдалить" id="5">
+		<Command name="НовостиКомандаУдалить" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1147,7 +1140,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Команда удалить</v8:content>
+					<v8:content>Новости удалить</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

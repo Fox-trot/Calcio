@@ -269,7 +269,7 @@
 			<CommonTemplate>ТурнирнаяТаблица</CommonTemplate>
 			<CommonTemplate>ПервоначальноеЗаполнение</CommonTemplate>
 			<FilterCriterion>МатчиСУчастием</FilterCriterion>
-			<FilterCriterion>Посещаемость</FilterCriterion>
+			<FilterCriterion>МатчиКоманды</FilterCriterion>
 			<CommonModule>Биоритмы</CommonModule>
 			<CommonModule>СерверныйФункции</CommonModule>
 			<CommonModule>Общий</CommonModule>
@@ -338,16 +338,16 @@
 			<Report>ТурнирнаяТаблица</Report>
 			<Report>РезультатыМатчей</Report>
 			<Report>Хронология</Report>
-			<Report>Саммит</Report>
 			<Report>Дерби</Report>
+			<Report>Саммит</Report>
 			<Report>Противостояние</Report>
 			<Report>ВМоменте</Report>
 			<Report>Трофеи</Report>
-			<Report>Чемпионы</Report>
 			<Report>ЧемпионскаяГонка</Report>
+			<Report>Чемпионы</Report>
 			<Report>Непобедимые</Report>
-			<Report>Эффективность</Report>
 			<Report>СтатистикаЛиг</Report>
+			<Report>Эффективность</Report>
 			<Report>Прогноз</Report>
 			<Report>КвизРезультаты</Report>
 			<Report>Галерея</Report>

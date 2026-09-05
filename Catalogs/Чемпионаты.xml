@@ -308,7 +308,7 @@
 			<InputByString>
 				<xr:Field>Catalog.Чемпионаты.StandardAttribute.Description</xr:Field>
 			</InputByString>
-			<SearchStringModeOnInputByString>AnyPart</SearchStringModeOnInputByString>
+			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.Чемпионаты.Form.ФормаЭлемента</DefaultObjectForm>

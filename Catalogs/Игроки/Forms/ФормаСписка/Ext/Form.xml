@@ -53,9 +53,7 @@
 					<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 					<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
-					<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-						<Autofill>false</Autofill>
-					</AutoCommandBar>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
 					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 					<SearchStringAddition name="СписокСтрокаПоиска" id="7">
 						<AdditionSource>

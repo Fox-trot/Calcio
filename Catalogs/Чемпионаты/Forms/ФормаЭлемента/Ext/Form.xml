@@ -803,15 +803,63 @@
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
-				<Command>Report.РезультатыМатчей.Command.Результаты</Command>
+				<Command>Report.ВозрастныеГруппы.Command.ВозрастныеГруппы</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>1</Index>
 			</Item>
 			<Item>
+				<Command>Report.Гражданство.Command.КомандаГражданство</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>Report.Посещаемость.Command.КомандаПосещаемость</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>3</Index>
+			</Item>
+			<Item>
+				<Command>Report.Прогноз.Command.КомандаПрогноз</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>9</Index>
+			</Item>
+			<Item>
+				<Command>Report.РезультатыМатчей.Command.Результаты</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>5</Index>
+			</Item>
+			<Item>
+				<Command>Report.Саммит.Command.КомандаСаммит</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>7</Index>
+			</Item>
+			<Item>
+				<Command>Catalog.Стадионы.Command.КомандаСтадионыЧемпионата</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+			</Item>
+			<Item>
 				<Command>Report.ТурнирнаяТаблица.Command.ТурнирнаяТаблица</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>4</Index>
+			</Item>
+			<Item>
+				<Command>Report.Хронология.Command.КомандаХронология</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>6</Index>
+			</Item>
+			<Item>
+				<Command>Report.Чемпионы.Command.КомандаЧемпионы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>8</Index>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>

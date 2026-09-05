@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<AutoTitle>false</AutoTitle>
+	<AutoFillCheck>false</AutoFillCheck>
 	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -18,7 +21,7 @@
 		<Table name="Список" id="3">
 			<Representation>List</Representation>
 			<DefaultItem>true</DefaultItem>
-			<ChangeRowSet>false</ChangeRowSet>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
@@ -36,7 +39,6 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
@@ -79,27 +81,33 @@
 					<DataPath>Список.Ref</DataPath>
 					<Visible>false</Visible>
 					<DefaultItem>true</DefaultItem>
-					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
 				<LabelField name="СсылкаДата" id="19">
 					<DataPath>Список.Ref.Date</DataPath>
-					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="СсылкаДатаКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="СсылкаДатаРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<LabelField name="СсылкаСчет" id="25">
+				<LabelField name="СсылкаСчет" id="22">
 					<DataPath>Список.Ref.Счет</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="27"/>
+					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="СсылкаКоличествоЗрителей" id="22">
+				<LabelField name="СсылкаТурВладелец" id="25">
+					<DataPath>Список.Ref.Тур.Owner</DataPath>
+					<ContextMenu name="СсылкаТурВладелецКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СсылкаТурВладелецРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="СсылкаСтадион" id="30">
+					<DataPath>Список.Ref.Стадион</DataPath>
+					<ContextMenu name="СсылкаСтадионКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СсылкаСтадионРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<LabelField name="СсылкаКоличествоЗрителей" id="33">
 					<DataPath>Список.Ref.КоличествоЗрителей</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СсылкаКоличествоЗрителейКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="СсылкаКоличествоЗрителейРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="СсылкаКоличествоЗрителейКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="СсылкаКоличествоЗрителейРасширеннаяПодсказка" id="35"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -111,10 +119,6 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>~Список.Date~Список.Дата</Field>
-				<Field>~Список.Posted~Список.Проведен</Field>
-				<Field>~Список.КоличествоЗрителей</Field>
-				<Field>~Список.Комментарий</Field>
 				<Field>Список.Ref</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
@@ -129,29 +133,22 @@
 						</v8:item>
 					</dcssch:title>
 					<dcssch:valueType>
-						<v8:Type>cfg:CatalogRef.Стадионы</v8:Type>
+						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 					</dcssch:valueType>
 					<dcssch:value xsi:nil="true"/>
 					<dcssch:useRestriction>false</dcssch:useRestriction>
-					<dcssch:use>Always</dcssch:use>
 				</Parameter>
-				<MainTable>FilterCriterion.Посещаемость</MainTable>
+				<MainTable>FilterCriterion.МатчиКоманды</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Ссылка.Проведен</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Ссылка.КоличествоЗрителей</dcsset:left>
-							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Ссылка.Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>

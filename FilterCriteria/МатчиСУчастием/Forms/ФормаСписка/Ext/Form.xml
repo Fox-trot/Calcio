@@ -40,7 +40,6 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
@@ -118,6 +117,16 @@
 					<DataPath>Список.Ref.Тур.Owner</DataPath>
 					<ContextMenu name="СсылкаЧемпионатКонтекстноеМеню" id="28"/>
 					<ExtendedTooltip name="СсылкаЧемпионатРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<LabelField name="СсылкаСтадион" id="30">
+					<DataPath>Список.Ref.Стадион</DataPath>
+					<ContextMenu name="СсылкаСтадионКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СсылкаСтадионРасширеннаяПодсказка" id="32"/>
+				</LabelField>
+				<LabelField name="СсылкаКоличествоЗрителей" id="33">
+					<DataPath>Список.Ref.КоличествоЗрителей</DataPath>
+					<ContextMenu name="СсылкаКоличествоЗрителейКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="СсылкаКоличествоЗрителейРасширеннаяПодсказка" id="35"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
