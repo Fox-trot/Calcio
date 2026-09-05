@@ -18,6 +18,7 @@
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
 	<ReportResult>Результат</ReportResult>
+	<DetailsData>ДанныеРасшифровки</DetailsData>
 	<ReportFormType>Main</ReportFormType>
 	<AutoShowState>ShowOnComposition</AutoShowState>
 	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
@@ -26,7 +27,6 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="OnLoadVariantAtServer">ПриЗагрузкеВариантаНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -62,16 +62,13 @@
 			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="13"/>
 			<ChildItems>
 				<InputField name="Команда" id="6">
-					<DataPath>Команда</DataPath>
+					<DataPath>Отчет.Команда</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="8"/>
-					<Events>
-						<Event name="OnChange">РеквизитПриИзменении</Event>
-					</Events>
 				</InputField>
 				<CheckBoxField name="ТолькоТекущийЧемпионат" id="9">
-					<DataPath>ТолькоТекущийЧемпионат</DataPath>
+					<DataPath>Отчет.ТолькоТекущийЧемпионат</DataPath>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -81,9 +78,6 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТолькоТекущийЧемпионатКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ТолькоТекущийЧемпионатРасширеннаяПодсказка" id="11"/>
-					<Events>
-						<Event name="OnChange">РеквизитПриИзменении</Event>
-					</Events>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
@@ -117,34 +111,14 @@
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="Команда" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда</v8:content>
-				</v8:item>
-			</Title>
+		<Attribute name="ДанныеРасшифровки" id="3">
 			<Type>
-				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
-			<FillCheck>ShowError</FillCheck>
-			<Save>
-				<Field>Команда</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="ТолькоТекущийЧемпионат" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команды текущего чемпионата</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-			<Save>
-				<Field>ТолькоТекущийЧемпионат</Field>
-			</Save>
 		</Attribute>
 	</Attributes>
 </Form>
