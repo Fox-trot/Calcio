@@ -64,6 +64,9 @@
 					<v8:content>Это прочие</v8:content>
 				</v8:item>
 			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
 			<valueType>
 				<v8:Type>xs:boolean</v8:Type>
 			</valueType>
@@ -169,7 +172,7 @@
 	ЕСТЬNULL(ВТ.Страна, "Прочие") КАК Страна,
 	СУММА(1) КАК Количество,
 	Перемещения.Команда КАК Команда,
-	ВТ.Страна ЕСТЬ NULL КАК ЭтоПрочие,
+	МАКСИМУМ(ВТ.Страна ЕСТЬ NULL) КАК ЭтоПрочие,
 	СУММА(ВЫБОР
 			КОГДА ВТ.Страна ЕСТЬ NULL
 				ТОГДА 0
@@ -205,8 +208,7 @@
 
 СГРУППИРОВАТЬ ПО
 	Перемещения.Команда,
-	ЕСТЬNULL(ВТ.Страна, "Прочие"),
-	ВТ.Страна ЕСТЬ NULL</query>
+	ЕСТЬNULL(ВТ.Страна, "Прочие")</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
@@ -304,13 +306,6 @@
 					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Команда</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Лига</dcscor:parameter>

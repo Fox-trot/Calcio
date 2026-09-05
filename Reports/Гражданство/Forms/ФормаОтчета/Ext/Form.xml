@@ -2,13 +2,17 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<CommandSet>
+		<ExcludedCommand>CancelEdit</ExcludedCommand>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>CompactViewMode</ExcludedCommand>
+		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>NewWindow</ExcludedCommand>
+		<ExcludedCommand>ReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
+		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
 	<ReportResult>Результат</ReportResult>
 	<DetailsData>ДанныеРасшифровки</DetailsData>
@@ -17,14 +21,30 @@
 	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСформировать" id="14">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Generate</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="ФормаЗагрузитьВариант" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.LoadVariant</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаЗагрузитьВариантРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -35,6 +55,34 @@
 			<Group>Vertical</Group>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="7"/>
+			<ChildItems>
+				<InputField name="Лига" id="8">
+					<DataPath>Отчет.Лига</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛигаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="OnChange">ЛигаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="Топ" id="11">
+					<DataPath>Отчет.Топ</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТопКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ТопРасширеннаяПодсказка" id="13"/>
+				</CheckBoxField>
+			</ChildItems>
 		</UsualGroup>
 		<SpreadSheetDocumentField name="Результат" id="3">
 			<DataPath>Результат</DataPath>
@@ -59,6 +107,7 @@
 			<MainAttribute>true</MainAttribute>
 			<Save>
 				<Field>Отчет.Лига</Field>
+				<Field>Отчет.Топ</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="Результат" id="2">
