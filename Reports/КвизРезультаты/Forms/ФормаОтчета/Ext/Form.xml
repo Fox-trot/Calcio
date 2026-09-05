@@ -4,6 +4,7 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoFillCheck>false</AutoFillCheck>
 	<CommandSet>
+		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
 		<ExcludedCommand>ClearChartAppearance</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
