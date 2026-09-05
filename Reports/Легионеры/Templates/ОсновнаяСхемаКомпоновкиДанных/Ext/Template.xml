@@ -35,9 +35,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Страна</dataPath>
 			<field>Страна</field>
-			<useRestriction>
-				<group>true</group>
-			</useRestriction>
 			<attributeUseRestriction>
 				<field>true</field>
 				<condition>true</condition>
@@ -51,22 +48,43 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Количество</dataPath>
 			<field>Количество</field>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоТоп</dataPath>
+			<field>ЭтоТоп</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это топ</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ЧемпионатыКоманды.Команда КАК Команда,
-	Лига.Страна КАК Страна
+	Чемпионаты.Владелец.Страна КАК Страна
 ПОМЕСТИТЬ Команды
 ИЗ
 	Справочник.Чемпионаты.Команды КАК ЧемпионатыКоманды
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Чемпионаты КАК Чемпионаты
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лига КАК Лига
-				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
-				ПО Лига.Страна = Страны.Ссылка
-			ПО Чемпионаты.Владелец = Лига.Ссылка
 		ПО ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 ГДЕ
-	Лига.Ссылка = &amp;Лига
+	Чемпионаты.Владелец = &amp;Лига
 	И Чемпионаты.ДатаОкончания В
 			(ВЫБРАТЬ
 				МАКСИМУМ(Чемпионаты.ДатаОкончания)
@@ -83,6 +101,17 @@
 						ЧемпионатыКоманды.Ссылка = Чемпионаты.Ссылка
 			ГДЕ
 				Лига.Ссылка = &amp;Лига)
+	И ВЫБОР
+			КОГДА &amp;Топ
+				ТОГДА ЧемпионатыКоманды.Команда В
+						(ВЫБРАТЬ РАЗЛИЧНЫЕ
+							ЛигаКоманды.Команда КАК КомандаТоп
+						ИЗ
+							Справочник.Лига.Команды КАК ЛигаКоманды
+						ГДЕ
+							ЛигаКоманды.Ссылка = &amp;Лига)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -114,11 +143,19 @@
 			КОГДА ПеремещенияИгроков.Страна ЕСТЬ NULL
 				ТОГДА 0
 			ИНАЧЕ 1
-		КОНЕЦ) КАК Количество
+		КОНЕЦ) КАК Количество,
+	МАКСИМУМ(Команды.Команда = Топы.Команда) КАК ЭтоТоп
 ИЗ
 	Команды КАК Команды
 		ЛЕВОЕ СОЕДИНЕНИЕ ПеремещенияИгроков КАК ПеремещенияИгроков
 		ПО Команды.Команда = ПеремещенияИгроков.Команда
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ЛигаКоманды.Команда КАК Команда
+		ИЗ
+			Справочник.Лига.Команды КАК ЛигаКоманды
+		ГДЕ
+			ЛигаКоманды.Ссылка = &amp;Лига) КАК Топы
+		ПО Команды.Команда = Топы.Команда
 
 СГРУППИРОВАТЬ ПО
 	Команды.Команда,
@@ -127,62 +164,16 @@
 			ТОГДА Команды.Страна
 		ИНАЧЕ "Легионеры"
 	КОНЕЦ</query>
+		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
 	</dataSet>
-	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных2</name>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КомандаТоп</dataPath>
-			<field>КомандаТоп</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Команда</v8:content>
-				</v8:item>
-			</title>
-			<useRestriction>
-				<field>true</field>
-				<condition>true</condition>
-				<group>true</group>
-				<order>true</order>
-			</useRestriction>
-			<attributeUseRestriction>
-				<field>true</field>
-				<condition>true</condition>
-				<group>true</group>
-				<order>true</order>
-			</attributeUseRestriction>
-		</field>
-		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
-	ЛигаКоманды.Команда КАК КомандаТоп
-ИЗ
-	Справочник.Лига.Команды КАК ЛигаКоманды
-ГДЕ
-	ЛигаКоманды.Ссылка = &amp;Лига</query>
-	</dataSet>
-	<dataSetLink>
-		<sourceDataSet>НаборДанных1</sourceDataSet>
-		<destinationDataSet>НаборДанных2</destinationDataSet>
-		<sourceExpression>Команда</sourceExpression>
-		<destinationExpression>КомандаТоп</destinationExpression>
-		<required>false</required>
-	</dataSetLink>
-	<calculatedField>
-		<dataPath>Топ</dataPath>
-		<expression>(КомандаТоп ЕСТЬ NULL)=ЛОЖЬ</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Топ</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:boolean</v8:Type>
-		</valueType>
-	</calculatedField>
 	<totalField>
 		<dataPath>Количество</dataPath>
 		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЭтоТоп</dataPath>
+		<expression>Максимум(ЭтоТоп)</expression>
+		<group>Команда</group>
 	</totalField>
 	<parameter>
 		<name>Лига</name>
@@ -201,10 +192,6 @@
 			<dcscor:item>
 				<dcscor:parameter>ПараметрыВыбора</dcscor:parameter>
 				<dcscor:value xsi:type="dcscor:ChoiceParameters">
-					<dcscor:item>
-						<dcscor:choiceParameter>Отбор.ОлимпийскаяСистема</dcscor:choiceParameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
 					<dcscor:item>
 						<dcscor:choiceParameter>Отбор.ПометкаУдаления</dcscor:choiceParameter>
 						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
@@ -243,6 +230,21 @@
 		<useRestriction>true</useRestriction>
 		<availableAsField>false</availableAsField>
 	</parameter>
+	<parameter>
+		<name>Топ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Топ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Диаграмма</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -257,27 +259,16 @@
 					<dcsset:field>Количество</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Топ</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					<dcsset:presentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Топы только</v8:content>
-						</v8:item>
-					</dcsset:presentation>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>3d3e09df-82aa-4101-b465-2383ef97cf03</dcsset:userSettingID>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Лига</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>4fc1dcd3-5c9b-4902-8aae-1de82b235296</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Топ</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:userSettingID>38705f73-e6e1-41e9-abcd-530bd58728a9</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
@@ -358,38 +349,25 @@
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Количество</dcsset:field>
-					<dcsset:lwsTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content> </v8:content>
-						</v8:item>
-					</dcsset:lwsTitle>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Топ</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					<dcsset:presentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Топы только</v8:content>
-						</v8:item>
-					</dcsset:presentation>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>c47a0d18-0bc9-497e-99b6-21caf4e1c723</dcsset:userSettingID>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Лига</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>4fc1dcd3-5c9b-4902-8aae-1de82b235296</dcsset:userSettingID>
 				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Топ</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:userSettingID>2ca9a3ff-51ce-4e99-b6dd-0f5a62a51c59</dcsset:userSettingID>
+				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Страна</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Команда</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
@@ -404,24 +382,33 @@
 							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
 						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
 					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
-					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
-					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
-					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
 				</dcsset:item>
 				<dcsset:item>
 					<dcsset:selection>
 						<dcsset:item>
 							<dcsset:field>Команда</dcsset:field>
 						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Количество</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Топ</dcsset:left>
+							<dcsset:left xsi:type="dcscor:Field">ЭтоТоп</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПараметрыДанных.Топ</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
 						</dcsset:item>
 					</dcsset:filter>
 					<dcsset:appearance>
@@ -440,6 +427,17 @@
 			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
 					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
 				</dcscor:item>
@@ -497,9 +495,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 				</dcsset:row>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
