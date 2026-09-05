@@ -27,9 +27,9 @@
 			</Button>
 			<Button name="ПросмотрИсходныхДанных" id="19">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<HorizontalStretch>true</HorizontalStretch>
 				<VerticalStretch>true</VerticalStretch>
-				<Check>true</Check>
 				<CommandName>Form.Command.ПросмотрИсходныхДанных</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ПросмотрИсходныхДанныхРасширеннаяПодсказка" id="20"/>
