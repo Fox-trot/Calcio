@@ -2134,6 +2134,12 @@
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
 				<Index>1</Index>
 			</Item>
+			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>8</Index>
+			</Item>
 		</NavigationPanel>
 		<CommandBar>
 			<Item>
