@@ -394,6 +394,17 @@
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 				<Index>5</Index>
 			</Item>
+			<Item>
+				<Command>CommonCommand.Биоритмы</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>6</Index>
+			</Item>
 		</NavigationPanel>
 		<CommandBar>
 			<Item>
