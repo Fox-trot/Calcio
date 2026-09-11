@@ -133,6 +133,14 @@
 						<Event name="Selection">ДанныеВыбор</Event>
 					</Events>
 					<ChildItems>
+						<InputField name="ДанныеПериод" id="87">
+							<DataPath>Отчет.Данные.Период</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДанныеПериодКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ДанныеПериодРасширеннаяПодсказка" id="89"/>
+						</InputField>
 						<InputField name="ДанныеЧемпионат" id="67">
 							<DataPath>Отчет.Данные.Чемпионат</DataPath>
 							<ReadOnly>true</ReadOnly>

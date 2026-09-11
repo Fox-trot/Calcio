@@ -176,7 +176,6 @@
 					<VerticalScrollBar>false</VerticalScrollBar>
 					<HorizontalScrollBar>false</HorizontalScrollBar>
 					<ShowGroups>false</ShowGroups>
-					<EnableStartDrag>false</EnableStartDrag>
 					<EnableDrag>false</EnableDrag>
 					<ContextMenu name="РезультатКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="6"/>
@@ -426,17 +425,6 @@
 			<Save>
 				<Field>Сравнить</Field>
 			</Save>
-		</Attribute>
-		<Attribute name="ЕстьКлюч" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Есть ключ</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
 		</Attribute>
 		<Attribute name="Победа" id="8">
 			<Title>
