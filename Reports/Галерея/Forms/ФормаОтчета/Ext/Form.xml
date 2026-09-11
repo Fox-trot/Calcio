@@ -25,6 +25,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -55,8 +56,12 @@
 				<InputField name="Команда" id="8">
 					<DataPath>Отчет.Команда</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>false</AutoMarkIncomplete>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="10"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>

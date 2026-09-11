@@ -217,22 +217,25 @@
 	И ВЫБОР
 			КОГДА &amp;ТолькоТекущийЧемпионат
 				ТОГДА ТурнирнаяТаблица.Команда В
-						(ВЫБРАТЬ
-							Чемпионаты.Команда
+						(ВЫБРАТЬ РАЗЛИЧНЫЕ
+							Чемпионаты.Команда КАК Команда
 						ИЗ
 							Справочник.Чемпионаты.Команды КАК Чемпионаты
 						ГДЕ
-							(Чемпионаты.Ссылка.Владелец, Чемпионаты.Ссылка.ДатаОкончания) В
-								(ВЫБРАТЬ
-									Чемпионаты.Тур.Владелец.Владелец,
-									МАКСИМУМ(Чемпионаты.Тур.Владелец.ДатаОкончания)
+							Чемпионаты.Ссылка В
+								(ВЫБРАТЬ ПЕРВЫЕ 1
+									Чемпионаты.Ссылка КАК Ссылка
 								ИЗ
-									РегистрНакопления.ТурнирнаяТаблица КАК Чемпионаты
+									Справочник.Чемпионаты КАК Чемпионаты
+										ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТурнирнаяТаблица КАК ТурнирнаяТаблица
+										ПО
+											Чемпионаты.Ссылка = ТурнирнаяТаблица.Тур.Владелец
 								ГДЕ
-									Чемпионаты.Тур.Владелец.Владелец.ОлимпийскаяСистема = ЛОЖЬ
-									И (Чемпионаты.Тур.Владелец.Владелец.Страна.Ссылка ЕСТЬ NULL) = ЛОЖЬ
-								СГРУППИРОВАТЬ ПО
-									Чемпионаты.Тур.Владелец.Владелец))
+									Чемпионаты.ПометкаУдаления = ЛОЖЬ
+									И Чемпионаты.Команды.Команда = &amp;Команда
+									И Чемпионаты.Владелец.Команды.НомерСтроки = 1
+								УПОРЯДОЧИТЬ ПО
+									Чемпионаты.ДатаНачала УБЫВ))
 			ИНАЧЕ ИСТИНА
 		КОНЕЦ
 
@@ -356,7 +359,7 @@
 			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
 		</valueType>
 		<value xsi:nil="true"/>
-		<useRestriction>true</useRestriction>
+		<useRestriction>false</useRestriction>
 		<use>Always</use>
 	</parameter>
 	<parameter>
@@ -371,7 +374,7 @@
 			<v8:Type>xs:boolean</v8:Type>
 		</valueType>
 		<value xsi:type="xs:boolean">true</value>
-		<useRestriction>true</useRestriction>
+		<useRestriction>false</useRestriction>
 		<inputParameters>
 			<dcscor:item>
 				<dcscor:use>false</dcscor:use>
@@ -654,13 +657,11 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>f786cb39-99a1-4a3a-a785-2b68edb38589</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ТолькоТекущийЧемпионат</dcscor:parameter>
 					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 					<dcsset:userSettingID>70e59370-9043-4edc-b23a-5712adfcf1bb</dcsset:userSettingID>
@@ -772,13 +773,11 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>11590f3c-f2d3-456b-8536-7161c2d7662f</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ТолькоТекущийЧемпионат</dcscor:parameter>
 					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 					<dcsset:userSettingID>0f031f2a-9220-4b76-b378-073b6ea3fd3f</dcsset:userSettingID>
@@ -844,13 +843,11 @@
 			</dcsset:selection>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Команда</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>11590f3c-f2d3-456b-8536-7161c2d7662f</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ТолькоТекущийЧемпионат</dcscor:parameter>
 					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
 					<dcsset:userSettingID>0f031f2a-9220-4b76-b378-073b6ea3fd3f</dcsset:userSettingID>

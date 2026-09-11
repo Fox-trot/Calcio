@@ -41,6 +41,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -70,6 +71,7 @@
 				<InputField name="Лига" id="8">
 					<DataPath>Отчет.Лига</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>false</AutoMarkIncomplete>
 					<ContextMenu name="ЛигаКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="10"/>
 					<Events>
@@ -81,6 +83,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТопКонтекстноеМеню" id="12"/>
 					<ExtendedTooltip name="ТопРасширеннаяПодсказка" id="13"/>
+					<Events>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>

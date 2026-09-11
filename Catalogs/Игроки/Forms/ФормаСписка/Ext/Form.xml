@@ -124,6 +124,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаИзображение" id="37">
+			<ReadOnly>true</ReadOnly>
 			<EnableContentChange>true</EnableContentChange>
 			<Title>
 				<v8:item>
@@ -140,8 +141,12 @@
 					<DataPath>Изображение</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
+					<Hyperlink>true</Hyperlink>
 					<ContextMenu name="ИзображениеКонтекстноеМеню" id="40"/>
 					<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="Click">ИзображениеНажатие</Event>
+					</Events>
 				</PictureField>
 			</ChildItems>
 		</UsualGroup>

@@ -306,6 +306,13 @@
 										<CommandName>Form.Command.ТекущийСоставОбновить</CommandName>
 										<ExtendedTooltip name="ТекущийСоставОбновитьРасширеннаяПодсказка" id="274"/>
 									</Button>
+									<Button name="ТекущийСоставОбщаяКомандаОткрытьВИнтернете" id="275">
+										<Type>CommandBarButton</Type>
+										<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+										<DataPath>ТекущийИгрок</DataPath>
+										<Font bold="true" kind="AutoFont"/>
+										<ExtendedTooltip name="ТекущийСоставОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="276"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТекущийСоставРасширеннаяПодсказка" id="19"/>

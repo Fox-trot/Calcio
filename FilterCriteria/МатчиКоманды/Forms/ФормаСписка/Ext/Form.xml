@@ -2,9 +2,23 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
 	<AutoTitle>false</AutoTitle>
 	<AutoFillCheck>false</AutoFillCheck>
-	<CommandBarLocation>None</CommandBarLocation>
 	<ShowTitle>false</ShowTitle>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОбщаяКомандаИмпортМатча" id="39">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ИмпортМатча</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаИмпортМатчаРасширеннаяПодсказка" id="40"/>
+			</Button>
+			<Button name="ФормаОбщаяКомандаОткрытьВИнтернете" id="41">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="42"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
@@ -21,6 +35,7 @@
 		<Table name="Список" id="3">
 			<Representation>List</Representation>
 			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -42,14 +57,7 @@
 			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
-				<ChildItems>
-					<Button name="СписокОбщаяКомандаОткрытьВИнтернете" id="28">
-						<Type>CommandBarButton</Type>
-						<CommandName>CommonCommand.ОткрытьВИнтернете</CommandName>
-						<DataPath>Items.Список.CurrentData.Ref</DataPath>
-						<ExtendedTooltip name="СписокОбщаяКомандаОткрытьВИнтернетеРасширеннаяПодсказка" id="29"/>
-					</Button>
-				</ChildItems>
+				<Autofill>false</Autofill>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
 			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
@@ -94,18 +102,28 @@
 					<ContextMenu name="СсылкаСчетКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="СсылкаСчетРасширеннаяПодсказка" id="24"/>
 				</LabelField>
+				<LabelField name="СсылкаТур" id="36">
+					<DataPath>Список.Ref.Тур</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Width>22</Width>
+					<ContextMenu name="СсылкаТурКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СсылкаТурРасширеннаяПодсказка" id="38"/>
+				</LabelField>
 				<LabelField name="СсылкаТурВладелец" id="25">
 					<DataPath>Список.Ref.Тур.Owner</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="СсылкаТурВладелецКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="СсылкаТурВладелецРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="СсылкаСтадион" id="30">
 					<DataPath>Список.Ref.Стадион</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="СсылкаСтадионКонтекстноеМеню" id="31"/>
 					<ExtendedTooltip name="СсылкаСтадионРасширеннаяПодсказка" id="32"/>
 				</LabelField>
 				<LabelField name="СсылкаКоличествоЗрителей" id="33">
 					<DataPath>Список.Ref.КоличествоЗрителей</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="СсылкаКоличествоЗрителейКонтекстноеМеню" id="34"/>
 					<ExtendedTooltip name="СсылкаКоличествоЗрителейРасширеннаяПодсказка" id="35"/>
 				</LabelField>
@@ -136,13 +154,17 @@
 						<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 					</dcssch:valueType>
 					<dcssch:value xsi:nil="true"/>
-					<dcssch:useRestriction>false</dcssch:useRestriction>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
 				<MainTable>FilterCriterion.МатчиКоманды</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Ссылка.ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:userSettingID>c9fb0dcc-40b9-49f5-8dbd-b2b508550b36</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">

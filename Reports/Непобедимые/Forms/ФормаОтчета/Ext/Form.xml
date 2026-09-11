@@ -8,9 +8,9 @@
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
-	<Customizable>false</Customizable>
 	<CommandSet>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
+		<ExcludedCommand>CompactViewMode</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
@@ -20,7 +20,7 @@
 	<ReportResult>Результат</ReportResult>
 	<DetailsData>ДанныеРасшифровки</DetailsData>
 	<ReportFormType>Main</ReportFormType>
-	<AutoShowState>ShowOnComposition</AutoShowState>
+	<AutoShowState>Auto</AutoShowState>
 	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
@@ -28,6 +28,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -64,8 +65,13 @@
 				<InputField name="Команда" id="6">
 					<DataPath>Отчет.Команда</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChooseType>false</ChooseType>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="8"/>
+					<Events>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
+					</Events>
 				</InputField>
 				<CheckBoxField name="ТолькоТекущийЧемпионат" id="9">
 					<DataPath>Отчет.ТолькоТекущийЧемпионат</DataPath>
@@ -78,6 +84,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТолькоТекущийЧемпионатКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ТолькоТекущийЧемпионатРасширеннаяПодсказка" id="11"/>
+					<Events>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
@@ -99,6 +108,10 @@
 				<v8:Type>cfg:ReportObject.Непобедимые</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.Команда</Field>
+				<Field>Отчет.ТолькоТекущийЧемпионат</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Результат" id="2">
 			<Title>

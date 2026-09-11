@@ -344,6 +344,18 @@
 																<Event name="StartChoice">КомандыКомандаНачалоВыбора</Event>
 															</Events>
 														</InputField>
+														<LabelField name="КомандыКомандаГород" id="214">
+															<DataPath>Объект.Команды.Команда.Город</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="КомандыКомандаГородКонтекстноеМеню" id="215"/>
+															<ExtendedTooltip name="КомандыКомандаГородРасширеннаяПодсказка" id="216"/>
+														</LabelField>
+														<LabelField name="КомандыКомандаГородВладелец" id="217">
+															<DataPath>Объект.Команды.Команда.Город.Owner</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="КомандыКомандаГородВладелецКонтекстноеМеню" id="218"/>
+															<ExtendedTooltip name="КомандыКомандаГородВладелецРасширеннаяПодсказка" id="219"/>
+														</LabelField>
 													</ChildItems>
 												</Table>
 												<PictureField name="Лого" id="211">
@@ -806,60 +818,66 @@
 				<Command>Report.ВозрастныеГруппы.Command.ВозрастныеГруппы</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>1</Index>
+				<Index>2</Index>
 			</Item>
 			<Item>
 				<Command>Report.Гражданство.Command.КомандаГражданство</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>2</Index>
+				<Index>3</Index>
 			</Item>
 			<Item>
 				<Command>Report.Посещаемость.Command.КомандаПосещаемость</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>3</Index>
+				<Index>4</Index>
 			</Item>
 			<Item>
 				<Command>Report.Прогноз.Command.КомандаПрогноз</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>9</Index>
+				<Index>10</Index>
 			</Item>
 			<Item>
 				<Command>Report.РезультатыМатчей.Command.Результаты</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>5</Index>
+				<Index>6</Index>
 			</Item>
 			<Item>
 				<Command>Report.Саммит.Command.КомандаСаммит</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>7</Index>
+				<Index>8</Index>
 			</Item>
 			<Item>
 				<Command>Catalog.Стадионы.Command.КомандаСтадионыЧемпионата</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>1</Index>
 			</Item>
 			<Item>
 				<Command>Report.ТурнирнаяТаблица.Command.ТурнирнаяТаблица</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>4</Index>
+				<Index>5</Index>
 			</Item>
 			<Item>
 				<Command>Report.Хронология.Command.КомандаХронология</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>6</Index>
+				<Index>7</Index>
 			</Item>
 			<Item>
 				<Command>Report.Чемпионы.Command.КомандаЧемпионы</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>8</Index>
+				<Index>9</Index>
+			</Item>
+			<Item>
+				<Command>Document.Матч.Command.Матчи</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>

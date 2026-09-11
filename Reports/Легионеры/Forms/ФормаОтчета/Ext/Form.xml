@@ -15,6 +15,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="1">
@@ -44,6 +45,7 @@
 				<InputField name="Лига" id="6">
 					<DataPath>Отчет.Лига</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ChooseType>false</ChooseType>
 					<ContextMenu name="ЛигаКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="8"/>
@@ -56,6 +58,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ТопКонтекстноеМеню" id="16"/>
 					<ExtendedTooltip name="ТопРасширеннаяПодсказка" id="17"/>
+					<Events>
+						<Event name="OnChange">ЭлементПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>

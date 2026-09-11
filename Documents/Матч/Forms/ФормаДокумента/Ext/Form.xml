@@ -101,7 +101,7 @@
 					<ContextMenu name="Декорация1КонтекстноеМеню" id="504"/>
 					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="505"/>
 				</LabelDecoration>
-				<LabelDecoration name="ЭтоДерби" id="455">
+				<LabelDecoration name="ЭтоДерби" id="508">
 					<HorizontalStretch>true</HorizontalStretch>
 					<TextColor>style:SpecialTextColor</TextColor>
 					<Title formatted="false">
@@ -111,8 +111,8 @@
 						</v8:item>
 					</Title>
 					<Hyperlink>true</Hyperlink>
-					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="456"/>
-					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="457"/>
+					<ContextMenu name="ЭтоДербиКонтекстноеМеню" id="509"/>
+					<ExtendedTooltip name="ЭтоДербиРасширеннаяПодсказка" id="510"/>
 					<Events>
 						<Event name="Click">ЭтоДербиНажатие</Event>
 					</Events>

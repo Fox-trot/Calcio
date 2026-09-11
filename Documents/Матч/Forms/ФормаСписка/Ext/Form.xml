@@ -92,6 +92,7 @@
 				</LabelField>
 				<LabelField name="Тур" id="22" DisplayImportance="Low">
 					<DataPath>Список.Тур</DataPath>
+					<Width>22</Width>
 					<ContextMenu name="ТурКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ТурРасширеннаяПодсказка" id="24"/>
 				</LabelField>
