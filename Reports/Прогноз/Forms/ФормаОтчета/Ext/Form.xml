@@ -33,7 +33,6 @@
 				<HorizontalStretch>true</HorizontalStretch>
 				<VerticalStretch>true</VerticalStretch>
 				<CommandName>Form.Command.ПросмотрИсходныхДанных</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ПросмотрИсходныхДанныхРасширеннаяПодсказка" id="20"/>
 			</Button>
 		</ChildItems>
