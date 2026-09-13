@@ -253,6 +253,13 @@
 		</Command>
 	</Commands>
 	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Document.Матч.Command.Матчи</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+			</Item>
+		</NavigationPanel>
 		<CommandBar>
 			<Item>
 				<Command>0:8254f35a-d2ae-4293-87c7-d38abbf67a83</Command>
