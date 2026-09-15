@@ -332,6 +332,7 @@
 				<c>
 					<f>23</f>
 					<parameter>КоличествоИгр</parameter>
+					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
 			<c>
@@ -424,6 +425,7 @@
 				<c>
 					<f>29</f>
 					<parameter>КоличествоИгр</parameter>
+					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
 			<c>
@@ -644,6 +646,7 @@
 				<c>
 					<f>29</f>
 					<parameter>КоличествоИгр</parameter>
+					<detailParameter>Матч</detailParameter>
 				</c>
 			</c>
 			<c>
