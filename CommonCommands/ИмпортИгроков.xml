@@ -22,7 +22,7 @@
 				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Shortcut/>
+			<Shortcut>F8</Shortcut>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType>
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
