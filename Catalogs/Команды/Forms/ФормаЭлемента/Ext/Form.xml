@@ -3,7 +3,15 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаТрансферы" id="277">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Трансферы</CommandName>
+				<ExtendedTooltip name="ФормаТрансферыРасширеннаяПодсказка" id="278"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
@@ -2078,6 +2086,25 @@
 			<Action>ТекущийСоставОбновитьНаКлиенте</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
+		</Command>
+		<Command name="Трансферы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трансферы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трансферы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InformationRegister</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Трансферы</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
