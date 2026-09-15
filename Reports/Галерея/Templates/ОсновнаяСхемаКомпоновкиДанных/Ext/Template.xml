@@ -147,7 +147,7 @@
 				И ПеремещенияИгроков.Команда = МатчСоставыКоманд.Команда
 				И (МатчСоставыКоманд.Ссылка.Проведен = ИСТИНА)
 	ГДЕ
-		ПеремещенияИгроков.Команда = &amp;Команда
+		ПеремещенияИгроков.Команда = &amp;Ссылка
 		И РАЗМЕРХРАНИМЫХДАННЫХ(ПеремещенияИгроков.Игрок.Изображение) &gt;= 64
 	
 	СГРУППИРОВАТЬ ПО
@@ -165,7 +165,7 @@
 			ПО ТурнирнаяТаблица.Регистратор = Противник.Регистратор
 				И ТурнирнаяТаблица.КоличествоОчков &gt; Противник.КоличествоОчков
 	ГДЕ
-		ТурнирнаяТаблица.Команда = &amp;Команда
+		ТурнирнаяТаблица.Команда = &amp;Ссылка
 		И ТурнирнаяТаблица.Тур В
 				(ВЫБРАТЬ
 					ТурнирнаяТаблица.Тур
@@ -190,7 +190,7 @@
 			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
 			ПО ТурнирнаяТаблица.Регистратор = Матч.Ссылка
 	ГДЕ
-		ТурнирнаяТаблица.Команда = &amp;Команда
+		ТурнирнаяТаблица.Команда = &amp;Ссылка
 		И РАЗМЕРХРАНИМЫХДАННЫХ(Матч.Изображение) &gt;= 64
 	
 	ОБЪЕДИНИТЬ ВСЕ
@@ -204,7 +204,7 @@
 			ЛЕВОЕ СОЕДИНЕНИЕ Документ.Матч КАК Матч
 			ПО Стадионы.Ссылка = Матч.Стадион
 	ГДЕ
-		Стадионы.Владелец = &amp;Команда
+		Стадионы.Владелец = &amp;Ссылка
 		И РАЗМЕРХРАНИМЫХДАННЫХ(Стадионы.Изображение) &gt;= 64
 	
 	СГРУППИРОВАТЬ ПО
@@ -219,7 +219,7 @@
 	ИЗ
 		Справочник.Команды КАК Команды
 	ГДЕ
-		Команды.Ссылка = &amp;Команда
+		Команды.Ссылка = &amp;Ссылка
 		И РАЗМЕРХРАНИМЫХДАННЫХ(Команды.Изображение) &gt;= 64) КАК Ссылки
 ;
 
@@ -262,22 +262,6 @@
 		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
 	</dataSet>
 	<parameter>
-		<name>Команда</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Команда</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-		<denyIncompleteValues>true</denyIncompleteValues>
-		<use>Always</use>
-	</parameter>
-	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -294,6 +278,21 @@
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Команда</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Команды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
 	</parameter>
 	<template>
 		<name>Макет1</name>
@@ -393,10 +392,9 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Команда</dcscor:parameter>
+					<dcscor:parameter>Ссылка</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>4a529169-1c1d-4f29-835f-6a7c5e89e1fb</dcsset:userSettingID>
+					<dcsset:userSettingID>2d722de3-feed-4848-9e00-b18a343ed030</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

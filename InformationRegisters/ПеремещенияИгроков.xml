@@ -429,6 +429,7 @@
 			</Dimension>
 			<Form>ФормаЗаписи</Form>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаПоследнее</Form>
 			<Command uuid="c8790fb5-7c10-43e7-a84d-5a5cb6873c05">
 				<Properties>
 					<Name>ПеремещенияИгрока</Name>

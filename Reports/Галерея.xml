@@ -172,9 +172,6 @@
 			</Attribute>
 			<Form>ФормаОтчета</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
-			<Template>СхемаИгрок</Template>
-			<Template>СхемаТур</Template>
-			<Template>СхемаЧемпионат</Template>
 			<Command uuid="61e66220-9855-472a-b922-60c66c7fa13a">
 				<Properties>
 					<Name>КомандаГалерея</Name>
