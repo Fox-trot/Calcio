@@ -278,13 +278,17 @@
 					<ExtendedTooltip name="СтраницаНовостиРасширеннаяПодсказка" id="107"/>
 					<ChildItems>
 						<Table name="Новости" id="108">
-							<ChangeRowSet>false</ChangeRowSet>
+							<Representation>List</Representation>
+							<TitleLocation>Auto</TitleLocation>
+							<RowSelectionMode>Row</RowSelectionMode>
 							<HorizontalLines>false</HorizontalLines>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Новости</DataPath>
-							<RowPictureDataPath>~Новости.DefaultPicture</RowPictureDataPath>
+							<RowPictureDataPath>Новости.DefaultPicture</RowPictureDataPath>
 							<CommandSet>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Create</ExcludedCommand>
 								<ExcludedCommand>Refresh</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
@@ -304,11 +308,6 @@
 							<ContextMenu name="НовостиКонтекстноеМеню" id="109"/>
 							<AutoCommandBar name="НовостиКоманднаяПанель" id="110">
 								<ChildItems>
-									<Button name="НовостиКомандаУдалить" id="141">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.НовостиКомандаУдалить</CommandName>
-										<ExtendedTooltip name="НовостиКомандаУдалитьРасширеннаяПодсказка" id="142"/>
-									</Button>
 									<Button name="НовостиКомандаОбновить" id="134">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.НовостиКомандаОбновить</CommandName>
@@ -843,7 +842,7 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<UseAlways>
-				<Field>~Новости.DefaultPicture</Field>
+				<Field>Новости.DefaultPicture</Field>
 				<Field>Новости.Дата</Field>
 				<Field>Новости.Комментарий</Field>
 				<Field>Новости.Наименование</Field>
@@ -900,6 +899,10 @@
 						</v8:item>
 					</dcssch:title>
 				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
 				<Parameter>
 					<dcssch:name>ДатаК</dcssch:name>
 					<dcssch:title xsi:type="v8:LocalStringType">
@@ -952,8 +955,7 @@
 					<dcssch:value xsi:type="xs:string"/>
 					<dcssch:useRestriction>true</dcssch:useRestriction>
 				</Parameter>
-				<KeyType>FieldValue</KeyType>
-				<KeyField>Ссылка</KeyField>
+				<MainTable>Document.Новости</MainTable>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1128,27 +1130,6 @@
 			</Picture>
 			<Action>КомандаНовостиОбновить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
-			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
-		</Command>
-		<Command name="НовостиКомандаУдалить" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Новости удалить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Delete</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>КомандаУдалить</Action>
-			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
 		</Command>
 	</Commands>
