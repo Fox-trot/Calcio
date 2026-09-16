@@ -123,8 +123,8 @@
 		<Metadata name="Catalog.Туры.Command.КомандаСледующий.CommandModule" id="09abea2a-048f-460c-8def-331d60dd6c11.2" configVersion="c9f1bb8b1604b942985dac1138c953d400000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаВыбора" id="8b658c03-cd25-4800-bfb4-f8fcace44f87" configVersion="22c8f55d16ac0547ba7267919fa58f2300000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаВыбора.Form" id="8b658c03-cd25-4800-bfb4-f8fcace44f87.0" configVersion="abd7d98f021b2241810fd51fbd9e10ab00000000"/>
-		<Metadata name="Catalog.Туры.Form.ФормаСписка" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7" configVersion="6fc43cb0ca1c0a4d8c356ce613ac70b400000000"/>
-		<Metadata name="Catalog.Туры.Form.ФормаСписка.Form" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7.0" configVersion="3f7e50ae1f69c4448afb259b1c1869fa00000000"/>
+		<Metadata name="Catalog.Туры.Form.ФормаСписка" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7" configVersion="4dbbecb5cf8a574999ec620312b25fd600000000"/>
+		<Metadata name="Catalog.Туры.Form.ФормаСписка.Form" id="b42648b3-4a86-4de3-8723-d4cf4a0a98b7.0" configVersion="69cd64d60ab77c47b8c4d289fa4e49a600000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента" id="20176894-388b-4c48-8bcc-b23abd1dfe18" configVersion="4b618f33d66f5f45b90d1695a86a548f00000000"/>
 		<Metadata name="Catalog.Туры.Form.ФормаЭлемента.Form" id="20176894-388b-4c48-8bcc-b23abd1dfe18.0" configVersion="f87c63ba7786fb48ba9b7f2f414cdf3400000000"/>
 		<Metadata name="Catalog.Туры.ManagerModule" id="8bedfced-d5fd-404b-a71f-110de6d1ec29.3" configVersion="426bbc0bc1e8ab4985b1dfb07491aaa100000000"/>
@@ -164,8 +164,8 @@
 		<Metadata name="CommonCommand.ОткрытьВИнтернете.CommandModule" id="8d40f3c3-cd8e-4b40-a23e-ac40d8405a2b.2" configVersion="26bf4e0a76584046ad1672b3c656946500000000"/>
 		<Metadata name="CommonCommand.Синхронизация" id="454d6e21-09a8-4055-a24c-ef304f4b33ea" configVersion="42d35e4e4c9c9148afa25cbafb337f1500000000"/>
 		<Metadata name="CommonCommand.Синхронизация.CommandModule" id="454d6e21-09a8-4055-a24c-ef304f4b33ea.2" configVersion="ab6b14f7511d1a4283d55552e5b39aed00000000"/>
-		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="2d89c3e0394afa40a590b9f2a51f628f00000000"/>
-		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="34b2c6523cb5c1429d4e23bfa141bd2400000000"/>
+		<Metadata name="CommonForm.Календарь" id="3fd1bd0c-fd10-4136-ae0e-3201686af265" configVersion="42ff09780dae2d48b601b1101c9e611c00000000"/>
+		<Metadata name="CommonForm.Календарь.Form" id="3fd1bd0c-fd10-4136-ae0e-3201686af265.0" configVersion="002f22c7c6a19446bc7ca1b9b14769dc00000000"/>
 		<Metadata name="CommonForm.КаталогаФайловУстановить" id="6c2ce582-cfd9-4f44-a7f2-08975dbb4d89" configVersion="36974295a1c9cc42a8329f893cf8835f00000000"/>
 		<Metadata name="CommonForm.КаталогаФайловУстановить.Form" id="6c2ce582-cfd9-4f44-a7f2-08975dbb4d89.0" configVersion="026f0c45876b7b49ae62462b2d923f2500000000"/>
 		<Metadata name="CommonForm.Квиз" id="d991fe97-844b-4b8e-a857-49079c93b635" configVersion="8de17317e9b60246b8f376b5b51cd26200000000"/>
@@ -325,8 +325,8 @@
 			<Metadata name="InformationRegister.ПеремещенияИгроков.Resource.Амплуа" id="f4549f9e-aefc-4579-b2b0-c9cded2437c5"/>
 		</Metadata>
 		<Metadata name="InformationRegister.ПеремещенияИгроков.Command.ПеремещенияИгрока.CommandModule" id="c8790fb5-7c10-43e7-a84d-5a5cb6873c05.2" configVersion="7b9d6d1b9f0cb04a826c3d3dd0d478a200000000"/>
-		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаЗаписи" id="d40e9ac9-ef4e-4c28-a9dd-5f36c8842305" configVersion="6b3086236c4f2048b8b4b48fe9b734cc00000000"/>
-		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаЗаписи.Form" id="d40e9ac9-ef4e-4c28-a9dd-5f36c8842305.0" configVersion="c0fd50c9c6809148886315522eb2013900000000"/>
+		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаЗаписи" id="d40e9ac9-ef4e-4c28-a9dd-5f36c8842305" configVersion="72774d042f4c364ea23e567fa0c3e6ad00000000"/>
+		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаЗаписи.Form" id="d40e9ac9-ef4e-4c28-a9dd-5f36c8842305.0" configVersion="f1f789059734e04b9c654de3edaf58aa00000000"/>
 		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаПоследнее" id="b17ce093-4599-400d-a22c-778fe3f467cd" configVersion="0d0177010d799a4e94184648f1a3e1ad00000000"/>
 		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаПоследнее.Form" id="b17ce093-4599-400d-a22c-778fe3f467cd.0" configVersion="85c909a1fdd7c949adb5896696ddc63400000000"/>
 		<Metadata name="InformationRegister.ПеремещенияИгроков.Form.ФормаСписка" id="be874a7d-e4c0-4be7-8a3d-85e4635952d5" configVersion="a91937af5a54f04488a3ae956ade078f00000000"/>

@@ -33,6 +33,13 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="ВидСпорта" id="28">
+					<DataPath>ВидСпорта</DataPath>
+					<Visible>false</Visible>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВидСпортаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВидСпортаРасширеннаяПодсказка" id="30"/>
+				</InputField>
 				<InputField name="Игрок" id="4">
 					<DataPath>Запись.Игрок</DataPath>
 					<ContextMenu name="ИгрокКонтекстноеМеню" id="5"/>
@@ -45,6 +52,13 @@
 					<DataPath>Запись.Команда</DataPath>
 					<ClearButton>true</ClearButton>
 					<CreateButton>true</CreateButton>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">ВидСпорта</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ContextMenu name="КомандаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="9"/>
 					<Events>
