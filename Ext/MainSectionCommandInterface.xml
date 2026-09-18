@@ -186,7 +186,7 @@
 		<Command name="Report.ВМоменте.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.Трофеи.StandardCommand.Open">
+		<Command name="0:525c4887-4513-4292-8264-ed334c01d240">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.ЧемпионскаяГонка.StandardCommand.Open">
