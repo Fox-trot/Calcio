@@ -4,13 +4,15 @@
 	<CommandSet>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
-		<ExcludedCommand>ClearChartAppearance</ExcludedCommand>
+		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>Generate</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
 		<ExcludedCommand>NewWindow</ExcludedCommand>
 		<ExcludedCommand>ReportSettings</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
 		<ExcludedCommand>SaveReportSettings</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
 		<ExcludedCommand>SaveVariant</ExcludedCommand>
 		<ExcludedCommand>StandardSettings</ExcludedCommand>
 	</CommandSet>
@@ -19,153 +21,82 @@
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="Сформировать" id="21">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.Сформировать</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="22"/>
-			</Button>
-			<Button name="ФормаРегистрСведенийДербиОткрытьСписок" id="23">
-				<Type>CommandBarButton</Type>
-				<CommandName>InformationRegister.Дерби.StandardCommand.OpenList</CommandName>
-				<Picture>
-					<xr:Ref>StdPicture.InformationRegister</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Дерби (Регистр сведений)</v8:content>
-					</v8:item>
-				</Title>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаРегистрСведенийДербиОткрытьСписокРасширеннаяПодсказка" id="24"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаПараметры" id="9">
+		<UsualGroup name="ГруппаПараметры" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Параметры</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа параметры</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="10"/>
-			<ChildItems>
-				<Button name="ФормаСформировать" id="4">
-					<Type>UsualButton</Type>
-					<DefaultButton>true</DefaultButton>
-					<CommandName>Form.Command.Сформировать</CommandName>
-					<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="5"/>
-				</Button>
-				<InputField name="Город" id="1">
-					<DataPath>Город</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<CreateButton>false</CreateButton>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ChooseType>false</ChooseType>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Ссылка</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Города</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-					<ContextMenu name="ГородКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="ГородРасширеннаяПодсказка" id="3"/>
-					<Events>
-						<Event name="OnChange">ГородПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ТипГрафика" id="16">
-					<DataPath>ТипГрафика</DataPath>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ChooseType>false</ChooseType>
-					<ContextMenu name="ТипГрафикаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ТипГрафикаРасширеннаяПодсказка" id="18"/>
-					<Events>
-						<Event name="OnChange">ТипГрафикаПриИзменении</Event>
-					</Events>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаОтчет" id="11">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаОтчетРасширеннаяПодсказка" id="12"/>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
-				<SpreadSheetDocumentField name="Результат" id="6">
-					<DataPath>Результат</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalScrollBar>false</HorizontalScrollBar>
-					<ContextMenu name="РезультатКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="8"/>
-				</SpreadSheetDocumentField>
-				<ChartField name="График" id="13">
-					<DataPath>График</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="ГрафикКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="15"/>
+				<Button name="ФормаСформировать" id="9">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<InputField name="Лига" id="1">
+					<DataPath>Отчет.Лига</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЛигаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ЛигаРасширеннаяПодсказка" id="3"/>
 					<Events>
-						<Event name="Selection">ГрафикВыбор</Event>
+						<Event name="OnChange">ЛигаПриИзменении</Event>
 					</Events>
-				</ChartField>
+				</InputField>
+				<InputField name="Команда" id="4">
+					<DataPath>Отчет.Команда</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Ссылка</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Клубы</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="КомандаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КомандаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">КомандаПриИзменении</Event>
+					</Events>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<ChartField name="График" id="11">
+			<DataPath>График</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="ГрафикКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="13"/>
+			<Events>
+				<Event name="Selection">ГрафикВыбор</Event>
+			</Events>
+		</ChartField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Отчет" id="1">
 			<Type>
-				<v8:Type>cfg:ReportObject.Дерби</v8:Type>
+				<v8:Type>cfg:ReportObject.ТекучестьКадров</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
-				<Field>1/0:020bf28c-af64-43c5-accf-c9bdb190e6cb</Field>
+				<Field>Отчет.Команда</Field>
+				<Field>Отчет.Лига</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="Города" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Города</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueListType</v8:Type>
-			</Type>
-			<Settings xsi:type="v8:TypeDescription">
-				<v8:Type>cfg:CatalogRef.Города</v8:Type>
-			</Settings>
-		</Attribute>
-		<Attribute name="Результат" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результат</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="График" id="4">
+		<Attribute name="График" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -202,12 +133,17 @@
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
-				<d4p1:chartType>Column</d4p1:chartType>
-				<d4p1:circleLabelType>None</d4p1:circleLabelType>
+				<d4p1:chartType>StackedColumn</d4p1:chartType>
+				<d4p1:circleLabelType>ValuePercent</d4p1:circleLabelType>
 				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
 				<d4p1:labelsLocation>Auto</d4p1:labelsLocation>
 				<d4p1:lbFormat/>
-				<d4p1:lbpFormat/>
+				<d4p1:lbpFormat>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=0</v8:content>
+					</v8:item>
+				</d4p1:lbpFormat>
 				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
 				<d4p1:labelsFont kind="AutoFont"/>
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
@@ -219,8 +155,8 @@
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
 				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
 				<d4p1:title/>
-				<d4p1:isShowTitle>true</d4p1:isShowTitle>
-				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:isShowTitle>false</d4p1:isShowTitle>
+				<d4p1:isShowLegend>false</d4p1:isShowLegend>
 				<d4p1:ttlBorder width="0">
 					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:ttlBorder>
@@ -280,7 +216,7 @@
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Auto</d4p1:paletteKind>
 				<d4p1:animation>Auto</d4p1:animation>
-				<d4p1:rebuildTime>0</d4p1:rebuildTime>
+				<d4p1:rebuildTime>6810909</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>false</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
@@ -339,39 +275,11 @@
 				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
+				<d4p1:legendPlacement>None</d4p1:legendPlacement>
+				<d4p1:titleAreaPlacement>None</d4p1:titleAreaPlacement>
 			</Settings>
 		</Attribute>
-		<Attribute name="ТипГрафика" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Тип графика</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>1</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-			<Save>
-				<Field>ТипГрафика</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="МойГород" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Мой город</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.Города</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="Клубы" id="7">
+		<Attribute name="Клубы" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -385,27 +293,16 @@
 				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
 			</Settings>
 		</Attribute>
-		<Attribute name="Город" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Город</v8:content>
-				</v8:item>
-			</Title>
+		<Attribute name="Кеш" id="4">
 			<Type>
-				<v8:Type>cfg:CatalogRef.Города</v8:Type>
+				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
-		</Attribute>
-		<Attribute name="ВидСпорта" id="9">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Вид спорта</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.ВидыСпорта</v8:Type>
-			</Type>
+			<Save>
+				<Field>Кеш</Field>
+			</Save>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Команды</v8:Type>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -419,16 +316,11 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сформировать отчет</v8:content>
+					<v8:content>Сформировать</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F5</Shortcut>
-			<Picture>
-				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>Сформировать</Action>
-			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

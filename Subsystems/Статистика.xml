@@ -50,10 +50,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Дерби</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Эффективность</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВМоменте</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">840ddf4d-f9d1-49a3-a8c2-a96b9f5856e3</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.КвизРезультаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Трофеи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.МатчиКоманды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТекучестьКадров</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

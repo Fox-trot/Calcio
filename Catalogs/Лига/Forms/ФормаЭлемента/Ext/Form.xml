@@ -482,4 +482,37 @@
 			<Action>РазрешитьРедактирование</Action>
 		</Command>
 	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Report.ВозрастныеГруппы.Command.ВозрастныеГруппы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Report.Гражданство.Command.КомандаГражданство</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>Report.ТекучестьКадров.Command.КомандаТекучестьКадров</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>3</Index>
+			</Item>
+			<Item>
+				<Command>Report.Саммит.Command.КомандаСаммит</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>4</Index>
+			</Item>
+			<Item>
+				<Command>Report.Чемпионы.Command.КомандаЧемпионы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>5</Index>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
 </Form>
