@@ -54,6 +54,10 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Трофеи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.МатчиКоманды</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ТекучестьКадров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаЛиг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Участие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Команды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Игроки</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

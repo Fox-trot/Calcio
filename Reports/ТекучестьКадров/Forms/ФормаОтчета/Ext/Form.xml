@@ -4,7 +4,6 @@
 	<CommandSet>
 		<ExcludedCommand>ChangeSettingsStructure</ExcludedCommand>
 		<ExcludedCommand>ChangeVariant</ExcludedCommand>
-		<ExcludedCommand>EndEdit</ExcludedCommand>
 		<ExcludedCommand>Generate</ExcludedCommand>
 		<ExcludedCommand>LoadReportSettings</ExcludedCommand>
 		<ExcludedCommand>LoadVariant</ExcludedCommand>
@@ -127,7 +126,7 @@
 					<d4p1:strIsChanged>false</d4p1:strIsChanged>
 					<d4p1:isExpand>false</d4p1:isExpand>
 					<d4p1:isIndicator>false</d4p1:isIndicator>
-					<d4p1:colorPriority>true</d4p1:colorPriority>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
 				</d4p1:realExSeriesData>
 				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
 				<d4p1:realPointCount>0</d4p1:realPointCount>
@@ -149,7 +148,7 @@
 				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
 				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
 				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:labelsBorder>
 				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
 				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
@@ -259,7 +258,7 @@
 				</d4p1:elementsTitle>
 				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
 				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 				</d4p1:border>
 				<d4p1:dataSourceDescription/>
 				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>

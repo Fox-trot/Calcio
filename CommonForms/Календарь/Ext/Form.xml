@@ -127,8 +127,6 @@
 					<ChildItems>
 						<Table name="Список" id="56">
 							<Representation>List</Representation>
-							<TitleLocation>Auto</TitleLocation>
-							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<SelectionMode>SingleRow</SelectionMode>
@@ -138,7 +136,11 @@
 							<DataPath>Список</DataPath>
 							<RowPictureDataPath>~Список.DefaultPicture</RowPictureDataPath>
 							<CommandSet>
+								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+								<ExcludedCommand>ListSettings</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
 								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
@@ -279,7 +281,6 @@
 					<ChildItems>
 						<Table name="Новости" id="108">
 							<Representation>List</Representation>
-							<TitleLocation>Auto</TitleLocation>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<HorizontalLines>false</HorizontalLines>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -289,7 +290,10 @@
 								<ExcludedCommand>Change</ExcludedCommand>
 								<ExcludedCommand>Copy</ExcludedCommand>
 								<ExcludedCommand>Create</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
 								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>SetDateInterval</ExcludedCommand>
 							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
@@ -342,6 +346,11 @@
 											</Button>
 										</ChildItems>
 									</Popup>
+									<Button name="НовостиКомандаУдалить" id="164">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаУдалить</CommandName>
+										<ExtendedTooltip name="НовостиКомандаУдалитьРасширеннаяПодсказка" id="165"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="НовостиРасширеннаяПодсказка" id="111"/>
@@ -385,6 +394,12 @@
 									<ReadOnly>true</ReadOnly>
 									<ContextMenu name="НовостиНаименованиеКонтекстноеМеню" id="125"/>
 									<ExtendedTooltip name="НовостиНаименованиеРасширеннаяПодсказка" id="126"/>
+								</LabelField>
+								<LabelField name="Ссылка" id="161">
+									<DataPath>Новости.Ссылка</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="163"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -846,9 +861,13 @@
 				<Field>Новости.Дата</Field>
 				<Field>Новости.Комментарий</Field>
 				<Field>Новости.Наименование</Field>
+				<Field>Новости.ПометкаУдаления</Field>
 				<Field>Новости.Проведен</Field>
 				<Field>Новости.Ссылка</Field>
 			</UseAlways>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ЧтениеНовостей</Item>
+			</FunctionalOptions>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
@@ -1130,6 +1149,27 @@
 			</Picture>
 			<Action>КомандаНовостиОбновить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаУдалить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаУдалить</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Новости</AssociatedTableElementId>
 		</Command>
 	</Commands>

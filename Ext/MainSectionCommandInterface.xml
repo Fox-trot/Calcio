@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
 	<CommandsVisibility>
+		<Command name="Document.Матч.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Catalog.Туры.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -22,6 +27,11 @@
 			</Visibility>
 		</Command>
 		<Command name="Catalog.Амплуа.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="CommonCommand.Квиз">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
@@ -61,8 +71,17 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="Report.Галерея.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 	</CommandsVisibility>
 	<CommandsPlacement>
+		<Command name="Document.Матч.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
 		<Command name="CommonForm.Квиз.StandardCommand.Open">
 			<CommandGroup>ActionsPanelCreate</CommandGroup>
 			<Placement>Auto</Placement>
@@ -70,7 +89,7 @@
 	</CommandsPlacement>
 	<CommandsOrder>
 		<Command name="Document.Матч.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
 		<Command name="Document.СнятиеОчков.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
@@ -106,6 +125,9 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.КомандаКалендарь">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.Квиз">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="Document.Матч.StandardCommand.Create">
@@ -208,6 +230,9 @@
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.КвизРезультаты.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+		</Command>
+		<Command name="Report.Галерея.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.Синхронизация">

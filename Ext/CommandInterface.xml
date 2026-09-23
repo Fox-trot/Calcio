@@ -1,6 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.19">
+	<SubsystemsVisibility>
+		<Subsystem name="Subsystem.ИсходныеДанные">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.Статистика">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.Биоритмы">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.Прочее">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="Subsystem.Администрирование">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+		<Subsystem name="9d588fa3-800a-4146-8adb-e751c7e7b55c">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Subsystem>
+	</SubsystemsVisibility>
 	<SubsystemsOrder>
 		<Subsystem>Subsystem.ИсходныеДанные</Subsystem>
+		<Subsystem>Subsystem.Статистика</Subsystem>
+		<Subsystem>Subsystem.Биоритмы</Subsystem>
+		<Subsystem>Subsystem.Прочее</Subsystem>
+		<Subsystem>Subsystem.Администрирование</Subsystem>
+		<Subsystem>9d588fa3-800a-4146-8adb-e751c7e7b55c</Subsystem>
 	</SubsystemsOrder>
 </CommandInterface>
