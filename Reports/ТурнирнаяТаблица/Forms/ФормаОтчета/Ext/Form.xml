@@ -440,6 +440,9 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
+			<Save>
+				<Field>Победа</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="Чемпионаты" id="9">
 			<Title>
