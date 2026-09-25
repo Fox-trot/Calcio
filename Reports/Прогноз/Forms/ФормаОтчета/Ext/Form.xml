@@ -27,18 +27,18 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаСформироватьРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="ПросмотрИсходныхДанных" id="19">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Command.ПросмотрИсходныхДанных</CommandName>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ПросмотрИсходныхДанныхРасширеннаяПодсказка" id="20"/>
-			</Button>
 			<Button name="ФормаКомандаДиаграмма" id="80">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.КомандаДиаграмма</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаКомандаДиаграммаРасширеннаяПодсказка" id="81"/>
+			</Button>
+			<Button name="ФормаПросмотрИсходныхДанных" id="19">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПросмотрИсходныхДанных</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаПросмотрИсходныхДанныхРасширеннаяПодсказка" id="20"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -136,7 +136,7 @@
 							<ContextMenu name="ГрафикКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="18"/>
 							<Events>
-								<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
+								<Event name="Selection">ГрафикВыбор</Event>
 							</Events>
 						</ChartField>
 						<GanttChartField name="Диаграмма" id="64">
@@ -189,7 +189,7 @@
 								</SearchControlAddition>
 							</Table>
 							<Events>
-								<Event name="DetailProcessing">ДиаграммаОбработкаРасшифровки</Event>
+								<Event name="Selection">ДиаграммаВыбор</Event>
 							</Events>
 						</GanttChartField>
 					</ChildItems>
@@ -311,6 +311,9 @@
 				<v8:Type>cfg:ReportObject.Прогноз</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Отчет.SettingsComposer</Field>
+			</UseAlways>
 			<Save>
 				<Field>Отчет.Чемпионат</Field>
 			</Save>
@@ -656,7 +659,7 @@
 					<d4p1:vsFormat/>
 					<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
 					<d4p1:scaleLine width="1" gap="false">
-						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+						<v8ui:style xsi:type="v8ui:ChartLineType">None</v8ui:style>
 					</d4p1:scaleLine>
 					<d4p1:scaleColor>auto</d4p1:scaleColor>
 					<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
@@ -764,7 +767,7 @@
 						<d4p1:backColor>auto</d4p1:backColor>
 						<d4p1:textColor>auto</d4p1:textColor>
 					</d4p1:contentCacheItem>
-					<d4p1:autoText>true</d4p1:autoText>
+					<d4p1:autoText>false</d4p1:autoText>
 					<d4p1:useValuesReverseBehavior>false</d4p1:useValuesReverseBehavior>
 				</d4p1:points>
 				<d4p1:series>
@@ -788,7 +791,7 @@
 					<d4p1:autoText>true</d4p1:autoText>
 					<d4p1:useValuesReverseBehavior>false</d4p1:useValuesReverseBehavior>
 				</d4p1:series>
-				<d4p1:drawEmpty>false</d4p1:drawEmpty>
+				<d4p1:drawEmpty>true</d4p1:drawEmpty>
 				<d4p1:timeScale>
 					<d4p1:placement>Top</d4p1:placement>
 					<d4p1:level>
@@ -796,7 +799,7 @@
 						<d4p1:interval>1</d4p1:interval>
 						<d4p1:show>false</d4p1:show>
 						<d4p1:line width="1" gap="false">
-							<v8ui:style xsi:type="v8ui:ChartLineType">Dotted</v8ui:style>
+							<v8ui:style xsi:type="v8ui:ChartLineType">None</v8ui:style>
 						</d4p1:line>
 						<d4p1:scaleColor>auto</d4p1:scaleColor>
 						<d4p1:dayFormatRule>MonthDayWeekDay</d4p1:dayFormatRule>
@@ -825,7 +828,7 @@
 				<d4p1:noneVariantMeasure>Day</d4p1:noneVariantMeasure>
 				<d4p1:verticalStretch>None</d4p1:verticalStretch>
 				<d4p1:verticalScrollEnable>true</d4p1:verticalScrollEnable>
-				<d4p1:showValueText>None</d4p1:showValueText>
+				<d4p1:showValueText>Right</d4p1:showValueText>
 				<d4p1:extTitle/>
 				<d4p1:outboundColor>#FFFFFF</d4p1:outboundColor>
 				<d4p1:backIntervals>
@@ -836,10 +839,10 @@
 				</d4p1:backIntervals>
 				<d4p1:linksColor>#555555</d4p1:linksColor>
 				<d4p1:linksLine width="1" gap="false">
-					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					<v8ui:style xsi:type="v8ui:ChartLineType">None</v8ui:style>
 				</d4p1:linksLine>
 				<d4p1:showPointsText>Auto</d4p1:showPointsText>
-				<d4p1:showData>Auto</d4p1:showData>
+				<d4p1:showData>DontShow</d4p1:showData>
 				<d4p1:textPlacement>Auto</d4p1:textPlacement>
 				<d4p1:intervalTextRepresentation>Auto</d4p1:intervalTextRepresentation>
 			</Settings>
@@ -993,6 +996,10 @@
 					<v8:content>Диаграмма Ганта или график</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GanttChart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>КомандаДиаграмма</Action>
 		</Command>
 	</Commands>
