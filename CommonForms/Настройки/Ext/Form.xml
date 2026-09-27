@@ -53,6 +53,12 @@
 							<ContextMenu name="МояКомандаКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="МояКомандаРасширеннаяПодсказка" id="3"/>
 						</InputField>
+						<CheckBoxField name="ИспользоватьСтадионы" id="80">
+							<DataPath>НаборКонстант.ИспользоватьСтадионы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтадионыКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ИспользоватьСтадионыРасширеннаяПодсказка" id="82"/>
+						</CheckBoxField>
 						<UsualGroup name="ГруппаТурнираяТаблица" id="41">
 							<Title>
 								<v8:item>
@@ -175,12 +181,6 @@
 								</LabelField>
 							</ChildItems>
 						</UsualGroup>
-						<CheckBoxField name="ИспользоватьСтадионы" id="80">
-							<DataPath>НаборКонстант.ИспользоватьСтадионы</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ИспользоватьСтадионыКонтекстноеМеню" id="81"/>
-							<ExtendedTooltip name="ИспользоватьСтадионыРасширеннаяПодсказка" id="82"/>
-						</CheckBoxField>
 						<UsualGroup name="ГруппаЦвета" id="4">
 							<Title>
 								<v8:item>
@@ -236,6 +236,17 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПрочее" id="129">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаПрочееРасширеннаяПодсказка" id="130"/>
+					<ChildItems>
 						<CheckBoxField name="ЧтениеНовостей" id="115">
 							<DataPath>НаборКонстант.ЧтениеНовостей</DataPath>
 							<CheckBoxType>Auto</CheckBoxType>
