@@ -30,6 +30,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.БуферНовостей</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Дерби</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Квиз</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">7dbb9296-873e-4eec-82ad-29465d9c384d</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -315,6 +315,7 @@
 			<Constant>ВыводитьЛоготипыКоманд</Constant>
 			<Constant>ЧтениеНовостей</Constant>
 			<Constant>БуферНовостей</Constant>
+			<Constant>НовостиТолькоПоследние</Constant>
 			<CommonForm>Настройки</CommonForm>
 			<CommonForm>Календарь</CommonForm>
 			<CommonForm>КаталогаФайловУстановить</CommonForm>
