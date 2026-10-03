@@ -342,6 +342,7 @@
 															<ExtendedTooltip name="КомандыКомандаРасширеннаяПодсказка" id="34"/>
 															<Events>
 																<Event name="StartChoice">КомандыКомандаНачалоВыбора</Event>
+																<Event name="Creating">КомандыКомандаСоздание</Event>
 															</Events>
 														</InputField>
 														<LabelField name="КомандыКомандаГород" id="214">

@@ -19,7 +19,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.Биоритмы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.Матч</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ТурнирнаяТаблица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТурнирнаяТаблица</xr:Item>
@@ -50,7 +49,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Дерби</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Эффективность</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ВМоменте</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.КвизРезультаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.Трофеи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.МатчиКоманды</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ТекучестьКадров</xr:Item>
