@@ -136,7 +136,7 @@
 							<ContextMenu name="ГрафикКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="ГрафикРасширеннаяПодсказка" id="18"/>
 							<Events>
-								<Event name="Selection">ГрафикВыбор</Event>
+								<Event name="DetailProcessing">ГрафикОбработкаРасшифровки</Event>
 							</Events>
 						</ChartField>
 						<GanttChartField name="Диаграмма" id="64">
