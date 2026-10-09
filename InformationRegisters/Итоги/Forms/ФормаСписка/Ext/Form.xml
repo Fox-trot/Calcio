@@ -54,6 +54,11 @@
 						<CommandName>Form.Command.КомандаОбновить</CommandName>
 						<ExtendedTooltip name="СписокКомандаОбновитьРасширеннаяПодсказка" id="43"/>
 					</Button>
+					<Button name="СписокКомандаУдалить" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаУдалить</CommandName>
+						<ExtendedTooltip name="СписокКомандаУдалитьРасширеннаяПодсказка" id="45"/>
+					</Button>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
@@ -307,6 +312,28 @@
 			</Picture>
 			<Action>КомандаОбновить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+		</Command>
+		<Command name="КомандаУдалить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаУдалить</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>Use</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
 		</Command>
 	</Commands>
