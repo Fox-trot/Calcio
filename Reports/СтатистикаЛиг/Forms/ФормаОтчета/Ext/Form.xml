@@ -80,6 +80,12 @@
 						<Event name="OnChange">Сформировать</Event>
 					</Events>
 				</InputField>
+				<CheckBoxField name="Группировать" id="17">
+					<DataPath>Группировать</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ГруппироватьКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ГруппироватьРасширеннаяПодсказка" id="19"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<ChartField name="График" id="4">
@@ -343,6 +349,20 @@
 			<Settings xsi:type="v8:TypeDescription">
 				<v8:Type>cfg:CatalogRef.Лига</v8:Type>
 			</Settings>
+		</Attribute>
+		<Attribute name="Группировать" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Группировать</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
