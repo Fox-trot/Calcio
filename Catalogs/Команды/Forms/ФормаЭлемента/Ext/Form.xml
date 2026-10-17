@@ -2083,7 +2083,7 @@
 				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>ТекущийСоставОбновитьНаКлиенте</Action>
+			<Action>КомандаТекущийСоставОбновить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId xsi:type="xs:string">ТекущийСостав</AssociatedTableElementId>
 		</Command>
@@ -2157,22 +2157,39 @@
 				<Index>7</Index>
 			</Item>
 			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>8</Index>
+			</Item>
+			<Item>
+				<Command>InformationRegister.Дерби.StandardCommand.OpenByValue.Команда</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.Биоритмы</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<Index>9</Index>
+			</Item>
+			<Item>
 				<Command>FilterCriterion.МатчиКоманды.StandardCommand.OpenByValue</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>5</Index>
 				<DefaultVisible>false</DefaultVisible>
 			</Item>
 			<Item>
 				<Command>Catalog.Стадионы.StandardCommand.OpenByValue</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
-				<Index>1</Index>
-			</Item>
-			<Item>
-				<Command>Report.Галерея.Command.КомандаГалерея</Command>
-				<Type>Auto</Type>
-				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
-				<Index>8</Index>
+				<Index>4</Index>
 			</Item>
 		</NavigationPanel>
 		<CommandBar>
@@ -2186,6 +2203,17 @@
 				<Command>Catalog.Игроки.StandardCommand.CreateBasedOn</Command>
 				<Type>Auto</Type>
 				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Report.Трофеи.Command.КомандаТрофеи</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
 			</Item>
 		</CommandBar>
 	</CommandInterface>

@@ -290,6 +290,12 @@
 					<xr:Common>false</xr:Common>
 				</Visible>
 			</Item>
+			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>3</Index>
+			</Item>
 		</CommandBar>
 	</CommandInterface>
 </Form>

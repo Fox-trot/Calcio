@@ -415,6 +415,17 @@
 					<xr:Common>false</xr:Common>
 				</Visible>
 			</Item>
+			<Item>
+				<Command>Report.Галерея.Command.КомандаГалерея</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+			</Item>
+			<Item>
+				<Command>Report.Трофеи.Command.КомандаТрофеи</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+			</Item>
 		</CommandBar>
 	</CommandInterface>
 </Form>

@@ -7,10 +7,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Амплуа</dataPath>
-			<field>Амплуа</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Страна</dataPath>
 			<field>Страна</field>
 			<title xsi:type="v8:LocalStringType">
@@ -19,9 +15,28 @@
 					<v8:content>Страна</v8:content>
 				</v8:item>
 			</title>
-			<role>
-				<dcscom:required>true</dcscom:required>
-			</role>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Страны</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>25</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Количество</dataPath>
@@ -32,21 +47,74 @@
 					<v8:content>Количество</v8:content>
 				</v8:item>
 			</title>
+			<orderExpression>
+				<dcscom:expression>КоличествоСортировка</dcscom:expression>
+				<dcscom:orderType>Asc</dcscom:orderType>
+				<dcscom:autoOrder>false</dcscom:autoOrder>
+			</orderExpression>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Игрок</dataPath>
 			<field>Игрок</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Игроки</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСортировка</dataPath>
+			<field>КоличествоСортировка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество сортировка</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЕСТЬNULL(Перемещения.Игрок.Страна.Ссылка, "Прочие") КАК Страна,
-	1 КАК Количество
+	1 КАК Количество,
+	ВЫБОР
+		КОГДА Страны.Ссылка ЕСТЬ NULL
+			ТОГДА -1
+		ИНАЧЕ 1
+	КОНЕЦ КАК КоличествоСортировка
 ИЗ
 	РегистрСведений.ПеремещенияИгроков.СрезПоследних КАК Перемещения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Игроки КАК Игроки
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Страны КАК Страны
+			ПО Игроки.Страна = Страны.Ссылка
+		ПО Перемещения.Игрок = Игроки.Ссылка
 ГДЕ
-	Перемещения.Команда = &amp;Команда
-{ГДЕ
-	Перемещения.Амплуа.*}</query>
+	Перемещения.Команда = &amp;Команда</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
@@ -109,10 +177,6 @@
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Количество</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Страна</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
 			<dcsset:outputParameters>
