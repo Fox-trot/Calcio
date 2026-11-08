@@ -119,6 +119,7 @@
 					</Events>
 				</SpreadSheetDocumentField>
 				<UsualGroup name="ГруппаДиаграммы" id="62">
+					<EnableContentChange>true</EnableContentChange>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -143,7 +144,7 @@
 							<DataPath>Диаграмма</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<TableLocation>None</TableLocation>
-							<ValuesSelectionMode>Single</ValuesSelectionMode>
+							<ValuesSelectionMode>None</ValuesSelectionMode>
 							<ContextMenu name="ДиаграммаКонтекстноеМеню" id="65"/>
 							<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="66"/>
 							<Table name="ДиаграммаТаблица" id="67">
